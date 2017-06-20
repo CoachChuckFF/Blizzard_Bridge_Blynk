@@ -51,6 +51,28 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 static const char *TAG = "DMX";
 
 static uint8_t DMX[DMX_MAX_SLOTS];
+static uint16_t SLOTS = (DMX_MAX_SLOTS - 1);
+
+uint16_t getSlots()
+{
+  return SLOTS;
+}
+
+void setSlots(uint16_t count)
+{
+  if(count >= DMX_MAX_SLOTS)
+  {
+      ESP_LOGI(TAG, "Too many slots =!= %d", count);
+      return;
+  }
+  if(count < DMX_MIN_SLOTS)
+  {
+      ESP_LOGI(TAG, "Too few slots =!= %d", count);
+      return;
+  }
+
+  SLOTS = count;
+}
 
 uint8_t getDMXData(uint16_t slot)
 {

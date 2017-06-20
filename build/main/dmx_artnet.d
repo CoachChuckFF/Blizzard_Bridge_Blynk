@@ -1,4 +1,4 @@
-main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
+dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/newlib.h \
@@ -116,7 +116,6 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sys.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/udp.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/pbuf.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netif.h \
@@ -128,7 +127,7 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
@@ -365,8 +364,6 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h:
 
-/home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
-
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/udp.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/pbuf.h:
@@ -389,6 +386,6 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h:
 
-/home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h:
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:

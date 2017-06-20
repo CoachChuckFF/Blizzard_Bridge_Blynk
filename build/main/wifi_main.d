@@ -116,7 +116,7 @@ wifi_main.o: /home/penguin/Programio/blizzard-esp/main/./wifi_main.c \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sys.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/esp32_artnet.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/udp.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/pbuf.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netif.h \
@@ -363,7 +363,7 @@ wifi_main.o: /home/penguin/Programio/blizzard-esp/main/./wifi_main.c \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h:
 
-/home/penguin/Programio/blizzard-esp/main/./lib/esp32_artnet.h:
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/udp.h:
 

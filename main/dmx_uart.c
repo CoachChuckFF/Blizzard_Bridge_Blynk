@@ -37,29 +37,6 @@ volatile uint8_t tx_done;
 static DRAM_ATTR uart_dev_t* const UART[UART_NUM_MAX] = {&UART0, &UART1, &UART2};
 static portMUX_TYPE uart_spinlock[UART_NUM_MAX] = {portMUX_INITIALIZER_UNLOCKED, portMUX_INITIALIZER_UNLOCKED, portMUX_INITIALIZER_UNLOCKED};
 
-/*----------------------------------- Getters/Setters -----
- |  Function Getters/Setters
- |
- |  Purpose:  Object abstraction for the DMX "class"
- |	Each will have a small discription
- |
- |  Parameters: Varies
- |
- |  Returns:  Varies
- *-------------------------------------------------------------------*/
-//Returns number of slots currently read/sent through DMX
-uint16_t getNumberOfSlots(void)
-{
-	return DMX._slots;
-}
-
-//Change the number of slots to read/send through DMX
-//Can be in the range of 24 - 512
-void setNumberOfSlots(int slot)
-{
-	DMX._slots = (slot > DMX_MAX_SLOTS) ? DMX_MAX_SLOTS : (slot < DMX_MIN_SLOTS) ? DMX_MIN_SLOTS : slot;
-}
-
 /*------------------------------------------------- starDMX -----
  |  Function startDMX
  |
@@ -80,16 +57,16 @@ void setNumberOfSlots(int slot)
  |
  |  Returns:  N/A
  *-------------------------------------------------------------------*/
-void startDMX (uint8_t dir, uint16_t slots)
+void startDMXUart (uint8_t dir)
 {
 		gpio_config_t io_conf;
 
 		if(DMX._enabled == DMX_ENABLE)
-			stopDMX();
+			stopDMXUart();
 
 		DMX._enabled = DMX_ENABLE;
 		DMX._dmx_state = DMX_STATE_START;
-		DMX._slots = (slots > DMX_MAX_SLOTS - 1) ? DMX_MAX_SLOTS : (slots < DMX_MIN_SLOTS) ? DMX_MIN_SLOTS : slots;
+		DMX._slots = getSlots();
 		DMX._idle_count = 0;
 		DMX._current_slot = 0;
 		DMX._direction = dir;
@@ -125,7 +102,7 @@ void startDMX (uint8_t dir, uint16_t slots)
  |
  |  Returns:  N/A
  *-------------------------------------------------------------------*/
-void stopDMX()
+void stopDMXUart()
 {
 	uart_disable_intr_mask(DMX_UART, UART_INTR_MASK); //disable all inturrupts
 	uart_isr_free(DMX_UART);
@@ -237,6 +214,15 @@ static void handleMAB()
 	}
 }
 
+/*------------------------------------------------- DMXTx -----
+ |  Function DMXTx
+ |
+ |  Purpose:  Safe thread sends a byte to fifo
+ |
+ |  Parameters: N/A
+ |
+ |  Returns:  N/A
+ *-------------------------------------------------------------------*/
 static void DMXTx(uint8_t value)
 {
 	WRITE_PERI_REG(UART_FIFO_AHB_REG(DMX_UART), value);

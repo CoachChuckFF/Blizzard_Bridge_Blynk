@@ -1,4 +1,4 @@
-/* esp32_dmx.h
+/* dmx_artnet.h
    Copyright 2017 by Christian Krueger
 
 Copyright (c) 2017, Christian Krueger
@@ -30,36 +30,71 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -----------------------------------------------------------------------------------
 
-  Generic DMX object class
+  Artnet library, needs a internet connection before useful
 
  */
 
-#ifndef DMX_H
-#define DMX_H
+#ifndef DMX_ARTNET_H
+#define DMX_ARTNET_H
 
 #include <inttypes.h>
+#include "lwip/err.h"
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include "lwip/netdb.h"
+#include "lwip/dns.h"
+#include "lwip/udp.h"
+#include "lwip/ip4_addr.h"
+#include "lwip/ip6_addr.h"
 
-#define DMX_MAX_SLOTS 513 // 512 + start byte
-#define DMX_MIN_SLOTS 24
+#define ART_NET_PORT 0x1936 // or 6454
 
-/* If need be add in option to add in a buffer*/
+#define ART_POLL 0x2000
+#define ART_DMX 0x5000
+#define ART_DMX_OFFSET 18
+#define ART_PROTO_VER 14
 
-uint16_t getSlots(void);
+#define MAX_ARTNET_BUFFER 530
 
-void setSlots(uint16_t count);
+typedef struct ArtnetPacket {
+  uint8_t _id[8];
+  uint16_t _opcode;
+  uint16_t _protocol_version; //14
+  uint8_t _sequence;
+  uint8_t _physical;
+  uint8_t _universe;
+  uint8_t _universe_subnet;
+  uint8_t _slot_length_hi; //2 - 512 has to be even
+  uint8_t _slot_length_lo; //2 - 512 has to be even
+  uint8_t *_dmx_data; // no start bit
+} ArtnetPacket;
 
-uint8_t getDMXData(uint16_t slot);
+typedef struct ArtnetNode {
+  ArtnetPacket *_packet;
+  struct udp_pcb *_udp;
+  ip_addr_t *_own_ip;
+  ip_addr_t *_dest_ip;
+  uint16_t _port;
 
-void setDMXData(uint16_t slot, uint8_t value);
+} ArtnetNode;
 
-uint8_t* getDMXBuffer(void);
+/*External*/
+void startDMXArtnet(void);
 
-void clearDMX(void);
+/*Internal*/
+void createPacketArtnet(void);
+void sendDMXArtnet(void);
+void parsePacketArtnet(struct pbuf *p);
+void receiveDMXArtnet(void *arg,
+                  struct udp_pcb *pcb,
+                  struct pbuf *p,
+                  const ip_addr_t *addr,
+                  u16_t port);
+void udp_artnet_init(void);
 
-void maxDMX(void);
 
-void copyToDMX(uint8_t *buf, uint16_t start_index, uint16_t length);
 
-void copyFromDMX(uint8_t *buf, uint16_t start_index, uint16_t length);
 
-#endif // ifndef DMX_H
+extern ArtnetNode ARTNET;
+
+#endif // ifndef  DMX_ARTNET_H

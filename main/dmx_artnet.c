@@ -18,44 +18,50 @@
 #include "lwip/ip4_addr.h"
 #include "lwip/ip6_addr.h"
 
-#include "lib/esp32_artnet.h"
+#include "lib/dmx_artnet.h"
 #include "lib/dmx.h"
 
 static const char *TAG = "ARTNET";
 
 ArtnetNode ARTNET;
-ArtnetPacket PACKET;
+ArtnetPacket ARTNETPACKET;
 ip_addr_t ip;
 
 
 const uint8_t ARTNET_ID[8] = {'A','r','t','-','N','e','t',0};
 
-void startArtnet()
+void startDMXArtnet()
 {
-  PACKET._dmx_data = getDMXBuffer();
-  createPacket();
-  udp_art_init();
+  ARTNETPACKET._dmx_data = getDMXBuffer();
+  createPacketArtnet();
+  udp_artnet_init();
 
 }
 
-void sendDMX(void){
-  int i;
+void sendDMXArtnet(void){
+  int i, j;
   struct pbuf *p;
 
   //establish pbuf
   p = pbuf_alloc(PBUF_TRANSPORT, MAX_ARTNET_BUFFER ,PBUF_RAM);
 
+  //update dmx buffer
+  copyFromDMX(ARTNETPACKET._dmx_data, 1, DMX_MAX_SLOTS);
+
   //transfer payload
-
-  for(i = 0; i < MAX_ARTNET_BUFFER; i++)
-    ((uint8_t*)(p->payload))[i] = ((uint8_t*)(ARTNET._packet))[i];
-
+  for(i = 0, j = 1; i < MAX_ARTNET_BUFFER; i++)
+  {
+    if(i < ART_DMX_OFFSET)
+      ((uint8_t*)(p->payload))[i] = ((uint8_t*)(ARTNET._packet))[i]; //skip start bit
+    else
+      ((uint8_t*)(p->payload))[i] = ARTNET._packet->_dmx_data[j++];
+  }
   ESP_LOGI(TAG, "Send %d", udp_send(ARTNET._udp, p));
 
   pbuf_free(p);
 }
 
-void recieveDMX(void *arg,
+void recieveDMXArtnet(void *arg,
                   struct udp_pcb *pcb,
                   struct pbuf *p,
                   const ip_addr_t *addr,
@@ -75,7 +81,7 @@ FREE_P:
   pbuf_free(p);
 }
 
-void udp_art_init()
+void udp_artnet_init()
 {
   ARTNET._udp = udp_new();
   ARTNET._own_ip = IP_ADDR_ANY;
@@ -85,39 +91,39 @@ void udp_art_init()
   ESP_LOGI(TAG, "Bind %d",udp_bind(ARTNET._udp, ARTNET._own_ip, ARTNET._port));
   ESP_LOGI(TAG, "Connect %d", udp_connect(ARTNET._udp, ARTNET._dest_ip, ARTNET._port));
 
-  udp_recv(ARTNET._udp, recieveDMX ,NULL);
+  udp_recv(ARTNET._udp, recieveDMXArtnet ,NULL);
 
 }
-void parsePacket(struct pbuf *p)
+void parsePacketArtnet(struct pbuf *p)
 {
 
 }
 
 // add in varible slots
-void createPacket()
+void createPacketArtnet()
 {
   uint8_t i;
 
-  ARTNET._packet = &PACKET;
+  ARTNET._packet = &ARTNETPACKET;
 
   //copy artnet id
   for(i = 0; i < 8; i++)
-    PACKET._id[i] = ARTNET_ID[i];
+    ARTNETPACKET._id[i] = ARTNET_ID[i];
 
-  PACKET._opcode = ART_DMX;
+  ARTNETPACKET._opcode = ART_DMX;
 
-  PACKET._protocol_version = ART_PROTO_VER;
+  ARTNETPACKET._protocol_version = ART_PROTO_VER;
 
-  PACKET._sequence = 0;
+  ARTNETPACKET._sequence = 0;
 
-  PACKET._physical = 1;
+  ARTNETPACKET._physical = 1;
 
-  PACKET._universe = 1;
+  ARTNETPACKET._universe = 1;
 
-  PACKET._universe_subnet = 0;
+  ARTNETPACKET._universe_subnet = 0;
 
-  PACKET._slot_length_hi = (DMX_MAX_SLOTS >> 8) & 0xFF; //2 - 512 has to be even
-  PACKET._slot_length_lo = DMX_MAX_SLOTS & 0xFF; //2 - 512 has to be even
+  ARTNETPACKET._slot_length_hi = ((DMX_MAX_SLOTS - 1) >> 8) & 0xFF; //2 - 512 has to be even
+  ARTNETPACKET._slot_length_lo = (DMX_MAX_SLOTS - 1) & 0xFF; //2 - 512 has to be even
 
   clearDMX();
 }

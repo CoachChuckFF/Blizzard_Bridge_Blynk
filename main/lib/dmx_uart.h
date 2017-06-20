@@ -1,4 +1,4 @@
-/* esp32_dmx.h
+/* dmx_uart.h
    Copyright 2017 by Christian Krueger
 
 Copyright (c) 2017, Christian Krueger
@@ -46,7 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "driver/uart.h"
 #include "driver/gpio.h"
 
-#define DMX_TX_PIN 17
+#define DMX_TX_PIN 33
 #define DMX_RX_PIN 16
 
 #define DIRECTION_PIN 23
@@ -84,11 +84,8 @@ void uart_enable_interrupt(void);
 void uart_init(int baudrate);
 
 /* DMX Handler (User) Functions */
-void startDMX(uint8_t dir, uint16_t slots);
-void getDMX( void );
-void stopDMX( void );
-uint16_t getNumberOfSlots(void);
-void setNumberOfSlots(int slot);
+void startDMXUart(uint8_t dir);
+void stopDMXUart( void );
 
 /* Interrupt (Internal) handlers */
 static void txEmptyInterruptHandler(void);

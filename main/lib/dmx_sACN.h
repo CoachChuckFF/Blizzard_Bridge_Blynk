@@ -39,8 +39,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  */
 
-#ifndef ESP32_DMX_H
-#define ESP32_DMX_H
+#ifndef DMX_SACN_H
+#define DMX_SACN_H
 
 #include <inttypes.h>
 #include "lwip/err.h"
@@ -52,58 +52,50 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "lwip/ip4_addr.h"
 #include "lwip/ip6_addr.h"
 
-#define ART_NET_PORT 0x1936 // or 6454
+#define SACN_PORT 0x15C0 // or 5568
 
-#define ART_POLL 0x2000
-#define ART_DMX 0x5000
-#define ART_DMX_OFFSET 18
-#define ART_PROTO_VER 14
+#define MAX_SACN_BUFFER 638
 
-#define MAX_ARTNET_BUFFER 530
+#define SACN_DMX_OFFSET 125
+#define SACN_CID_LENGTH 16
 
-#define DMX_MAX_SLOTS 512
+#define SACN_SEQ_INDEX 111
+#define SACN_UNI_H_INDEX 113
+#define SACN_UNI_L_INDEX 114
+#define SACN_DMX_START_INDEX 125
+#define SACN_DMX_DATA_INDEX 126
 
-typedef struct ArtnetPacket {
-  uint8_t _id[8];
-  uint16_t _opcode;
-  uint16_t _protocol_version; //14
-  uint8_t _sequence;
-  uint8_t _physical;
-  uint8_t _universe;
-  uint8_t _universe_subnet;
-  uint8_t _slot_length_hi; //2 - 512 has to be even
-  uint8_t _slot_length_lo; //2 - 512 has to be even
+typedef struct sACNPacket {
+  uint8_t _packet_buffer[MAX_SACN_BUFFER];
   uint8_t *_dmx_data;
-} ArtnetPacket;
+  uint8_t _sequence;
+  uint16_t _universe;
+} sACNPacket;
 
-typedef struct ArtnetNode {
-  ArtnetPacket *_packet;
+typedef struct sACNNode {
+  sACNPacket *_packet;
   struct udp_pcb *_udp;
   ip_addr_t *_own_ip;
   ip_addr_t *_dest_ip;
   uint16_t _port;
 
-} ArtnetNode;
+} sACNNode;
 
 /*External*/
-void startArtnet(void);
-void setSlot(int slot, uint8_t value);
-void clearDMX(void);
+void startDMXsACN(void);
 
 /*Internal*/
-void createPacket(void);
-void sendDMX(void);
-void parsePacket(struct pbuf *p);
-void receiveDMX(void *arg,
+void createPacketsACN(void);
+void sendDMXsACN(uint16_t universe);
+void parsePacketsACN(struct pbuf *p);
+void receiveDMXsACN(void *arg,
                   struct udp_pcb *pcb,
                   struct pbuf *p,
                   const ip_addr_t *addr,
                   u16_t port);
-void udp_art_init(void);
+void udp_sacn_init(void);
 
+extern sACNNode SACN;
+extern sACNPacket SACNPACKET;
 
-
-
-extern ArtnetNode ARTNET;
-
-#endif // ifndef ESP32_DMX_H
+#endif // ifndef DMX_SACN
