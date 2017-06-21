@@ -130,7 +130,7 @@ void startDMXsACN(void);
 
 /*Internal*/
 void createDataPacketsACN(void);
-void sendDMXsACN(uint16_t universe);
+void sendDMXDatasACN(uint16_t universe);
 void parsePacketsACN(struct pbuf *p);
 void receiveDMXsACN(void *arg,
                   struct udp_pcb *pcb,

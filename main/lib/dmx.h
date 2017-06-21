@@ -44,11 +44,21 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #define MAX_NAME_LENGTH 64
 
+#define DMX_SEND 1
+#define DMX_RECEIVE 0
+
+#define DMX_ENABLE 1
+#define DMX_DISABLE 0
+
 /* If need be add in option to add in a buffer*/
 
 char* getName(void);
 
 void setName(char *name, uint8_t length);
+
+uint16_t getOwnUniverse(void);
+
+void setOwnUniverse(uint16_t universe);
 
 uint16_t getSlots(void);
 

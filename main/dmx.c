@@ -52,6 +52,7 @@ static const char *TAG = "DMX";
 
 static volatile uint8_t DMX[DMX_MAX_SLOTS];
 static char DEVICE_NAME[MAX_NAME_LENGTH];
+static uint16_t OWN_UNIVERSE;
 static uint16_t SLOTS = (DMX_MAX_SLOTS - 1);
 
 char* getName()
@@ -72,6 +73,16 @@ void setName(char *name, uint8_t length)
   for(i = 0; i < length; i++)
     DEVICE_NAME[i] = name[i];
   DEVICE_NAME[i] = '\0'; //null termination
+}
+
+uint16_t getOwnUniverse()
+{
+  return OWN_UNIVERSE;
+}
+
+void setOwnUniverse(uint16_t universe)
+{
+  OWN_UNIVERSE = universe;
 }
 
 uint16_t getSlots()

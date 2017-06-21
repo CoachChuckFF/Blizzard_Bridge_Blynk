@@ -49,10 +49,18 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #define ART_NET_PORT 0x1936 // or 6454
 
-#define ART_POLL 0x2000
-#define ART_DMX 0x5000
-#define ART_DMX_OFFSET 18
+#define ART_OP_DMX 0x5000
+#define ART_OP_POLL 0x2000
+#define ART_OP_POLL_REPLY 0x2100
+
 #define ART_PROTO_VER 14
+
+#define ART_OPCODE_U16_INDEX 4
+#define ART_DATA_UNIVERSE_H_INDEX 15
+#define ART_DATA_UNIVERSE_L_INDEX 14
+#define ART_DATA_SLOTS_H_INDEX 16
+#define ART_DATA_SLOTS_L_INDEX 17
+#define ART_DMX_DATA_INDEX 18
 
 #define MAX_ARTNET_BUFFER 530
 
@@ -62,12 +70,12 @@ typedef struct ArtnetPacket {
   uint16_t _protocol_version; //14
   uint8_t _sequence;
   uint8_t _physical;
-  uint8_t _universe;
-  uint8_t _universe_subnet;
+  uint8_t _universe_subnet; //low byte
+  uint8_t _universe; //high 7 bits
   uint8_t _slot_length_hi; //2 - 512 has to be even
   uint8_t _slot_length_lo; //2 - 512 has to be even
   uint8_t *_dmx_data; // no start bit
-} ArtnetPacket;
+}__attribute__((packed)) ArtnetPacket;
 
 typedef struct ArtnetNode {
   ArtnetPacket *_packet;
@@ -75,17 +83,22 @@ typedef struct ArtnetNode {
   ip_addr_t *_own_ip;
   ip_addr_t *_dest_ip;
   uint16_t _port;
+  uint8_t _direction;
+  uint8_t _enabled;
 
 } ArtnetNode;
 
 /*External*/
-void startDMXArtnet(void);
-
+void startDMXArtnet(uint8_t direction);
+void stopDMXArtnet(void);
+void sendDMXDataArtnet(uint16_t universe);
 /*Internal*/
 void createPacketArtnet(void);
-void sendDMXArtnet(void);
-void parsePacketArtnet(struct pbuf *p);
-void receiveDMXArtnet(void *arg,
+void sendPollReplyArtnet(struct pbuf *p, const ip_addr_t *addr);
+void sendPollArtnet(void); // run periodically in own thread
+void parsePollReplyArtnet(struct pbuf *p);
+void parseDMXDataPacketArtnet(struct pbuf *p);
+void recieveDMXArtnet(void *arg,
                   struct udp_pcb *pcb,
                   struct pbuf *p,
                   const ip_addr_t *addr,

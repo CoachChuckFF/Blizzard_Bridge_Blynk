@@ -179,21 +179,42 @@ static void http_get_task(void *pvParameters)
 
 static void test()
 {
-  uint8_t i = 0;
-  uint8_t j = 70;
+  uint16_t i = 0;
+  uint8_t j = 3;
   uint8_t k = 140;
   uint8_t l = 210;
+  uint8_t direction = DMX_SEND;
   xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
                       false, true, portMAX_DELAY);
   ESP_LOGI(TAG, "Connected to AP");
   setName((char*)"magic box", 9);
-  startDMXsACN();
-  setDMXData(1, 0xFF);
+  setOwnUniverse(1);
+  startDMXArtnet(direction);
   while(1)
   {
-    sendDMXsACN(1);
+    switch(direction)
+    {
+      case DMX_SEND:
+        for(i = 1; i < DMX_MAX_SLOTS; i++)
+          setDMXData(i, i * j);
+        j++;
+        sendDMXDataArtnet(1);
+        vTaskDelay(1000 / portTICK_RATE_MS);
+      break;
+      case DMX_RECEIVE:
+        printf("\n------------ START -------------\n");
 
-    vTaskDelay(10000 / portTICK_RATE_MS);
+        for(i = 0; i < 513; i++)
+        {
+          if(!(i%32))
+            printf("\n");
+          if(getDMXData(i))
+            printf(" %d-%d ", i, getDMXData(i));
+        }
+        printf("\n------------ END -------------\n");
+        vTaskDelay(5000 / portTICK_RATE_MS);
+      break;
+    }
 
   }
 }

@@ -37,7 +37,7 @@ void startDMXsACN()
   udp_sacn_init();
 }
 
-void sendDMXsACN(uint16_t universe){
+void sendDMXDatasACN(uint16_t universe){
   int i, j;
   struct pbuf *p;
 
