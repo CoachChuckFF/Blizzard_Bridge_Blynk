@@ -4,12 +4,9 @@
     @author   Christian Krueger
     @license  BSD (see esp32_dmx.h)
     @copyright 2017 by Christian Krueger
-
     DMX UART Driver for esp32_dmx
 		Uses UART2 for tx and rx
-
     @section  HISTORY
-
     v1.0 - First release
 */
 /**************************************************************************/

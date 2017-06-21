@@ -28,7 +28,7 @@ sACNPacket SACNPACKET;
 ip_addr_t ip;
 
 
-const uint8_t sCAN_ID[11] = {0, 0x10, 'A','S','C','-','E','1','.','1','7'};
+const uint8_t sCAN_ID[9] = {'A','S','C','-','E','1','.','1','7'};
 
 void startDMXsACN()
 {
@@ -111,11 +111,14 @@ void createPacketsACN()
 {
   uint16_t i;
 
-  for(i = 0; i < 126; i++)
+  for(i = 0; i < MAX_SACN_BUFFER; i++)
     SACNPACKET._packet_buffer[i] = 0;        // zero outside layers & start code
 
+  SACNPACKET._packet_buffer[0] = 0x00;
+  SACNPACKET._packet_buffer[1] = 0x10;
+
   for(i = 0; i < (sizeof(sCAN_ID)/sizeof(uint8_t)); i++)
-    SACNPACKET._packet_buffer[i] = sCAN_ID[i];
+    SACNPACKET._packet_buffer[i + 4] = sCAN_ID[i]; //starts at packet index 4
 
    uint16_t fplusl = getSlots() + 110 + 0x7000;
    SACNPACKET._packet_buffer[16] = fplusl >> 8;

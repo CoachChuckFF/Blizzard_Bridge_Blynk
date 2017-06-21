@@ -127,7 +127,9 @@ wifi_main.o: /home/penguin/Programio/blizzard-esp/main/./wifi_main.c \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/priv/memp_priv.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
- /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -386,3 +388,7 @@ wifi_main.o: /home/penguin/Programio/blizzard-esp/main/./wifi_main.c \
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
