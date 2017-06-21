@@ -24,18 +24,17 @@
 static const char *TAG = "ARTNET";
 
 sACNNode SACN;
-sACNPacket SACNPACKET;
+sACNDataPacket SACNPACKET;
+char SACNNAME[64];
 ip_addr_t ip;
 
-
-const uint8_t sCAN_ID[9] = {'A','S','C','-','E','1','.','1','7'};
+const uint8_t ACN_ID[12] = {'A','S','C','-','E','1','.','3','1', 0, 0, 0};
+const uint8_t CID[16] = {'B','e','e','p','B','e','e','p','B','l','i','z','z','a','r','d'};
 
 void startDMXsACN()
 {
-  SACNPACKET._dmx_data = getDMXBuffer();
-  createPacketsACN();
+  createDataPacketsACN();
   udp_sacn_init();
-
 }
 
 void sendDMXsACN(uint16_t universe){
@@ -45,10 +44,13 @@ void sendDMXsACN(uint16_t universe){
   //establish pbuf
   p = pbuf_alloc(PBUF_TRANSPORT, MAX_SACN_BUFFER ,PBUF_RAM);
 
-  SACNPACKET._packet_buffer[SACN_SEQ_INDEX] = (!SACNPACKET._sequence) ? 1 : SACNPACKET._sequence++;
+  SACNPACKET._universe_h =  universe >> 8;
+  SACNPACKET._universe_l =  universe & 0xff;
 
-  SACNPACKET._packet_buffer[SACN_UNI_H_INDEX] =  universe >> 8;
-  SACNPACKET._packet_buffer[SACN_UNI_L_INDEX] =  universe & 0xff;
+  //update name?
+  //
+  //
+
 
   //transfer payload
 
@@ -57,8 +59,11 @@ void sendDMXsACN(uint16_t universe){
     if(i < SACN_DMX_START_INDEX)
       ((uint8_t*)(p->payload))[i] = ((uint8_t*)(SACN._packet))[i]; //skip start bit
     else
-      ((uint8_t*)(p->payload))[i] = ((uint8_t*)(SACN._packet->_dmx_data))[j++]; //sACN uses a start bit
+      ((uint8_t*)(p->payload))[i] = (SACN._packet->_dmx_data)[j++]; //sACN uses a start bit
   }
+
+  //increment sequence
+  SACNPACKET._sequence = (!SACNPACKET._sequence) ? 1 : SACNPACKET._sequence + 1;
 
   ESP_LOGI(TAG, "Send %d", udp_send(SACN._udp, p));
 
@@ -107,50 +112,69 @@ void parsePacketsACN(struct pbuf *p)
 }
 
 // add in varible slots
-void createPacketsACN()
+void createDataPacketsACN()
 {
-  uint16_t i;
+  uint16_t i, flag_length;
+  char *name = getName();
 
-  for(i = 0; i < MAX_SACN_BUFFER; i++)
-    SACNPACKET._packet_buffer[i] = 0;        // zero outside layers & start code
+/********* Root Layer *******************/
 
-  SACNPACKET._packet_buffer[0] = 0x00;
-  SACNPACKET._packet_buffer[1] = 0x10;
+  SACNPACKET._preamble_size = SACN_PREAMBLE_SIZE;
+  SACNPACKET._postamble_size = SACN_POSTABMLE_SIZE;
 
-  for(i = 0; i < (sizeof(sCAN_ID)/sizeof(uint8_t)); i++)
-    SACNPACKET._packet_buffer[i + 4] = sCAN_ID[i]; //starts at packet index 4
+  for(i = 0; i < (sizeof(ACN_ID)/sizeof(uint8_t)); i++)
+    SACNPACKET._acn_id[i] = ACN_ID[i];
 
-   uint16_t fplusl = getSlots() + 110 + 0x7000;
-   SACNPACKET._packet_buffer[16] = fplusl >> 8;
-   SACNPACKET._packet_buffer[17] = fplusl & 0xff;
-   SACNPACKET._packet_buffer[21] = 0x04;
-   fplusl = getSlots() + 88 + 0x7000;
-   SACNPACKET._packet_buffer[38] = fplusl >> 8;
-   SACNPACKET._packet_buffer[39] = fplusl & 0xff;
-   SACNPACKET._packet_buffer[43] = 0x02;
-   SACNPACKET._packet_buffer[44] = 'A';
-   SACNPACKET._packet_buffer[45] = 'r';
-   SACNPACKET._packet_buffer[46] = 'd';
-   SACNPACKET._packet_buffer[47] = 'u';
-   SACNPACKET._packet_buffer[48] = 'i';
-   SACNPACKET._packet_buffer[49] = 'n';
-   SACNPACKET._packet_buffer[50] = 'o';
-   SACNPACKET._packet_buffer[108] = 100;    //priority
+  //low 12 bits PDU length high 4 bits 0x7
+  flag_length = getSlots() + 110 + 0x7000;
+  SACNPACKET._flags_length_h = flag_length >> 8;
+  SACNPACKET._flags_length_l = flag_length & 0xFF;
 
-   SACNPACKET._sequence = 1;
+  SACNPACKET._root_vector = VECTOR_ROOT_E131_DATA;
 
-   SACNPACKET._packet_buffer[111] =  SACNPACKET._sequence;
-   SACNPACKET._packet_buffer[113] =  SACNPACKET._universe >> 8;
-   SACNPACKET._packet_buffer[114] =  SACNPACKET._universe & 0xff;
-   fplusl = getSlots() + 11 + 0x7000;
-   SACNPACKET._packet_buffer[115] = fplusl >> 8;
-   SACNPACKET._packet_buffer[116] = fplusl & 0xff;
-   SACNPACKET._packet_buffer[117] = 0x02;
-   SACNPACKET._packet_buffer[118] = 0xa1;
-   SACNPACKET._packet_buffer[122] = 0x01;
-   fplusl = getSlots() + 1;
-   SACNPACKET._packet_buffer[123] = fplusl >> 8;
-   SACNPACKET._packet_buffer[124] = fplusl & 0xFF;
+  for(i = 0; i < (sizeof(CID)/sizeof(uint8_t)); i++)
+    SACNPACKET._cid[i] = CID[i];
 
-  clearDMX();
+/********* Frame Layer *******************/
+
+  flag_length = getSlots() + 88 + 0x7000;
+  SACNPACKET._frame_flength_h = flag_length >> 8;
+  SACNPACKET._frame_flength_l = flag_length & 0xFF;
+
+  SACNPACKET._frame_vector = VECTOR_E131_DATA_PACKET;
+
+  for(i = 0; i < MAX_NAME_LENGTH; i++)
+    SACNPACKET._source_name[i] = name[i];
+
+  SACNPACKET._priority = SACN_PRIORITY_DEFAULT;
+
+  SACNPACKET._sync_address = 0x00;
+
+  SACNPACKET._sequence = 0x01; //this increments as time goes on in sendDMXsACN (no seq 0!)
+
+  SACNPACKET._options = 0x00;
+
+  SACNPACKET._universe_h = 0x00; //this will be set in sendDMXsACN
+  SACNPACKET._universe_l = 0x00;
+
+/********* DMP Layer *******************/
+
+  flag_length = getSlots() + 11 + 0x7000;
+  SACNPACKET._dmp_flength_h = flag_length >> 8;
+  SACNPACKET._dmp_flength_l = flag_length & 0xFF;
+
+  SACNPACKET._dmp_vector = VECTOR_DMP_SET_PROPERTY;
+
+  SACNPACKET._type = SACN_ADDRESS_DATA_TYPE;
+
+  SACNPACKET._first_address = SACN_FIRST_ADDRESS_DEFAULT;
+
+  SACNPACKET._address_increment = SACN_FIRST_ADDRESS_INCREMENT_DEFAULT;
+
+  flag_length = getSlots() + 1;
+  SACNPACKET._dmx_slots_h = flag_length >> 8;
+  SACNPACKET._dmx_slots_l = flag_length && 0xFF;
+
+  SACNPACKET._dmx_data = getDMXBuffer(); //just a pointer, will copy data in sendDMXsACN
+
 }

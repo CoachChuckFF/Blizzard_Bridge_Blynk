@@ -42,7 +42,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define DMX_MAX_SLOTS 513 // 512 + start byte
 #define DMX_MIN_SLOTS 24
 
+#define MAX_NAME_LENGTH 64
+
 /* If need be add in option to add in a buffer*/
+
+char* getName(void);
+
+void setName(char *name, uint8_t length);
 
 uint16_t getSlots(void);
 

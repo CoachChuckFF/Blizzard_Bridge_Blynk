@@ -50,8 +50,29 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 static const char *TAG = "DMX";
 
-static uint8_t DMX[DMX_MAX_SLOTS];
+static volatile uint8_t DMX[DMX_MAX_SLOTS];
+static char DEVICE_NAME[MAX_NAME_LENGTH];
 static uint16_t SLOTS = (DMX_MAX_SLOTS - 1);
+
+char* getName()
+{
+  return DEVICE_NAME;
+}
+
+//length is assuming the user did not include a null termination
+void setName(char *name, uint8_t length)
+{
+  uint8_t i;
+  if(length - 1 > MAX_NAME_LENGTH)
+  {
+    ESP_LOGI(TAG, "Name too long %d", length);
+    return;
+  }
+
+  for(i = 0; i < length; i++)
+    DEVICE_NAME[i] = name[i];
+  DEVICE_NAME[i] = '\0'; //null termination
+}
 
 uint16_t getSlots()
 {
