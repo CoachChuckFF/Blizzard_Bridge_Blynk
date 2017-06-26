@@ -2290,6 +2290,8 @@ END GROUP
                 0x0000000040062df4                PROVIDE (esp_rom_spiflash_write_encrypted_enable, 0x40062df4)
                 0x0000000040062e1c                PROVIDE (esp_rom_spiflash_prepare_encrypted_data, 0x40062e1c)
                 [!provide]                        PROVIDE (esp_rom_spiflash_select_qio_pins, 0x40061ddc)
+                [!provide]                        PROVIDE (esp_rom_spiflash_attach, 0x40062a6c)
+                [!provide]                        PROVIDE (esp_rom_spiflash_config_clk, 0x40062bc8)
                 0x000000003ffae270                PROVIDE (g_rom_spiflash_chip, 0x3ffae270)
                 [!provide]                        PROVIDE (FilePacketSendDeflatedReqMsgProc, 0x40008b24)
                 [!provide]                        PROVIDE (FilePacketSendReqMsgProc, 0x40008860)

@@ -28,7 +28,7 @@ uint8_t octet = 0;
 
 void ArduinoLoop()
 {
-  //initArduino();
+  initArduino();
   Blynk.begin(auth, ssid, pass);
   while(1)
   {
