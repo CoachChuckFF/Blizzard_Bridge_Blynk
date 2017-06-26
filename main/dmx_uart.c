@@ -149,7 +149,7 @@ if(DMX._direction == DMX_SEND)
 	UART[DMX_UART]->int_ena.tx_done = 1;
 	UART[DMX_UART]->conf1.txfifo_empty_thrhd = 1;
 	UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
-	xTaskCreate(&handleMAB, "MAB", 2048, NULL, 5, NULL);
+	xTaskCreate(&handleMAB, "MAB", 2048, NULL, 15, NULL);
 }
 else //DMX_RECEIVE
 {

@@ -88,7 +88,6 @@ port/coap_io_socket.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/debug.h \
- /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/mem.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/coap_io.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/address.h \
@@ -270,8 +269,6 @@ port/coap_io_socket.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/debug.h:
-
-/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h:
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/mem.h:
 

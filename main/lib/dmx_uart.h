@@ -33,6 +33,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef DMX_UART_H
 #define DMX_UART_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "driver/uart.h"
 #include "driver/gpio.h"
@@ -79,5 +83,9 @@ static void handleMAB(void);
 static void DMXTx(uint8_t value);
 
 extern ESP32DMX DMX;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ifndef DMX_UART_H

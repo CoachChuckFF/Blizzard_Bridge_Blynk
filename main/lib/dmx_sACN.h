@@ -42,6 +42,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef DMX_SACN_H
 #define DMX_SACN_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "lwip/err.h"
 #include "lwip/sockets.h"
@@ -141,5 +145,9 @@ void udp_sacn_init(void);
 
 extern sACNNode SACN;
 extern sACNDataPacket SACNPACKET;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ifndef DMX_SACN

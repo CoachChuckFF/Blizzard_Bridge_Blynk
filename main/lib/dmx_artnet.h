@@ -37,6 +37,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef DMX_ARTNET_H
 #define DMX_ARTNET_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 #include "lwip/err.h"
 #include "lwip/sockets.h"
@@ -109,5 +113,9 @@ void udp_artnet_init(void);
 
 
 extern ArtnetNode ARTNET;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ifndef  DMX_ARTNET_H

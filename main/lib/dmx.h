@@ -37,6 +37,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #ifndef DMX_H
 #define DMX_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <inttypes.h>
 
 #define DMX_MAX_SLOTS 513 // 512 + start byte
@@ -77,5 +81,9 @@ void maxDMX(void);
 void copyToDMX(uint8_t *buf, uint16_t start_index, uint16_t length);
 
 void copyFromDMX(uint8_t *buf, uint16_t start_index, uint16_t length);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // ifndef DMX_H

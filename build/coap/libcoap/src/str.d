@@ -82,14 +82,10 @@ libcoap/src/str.o: \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/inet.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/debug.h \
- /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h \
- /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/uri.h \
- /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/hashkey.h \
+ /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/mem.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/str.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
- /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/mem.h \
- /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/str.h
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h
 
 /home/penguin/Programio/esp-idf/components/coap/port/include/coap_config.h:
 
@@ -255,18 +251,10 @@ libcoap/src/str.o: \
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/debug.h:
 
-/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h:
-
-/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/uri.h:
-
-/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/hashkey.h:
+/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/mem.h:
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/str.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
-
-/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/mem.h:
-
-/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/str.h:

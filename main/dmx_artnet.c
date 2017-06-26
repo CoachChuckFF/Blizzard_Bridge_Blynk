@@ -58,7 +58,7 @@ void udp_artnet_init()
   ARTNET._port = ART_NET_PORT;
   ESP_LOGI(TAG, "Bind %d",udp_bind(ARTNET._udp, ARTNET._own_ip, ARTNET._port));
   //move to send?
-  ESP_LOGI(TAG, "Connect %d", udp_connect(ARTNET._udp, ARTNET._dest_ip, ARTNET._port));
+  //ESP_LOGI(TAG, "Connect %d", udp_connect(ARTNET._udp, ARTNET._dest_ip, ARTNET._port));
 
   udp_recv(ARTNET._udp, recieveDMXArtnet ,NULL);
 
@@ -97,11 +97,15 @@ void sendDMXDataArtnet(uint16_t universe){
   int i, j;
   struct pbuf *p;
 
+
+
   if(ARTNET._enabled != DMX_ENABLE)
   {
     ESP_LOGI(TAG, "You silly, call startDMXArtnet(DMX_SEND/DMX_RECEIVE) first!")
     return;
   }
+
+  ESP_LOGI(TAG, "Connect %d", udp_connect(ARTNET._udp, ARTNET._dest_ip, ARTNET._port));
 
   //establish pbuf
   p = pbuf_alloc(PBUF_TRANSPORT, MAX_ARTNET_BUFFER ,PBUF_RAM);
@@ -171,19 +175,19 @@ void recieveDMXArtnet(void *arg,
         goto FREE_P;
       }
       parseDMXDataPacketArtnet(p);
-      ESP_LOGI(TAG, "Artnet DMX Data");
+      //ESP_LOGI(TAG, "Artnet DMX Data");
     break;
     case ART_OP_POLL:
       sendPollReplyArtnet(p, addr);
-      ESP_LOGI(TAG, "Artnet Poll");
+      //ESP_LOGI(TAG, "Artnet Poll");
     break;
     case ART_OP_POLL_REPLY:
       parsePollReplyArtnet(p);
-      ESP_LOGI(TAG, "Artnet Poll Reply");
+      //ESP_LOGI(TAG, "Artnet Poll Reply");
     break;
   }
 
-  ESP_LOGI(TAG, ":)");
+  //ESP_LOGI(TAG, ":)");
 
 FREE_P:
 
@@ -209,7 +213,7 @@ void parseDMXDataPacketArtnet(struct pbuf *p)
   //copy over dmx data into global DMX array
   slots = ((uint16_t)((uint8_t*)p->payload)[ART_DATA_SLOTS_H_INDEX]) << 8;
   slots |= ((uint16_t)((uint8_t*)p->payload)[ART_DATA_SLOTS_L_INDEX]) && 0xFF;
-  ESP_LOGI(TAG, "DMX slots recieved %d", slots);
+  //ESP_LOGI(TAG, "DMX slots recieved %d", slots);
 
   dmx_data = getDMXBuffer();
 

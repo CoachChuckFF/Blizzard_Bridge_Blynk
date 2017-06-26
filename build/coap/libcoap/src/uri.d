@@ -90,9 +90,9 @@ libcoap/src/uri.o: \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/uri.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/hashkey.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/str.h \
- /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/option.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/bits.h \
+ /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h \
  /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/uri.h
 
 /home/penguin/Programio/esp-idf/components/coap/port/include/coap_config.h:
@@ -275,10 +275,10 @@ libcoap/src/uri.o: \
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/str.h:
 
-/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h:
-
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/option.h:
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/bits.h:
+
+/home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/pdu.h:
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/uri.h:

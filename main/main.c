@@ -1,4 +1,4 @@
-/* HTTP GET Example using plain POSIX sockets
+/* Uart Example
 
    This example code is in the Public Domain (or CC0 licensed, at your option.)
 
@@ -25,14 +25,35 @@
 
 #include "lib/dmx_artnet.h"
 #include "lib/dmx_sACN.h"
+#include "esp_log.h"
+#include "soc/uart_struct.h"
 #include "lib/dmx.h"
+//#include "lib/dmx_uart.h"
+#include <stdio.h>
+#include "lib/dmx_uart.h"
+#include "lib/dmx.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
+#include "nvs_flash.h"
+#include "esp_log.h"
+#include "lib/main_arduino.h"
+#include "Arduino.h"
 
-/* The examples use simple WiFi configuration that you can set via
-   'make menuconfig'.
+static const char *TAG = "DMX UART EXAMPLE";
 
-   If you'd rather not, just change the below entries to strings with
-   the config you want - ie #define EXAMPLE_WIFI_SSID "mywifissid"
-*/
+#define UART_DMX UART_NUM_2
+#define DMX_TX_PIN 25
+#define DMX_RX_PIN 26
+#define DMX_DATA_BAUD		250000
+#define DMX_BREAK_BAUD 	 88000
+
+#define DMX_STATE_START 0
+#define DMX_STATE_DATA 1
+#define DMX_STATE_BREAK 2
+#define DMX_STATE_MAB 3
+#define DMX_STATE_IDLE 4
+
 #define EXAMPLE_WIFI_SSID "blizznet"
 #define EXAMPLE_WIFI_PASS "destroyer"
 
@@ -44,17 +65,9 @@ static EventGroupHandle_t wifi_event_group;
    to the AP with an IP? */
 const int CONNECTED_BIT = BIT0;
 
-/* Constants that aren't configurable in menuconfig */
-#define WEB_SERVER "example.com"
-#define WEB_PORT 80
-#define WEB_URL "http://example.com/"
+int state;
 
-static const char *TAG = "example";
-
-static const char *REQUEST = "GET " WEB_URL " HTTP/1.1\n"
-    "Host: "WEB_SERVER"\n"
-    "User-Agent: esp-idf/1.0 esp32\n"
-    "\n";
+uint8_t dmx[513];
 
 static esp_err_t event_handler(void *ctx, system_event_t *event)
 {
@@ -97,95 +110,15 @@ static void initialise_wifi(void)
     ESP_ERROR_CHECK( esp_wifi_start() );
 }
 
-static void http_get_task(void *pvParameters)
-{
-    const struct addrinfo hints = {
-        .ai_family = AF_INET,
-        .ai_socktype = SOCK_STREAM,
-    };
-    struct addrinfo *res;
-    struct in_addr *addr;
-    int s, r;
-    char recv_buf[64];
-
-    while(1) {
-        /* Wait for the callback to set the CONNECTED_BIT in the
-           event group.
-        */
-        xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
-                            false, true, portMAX_DELAY);
-        ESP_LOGI(TAG, "Connected to AP");
-
-        int err = getaddrinfo(WEB_SERVER, "80", &hints, &res);
-
-        if(err != 0 || res == NULL) {
-            ESP_LOGE(TAG, "DNS lookup failed err=%d res=%p", err, res);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-            continue;
-        }
-
-        /* Code to print the resolved IP.
-
-           Note: inet_ntoa is non-reentrant, look at ipaddr_ntoa_r for "real" code */
-        addr = &((struct sockaddr_in *)res->ai_addr)->sin_addr;
-        ESP_LOGI(TAG, "DNS lookup succeeded. IP=%s", inet_ntoa(*addr));
-
-        s = socket(res->ai_family, res->ai_socktype, 0);
-        if(s < 0) {
-            ESP_LOGE(TAG, "... Failed to allocate socket.");
-            freeaddrinfo(res);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-            continue;
-        }
-        ESP_LOGI(TAG, "... allocated socket\r\n");
-
-        if(connect(s, res->ai_addr, res->ai_addrlen) != 0) {
-            ESP_LOGE(TAG, "... socket connect failed errno=%d", errno);
-            close(s);
-            freeaddrinfo(res);
-            vTaskDelay(4000 / portTICK_PERIOD_MS);
-            continue;
-        }
-
-        ESP_LOGI(TAG, "... connected");
-        freeaddrinfo(res);
-
-        if (write(s, REQUEST, strlen(REQUEST)) < 0) {
-            ESP_LOGE(TAG, "... socket send failed");
-            close(s);
-            vTaskDelay(4000 / portTICK_PERIOD_MS);
-            continue;
-        }
-        ESP_LOGI(TAG, "... socket send success");
-
-        /* Read HTTP response */
-        do {
-            bzero(recv_buf, sizeof(recv_buf));
-            r = read(s, recv_buf, sizeof(recv_buf)-1);
-            for(int i = 0; i < r; i++) {
-                putchar(recv_buf[i]);
-            }
-        } while(r > 0);
-
-        ESP_LOGI(TAG, "... done reading from socket. Last read return=%d errno=%d\r\n", r, errno);
-        close(s);
-        for(int countdown = 10; countdown >= 0; countdown--) {
-            ESP_LOGI(TAG, "%d... ", countdown);
-            vTaskDelay(1000 / portTICK_PERIOD_MS);
-        }
-        ESP_LOGI(TAG, "Starting again!");
-    }
-}
-
 static void test()
 {
   uint16_t i = 0;
   uint8_t j = 3;
   uint8_t k = 140;
   uint8_t l = 210;
-  uint8_t direction = DMX_SEND;
-  xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
-                      false, true, portMAX_DELAY);
+  uint8_t direction = DMX_RECEIVE;
+  //xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
+                      //false, true, portMAX_DELAY);
   ESP_LOGI(TAG, "Connected to AP");
   setName((char*)"magic box", 9);
   setOwnUniverse(1);
@@ -195,9 +128,9 @@ static void test()
     switch(direction)
     {
       case DMX_SEND:
-        for(i = 1; i < DMX_MAX_SLOTS; i++)
+        /*for(i = 1; i < DMX_MAX_SLOTS; i++)
           setDMXData(i, i * j);
-        j++;
+        j++;*/
         sendDMXDataArtnet(1);
         vTaskDelay(1000 / portTICK_RATE_MS);
       break;
@@ -221,7 +154,67 @@ static void test()
 
 void app_main()
 {
-    nvs_flash_init();
-    initialise_wifi();
-    xTaskCreate(&test, "test", 2048, NULL, 5, NULL);
+  uint8_t* data;
+  uart_config_t uart_config = {
+    .baud_rate = DMX_DATA_BAUD,
+    .data_bits = UART_DATA_8_BITS,
+    .parity = UART_PARITY_DISABLE,
+    .stop_bits = UART_STOP_BITS_1,
+    .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+    .rx_flow_ctrl_thresh = 122
+  };
+
+  //nvs_flash_init();
+  //initialise_wifi();
+  initArduino();
+  xTaskCreate(&ArduinoLoop, "Arduino Core", 2048, NULL, 10, NULL);
+  vTaskDelay(10000 / portTICK_RATE_MS);
+  clearDMX();
+  //setOwnUniverse(1);
+  //startDMXArtnet(DMX_RECEIVE);
+  //xTaskCreate(&test, "test", 2048, NULL, 5, NULL);*/
+  ESP_LOGI(TAG, "UART config");
+
+  uart_param_config(UART_DMX, &uart_config);
+
+  uart_set_pin(UART_DMX, DMX_TX_PIN, DMX_RX_PIN,
+  	UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+
+  uart_driver_install(UART_DMX, 1024 * 2, 0, 0, NULL, 0);
+
+  state = DMX_STATE_START;
+
+  for(;;)
+  {
+    switch( state )
+    {
+        case DMX_STATE_START:
+          uart_set_baudrate(UART_DMX, DMX_DATA_BAUD);
+          uart_set_stop_bits(UART_DMX, UART_STOP_BITS_2);
+          state = DMX_STATE_DATA;
+        break;
+        case DMX_STATE_DATA:
+          uart_write_bytes(UART_DMX, (const char *) getDMXBuffer(), DMX_MAX_SLOTS);
+          state = DMX_STATE_BREAK;
+        break;
+        case DMX_STATE_BREAK:
+          uart_wait_tx_done(UART_DMX, 10);
+          //vTaskDelay(3);
+          uart_set_baudrate(UART_DMX, DMX_BREAK_BAUD);
+          uart_set_stop_bits(UART_DMX, UART_STOP_BITS_1);
+          uart_write_bytes(UART_DMX, (const char *) getDMXBuffer(), 1);
+          state = DMX_STATE_MAB;
+        break;
+        case DMX_STATE_MAB:
+          uart_wait_tx_done(UART_DMX, 10);
+          //vTaskDelay(2);
+          state = DMX_STATE_START;
+        break;
+    }
+
+  }
+
+  // Debug console
+  //Serial.begin(9600);
+
 }
