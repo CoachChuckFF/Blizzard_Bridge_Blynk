@@ -37,6 +37,9 @@ port/debug/lwip_debug.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -53,7 +56,6 @@ port/debug/lwip_debug.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -71,8 +73,6 @@ port/debug/lwip_debug.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netbuf.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/pbuf.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h \
@@ -171,6 +171,12 @@ port/debug/lwip_debug.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
@@ -202,8 +208,6 @@ port/debug/lwip_debug.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -238,10 +242,6 @@ port/debug/lwip_debug.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netbuf.h:
 

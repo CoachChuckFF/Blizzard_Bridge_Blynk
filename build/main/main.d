@@ -1,26 +1,23 @@
 main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/newlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/config.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/ieeefp.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/features.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/reent.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/_types.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/_default_types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/lock.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/inttypes.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -54,8 +51,15 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h \
@@ -72,11 +76,12 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
  /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
@@ -96,29 +101,22 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/def.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
- /home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/inttypes.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/inet.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sys.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/udp.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/pbuf.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netif.h \
@@ -130,11 +128,42 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
- /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h \
- /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_uart.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/main_arduino.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Arduino.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/math.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-log.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-matrix.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-uart.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-gpio.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-touch.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-dac.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-adc.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-spi.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-i2c.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-ledc.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-sigmadelta.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-timer.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-bt.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/stdlib_noniso.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/binary.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/variants/esp32/pins_arduino.h
 
-/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
+/home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h:
 
@@ -148,10 +177,6 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/_default_types.h:
-
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/reent.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h:
@@ -160,23 +185,21 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/_types.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/_default_types.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/lock.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/string.h:
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+/home/penguin/Programio/esp-idf/components/newlib/include/inttypes.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -244,9 +267,23 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
 
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
+
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h:
 
@@ -280,15 +317,17 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h:
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
-
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h:
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
 
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h:
+
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 
 /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
 
@@ -328,8 +367,6 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
 
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
@@ -342,25 +379,11 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
 
-/home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
-
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
-
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
-
-/home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/inttypes.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h:
 
@@ -373,6 +396,8 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/udp.h:
 
@@ -396,8 +421,70 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h:
 
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
+
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
 
-/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h:
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
 
-/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h:
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_uart.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/main_arduino.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Arduino.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/math.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-log.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-matrix.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-uart.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-gpio.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-touch.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-dac.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-adc.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-spi.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-i2c.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-ledc.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-sigmadelta.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-timer.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-bt.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/stdlib_noniso.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/binary.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/variants/esp32/pins_arduino.h:

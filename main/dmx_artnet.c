@@ -34,11 +34,11 @@ const uint8_t ARTNET_ID[8] = {'A','r','t','-','N','e','t',0};
 void startDMXArtnet(uint8_t direction)
 {
 
-  if(ARTNET._enabled == DMX_ENABLE)
+  if(ARTNET._enabled == ENABLE)
     stopDMXArtnet();
 
   ARTNET._direction = direction;
-  ARTNET._enabled = DMX_ENABLE;
+  ARTNET._enabled = ENABLE;
   createPacketArtnet();
   udp_artnet_init();
 
@@ -46,7 +46,7 @@ void startDMXArtnet(uint8_t direction)
 
 void stopDMXArtnet()
 {
-  ARTNET._enabled = DMX_DISABLE;
+  ARTNET._enabled = DISABLE;
 }
 
 void udp_artnet_init()
@@ -99,9 +99,9 @@ void sendDMXDataArtnet(uint16_t universe){
 
 
 
-  if(ARTNET._enabled != DMX_ENABLE)
+  if(ARTNET._enabled != ENABLE)
   {
-    ESP_LOGI(TAG, "You silly, call startDMXArtnet(DMX_SEND/DMX_RECEIVE) first!")
+    ESP_LOGI(TAG, "You silly, call startDMXArtnet(SEND/RECEIVE) first!")
     return;
   }
 
@@ -130,9 +130,9 @@ void sendDMXDataArtnet(uint16_t universe){
 
 void sendPollArtnet()
 {
-  if(ARTNET._enabled != DMX_ENABLE)
+  if(ARTNET._enabled != ENABLE)
   {
-    ESP_LOGI(TAG, "You silly, call startDMXArtnet(DMX_SEND/DMX_RECEIVE) first!")
+    ESP_LOGI(TAG, "You silly, call startDMXArtnet(SEND/RECEIVE) first!")
     return;
   }
 }
@@ -169,7 +169,7 @@ void recieveDMXArtnet(void *arg,
   switch(opcode)
   {
     case ART_OP_DMX:
-      if(ARTNET._direction != DMX_RECEIVE)
+      if(ARTNET._direction != RECEIVE)
       {
         ESP_LOGI(TAG, "Not in Receive Mode %d", ARTNET._direction);
         goto FREE_P;

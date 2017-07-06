@@ -41,24 +41,94 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 extern "C" {
 #endif
 
+#include <string.h>
 #include <inttypes.h>
+#include "esp_system.h"
+#include "esp_wifi.h"
+#include "esp_event_loop.h"
+#include "esp_log.h"
+#include "esp_system.h"
+#include "esp_partition.h"
+#include "nvs_flash.h"
+#include "nvs.h"
 
+//globals
+#define SEND 1
+#define RECEIVE 0
+
+#define ENABLE 1
+#define DISABLE 0
+
+//Modes
+#define ETHERNET_MODE 0
+#define WIFI_MODE 1
+#define DMX_MODE 2
+#define WDMX 3
+
+//Sub Modes
+#define ARTNET_MODE 0
+#define SACN_MODE 1
+#define BLYNK_MODE 2
+
+//Max and Mins
 #define DMX_MAX_SLOTS 513 // 512 + start byte
 #define DMX_MIN_SLOTS 24
 
-#define MAX_NAME_LENGTH 64
+#define NAME_MAX_LENGTH 64
+#define SSID_MAX_LENGTH 32
+#define PASS_MAX_LENGTH 32
 
-#define DMX_SEND 1
-#define DMX_RECEIVE 0
+//flags
+extern uint8_t device_name_changed;
+extern uint8_t com_made_changed;
+extern uint8_t com_sub_mode_changed;
+extern uint8_t own_ip_changed;
+extern uint8_t own_address_changed;
+extern uint8_t own_universe_changed;
+extern uint8_t slots_changed;
 
-#define DMX_ENABLE 1
-#define DMX_DISABLE 0
+//NVS Handle
+#define NVS_NAMESPACE "Blizzard"
+#define NVS_DEVICE_NAME_KEY "DEVICE_NAME"
+#define NVS_SSID_KEY "SSID"
+#define NVS_PASS_KEY "PASS"
+#define NVS_COM_MODE_KEY "COM_MODE"
+#define NVS_COM_SUB_MODE_KEY "COM_SUB_MODE"
+#define NVS_OWN_IP_ADDRESS_KEY "OWN_IP_ADDRESS"
+#define NVS_OWN_ADDRESS_KEY "OWN_ADDRESS"
+#define NVS_OWN_UNIVERSE_KEY "OWN_UNIVERSE"
+#define NVS_SLOTS_KEY "SLOTS"
+extern nvs_handle config_nvs_handle;
 
 /* If need be add in option to add in a buffer*/
 
 char* getName(void);
 
 void setName(char *name, uint8_t length);
+
+char* getSSID(void);
+
+void setSSID(char *ssid, uint8_t length); //has to be null terminated
+
+char* getPASS(void);
+
+void setPASS(char *pass, uint8_t length); //has to be null terminated
+
+uint8_t getComMode(void);
+
+void setComMode(uint8_t com_mode);
+
+uint8_t getSubComMode(void);
+
+void setSubComMode(uint8_t com_sub_mode);
+
+uint8_t* getOwnIPAddress();
+
+void setOwnIPAddress(uint8_t* address);
+
+uint16_t getOwnAddress(void);
+
+void setOwnAddress(uint16_t address);
 
 uint16_t getOwnUniverse(void);
 

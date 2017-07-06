@@ -99,6 +99,9 @@ bluedroid/bta/gatt/bta_gattc_act.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/l2cap/include/l2c_int.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/l2cdefs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/list.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/gatt/include/gatt_int.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btu.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h
 
@@ -299,6 +302,12 @@ bluedroid/bta/gatt/bta_gattc_act.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/l2cdefs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/list.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/gatt/include/gatt_int.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btu.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 

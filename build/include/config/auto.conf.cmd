@@ -1,4 +1,5 @@
 deps_config := \
+	/home/penguin/Programio/esp-idf/components/app_trace/Kconfig \
 	/home/penguin/Programio/blizzard-esp/components/arduino/Kconfig \
 	/home/penguin/Programio/esp-idf/components/aws_iot/Kconfig \
 	/home/penguin/Programio/esp-idf/components/bt/Kconfig \

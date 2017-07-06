@@ -41,11 +41,11 @@ extern "C" {
 #include "driver/uart.h"
 #include "driver/gpio.h"
 
-#define DMX_TX_PIN 17
-#define DMX_RX_PIN 16
-
 #define DIRECTION_PIN 23
 
+#define DMX_UART UART_NUM_2
+#define DMX_TX_PIN 12
+#define DMX_RX_PIN 14
 #define DMX_DATA_BAUD		250000
 #define DMX_BREAK_BAUD 	 88000
 
@@ -54,8 +54,6 @@ extern "C" {
 #define DMX_STATE_BREAK 2
 #define DMX_STATE_MAB 3
 #define DMX_STATE_IDLE 4
-
-#define DMX_UART UART_NUM_2
 
 /* ESP32 DMX struct*/
 typedef struct ESP32DMX {
@@ -69,16 +67,16 @@ typedef struct ESP32DMX {
 } ESP32DMX;
 
 /* UART Handler (Internal) Functions */
-void uart_enable_interrupt(void);
-void uart_init(int baudrate);
+//void uart_enable_interrupt(void);
+void uart_dmx_init(int baudrate);
 
 /* DMX Handler (User) Functions */
 void startDMXUart(uint8_t dir);
 void stopDMXUart( void );
 
 /* Interrupt (Internal) handlers */
-static void txEmptyInterruptHandler(void);
-static void receiveInterruptHandler(void);
+static void txEmptyInterruptHandlerDMX(void);
+static void receiveInterruptHandlerDMX(void);
 static void handleMAB(void);
 static void DMXTx(uint8_t value);
 

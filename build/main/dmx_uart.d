@@ -57,31 +57,69 @@ dmx_uart.o: /home/penguin/Programio/blizzard-esp/main/./dmx_uart.c \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx_uart.h \
- /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
- /home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/touch_pad.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
+ /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/opt.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/time.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/time.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/fcntl.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/_default_fcntl.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/debug.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/arch.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/def.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h \
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_uart.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
@@ -199,45 +237,19 @@ dmx_uart.o: /home/penguin/Programio/blizzard-esp/main/./dmx_uart.c \
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
 
-/home/penguin/Programio/blizzard-esp/main/./lib/dmx_uart.h:
-
-/home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h:
-
-/home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
-
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
-
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
-
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h:
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h:
 
 /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h:
 
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h:
+
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
 
@@ -248,3 +260,105 @@ dmx_uart.o: /home/penguin/Programio/blizzard-esp/main/./dmx_uart.c \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/touch_pad.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
+
+/home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/opt.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/time.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/time.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/fcntl.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/_default_fcntl.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/debug.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/arch.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/cc.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/errno.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/def.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h:
+
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
+
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_uart.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:

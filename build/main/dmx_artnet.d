@@ -128,7 +128,10 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -389,3 +392,9 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
+
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:

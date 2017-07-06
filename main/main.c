@@ -1,4 +1,4 @@
-/* ethernet Example
+/* Uart Example
 
    This example code is in the Public Domain (or CC0 licensed, at your option.)
 
@@ -6,114 +6,114 @@
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
 */
-#include <stdio.h>
 #include <string.h>
-
+#include <inttypes.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-
+#include "freertos/event_groups.h"
 #include "esp_system.h"
-#include "esp_err.h"
+#include "esp_wifi.h"
 #include "esp_event_loop.h"
-#include "esp_event.h"
-#include "esp_attr.h"
 #include "esp_log.h"
-#include "esp_eth.h"
-
-#include "rom/ets_sys.h"
-#include "rom/gpio.h"
-
-#include "soc/dport_reg.h"
-#include "soc/io_mux_reg.h"
-#include "soc/rtc_cntl_reg.h"
-#include "soc/gpio_reg.h"
-#include "soc/gpio_sig_map.h"
-
-#include "tcpip_adapter.h"
 #include "nvs_flash.h"
-#include "driver/gpio.h"
+
+#include "lwip/err.h"
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include "lwip/netdb.h"
+#include "lwip/dns.h"
+
 #include "lib/dmx_artnet.h"
+#include "lib/dmx_sACN.h"
+#include "esp_log.h"
+#include "soc/uart_struct.h"
 #include "lib/dmx.h"
+#include <stdio.h>
+#include "lib/dmx_uart.h"
+#include "lib/dmx.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
+#include "nvs_flash.h"
+#include "esp_log.h"
+#include "lib/main_arduino.h"
+#include "Arduino.h"
 
-#include "eth_phy/phy_lan8720.h"
-#define DEFAULT_ETHERNET_PHY_CONFIG phy_lan8720_default_ethernet_config
+static const char *TAG = "DMX UART EXAMPLE";
 
-#define CONFIG_PHY_USE_POWER_PIN
+#define UART_DMX UART_NUM_2
+#define DMX_TX_PIN 12
+#define DMX_RX_PIN 14
+#define DMX_DATA_BAUD		250000
+#define DMX_BREAK_BAUD 	 88000
 
-static const char *TAG = "eth_example";
+#define UART_BLIZZARD UART_NUM_1
+#define BLIZZARD_TX_PIN 16
+#define BLIZZARD_RX_PIN 34
+#define BLIZZARD_BAUD		921600
 
-#define PIN_PHY_POWER 17
-#define PIN_SMI_MDC   23
-#define PIN_SMI_MDIO  18
+#define DMX_STATE_START 0
+#define DMX_STATE_DATA 1
+#define DMX_STATE_BREAK 2
+#define DMX_STATE_MAB 3
+#define DMX_STATE_IDLE 4
 
-#ifdef CONFIG_PHY_USE_POWER_PIN
-/* This replaces the default PHY power on/off function with one that
-   also uses a GPIO for power on/off.
+#define EXAMPLE_WIFI_SSID "blizznet"
+#define EXAMPLE_WIFI_PASS "destroyer"
 
-   If this GPIO is not connected on your device (and PHY is always powered), you can use the default PHY-specific power
-   on/off function rather than overriding with this one.
-*/
-static void phy_device_power_enable_via_gpio(bool enable)
+/* FreeRTOS event group to signal when we are connected & ready to make a request */
+static EventGroupHandle_t wifi_event_group;
+
+nvs_handle config_nvs_handle;
+
+/* The event group allows multiple bits for each event,
+   but we only care about one event - are we connected
+   to the AP with an IP? */
+const int CONNECTED_BIT = BIT0;
+
+int state;
+
+uint8_t dmx[513];
+
+static esp_err_t event_handler(void *ctx, system_event_t *event)
 {
-    assert(DEFAULT_ETHERNET_PHY_CONFIG.phy_power_enable);
-
-    if (!enable) {
-        /* Do the PHY-specific power_enable(false) function before powering down */
-        DEFAULT_ETHERNET_PHY_CONFIG.phy_power_enable(false);
+    switch(event->event_id) {
+    case SYSTEM_EVENT_STA_START:
+        esp_wifi_connect();
+        break;
+    case SYSTEM_EVENT_STA_GOT_IP:
+        xEventGroupSetBits(wifi_event_group, CONNECTED_BIT);
+        break;
+    case SYSTEM_EVENT_STA_DISCONNECTED:
+        /* This is a workaround as ESP32 WiFi libs don't currently
+           auto-reassociate. */
+        esp_wifi_connect();
+        xEventGroupClearBits(wifi_event_group, CONNECTED_BIT);
+        break;
+    default:
+        break;
     }
-
-    gpio_pad_select_gpio(PIN_PHY_POWER);
-    gpio_set_direction(PIN_PHY_POWER,GPIO_MODE_OUTPUT);
-    if(enable == true) {
-        gpio_set_level(PIN_PHY_POWER, 1);
-        ESP_LOGD(TAG, "phy_device_power_enable(TRUE)");
-    } else {
-        gpio_set_level(PIN_PHY_POWER, 0);
-        ESP_LOGD(TAG, "power_enable(FALSE)");
-    }
-
-    // Allow the power up/down to take effect, min 300us
-    vTaskDelay(1);
-
-    if (enable) {
-        /* Run the PHY-specific power on operations now the PHY has power */
-        DEFAULT_ETHERNET_PHY_CONFIG.phy_power_enable(true);
-    }
+    return ESP_OK;
 }
-#endif
 
-static void eth_gpio_config_rmii(void)
+static void initialise_wifi(void)
 {
-    // RMII data pins are fixed:
-    // TXD0 = GPIO19
-    // TXD1 = GPIO22
-    // TX_EN = GPIO21
-    // RXD0 = GPIO25
-    // RXD1 = GPIO26
-    // CLK == GPIO0
-    phy_rmii_configure_data_interface_pins();
-    // MDC is GPIO 23, MDIO is GPIO 18
-    phy_rmii_smi_configure_pins(PIN_SMI_MDC, PIN_SMI_MDIO);
-}
-
-void eth_task(void *pvParameter)
-{
-    tcpip_adapter_ip_info_t ip;
-    memset(&ip, 0, sizeof(tcpip_adapter_ip_info_t));
-    vTaskDelay(2000 / portTICK_PERIOD_MS);
-
-    while (1) {
-
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
-
-        if (tcpip_adapter_get_ip_info(ESP_IF_ETH, &ip) == 0) {
-            ESP_LOGI(TAG, "~~~~~~~~~~~");
-            ESP_LOGI(TAG, "ETHIP:"IPSTR, IP2STR(&ip.ip));
-            ESP_LOGI(TAG, "ETHPMASK:"IPSTR, IP2STR(&ip.netmask));
-            ESP_LOGI(TAG, "ETHPGW:"IPSTR, IP2STR(&ip.gw));
-            ESP_LOGI(TAG, "~~~~~~~~~~~");
-        }
-    }
+    tcpip_adapter_init();
+    wifi_event_group = xEventGroupCreate();
+    ESP_ERROR_CHECK( esp_event_loop_init(event_handler, NULL) );
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
+    ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
+    wifi_config_t wifi_config = {
+        .sta = {
+            .ssid = EXAMPLE_WIFI_SSID,
+            .password = EXAMPLE_WIFI_PASS,
+        },
+    };
+    ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
+    ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
+    ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
+    ESP_ERROR_CHECK( esp_wifi_start() );
 }
 
 static void test()
@@ -122,7 +122,7 @@ static void test()
   uint8_t j = 3;
   uint8_t k = 140;
   uint8_t l = 210;
-  uint8_t direction = DMX_RECEIVE;
+  uint8_t direction = RECEIVE;
   //xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
                       //false, true, portMAX_DELAY);
   ESP_LOGI(TAG, "Connected to AP");
@@ -133,14 +133,14 @@ static void test()
   {
     switch(direction)
     {
-      case DMX_SEND:
-        for(i = 1; i < DMX_MAX_SLOTS; i++)
+      case SEND:
+        /*for(i = 1; i < DMX_MAX_SLOTS; i++)
           setDMXData(i, i * j);
-        j++;
+        j++;*/
         sendDMXDataArtnet(1);
         vTaskDelay(1000 / portTICK_RATE_MS);
       break;
-      case DMX_RECEIVE:
+      case RECEIVE:
         printf("\n------------ START -------------\n");
 
         for(i = 0; i < 513; i++)
@@ -158,31 +158,101 @@ static void test()
   }
 }
 
+void configure_uart()
+{
+  uart_config_t uart_config = {
+    .baud_rate = DMX_DATA_BAUD,
+    .data_bits = UART_DATA_8_BITS,
+    .parity = UART_PARITY_DISABLE,
+    .stop_bits = UART_STOP_BITS_1,
+    .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+    .rx_flow_ctrl_thresh = 122
+  };
+
+  uart_config_t uart_config_1 = {
+    .baud_rate = BLIZZARD_BAUD,
+    .data_bits = UART_DATA_8_BITS,
+    .parity = UART_PARITY_DISABLE,
+    .stop_bits = UART_STOP_BITS_1,
+    .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+    .rx_flow_ctrl_thresh = 122
+  };
+
+  ESP_LOGI(TAG, "UART config");
+
+  uart_param_config(UART_DMX, &uart_config);
+  uart_param_config(UART_BLIZZARD, &uart_config_1);
+
+  uart_set_pin(UART_DMX, DMX_TX_PIN, DMX_RX_PIN,
+    UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+
+  uart_set_pin(UART_BLIZZARD, BLIZZARD_TX_PIN, BLIZZARD_RX_PIN,
+    UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+
+  uart_driver_install(UART_DMX, 1024 * 2, 0, 0, NULL, 0);
+  uart_driver_install(UART_BLIZZARD, 1024 * 2, 0, 0, NULL, 0);
+}
+
+//initalize and look for flags
 void app_main()
 {
-    esp_err_t ret = ESP_OK;
-    tcpip_adapter_init();
-    esp_event_loop_init(NULL, NULL);
+  uint8_t* data;
+  int ret_val;
 
-    eth_config_t config = DEFAULT_ETHERNET_PHY_CONFIG;
-    /* Set the PHY address in the example configuration */
-    config.phy_addr = PHY1;
-    config.gpio_config = eth_gpio_config_rmii;
-    config.tcpip_input = tcpip_adapter_eth_input;
+  configure_uart();
+  //nvs_flash_init();
+  //initialise_wifi();
+  //xTaskCreate(&ArduinoLoop, "Arduino Core", 2048, NULL, 10, NULL);
+  //vTaskDelay(10000 / portTICK_RATE_MS);
 
-#ifdef CONFIG_PHY_USE_POWER_PIN
-    /* Replace the default 'power enable' function with an example-specific
-       one that toggles a power GPIO. */
-    config.phy_power_enable = phy_device_power_enable_via_gpio;
-#endif
+  ret_val = nvs_flash_init();
+  if(ret_val != ESP_OK)
+    ESP_LOGI(TAG, "NVS INIT FAILED %d", ret_val);
 
-    ret = esp_eth_init(&config);
+  ret_val = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &config_nvs_handle);
+  if(ret_val != ESP_OK)
+    ESP_LOGI(TAG, "NVS OPEN FAILED %d", ret_val);
 
-    if(ret == ESP_OK) {
-        esp_eth_enable();
-        xTaskCreate(eth_task, "eth_task", 2048, NULL, (tskIDLE_PRIORITY + 2), NULL);
+
+
+  clearDMX();
+  //setOwnUniverse(1);
+  //startDMXArtnet(DMX_RECEIVE);
+  //xTaskCreate(&test, "test", 2048, NULL, 5, NULL);
+
+  ESP_LOGI(TAG, "MAIN STATE");
+  state = DMX_STATE_START;
+
+  for(;;)
+  {
+    uart_write_bytes(UART_BLIZZARD, (const char *) getDMXBuffer(), DMX_MAX_SLOTS);
+    switch( state )
+    {
+        case DMX_STATE_START:
+          uart_set_baudrate(UART_DMX, DMX_DATA_BAUD);
+          uart_set_stop_bits(UART_DMX, UART_STOP_BITS_2);
+          state = DMX_STATE_DATA;
+        break;
+        case DMX_STATE_DATA:
+          uart_write_bytes(UART_DMX, (const char *) getDMXBuffer(), DMX_MAX_SLOTS);
+          state = DMX_STATE_BREAK;
+        break;
+        case DMX_STATE_BREAK:
+          uart_wait_tx_done(UART_DMX, 10);
+          //vTaskDelay(3);
+          uart_set_baudrate(UART_DMX, DMX_BREAK_BAUD);
+          uart_set_stop_bits(UART_DMX, UART_STOP_BITS_1);
+          uart_write_bytes(UART_DMX, (const char *) getDMXBuffer(), 1);
+          state = DMX_STATE_MAB;
+        break;
+        case DMX_STATE_MAB:
+          uart_wait_tx_done(UART_DMX, 10);
+          //vTaskDelay(2);
+          state = DMX_STATE_START;
+        break;
     }
-    vTaskDelay(20000 / portTICK_PERIOD_MS);
-    test();
+
+  }
+
 
 }

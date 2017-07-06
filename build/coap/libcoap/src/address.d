@@ -38,6 +38,8 @@ libcoap/src/address.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -71,8 +73,6 @@ libcoap/src/address.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/def.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
@@ -162,6 +162,10 @@ libcoap/src/address.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
@@ -227,10 +231,6 @@ libcoap/src/address.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/def.h:
 

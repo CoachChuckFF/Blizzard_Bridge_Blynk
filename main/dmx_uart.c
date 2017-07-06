@@ -47,8 +47,8 @@ static portMUX_TYPE uart_spinlock[UART_NUM_MAX] = {portMUX_INITIALIZER_UNLOCKED,
  |
  |  Parameters:
  |      dir
- |				-DMX_SEND, sends the contents of DMX._dmx_data. forever.
- |				-DMX_RECEIVE, reads DMX from DMX_UART into DMX._dmx_data
+ |				-SEND, sends the contents of DMX._dmx_data. forever.
+ |				-RECEIVE, reads DMX from DMX_UART into DMX._dmx_data
  |			slots
  |				-Can be between 512 and 24 - length of DMX to send/recieve
  |
@@ -58,19 +58,16 @@ void startDMXUart (uint8_t dir)
 {
 		gpio_config_t io_conf;
 
-		if(DMX._enabled == DMX_ENABLE)
+		if(DMX._enabled == ENABLE)
 			stopDMXUart();
 
-		DMX._enabled = DMX_ENABLE;
+		DMX._enabled = ENABLE;
 		DMX._dmx_state = DMX_STATE_START;
 		DMX._slots = getSlots();
 		DMX._idle_count = 0;
 		DMX._current_slot = 0;
 		DMX._direction = dir;
 		DMX._dmx_data = getDMXBuffer();
-
-		//clear DMX data
-		clearDMX();
 
 		//GPIO setup
     //This sets the direction for the MAX 485 chip
@@ -86,7 +83,7 @@ void startDMXUart (uint8_t dir)
     gpio_config(&io_conf);
 		gpio_set_level(DIRECTION_PIN, dir);
 
-		uart_init(DMX_DATA_BAUD);
+		uart_dmx_init(DMX_DATA_BAUD);
 
 }
 
@@ -104,11 +101,11 @@ void stopDMXUart()
 	uart_disable_intr_mask(DMX_UART, UART_INTR_MASK); //disable all inturrupts
 	uart_isr_free(DMX_UART);
 	uart_flush(DMX_UART);
-	DMX._enabled = DMX_DISABLE;
+	DMX._enabled = DISABLE;
 }
 
-/*------------------------------------------------- uart_init -----
- |  Function uart_init
+/*------------------------------------------------- uart_dmx_init -----
+ |  Function uart_dmx_init
  |
  |  Purpose:  Start the UART periferal to DMX standards
  |		DMX is 8N2 at 250k Baud. There is a hardware bug where
@@ -122,7 +119,7 @@ void stopDMXUart()
  |
  |  Returns:  N/A
  *-------------------------------------------------------------------*/
-void uart_init(int baudrate)
+void uart_dmx_init(int baudrate)
 {
 
 uart_config_t uart_config = {
@@ -140,10 +137,10 @@ uart_param_config(DMX_UART, &uart_config);
 uart_set_pin(DMX_UART, DMX_TX_PIN, DMX_RX_PIN,
 	UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
 
-if(DMX._direction == DMX_SEND)
+if(DMX._direction == SEND)
 {
 	//enable tx fifo full interrupt
-	uart_isr_register(DMX_UART, (void *) txEmptyInterruptHandler, NULL, ESP_INTR_FLAG_LOWMED, NULL);
+	uart_isr_register(DMX_UART, (void *) txEmptyInterruptHandlerDMX, NULL, ESP_INTR_FLAG_LOWMED, NULL);
 	UART_ENTER_CRITICAL(&uart_spinlock[DMX_UART]);
 	UART[DMX_UART]->int_ena.txfifo_empty = 1;
 	UART[DMX_UART]->int_ena.tx_done = 1;
@@ -151,9 +148,9 @@ if(DMX._direction == DMX_SEND)
 	UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
 	xTaskCreate(&handleMAB, "MAB", 2048, NULL, 15, NULL);
 }
-else //DMX_RECEIVE
+else //RECEIVE
 {
-	uart_isr_register(DMX_UART, (void *) receiveInterruptHandler, NULL, ESP_INTR_FLAG_LOWMED, NULL);
+	uart_isr_register(DMX_UART, (void *) receiveInterruptHandlerDMX, NULL, ESP_INTR_FLAG_LOWMED, NULL);
 	UART_ENTER_CRITICAL(&uart_spinlock[DMX_UART]);
 	//set interrupts
 	UART[DMX_UART]->int_ena.rxfifo_full = 1;
@@ -167,7 +164,7 @@ else //DMX_RECEIVE
  |  Function handleMAB
  |
  |  Purpose:  This is a seperate thread that deals with the
- |	DMX Tx state machine, it works as txEmptyInterruptHandler
+ |	DMX Tx state machine, it works as txEmptyInterruptHandlerDMX
  |	describes
  |
  |
@@ -232,8 +229,8 @@ static void DMXTx(uint8_t value)
 	}
 
 }
-/*---------------------------------------- txEmptyInterruptHandler -----
- |  Function txEmptyInterruptHandler
+/*---------------------------------------- txEmptyInterruptHandlerDMX -----
+ |  Function txEmptyInterruptHandlerDMX
  |
  |  Purpose:  The is where the DMX magic happens, it places
  |	one byte of DMX._dmx_data data directly into the UART fifo to be
@@ -248,7 +245,7 @@ static void DMXTx(uint8_t value)
  |
  |  Returns:  N/A
  *-------------------------------------------------------------------*/
-static void txEmptyInterruptHandler(void)
+static void txEmptyInterruptHandlerDMX(void)
 {
 	uint8_t done = UART[DMX_UART]->int_st.tx_done;
 
@@ -284,8 +281,8 @@ EXIT_ISR:
 	UART_EXIT_CRITICAL_ISR(&uart_spinlock[DMX_UART]);
 }
 
-/*---------------------------------------- receiveInterruptHandler -----
- |  Function receiveInterruptHandler
+/*---------------------------------------- receiveInterruptHandlerDMX -----
+ |  Function receiveInterruptHandlerDMX
  |
  |  Purpose: Receives DMX data and puts it into DMX._dmx_data
  |	Pretty simple: If break detected, the next byte should be a
@@ -297,7 +294,7 @@ EXIT_ISR:
  |
  |  Returns:  N/A
  *-------------------------------------------------------------------*/
-static void receiveInterruptHandler() {
+static void receiveInterruptHandlerDMX() {
 	uint8_t incoming_byte;
 
 	UART_ENTER_CRITICAL_ISR(&uart_spinlock[DMX_UART]);

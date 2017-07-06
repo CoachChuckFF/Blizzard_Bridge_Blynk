@@ -58,7 +58,8 @@ port.o: /home/penguin/Programio/esp-idf/components/freertos/./port.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
@@ -179,3 +180,5 @@ port.o: /home/penguin/Programio/esp-idf/components/freertos/./port.c \
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h:

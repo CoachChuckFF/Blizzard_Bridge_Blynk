@@ -50,10 +50,28 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 static const char *TAG = "DMX";
 
+//NVS Handle
+extern nvs_handle config_nvs_handle;
+
 static volatile uint8_t DMX[DMX_MAX_SLOTS];
-static char DEVICE_NAME[MAX_NAME_LENGTH];
+static char DEVICE_NAME[NAME_MAX_LENGTH];
+static char SSID[SSID_MAX_LENGTH];
+static char PASS[PASS_MAX_LENGTH];
+static uint8_t COM_MODE; //ethernet, wifi, dmx
+static uint8_t COM_SUB_MODE; //Arthnet, sACN, Blynk
+static uint8_t OWN_IP_ADDRESS[4];
+static uint16_t OWN_ADDRESS;
 static uint16_t OWN_UNIVERSE;
 static uint16_t SLOTS = (DMX_MAX_SLOTS - 1);
+
+//flags
+uint8_t device_name_changed;
+uint8_t com_made_changed;
+uint8_t com_sub_mode_changed;
+uint8_t own_ip_changed;
+uint8_t own_address_changed;
+uint8_t own_universe_changed;
+uint8_t slots_changed;
 
 char* getName()
 {
@@ -64,7 +82,7 @@ char* getName()
 void setName(char *name, uint8_t length)
 {
   uint8_t i;
-  if(length - 1 > MAX_NAME_LENGTH)
+  if(length - 1 > NAME_MAX_LENGTH)
   {
     ESP_LOGI(TAG, "Name too long %d", length);
     return;
@@ -74,6 +92,98 @@ void setName(char *name, uint8_t length)
     DEVICE_NAME[i] = name[i];
   DEVICE_NAME[i] = '\0'; //null termination
 }
+
+char* getSSID(void)
+{
+  return SSID;
+}
+
+void setSSID(char *ssid, uint8_t length)
+{
+  uint8_t i;
+  if(ssid == NULL)
+  {
+    ESP_LOGI(TAG, "NULL SSID");
+    return;
+  }
+  if(length - 1 > SSID_MAX_LENGTH)
+  {
+    ESP_LOGI(TAG, "SSID length too long");
+    return;
+  }
+
+  for(i = 0; i < length; i++)
+    SSID[i] = ssid[i];
+  SSID[i] = '\0'; //null termination
+}
+
+char* getPASS(void)
+{
+  return PASS;
+}
+
+void setPASS(char *pass, uint8_t length)
+{
+  uint8_t i;
+  if(pass == NULL)
+  {
+    ESP_LOGI(TAG, "NULL PASS");
+    return;
+  }
+  if(length - 1 > PASS_MAX_LENGTH)
+  {
+    ESP_LOGI(TAG, "PASS length too long");
+    return;
+  }
+
+  for(i = 0; i < length; i++)
+    PASS[i] = pass[i];
+  PASS[i] = '\0'; //null termination
+}
+
+uint8_t getComMode(void)
+{
+  return COM_MODE;
+}
+
+void setComMode(uint8_t com_mode)
+{
+  COM_MODE = com_mode;
+}
+
+uint8_t getSubComMode(void)
+{
+  return COM_SUB_MODE;
+}
+
+void setSubComMode(uint8_t com_sub_mode)
+{
+  COM_SUB_MODE = com_sub_mode;
+}
+
+uint8_t* getOwnIPAddress()
+{
+  return OWN_IP_ADDRESS;
+}
+
+void setOwnIPAddress(uint8_t* address)
+{
+  if(address == NULL)
+  {
+    ESP_LOGI(TAG, "NULL IP Address");
+    return;
+  }
+  OWN_IP_ADDRESS[0] = address[0];
+  OWN_IP_ADDRESS[1] = address[1];
+  OWN_IP_ADDRESS[2] = address[2];
+  OWN_IP_ADDRESS[3] = address[3];
+
+  own_ip_changed = 1;
+}
+
+uint16_t getOwnAddress(void);
+
+void setOwnAddress(uint16_t address);
 
 uint16_t getOwnUniverse()
 {

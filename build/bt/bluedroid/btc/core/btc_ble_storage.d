@@ -95,7 +95,8 @@ bluedroid/btc/core/btc_ble_storage.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gatt_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h \
- /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_util.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -288,3 +289,5 @@ bluedroid/btc/core/btc_ble_storage.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_util.h:

@@ -18,6 +18,13 @@ port/freertos/sys_arch.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/_types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/lock.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -33,14 +40,11 @@ port/freertos/sys_arch.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -58,10 +62,6 @@ port/freertos/sys_arch.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/time.h \
@@ -117,6 +117,20 @@ port/freertos/sys_arch.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/lock.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
+
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
@@ -147,10 +161,6 @@ port/freertos/sys_arch.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h:
-
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
@@ -160,8 +170,6 @@ port/freertos/sys_arch.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -196,14 +204,6 @@ port/freertos/sys_arch.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/opt.h:
 

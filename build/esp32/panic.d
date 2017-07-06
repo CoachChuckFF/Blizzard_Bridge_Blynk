@@ -75,7 +75,8 @@ panic.o: /home/penguin/Programio/esp-idf/components/esp32/./panic.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_core_dump.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_cache_err_int.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_app_trace.h
+ /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
@@ -229,4 +230,6 @@ panic.o: /home/penguin/Programio/esp-idf/components/esp32/./panic.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_cache_err_int.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_app_trace.h:
+/home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h:

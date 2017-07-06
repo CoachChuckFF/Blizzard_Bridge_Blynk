@@ -182,7 +182,13 @@ main_arduino.o: \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/Blynk/src/WidgetGPS.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/Blynk/src/WidgetMap.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/main_arduino.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
+ /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
 
@@ -549,3 +555,15 @@ main_arduino.o: \
 /home/penguin/Programio/blizzard-esp/main/./lib/main_arduino.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
+
+/home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
+
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
+
+/home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
