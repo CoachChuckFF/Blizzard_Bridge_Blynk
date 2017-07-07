@@ -87,18 +87,6 @@ extern uint8_t own_address_changed;
 extern uint8_t own_universe_changed;
 extern uint8_t slots_changed;
 
-//NVS Handle
-#define NVS_NAMESPACE "Blizzard"
-#define NVS_DEVICE_NAME_KEY "DEVICE_NAME"
-#define NVS_SSID_KEY "SSID"
-#define NVS_PASS_KEY "PASS"
-#define NVS_COM_MODE_KEY "COM_MODE"
-#define NVS_COM_SUB_MODE_KEY "COM_SUB_MODE"
-#define NVS_OWN_IP_ADDRESS_KEY "OWN_IP_ADDRESS"
-#define NVS_OWN_ADDRESS_KEY "OWN_ADDRESS"
-#define NVS_OWN_UNIVERSE_KEY "OWN_UNIVERSE"
-#define NVS_SLOTS_KEY "SLOTS"
-extern nvs_handle config_nvs_handle;
 
 /* If need be add in option to add in a buffer*/
 

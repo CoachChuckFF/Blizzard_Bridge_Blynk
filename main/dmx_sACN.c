@@ -143,7 +143,7 @@ void createDataPacketsACN()
 
   SACNPACKET._frame_vector = VECTOR_E131_DATA_PACKET;
 
-  for(i = 0; i < MAX_NAME_LENGTH; i++)
+  for(i = 0; i < NAME_MAX_LENGTH; i++)
     SACNPACKET._source_name[i] = name[i];
 
   SACNPACKET._priority = SACN_PRIORITY_DEFAULT;

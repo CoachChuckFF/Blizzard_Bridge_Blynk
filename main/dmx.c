@@ -62,7 +62,7 @@ static uint8_t COM_SUB_MODE; //Arthnet, sACN, Blynk
 static uint8_t OWN_IP_ADDRESS[4];
 static uint16_t OWN_ADDRESS;
 static uint16_t OWN_UNIVERSE;
-static uint16_t SLOTS = (DMX_MAX_SLOTS - 1);
+static uint16_t SLOTS;
 
 //flags
 uint8_t device_name_changed;
@@ -181,9 +181,15 @@ void setOwnIPAddress(uint8_t* address)
   own_ip_changed = 1;
 }
 
-uint16_t getOwnAddress(void);
+uint16_t getOwnAddress(void)
+{
+  return OWN_ADDRESS;
+}
 
-void setOwnAddress(uint16_t address);
+void setOwnAddress(uint16_t address)
+{
+  OWN_ADDRESS = address;
+}
 
 uint16_t getOwnUniverse()
 {

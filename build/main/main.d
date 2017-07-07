@@ -143,25 +143,8 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/main_arduino.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Arduino.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/math.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-log.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-matrix.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-uart.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-gpio.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-touch.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-dac.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-adc.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-spi.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-i2c.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-ledc.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-sigmadelta.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-timer.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-bt.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/stdlib_noniso.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/binary.h \
- /home/penguin/Programio/blizzard-esp/components/arduino/variants/esp32/pins_arduino.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -451,40 +434,6 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/blizzard-esp/main/./lib/main_arduino.h:
 
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Arduino.h:
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h:
 
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/math.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-log.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-matrix.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-uart.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-gpio.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-touch.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-dac.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-adc.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-spi.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-i2c.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-ledc.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-sigmadelta.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-timer.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-bt.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/stdlib_noniso.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/binary.h:
-
-/home/penguin/Programio/blizzard-esp/components/arduino/variants/esp32/pins_arduino.h:
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
