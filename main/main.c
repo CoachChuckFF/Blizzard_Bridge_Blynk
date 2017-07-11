@@ -38,24 +38,15 @@
 #include "esp_log.h"
 #include "lib/main_arduino.h"
 #include "lib/blizzard_nvs.h"
+#include "lib/blizzard_uart.h"
+#include "lib/blizzard_structs.h"
+#include "lib/blizzard_wifi.h"
+#include "lib/blizzard_eth.h"
 //#include "Arduino.h"
 
 static const char *TAG = "MAIN";
 
-
-
-extern nvs_handle config_nvs_handle;
-
-/* The event group allows multiple bits for each event,
-   but we only care about one event - are we connected
-   to the AP with an IP? */
-
-
 //initalize and look for flags
-char d[32];
-
-
-
 void app_main()
 {
   uint8_t* data;
@@ -63,24 +54,50 @@ void app_main()
   uint8_t i;
   size_t length;
 
+  //initallize
+
   init_blizzard_nvs();
 
   populate_all_dmx_nvs_values();
+
+
 
 
   for(i = 0; i < 9; i++)
     print_nvs_values(i);
 
   //nvs_flash_init();
-  //initialise_wifi();
+  //initialise_blizzard_wifi();
   //xTaskCreate(&ArduinoLoop, "Arduino Core", 2048, NULL, 10, NULL);
   //vTaskDelay(10000 / portTICK_RATE_MS);
 
+  //startBlizzardUart();
+  startDMXUart(SEND);
+  //initialise_blizzard_ethernet();
+  //vTaskDelay(5000);
+  initialise_blizzard_wifi();
+
+  //startDMXArtnet(SEND);
+  xTaskCreate(&ArduinoLoop, "Arduino Core", 2048, NULL, tskIDLE_PRIORITY + 6, NULL);
+  //vTaskStartScheduler();
 
   clearDMX();
   //setOwnUniverse(1);
-  //startDMXArtnet(DMX_RECEIVE);
+  startDMXArtnet(RECEIVE);
+
   //xTaskCreate(&test, "test", 2048, NULL, 5, NULL);
 
+  //main loop - listens to flag changes and responds to flag changes
+
+  vTaskDelay(15000);
+  while(1)
+  {
+
+
+    //ESP_LOGI(TAG, "MAIN LOOP");
+    sendDMXDataArtnet(0);
+    //delay for context switch
+    vTaskDelay(1000);
+  }
 
 }

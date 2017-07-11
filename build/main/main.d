@@ -144,7 +144,14 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/main_arduino.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_uart.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_eth.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -437,3 +444,17 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_uart.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_eth.h:

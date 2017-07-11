@@ -24,12 +24,18 @@ char auth[] = "48ad103165ae48418a7bda0c65837c25";
 char ssid[] = "blizznet";
 char pass[] = "destroyer";
 
+/* Widgets */
+WidgetLCD ip_lcd(V9);
+
 uint8_t octet = 0;
 
 void ArduinoLoop()
 {
   initArduino();
-  Blynk.begin(auth, ssid, pass);
+  //Blynk.begin(auth, ssid, pass);
+  Blynk.config(auth);
+  Blynk.connect();
+  ip_lcd.print(0,0, "My Ip is:");
   while(1)
   {
     Blynk.run();
@@ -96,4 +102,24 @@ BLYNK_WRITE(V7)
 BLYNK_WRITE(V8)
 {
   octet = (uint8_t) param.asInt();
+}
+
+BLYNK_WRITE(V10)
+{
+  uint8_t val = (uint8_t) param.asInt();
+  setDMXData(2, val);
+
+}
+
+BLYNK_WRITE(V11)
+{
+  uint8_t val = (uint8_t) param.asInt();
+  setDMXData(3, val);
+
+}
+
+BLYNK_WRITE(V12)
+{
+  uint8_t val = (uint8_t) param.asInt();
+  setDMXData(4, val);
 }

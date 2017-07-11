@@ -34,17 +34,14 @@
 #include "driver/gpio.h"
 #include "lib/dmx_artnet.h"
 #include "lib/dmx.h"
+#include "lib/blizzard_eth.h"
 
 #include "eth_phy/phy_lan8720.h"
 #define DEFAULT_ETHERNET_PHY_CONFIG phy_lan8720_default_ethernet_config
 
 #define CONFIG_PHY_USE_POWER_PIN
 
-static const char *TAG = "eth_example";
-
-#define PIN_PHY_POWER 17
-#define PIN_SMI_MDC   23
-#define PIN_SMI_MDIO  18
+static const char *TAG = "ETHERNET";
 
 #ifdef CONFIG_PHY_USE_POWER_PIN
 /* This replaces the default PHY power on/off function with one that
@@ -116,49 +113,7 @@ void eth_task(void *pvParameter)
     }
 }
 
-static void test()
-{
-  uint16_t i = 0;
-  uint8_t j = 3;
-  uint8_t k = 140;
-  uint8_t l = 210;
-  uint8_t direction = RECEIVE;
-  //xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
-                      //false, true, portMAX_DELAY);
-  ESP_LOGI(TAG, "Connected to AP");
-  setName((char*)"magic box", 9);
-  setOwnUniverse(1);
-  startDMXArtnet(direction);
-  while(1)
-  {
-    switch(direction)
-    {
-      case SEND:
-        for(i = 1; i < DMX_MAX_SLOTS; i++)
-          setDMXData(i, i * j);
-        j++;
-        sendDMXDataArtnet(1);
-        vTaskDelay(1000 / portTICK_RATE_MS);
-      break;
-      case RECEIVE:
-        printf("\n------------ START -------------\n");
-
-        for(i = 0; i < 513; i++)
-        {
-          if(!(i%32))
-            printf("\n");
-          if(getDMXData(i))
-            printf(" %d-%d ", i, getDMXData(i));
-        }
-        printf("\n------------ END -------------\n");
-        vTaskDelay(5000 / portTICK_RATE_MS);
-      break;
-    }
-
-  }
-}
-/*
-void app_main()
+void initialise_blizzard_ethernet()
 {
     esp_err_t ret = ESP_OK;
     tcpip_adapter_init();
@@ -183,6 +138,6 @@ void app_main()
         xTaskCreate(eth_task, "eth_task", 2048, NULL, (tskIDLE_PRIORITY + 2), NULL);
     }
     vTaskDelay(20000 / portTICK_PERIOD_MS);
-    test();
 
-}*/
+
+}

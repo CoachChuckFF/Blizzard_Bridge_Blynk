@@ -53,7 +53,7 @@ void udp_artnet_init()
 {
   ARTNET._udp = udp_new();
   ARTNET._own_ip = IP_ADDR_ANY;
-  IP_ADDR4(&ip, 192,168,1,186);
+  IP_ADDR4(&ip, 192,168,1,173);
   ARTNET._dest_ip = &ip;
   ARTNET._port = ART_NET_PORT;
   ESP_LOGI(TAG, "Bind %d",udp_bind(ARTNET._udp, ARTNET._own_ip, ARTNET._port));
@@ -105,7 +105,7 @@ void sendDMXDataArtnet(uint16_t universe){
     return;
   }
 
-  ESP_LOGI(TAG, "Connect %d", udp_connect(ARTNET._udp, ARTNET._dest_ip, ARTNET._port));
+  //ESP_LOGI(TAG, "Connect %d", udp_connect(ARTNET._udp, ARTNET._dest_ip, ARTNET._port));
 
   //establish pbuf
   p = pbuf_alloc(PBUF_TRANSPORT, MAX_ARTNET_BUFFER ,PBUF_RAM);

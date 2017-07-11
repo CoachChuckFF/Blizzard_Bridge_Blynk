@@ -37,8 +37,8 @@ static portMUX_TYPE uart_spinlock[UART_NUM_MAX] = {portMUX_INITIALIZER_UNLOCKED,
 /*------------------------------------------------- starDMX -----
  |  Function startDMX
  |
- |  Purpose:  To establish DMX functionality on the UART_DMX.
- |	UART_DMX = UART2, beacuse UART0 and 1 are already in use.
+ |  Purpose:  To establish DMX functionality on the DMX_UART.
+ |	DMX_UART = UART2, beacuse UART0 and 1 are already in use.
  |	To read dmx data just access DMX._dmx_data[] from the caller
  |	Modify it at will.
  |
@@ -121,7 +121,25 @@ void stopDMXUart()
  *-------------------------------------------------------------------*/
 void uart_dmx_init(int baudrate)
 {
+	uart_config_t uart_config = {
+	.baud_rate = DMX_DATA_BAUD,
+	.data_bits = UART_DATA_8_BITS,
+	.parity = UART_PARITY_DISABLE,
+	.stop_bits = UART_STOP_BITS_1,
+	.flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+	.rx_flow_ctrl_thresh = 122
+};
 
+ESP_LOGI(TAG, "UART config");
+
+uart_param_config(DMX_UART, &uart_config);
+
+uart_set_pin(DMX_UART, DMX_TX_PIN, DMX_RX_PIN,
+	UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+
+uart_driver_install(DMX_UART, 1024 * 2, 0, 0, NULL, 0);
+xTaskCreate(&handleMAB, "MAB", 2048, NULL, 15, NULL);
+/*
 uart_config_t uart_config = {
  .baud_rate = baudrate,
  .data_bits = UART_DATA_8_BITS,
@@ -157,7 +175,7 @@ else //RECEIVE
 	UART[DMX_UART]->int_ena.brk_det = 1;
 	UART[DMX_UART]->conf1.rxfifo_full_thrhd = 1;
 	UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
-}
+}*/
 
 }
 /*---------------------------------------- handleMAB -----
@@ -174,8 +192,37 @@ else //RECEIVE
  *-------------------------------------------------------------------*/
 static void handleMAB()
 {
-	uint32_t i;
+	uint32_t i, state = DMX_STATE_START;
 	ESP_LOGI(TAG, "LOOP");
+	while(DMX._enabled)
+	{
+		switch( state )
+		{
+			case DMX_STATE_START:
+				uart_set_baudrate(DMX_UART, DMX_DATA_BAUD);
+				uart_set_stop_bits(DMX_UART, UART_STOP_BITS_2);
+				state = DMX_STATE_DATA;
+			break;
+			case DMX_STATE_DATA:
+				uart_write_bytes(DMX_UART, (const char *) getDMXBuffer(), DMX_MAX_SLOTS);
+				state = DMX_STATE_BREAK;
+			break;
+			case DMX_STATE_BREAK:
+				uart_wait_tx_done(DMX_UART, 10);
+				//vTaskDelay(3);
+				uart_set_baudrate(DMX_UART, DMX_BREAK_BAUD);
+				uart_set_stop_bits(DMX_UART, UART_STOP_BITS_1);
+				uart_write_bytes(DMX_UART, (const char *) getDMXBuffer(), 1);
+				state = DMX_STATE_MAB;
+			break;
+			case DMX_STATE_MAB:
+				uart_wait_tx_done(DMX_UART, 10);
+				//vTaskDelay(2);
+				state = DMX_STATE_START;
+			break;
+		}
+	}
+	/*
 	while(DMX._enabled)
 	{
 		switch(DMX._dmx_state)
@@ -205,7 +252,7 @@ static void handleMAB()
 				DMX._dmx_state = DMX_STATE_START;
 			break;
 		}
-	}
+	}*/
 }
 
 /*------------------------------------------------- DMXTx -----

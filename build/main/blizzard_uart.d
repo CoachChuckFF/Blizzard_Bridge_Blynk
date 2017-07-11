@@ -120,7 +120,9 @@ blizzard_uart.o: \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
@@ -363,3 +365,7 @@ blizzard_uart.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h:
