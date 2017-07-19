@@ -18,3 +18,4 @@ library/certs.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/newlib.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/certs.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/certs.c:

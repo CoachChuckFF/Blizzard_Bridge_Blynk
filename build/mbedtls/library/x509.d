@@ -150,3 +150,4 @@ library/x509.o: \
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/x509_crl.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/certs.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/x509.c:

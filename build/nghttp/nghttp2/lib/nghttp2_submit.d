@@ -29,6 +29,8 @@ nghttp2/lib/nghttp2_submit.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
  /home/penguin/Programio/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h \
@@ -104,6 +106,10 @@ nghttp2/lib/nghttp2_submit.o: \
 
 /home/penguin/Programio/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h:
@@ -135,3 +141,4 @@ nghttp2/lib/nghttp2_submit.o: \
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_priority_spec.h:
+/home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_submit.c:

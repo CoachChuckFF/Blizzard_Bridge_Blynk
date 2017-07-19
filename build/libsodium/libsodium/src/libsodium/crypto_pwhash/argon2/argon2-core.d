@@ -105,3 +105,4 @@ libsodium/src/libsodium/crypto_pwhash/argon2/argon2-core.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/limits.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/blake2b-long.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-core.c:

@@ -22,6 +22,8 @@ port/minicheck.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/setjmp.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/setjmp.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/expat/include/expat/internal.h \
  /home/penguin/Programio/esp-idf/components/expat/port/include/minicheck.h
@@ -70,8 +72,13 @@ port/minicheck.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/setjmp.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/expat/include/expat/internal.h:
 
 /home/penguin/Programio/esp-idf/components/expat/port/include/minicheck.h:
+/home/penguin/Programio/esp-idf/components/expat/port/minicheck.c:

@@ -126,3 +126,4 @@ libsodium/src/libsodium/sodium/core.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/mutex.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/core.c:

@@ -22,6 +22,11 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
@@ -40,16 +45,12 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/malloc.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/malloc.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -130,6 +131,16 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h:
@@ -166,8 +177,6 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
 
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/malloc.h:
@@ -179,12 +188,6 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -251,3 +254,4 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h:
+/home/penguin/Programio/esp-idf/components/driver/./uart.c:

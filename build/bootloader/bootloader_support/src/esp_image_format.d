@@ -27,3 +27,4 @@ src/esp_image_format.o: \
 /home/penguin/Programio/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/esp_image_format.c:

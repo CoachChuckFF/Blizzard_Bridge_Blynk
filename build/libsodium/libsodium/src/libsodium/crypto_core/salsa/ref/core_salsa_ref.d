@@ -75,3 +75,4 @@ libsodium/src/libsodium/crypto_core/salsa/ref/core_salsa_ref.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/salsa/ref/core_salsa_ref.c:

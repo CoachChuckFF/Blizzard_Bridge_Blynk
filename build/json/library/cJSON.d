@@ -78,3 +78,4 @@ library/cJSON.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/ctype.h:
 
 /home/penguin/Programio/esp-idf/components/json/include/cJSON.h:
+/home/penguin/Programio/esp-idf/components/json/library/cJSON.c:

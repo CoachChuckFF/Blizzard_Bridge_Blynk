@@ -42,3 +42,4 @@ src/secure_boot_signatures.o: \
 /home/penguin/Programio/esp-idf/components/micro-ecc/micro-ecc/uECC.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/sha.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/secure_boot_signatures.c:

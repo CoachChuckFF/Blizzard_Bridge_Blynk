@@ -29,6 +29,10 @@ bluedroid/stack/a2dp/a2d_sbc.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
@@ -97,6 +101,14 @@ bluedroid/stack/a2dp/a2d_sbc.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
@@ -114,3 +126,4 @@ bluedroid/stack/a2dp/a2d_sbc.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/a2d_sbc.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/utils/include/bt_utils.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/a2dp/a2d_sbc.c:

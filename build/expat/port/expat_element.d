@@ -72,3 +72,4 @@ port/expat_element.o: \
 /home/penguin/Programio/esp-idf/components/expat/include/expat/expat.h:
 
 /home/penguin/Programio/esp-idf/components/expat/include/expat/expat_external.h:
+/home/penguin/Programio/esp-idf/components/expat/port/expat_element.c:

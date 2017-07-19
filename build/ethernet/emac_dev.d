@@ -24,6 +24,11 @@ emac_dev.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
@@ -38,7 +43,6 @@ emac_dev.o: \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/emac_reg_v2.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/emac_ex_reg.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h \
@@ -97,6 +101,16 @@ emac_dev.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h:
@@ -125,8 +139,6 @@ emac_dev.o: \
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
 
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
 /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
@@ -144,3 +156,4 @@ emac_dev.o: \
 /home/penguin/Programio/esp-idf/components/ethernet/./emac_dev.h:
 
 /home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h:
+/home/penguin/Programio/esp-idf/components/ethernet/./emac_dev.c:

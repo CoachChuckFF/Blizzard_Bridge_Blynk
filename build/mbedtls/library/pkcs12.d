@@ -102,3 +102,4 @@ library/pkcs12.o: \
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/arc4.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/des.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/pkcs12.c:

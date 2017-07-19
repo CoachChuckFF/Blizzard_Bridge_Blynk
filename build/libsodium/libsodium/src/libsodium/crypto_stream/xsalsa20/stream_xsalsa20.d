@@ -60,3 +60,4 @@ libsodium/src/libsodium/crypto_stream/xsalsa20/stream_xsalsa20.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/xsalsa20/stream_xsalsa20.c:

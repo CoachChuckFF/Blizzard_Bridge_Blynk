@@ -24,6 +24,10 @@ src/secure_boot.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/cache.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
@@ -96,6 +100,14 @@ src/secure_boot.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/cache.h:
@@ -141,3 +153,4 @@ src/secure_boot.o: \
 /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
 
 /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_efuse.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/secure_boot.c:

@@ -33,6 +33,7 @@ log.o: /home/penguin/Programio/esp-idf/components/log/./log.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -128,6 +129,8 @@ log.o: /home/penguin/Programio/esp-idf/components/log/./log.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -179,3 +182,4 @@ log.o: /home/penguin/Programio/esp-idf/components/log/./log.c \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
+/home/penguin/Programio/esp-idf/components/log/./log.c:

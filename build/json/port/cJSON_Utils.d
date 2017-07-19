@@ -75,3 +75,4 @@ port/cJSON_Utils.o: \
 /home/penguin/Programio/esp-idf/components/json/port/include/cJSON_Utils.h:
 
 /home/penguin/Programio/esp-idf/components/json/include/cJSON.h:
+/home/penguin/Programio/esp-idf/components/json/port/cJSON_Utils.c:

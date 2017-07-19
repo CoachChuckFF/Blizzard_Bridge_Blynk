@@ -75,3 +75,4 @@ esp32/rtc_clk.o: \
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
 
 /home/penguin/Programio/blizzard-esp/build/bootloader/../include/sdkconfig.h:
+/home/penguin/Programio/esp-idf/components/soc/esp32/rtc_clk.c:

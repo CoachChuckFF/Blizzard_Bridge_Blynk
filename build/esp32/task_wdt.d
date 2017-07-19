@@ -39,6 +39,7 @@ task_wdt.o: /home/penguin/Programio/esp-idf/components/esp32/./task_wdt.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -152,6 +153,8 @@ task_wdt.o: /home/penguin/Programio/esp-idf/components/esp32/./task_wdt.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -215,3 +218,4 @@ task_wdt.o: /home/penguin/Programio/esp-idf/components/esp32/./task_wdt.c \
 /home/penguin/Programio/esp-idf/components/driver/include/driver/timer.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_task_wdt.h:
+/home/penguin/Programio/esp-idf/components/esp32/./task_wdt.c:

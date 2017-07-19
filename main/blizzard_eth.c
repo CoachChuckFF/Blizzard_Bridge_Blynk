@@ -135,9 +135,9 @@ void initialise_blizzard_ethernet()
 
     if(ret == ESP_OK) {
         esp_eth_enable();
-        xTaskCreate(eth_task, "eth_task", 2048, NULL, (tskIDLE_PRIORITY + 2), NULL);
+        //xTaskCreate(eth_task, "eth_task", 2048, NULL, (tskIDLE_PRIORITY + 2), NULL);
     }
-    vTaskDelay(20000 / portTICK_PERIOD_MS);
+    //vTaskDelay(20000 / portTICK_PERIOD_MS);
 
 
 }

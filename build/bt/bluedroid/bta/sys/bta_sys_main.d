@@ -37,6 +37,7 @@ bluedroid/bta/sys/bta_sys_main.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -172,6 +173,8 @@ bluedroid/bta/sys/bta_sys_main.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -291,3 +294,4 @@ bluedroid/bta/sys/bta_sys_main.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_map.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/utl.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/sys/bta_sys_main.c:

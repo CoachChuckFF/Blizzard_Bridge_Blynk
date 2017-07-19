@@ -34,6 +34,7 @@ bluedroid/stack/btm/btm_acl.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/device/include/controller.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h \
@@ -176,6 +177,8 @@ bluedroid/stack/btm/btm_acl.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -324,3 +327,4 @@ bluedroid/stack/btm/btm_acl.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/list.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/hcidefs.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/btm/btm_acl.c:

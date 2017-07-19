@@ -31,6 +31,7 @@ bluedroid/btc/core/btc_storage.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -170,6 +171,8 @@ bluedroid/btc/core/btc_storage.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -324,3 +327,4 @@ bluedroid/btc/core/btc_storage.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_map.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_config.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/core/btc_storage.c:

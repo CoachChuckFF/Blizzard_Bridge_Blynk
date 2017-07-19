@@ -27,3 +27,4 @@ esp32/rtc_init.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+/home/penguin/Programio/esp-idf/components/soc/esp32/rtc_init.c:

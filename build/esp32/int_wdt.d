@@ -37,6 +37,7 @@ int_wdt.o: /home/penguin/Programio/esp-idf/components/esp32/./int_wdt.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -142,6 +143,8 @@ int_wdt.o: /home/penguin/Programio/esp-idf/components/esp32/./int_wdt.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -197,3 +200,4 @@ int_wdt.o: /home/penguin/Programio/esp-idf/components/esp32/./int_wdt.c \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_int_wdt.h:
+/home/penguin/Programio/esp-idf/components/esp32/./int_wdt.c:

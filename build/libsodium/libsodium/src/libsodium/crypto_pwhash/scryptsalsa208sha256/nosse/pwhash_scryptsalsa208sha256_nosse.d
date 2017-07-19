@@ -93,3 +93,4 @@ libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/nosse/pwhash_scryptsa
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/nosse/pwhash_scryptsalsa208sha256_nosse.c:

@@ -33,6 +33,7 @@ bluedroid/btif/bta_dm_co.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
@@ -158,6 +159,8 @@ bluedroid/btif/bta_dm_co.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_api.h:
@@ -273,3 +276,4 @@ bluedroid/btif/bta_dm_co.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_ble_storage.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bte_appl.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btif/bta_dm_co.c:

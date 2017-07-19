@@ -16,6 +16,8 @@ flash_mmap.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
@@ -27,7 +29,6 @@ flash_mmap.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -107,6 +108,10 @@ flash_mmap.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
@@ -128,8 +133,6 @@ flash_mmap.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -222,3 +225,4 @@ flash_mmap.o: \
 /home/penguin/Programio/esp-idf/components/spi_flash/./cache_utils.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
+/home/penguin/Programio/esp-idf/components/spi_flash/./flash_mmap.c:

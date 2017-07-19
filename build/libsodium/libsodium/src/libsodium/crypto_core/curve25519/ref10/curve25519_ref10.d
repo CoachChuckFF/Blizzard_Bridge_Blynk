@@ -66,3 +66,4 @@ libsodium/src/libsodium/crypto_core/curve25519/ref10/curve25519_ref10.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/curve25519/ref10/base2.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/curve25519/ref10/base.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/curve25519/ref10/curve25519_ref10.c:

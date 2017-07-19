@@ -29,6 +29,10 @@ bluedroid/stack/gatt/gatt_sr.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
@@ -38,9 +42,6 @@ bluedroid/stack/gatt/gatt_sr.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -153,6 +154,14 @@ bluedroid/stack/gatt/gatt_sr.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
@@ -170,12 +179,6 @@ bluedroid/stack/gatt/gatt_sr.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
 
@@ -282,3 +285,4 @@ bluedroid/stack/gatt/gatt_sr.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/l2cdefs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/list.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/gatt/gatt_sr.c:

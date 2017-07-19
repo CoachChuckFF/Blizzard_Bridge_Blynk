@@ -81,3 +81,4 @@ libsodium/src/libsodium/crypto_kdf/blake2b/kdf_blake2b.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_kdf/blake2b/kdf_blake2b.c:

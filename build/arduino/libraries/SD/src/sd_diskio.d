@@ -43,6 +43,7 @@ libraries/SD/src/sd_diskio.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -223,6 +224,8 @@ libraries/SD/src/sd_diskio.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -411,3 +414,4 @@ libraries/SD/src/sd_diskio.o: \
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/SD/src/sd_diskio.cpp:

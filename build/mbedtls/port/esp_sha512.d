@@ -108,3 +108,4 @@ port/esp_sha512.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/sha.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/port/esp_sha512.c:

@@ -35,6 +35,7 @@ core/tcp_out.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
@@ -164,6 +165,8 @@ core/tcp_out.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -279,3 +282,4 @@ core/tcp_out.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/esp-idf/components/lwip/core/tcp_out.c:

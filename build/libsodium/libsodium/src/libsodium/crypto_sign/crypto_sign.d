@@ -66,3 +66,4 @@ libsodium/src/libsodium/crypto_sign/crypto_sign.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_sign/crypto_sign.c:

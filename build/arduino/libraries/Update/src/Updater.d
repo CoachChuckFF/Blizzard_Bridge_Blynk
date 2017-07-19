@@ -43,6 +43,7 @@ libraries/Update/src/Updater.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -207,6 +208,8 @@ libraries/Update/src/Updater.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -360,3 +363,4 @@ libraries/Update/src/Updater.o: \
 /home/penguin/Programio/esp-idf/components/app_update/include/esp_ota_ops.h:
 
 /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_image_format.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/Update/src/Updater.cpp:

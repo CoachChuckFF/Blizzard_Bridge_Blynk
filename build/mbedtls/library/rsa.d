@@ -135,3 +135,4 @@ library/rsa.o: \
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/sha1.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/port/include/sha1_alt.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/rsa.c:

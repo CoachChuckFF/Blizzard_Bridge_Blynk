@@ -84,3 +84,4 @@ nghttp2/lib/nghttp2_version.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h:
+/home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_version.c:

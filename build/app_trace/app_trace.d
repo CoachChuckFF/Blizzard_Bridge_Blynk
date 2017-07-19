@@ -19,6 +19,11 @@ app_trace.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -27,7 +32,6 @@ app_trace.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
  /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/eri.h \
  /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/trax.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
@@ -47,9 +51,6 @@ app_trace.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -111,6 +112,16 @@ app_trace.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
@@ -126,8 +137,6 @@ app_trace.o: \
 /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/eri.h:
 
 /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/trax.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 
@@ -166,12 +175,6 @@ app_trace.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -216,3 +219,4 @@ app_trace.o: \
 /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h:
 
 /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h:
+/home/penguin/Programio/esp-idf/components/app_trace/./app_trace.c:

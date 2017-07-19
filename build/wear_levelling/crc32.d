@@ -18,3 +18,4 @@ crc32.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/features.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
+/home/penguin/Programio/esp-idf/components/wear_levelling/./crc32.cpp:

@@ -37,6 +37,7 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
@@ -172,6 +173,8 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_api.h:
@@ -291,3 +294,4 @@ bluedroid/btc/profile/std/gatt/btc_gatt_util.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gatt_defs.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/profile/std/gatt/btc_gatt_util.c:

@@ -126,3 +126,4 @@ nghttp2/lib/nghttp2_option.o: \
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h:
+/home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_option.c:

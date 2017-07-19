@@ -31,6 +31,8 @@ nghttp2/lib/nghttp2_pq.o: \
  /home/penguin/Programio/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h
 
@@ -96,6 +98,11 @@ nghttp2/lib/nghttp2_pq.o: \
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h:
+/home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.c:

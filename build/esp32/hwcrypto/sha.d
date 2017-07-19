@@ -20,6 +20,11 @@ hwcrypto/sha.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/hwcrypto/sha.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/sha.h \
@@ -76,6 +81,16 @@ hwcrypto/sha.o: \
 
 /home/penguin/Programio/esp-idf/components/wpa_supplicant/port/include/byteswap.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/hwcrypto/sha.h:
@@ -105,3 +120,4 @@ hwcrypto/sha.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/hwcrypto_reg.h:
+/home/penguin/Programio/esp-idf/components/esp32/hwcrypto/sha.c:

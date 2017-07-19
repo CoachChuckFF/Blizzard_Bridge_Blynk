@@ -21,8 +21,13 @@ clk.o: /home/penguin/Programio/esp-idf/components/esp32/./clk.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/reent.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_clk.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/uart.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h \
@@ -77,9 +82,19 @@ clk.o: /home/penguin/Programio/esp-idf/components/esp32/./clk.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/_ansi.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/reent.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_clk.h:
 
@@ -98,3 +113,4 @@ clk.o: /home/penguin/Programio/esp-idf/components/esp32/./clk.c \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
+/home/penguin/Programio/esp-idf/components/esp32/./clk.c:

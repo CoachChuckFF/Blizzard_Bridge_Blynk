@@ -31,6 +31,7 @@ bluedroid/bta/sdp/bta_sdp_act.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -159,6 +160,8 @@ bluedroid/bta/sdp/bta_sdp_act.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -291,3 +294,4 @@ bluedroid/bta/sdp/bta_sdp_act.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/sdp/bta_sdp_act.c:

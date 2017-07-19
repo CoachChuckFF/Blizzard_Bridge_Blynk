@@ -81,3 +81,4 @@ library/ecp_curves.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/ecp_curves.c:

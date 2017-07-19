@@ -35,6 +35,7 @@ bluedroid/stack/btm/btm_dev.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
@@ -176,6 +177,8 @@ bluedroid/stack/btm/btm_dev.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h:
@@ -315,3 +318,4 @@ bluedroid/stack/btm/btm_dev.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/l2c_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/l2cdefs.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/btm/btm_dev.c:

@@ -66,3 +66,4 @@ cores/esp32/WString.o: \
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/pgmspace.h:
 
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/stdlib_noniso.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/WString.cpp:

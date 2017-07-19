@@ -21,6 +21,11 @@ bluedroid/osi/config.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
@@ -54,13 +59,9 @@ bluedroid/osi/config.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/ctype.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/allocator.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/config.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/list.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h \
@@ -109,6 +110,16 @@ bluedroid/osi/config.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -176,19 +187,11 @@ bluedroid/osi/config.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
-
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/allocator.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/config.h:
 
@@ -201,3 +204,4 @@ bluedroid/osi/config.o: \
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/config.c:

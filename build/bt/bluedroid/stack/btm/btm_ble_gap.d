@@ -33,6 +33,7 @@ bluedroid/stack/btm/btm_ble_gap.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -184,6 +185,8 @@ bluedroid/stack/btm/btm_ble_gap.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -354,3 +357,4 @@ bluedroid/stack/btm/btm_ble_gap.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_int.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c:

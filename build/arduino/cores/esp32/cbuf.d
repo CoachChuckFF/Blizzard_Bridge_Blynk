@@ -54,3 +54,4 @@ cores/esp32/cbuf.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/cbuf.cpp:

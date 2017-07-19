@@ -36,3 +36,4 @@ src/flash_partitions.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/flash_partitions.c:

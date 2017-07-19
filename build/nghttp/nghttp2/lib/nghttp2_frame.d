@@ -35,6 +35,8 @@ nghttp2/lib/nghttp2_frame.o: \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
@@ -113,6 +115,10 @@ nghttp2/lib/nghttp2_frame.o: \
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/errno.h:
@@ -126,3 +132,4 @@ nghttp2/lib/nghttp2_frame.o: \
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_priority_spec.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.h:
+/home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.c:

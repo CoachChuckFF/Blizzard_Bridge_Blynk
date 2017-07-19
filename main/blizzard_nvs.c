@@ -40,15 +40,15 @@ void init_nvs_key_pair_default(uint8_t index)
       if(ret_val != ESP_OK)
         ESP_LOGI(TAG, "ERROR NVS SET DEFAULT PASS %d", ret_val);
     break;
-    case NVS_COM_MODE_INDEX:
-      ret_val = nvs_set_u8(config_nvs_handle, NVS_COM_MODE_KEY, DEFAULT_COM_MODE);
+    case NVS_INPUT_MODE_INDEX:
+      ret_val = nvs_set_u8(config_nvs_handle, NVS_INPUT_MODE_KEY, DEFAULT_INPUT_MODE);
       if(ret_val != ESP_OK)
-        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT COM MODE %d", ret_val);
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT INPUT MODE %d", ret_val);
     break;
-    case NVS_COM_SUB_MODE_INDEX:
-      ret_val = nvs_set_u8(config_nvs_handle, NVS_COM_SUB_MODE_KEY, DEFAULT_SUB_COM_MODE);
+    case NVS_OUTPUT_MODE_INDEX:
+      ret_val = nvs_set_u8(config_nvs_handle, NVS_OUTPUT_MODE_KEY, DEFAULT_OUTPUT_MODE);
       if(ret_val != ESP_OK)
-        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT SUB COM MODE %d", ret_val);
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT OUTPUT MODE %d", ret_val);
     break;
     case NVS_OWN_IP_ADDRESS_INDEX:
       buf8[3] = 192; buf8[2] = 168; buf8[1] = 1; buf8[0] = 1;
@@ -123,27 +123,27 @@ SET_PASS:
   }else
     setPASS((char *) buf8, length);
 
-SET_COM_MODE:
-  ret_val = nvs_get_u8(config_nvs_handle, NVS_COM_MODE_KEY, buf8);
+SET_INPUT_MODE:
+  ret_val = nvs_get_u8(config_nvs_handle, NVS_INPUT_MODE_KEY, buf8);
   if(ret_val != ESP_OK){
-    ESP_LOGI(TAG, "ERROR NVS GET COM MODE %d", ret_val);
+    ESP_LOGI(TAG, "ERROR NVS GET INPUT MODE %d", ret_val);
   }
   if(ret_val == ESP_ERR_NVS_NOT_FOUND){
-    init_nvs_key_pair_default(NVS_COM_MODE_INDEX);
-    goto SET_COM_MODE;
+    init_nvs_key_pair_default(NVS_INPUT_MODE_INDEX);
+    goto SET_INPUT_MODE;
   }else
-    setComMode(buf8[0]);
+    setInputMode(buf8[0]);
 
-SET_COM_SUB_MODE:
-  ret_val = nvs_get_u8(config_nvs_handle, NVS_COM_SUB_MODE_KEY, buf8);
+SET_OUTPUT_MODE:
+  ret_val = nvs_get_u8(config_nvs_handle, NVS_OUTPUT_MODE_KEY, buf8);
   if(ret_val != ESP_OK){
-    ESP_LOGI(TAG, "ERROR NVS GET SUB COM MODE %d", ret_val);
+    ESP_LOGI(TAG, "ERROR NVS GET OUTPUT MODE %d", ret_val);
   }
   if(ret_val == ESP_ERR_NVS_NOT_FOUND){
-    init_nvs_key_pair_default(NVS_COM_SUB_MODE_INDEX);
-    goto SET_COM_SUB_MODE;
+    init_nvs_key_pair_default(NVS_OUTPUT_MODE_INDEX);
+    goto SET_OUTPUT_MODE;
   }else
-    setSubComMode(buf8[0]);
+    setOutputMode(buf8[0]);
 
 SET_OWN_IP:
   ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_IP_ADDRESS_KEY, NULL, &length);
@@ -207,7 +207,7 @@ void update_u8_nvs_val(const char* key, uint8_t value)
   if(ret_val != ESP_OK){
     ESP_LOGI(TAG, "NVS COMMIT FAIL - SET u8 %d", ret_val);
   }else
-    ESP_LOGI(TAG, "COMMITED");
+    ESP_LOGI(TAG, "COMMITED U8 %d", value);
 }
 
 void update_u16_nvs_val(const char* key, uint8_t value)
@@ -222,7 +222,7 @@ void update_u16_nvs_val(const char* key, uint8_t value)
   if(ret_val != ESP_OK){
     ESP_LOGI(TAG, "NVS COMMIT FAIL - SET u16 %d", ret_val);
   }else
-    ESP_LOGI(TAG, "COMMITED");
+    ESP_LOGI(TAG, "COMMITED 16 %d", value);
 }
 
 void update_blob_nvs_val(const char* key, uint8_t* value, uint8_t length)
@@ -237,7 +237,7 @@ void update_blob_nvs_val(const char* key, uint8_t* value, uint8_t length)
   if(ret_val != ESP_OK){
     ESP_LOGI(TAG, "NVS COMMIT FAIL - SET BLOB %d", ret_val);
   }else
-    ESP_LOGI(TAG, "COMMITED");
+    ESP_LOGI(TAG, "COMMITED BLOB");
 }
 
 void update_str_nvs_val(const char* key, char* value)
@@ -253,7 +253,7 @@ void update_str_nvs_val(const char* key, char* value)
   if(ret_val != ESP_OK){
     ESP_LOGI(TAG, "NVS COMMIT FAIL - SET STR %d", ret_val);
   }else
-    ESP_LOGI(TAG, "COMMITED");
+    ESP_LOGI(TAG, "COMMITED STR");
 }
 
 void print_nvs_values(uint8_t index)
@@ -286,19 +286,19 @@ void print_nvs_values(uint8_t index)
       }else
         ESP_LOGI(TAG, "PASS: %s", buf8);
     break;
-    case NVS_COM_MODE_INDEX:
-      ret_val = nvs_get_u8(config_nvs_handle, NVS_COM_MODE_KEY, buf8);
+    case NVS_INPUT_MODE_INDEX:
+      ret_val = nvs_get_u8(config_nvs_handle, NVS_INPUT_MODE_KEY, buf8);
       if(ret_val != ESP_OK){
-        ESP_LOGI(TAG, "ERROR NVS GET COM MODE %d", ret_val);
+        ESP_LOGI(TAG, "ERROR NVS GET INPUT MODE %d", ret_val);
       }else
-        ESP_LOGI(TAG, "COM MODE: %d", buf8[0]);
+        ESP_LOGI(TAG, "INPUT MODE: %d", buf8[0]);
     break;
-    case NVS_COM_SUB_MODE_INDEX:
-      ret_val = nvs_get_u8(config_nvs_handle, NVS_COM_SUB_MODE_KEY, buf8);
+    case NVS_OUTPUT_MODE_INDEX:
+      ret_val = nvs_get_u8(config_nvs_handle, NVS_OUTPUT_MODE_KEY, buf8);
       if(ret_val != ESP_OK){
-        ESP_LOGI(TAG, "ERROR NVS GET SUB COM MODE %d", ret_val);
+        ESP_LOGI(TAG, "ERROR NVS GET OUTPUT MODE %d", ret_val);
       }else
-        ESP_LOGI(TAG, "SUB COM MODE: %d", buf8[0]);
+        ESP_LOGI(TAG, "OUTPUT MODE: %d", buf8[0]);
     break;
     case NVS_OWN_IP_ADDRESS_INDEX:
       ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_IP_ADDRESS_KEY, NULL, &length);

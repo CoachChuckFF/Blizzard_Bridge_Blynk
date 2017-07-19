@@ -36,6 +36,7 @@ rmt.o: /home/penguin/Programio/esp-idf/components/driver/./rmt.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -152,6 +153,8 @@ rmt.o: /home/penguin/Programio/esp-idf/components/driver/./rmt.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -233,3 +236,4 @@ rmt.o: /home/penguin/Programio/esp-idf/components/driver/./rmt.c \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h:
+/home/penguin/Programio/esp-idf/components/driver/./rmt.c:

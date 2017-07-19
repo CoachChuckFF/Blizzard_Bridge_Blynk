@@ -24,3 +24,4 @@ libsodium/src/libsodium/crypto_verify/sodium/verify.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_32.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_verify_64.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_verify/sodium/verify.c:

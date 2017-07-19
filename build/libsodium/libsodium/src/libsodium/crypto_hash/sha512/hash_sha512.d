@@ -60,3 +60,4 @@ libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_hash/sha512/hash_sha512.c:

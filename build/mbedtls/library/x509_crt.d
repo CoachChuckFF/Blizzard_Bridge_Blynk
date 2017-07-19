@@ -141,3 +141,4 @@ library/x509_crt.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h:
 
 /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/x509_crt.c:

@@ -87,3 +87,4 @@ libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/hmacsha256/auth_hmacsha256.c:

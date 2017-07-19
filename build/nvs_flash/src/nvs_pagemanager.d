@@ -11,7 +11,6 @@ src/nvs_pagemanager.o: \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_page.hpp \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/intrusive_list.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_item_hash_list.hpp
 
@@ -37,8 +36,7 @@ src/nvs_pagemanager.o: \
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/intrusive_list.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_item_hash_list.hpp:
+/home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_pagemanager.cpp:

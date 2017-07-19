@@ -39,6 +39,7 @@ libcoap/src/block.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
@@ -172,6 +173,8 @@ libcoap/src/block.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -279,3 +282,4 @@ libcoap/src/block.o: \
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/option.h:
 
 /home/penguin/Programio/esp-idf/components/coap/libcoap/include/coap/bits.h:
+/home/penguin/Programio/esp-idf/components/coap/libcoap/src/block.c:

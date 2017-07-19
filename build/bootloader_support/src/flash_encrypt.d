@@ -22,9 +22,13 @@ src/flash_encrypt.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/bootloader_support/include_priv/bootloader_random.h \
  /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
@@ -90,11 +94,19 @@ src/flash_encrypt.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/bootloader_support/include_priv/bootloader_random.h:
 
@@ -135,3 +147,4 @@ src/flash_encrypt.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/spi_flash.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/flash_encrypt.c:

@@ -23,6 +23,10 @@ mcpwm.o: /home/penguin/Programio/esp-idf/components/driver/./mcpwm.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h \
@@ -41,9 +45,6 @@ mcpwm.o: /home/penguin/Programio/esp-idf/components/driver/./mcpwm.c \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -126,6 +127,14 @@ mcpwm.o: /home/penguin/Programio/esp-idf/components/driver/./mcpwm.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
@@ -161,12 +170,6 @@ mcpwm.o: /home/penguin/Programio/esp-idf/components/driver/./mcpwm.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -233,3 +236,4 @@ mcpwm.o: /home/penguin/Programio/esp-idf/components/driver/./mcpwm.c \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+/home/penguin/Programio/esp-idf/components/driver/./mcpwm.c:

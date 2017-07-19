@@ -39,3 +39,4 @@ library/xmltok.o: \
 /home/penguin/Programio/esp-idf/components/expat/include/expat/latin1tab.h:
 
 /home/penguin/Programio/esp-idf/components/expat/library/xmltok_ns.c:
+/home/penguin/Programio/esp-idf/components/expat/library/xmltok.c:

@@ -78,3 +78,4 @@ libsodium/src/libsodium/crypto_auth/crypto_auth.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_auth/crypto_auth.c:

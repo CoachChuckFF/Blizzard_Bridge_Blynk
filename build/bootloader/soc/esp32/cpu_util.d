@@ -24,3 +24,4 @@ esp32/cpu_util.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/blizzard-esp/build/bootloader/../include/sdkconfig.h:
+/home/penguin/Programio/esp-idf/components/soc/esp32/cpu_util.c:

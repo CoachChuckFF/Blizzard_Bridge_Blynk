@@ -18,3 +18,4 @@ library/pkcs11.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/limits.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/newlib.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/pkcs11.c:

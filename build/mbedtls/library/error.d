@@ -240,3 +240,4 @@ library/error.o: \
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/x509.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/xtea.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/error.c:

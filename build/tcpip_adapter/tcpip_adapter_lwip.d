@@ -26,14 +26,16 @@ tcpip_adapter_lwip.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip_addr.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/opt.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/lwipopts.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/time.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/time.h \
@@ -41,7 +43,6 @@ tcpip_adapter_lwip.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/debug.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/arch.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
@@ -165,6 +166,16 @@ tcpip_adapter_lwip.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h:
@@ -174,12 +185,6 @@ tcpip_adapter_lwip.o: \
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/opt.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/lwipopts.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/time.h:
 
@@ -194,8 +199,6 @@ tcpip_adapter_lwip.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/debug.h:
 
@@ -336,3 +339,4 @@ tcpip_adapter_lwip.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
+/home/penguin/Programio/esp-idf/components/tcpip_adapter/./tcpip_adapter_lwip.c:

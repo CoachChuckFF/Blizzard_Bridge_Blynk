@@ -129,3 +129,4 @@ library/oid.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/x509.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/oid.c:

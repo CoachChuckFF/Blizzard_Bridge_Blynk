@@ -36,15 +36,26 @@
 #include "esp_system.h"
 #include "nvs_flash.h"
 #include "esp_log.h"
-#include "lib/main_arduino.h"
+#include "lib/blizzard_blynk.h"
 #include "lib/blizzard_nvs.h"
 #include "lib/blizzard_uart.h"
 #include "lib/blizzard_structs.h"
 #include "lib/blizzard_wifi.h"
 #include "lib/blizzard_eth.h"
+#include "lib/blizzard_wdmx.h"
 //#include "Arduino.h"
 
 static const char *TAG = "MAIN";
+
+ESP32DMX DMX;
+
+extern uint8_t device_name_changed;
+extern uint8_t input_mode_changed;
+extern uint8_t output_mode_changed;
+extern uint8_t own_ip_changed;
+extern uint8_t own_address_changed;
+extern uint8_t own_universe_changed;
+extern uint8_t slots_changed;
 
 //initalize and look for flags
 void app_main()
@@ -60,11 +71,20 @@ void app_main()
 
   populate_all_dmx_nvs_values();
 
-
-
-
+  //start with trying to connect to wifi
+  //try to connect with nvs values
+/*
   for(i = 0; i < 9; i++)
-    print_nvs_values(i);
+    print_nvs_values(i);*/
+
+
+  initialise_blizzard_wifi(getSSID(), getPASS());
+  setOwnIPAddress(get_wifi_ip());
+  print_nvs_values(NVS_OWN_IP_ADDRESS_INDEX); //does not work yet
+  initialise_blizzard_ethernet();
+  /*for(i = 0; i < 9; i++)
+    print_nvs_values(i);*/
+
 
   //nvs_flash_init();
   //initialise_blizzard_wifi();
@@ -72,31 +92,82 @@ void app_main()
   //vTaskDelay(10000 / portTICK_RATE_MS);
 
   //startBlizzardUart();
-  startDMXUart(SEND);
+  //startDMXUart(SEND);
+
   //initialise_blizzard_ethernet();
   //vTaskDelay(5000);
-  initialise_blizzard_wifi();
 
   //startDMXArtnet(SEND);
-  xTaskCreate(&ArduinoLoop, "Arduino Core", 2048, NULL, tskIDLE_PRIORITY + 6, NULL);
+  xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 3, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
   //vTaskStartScheduler();
 
-  clearDMX();
+  //clearDMX();
+  startDMXUart(SEND);
+  startWDMX();
   //setOwnUniverse(1);
-  startDMXArtnet(RECEIVE);
+
 
   //xTaskCreate(&test, "test", 2048, NULL, 5, NULL);
 
   //main loop - listens to flag changes and responds to flag changes
+  /*startWDMX();
+  switch_wdmx_button_on();*/
 
-  vTaskDelay(15000);
+  //easy_wdmx_connect();
+  //startDMXArtnet(RECEIVE);
+  /* Listen for Config Changes */
   while(1)
   {
+    if(input_mode_changed)
+    {
+      ESP_LOGI(TAG, "input mode changed to: %d", getInputMode());
+      switch(getInputMode())
+      {
+        case DMX_MODE:
+          changeDirectionDMXUart(RECEIVE);
+        break;
+        case WDMX_MODE:
+          //TODO be able to toggle wdmx
+        break;
+        case ARTNET_MODE:
+          //startDMXArtnet(RECEIVE);
+        break;
+        case SACN_MODE:
+          //startDMXsACN();//TODO add in recive mode
+        break;
+      }
+      input_mode_changed = 0;
+    }
+
+    if(output_mode_changed)
+    {
+      ESP_LOGI(TAG, "output mode changed to: %d", getOutputMode());
+      switch(getOutputMode())
+      {
+        case DMX_MODE:
+          changeDirectionDMXUart(SEND);
+        break;
+        case WDMX_MODE:
+          //TODO be able to toggle wdmx
+        break;
+        case ARTNET_MODE:
+
+          //startDMXArtnet(SEND);
+        break;
+        case SACN_MODE:
+          //startDMXsACN();//TODO add in recive mode
+        break;
+      }
+      output_mode_changed = 0;
+    }
+
 
 
     //ESP_LOGI(TAG, "MAIN LOOP");
-    sendDMXDataArtnet(0);
+    //sendDMXDataArtnet(0);
     //delay for context switch
+    //ESP_LOGI(TAG, "COLOR %d", get_wdmx_color());
+    //ESP_LOGI(TAG, "DMX0 %d", getDMXData(0));
     vTaskDelay(1000);
   }
 

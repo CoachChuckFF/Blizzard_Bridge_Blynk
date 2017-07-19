@@ -72,3 +72,4 @@ src/flash_encrypt.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/spi_flash.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/flash_encrypt.c:

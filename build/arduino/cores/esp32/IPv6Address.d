@@ -42,6 +42,7 @@ cores/esp32/IPv6Address.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -199,6 +200,8 @@ cores/esp32/IPv6Address.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -342,3 +345,4 @@ cores/esp32/IPv6Address.o: \
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/IPv6Address.h:
 
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Print.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/IPv6Address.cpp:

@@ -30,7 +30,7 @@ ip_addr_t ip;
 
 const uint8_t ARTNET_ID[8] = {'A','r','t','-','N','e','t',0};
 
-//direction so you can ignor incoming DMX data packets
+//direction so you can ignore incoming DMX data packets
 void startDMXArtnet(uint8_t direction)
 {
 
@@ -94,7 +94,7 @@ void createPacketArtnet()
 }
 
 void sendDMXDataArtnet(uint16_t universe){
-  int i, j;
+  int i, j, ret_val;
   struct pbuf *p;
 
 
@@ -123,7 +123,10 @@ void sendDMXDataArtnet(uint16_t universe){
   }
 
   ARTNETPACKET._sequence = (!ARTNETPACKET._sequence) ? 1 : ARTNETPACKET._sequence + 1;
-  ESP_LOGI(TAG, "Send %d", udp_send(ARTNET._udp, p));
+
+  ret_val = udp_send(ARTNET._udp, p);
+  if(ret_val)
+    ESP_LOGI(TAG, "Send Error %d", ret_val);
 
   pbuf_free(p);
 }

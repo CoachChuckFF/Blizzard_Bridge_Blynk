@@ -25,6 +25,8 @@ freertos_hooks.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h:
@@ -77,4 +79,9 @@ freertos_hooks.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+/home/penguin/Programio/esp-idf/components/esp32/./freertos_hooks.c:

@@ -72,3 +72,4 @@ xtensa_vectors.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
+/home/penguin/Programio/esp-idf/components/freertos/./xtensa_vectors.S:

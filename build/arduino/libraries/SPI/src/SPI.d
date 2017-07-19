@@ -63,3 +63,4 @@ libraries/SPI/src/SPI.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
 
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-spi.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/SPI/src/SPI.cpp:

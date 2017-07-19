@@ -7,12 +7,16 @@ src/nvs_api.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_types.hpp \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_page.hpp \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/intrusive_list.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_item_hash_list.hpp \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp \
@@ -65,6 +69,16 @@ src/nvs_api.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_types.hpp:
@@ -74,8 +88,6 @@ src/nvs_api.o: \
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_page.hpp:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/intrusive_list.h:
 
@@ -150,3 +162,4 @@ src/nvs_api.o: \
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
+/home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_api.cpp:

@@ -32,6 +32,7 @@ bluedroid/osi/alarm.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -143,6 +144,8 @@ bluedroid/osi/alarm.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
@@ -234,3 +237,4 @@ bluedroid/osi/alarm.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_alarm.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/alarm.c:

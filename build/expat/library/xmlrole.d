@@ -18,3 +18,4 @@ library/xmlrole.o: \
 /home/penguin/Programio/esp-idf/components/expat/include/expat/xmltok.h:
 
 /home/penguin/Programio/esp-idf/components/expat/include/expat/ascii.h:
+/home/penguin/Programio/esp-idf/components/expat/library/xmlrole.c:

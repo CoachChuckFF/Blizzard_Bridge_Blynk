@@ -30,3 +30,4 @@ spi_flash_rom_patch.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
 
 /home/penguin/Programio/blizzard-esp/build/bootloader/../include/sdkconfig.h:
+/home/penguin/Programio/esp-idf/components/spi_flash/./spi_flash_rom_patch.c:

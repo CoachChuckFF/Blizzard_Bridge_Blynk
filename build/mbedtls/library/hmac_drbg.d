@@ -93,3 +93,4 @@ library/hmac_drbg.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/time.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/hmac_drbg.c:

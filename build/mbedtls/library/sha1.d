@@ -99,3 +99,4 @@ library/sha1.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/time.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/sha1.c:

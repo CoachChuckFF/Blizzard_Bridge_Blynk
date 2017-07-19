@@ -22,6 +22,8 @@ tasks.o: /home/penguin/Programio/esp-idf/components/freertos/./tasks.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/platform_include/esp_newlib.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_panic.h \
@@ -32,7 +34,6 @@ tasks.o: /home/penguin/Programio/esp-idf/components/freertos/./tasks.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -110,6 +111,10 @@ tasks.o: /home/penguin/Programio/esp-idf/components/freertos/./tasks.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/platform_include/esp_newlib.h:
@@ -129,8 +134,6 @@ tasks.o: /home/penguin/Programio/esp-idf/components/freertos/./tasks.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -191,3 +194,4 @@ tasks.o: /home/penguin/Programio/esp-idf/components/freertos/./tasks.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+/home/penguin/Programio/esp-idf/components/freertos/./tasks.c:

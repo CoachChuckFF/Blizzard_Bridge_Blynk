@@ -37,6 +37,7 @@ bluedroid/stack/btu/btu_task.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -188,6 +189,8 @@ bluedroid/stack/btu/btu_task.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -342,3 +345,4 @@ bluedroid/stack/btu/btu_task.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/smp_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_int.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/btu/btu_task.c:

@@ -81,3 +81,4 @@ libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/crypto_scrypt-common.
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/runtime.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/crypto_scrypt-common.c:

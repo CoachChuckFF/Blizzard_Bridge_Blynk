@@ -34,6 +34,7 @@ bluedroid/stack/l2cap/l2c_csm.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki_common.h \
@@ -164,6 +165,8 @@ bluedroid/stack/l2cap/l2c_csm.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki.h:
@@ -285,3 +288,4 @@ bluedroid/stack/l2cap/l2c_csm.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btu.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_csm.c:

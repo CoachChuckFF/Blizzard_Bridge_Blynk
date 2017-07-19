@@ -15,3 +15,4 @@ eri.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
 
 /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/eri.h:
+/home/penguin/Programio/esp-idf/components/xtensa-debug-module/./eri.c:

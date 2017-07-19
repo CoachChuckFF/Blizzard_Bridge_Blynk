@@ -20,6 +20,11 @@ gpio.o: /home/penguin/Programio/esp-idf/components/driver/./gpio.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -38,11 +43,7 @@ gpio.o: /home/penguin/Programio/esp-idf/components/driver/./gpio.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -109,6 +110,16 @@ gpio.o: /home/penguin/Programio/esp-idf/components/driver/./gpio.c \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h:
@@ -145,15 +156,7 @@ gpio.o: /home/penguin/Programio/esp-idf/components/driver/./gpio.c \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -200,3 +203,4 @@ gpio.o: /home/penguin/Programio/esp-idf/components/driver/./gpio.c \
 /home/penguin/Programio/esp-idf/components/driver/include/driver/rtc_io.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
+/home/penguin/Programio/esp-idf/components/driver/./gpio.c:

@@ -22,14 +22,15 @@ port/esp_bignum.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/malloc.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/malloc.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/port/include/mbedtls/bignum.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/bignum.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/check_config.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -132,7 +133,9 @@ port/esp_bignum.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/limits.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
@@ -140,13 +143,13 @@ port/esp_bignum.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/mbedtls/port/include/mbedtls/bignum.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/bignum.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/check_config.h:
 
@@ -261,3 +264,4 @@ port/esp_bignum.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/port/esp_bignum.c:

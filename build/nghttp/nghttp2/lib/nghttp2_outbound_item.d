@@ -36,6 +36,8 @@ nghttp2/lib/nghttp2_outbound_item.o: \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h:
@@ -110,4 +112,9 @@ nghttp2/lib/nghttp2_outbound_item.o: \
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+/home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.c:

@@ -90,3 +90,4 @@ libsodium/src/libsodium/crypto_pwhash/argon2/argon2.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2-encoding.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/argon2/argon2.c:

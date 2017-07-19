@@ -35,6 +35,7 @@ core/ipv6/ip6.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
@@ -167,6 +168,8 @@ core/ipv6/ip6.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -288,3 +291,4 @@ core/ipv6/ip6.o: \
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/nd6.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/mld6.h:
+/home/penguin/Programio/esp-idf/components/lwip/core/ipv6/ip6.c:

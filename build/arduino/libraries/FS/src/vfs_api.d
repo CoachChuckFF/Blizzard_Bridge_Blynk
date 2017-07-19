@@ -29,6 +29,7 @@ libraries/FS/src/vfs_api.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -163,6 +164,8 @@ libraries/FS/src/vfs_api.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -315,3 +318,4 @@ libraries/FS/src/vfs_api.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h:
 
 /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/FS/src/vfs_api.cpp:

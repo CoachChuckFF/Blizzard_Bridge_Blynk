@@ -57,3 +57,4 @@ libsodium/src/libsodium/crypto_pwhash/crypto_pwhash.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/crypto_pwhash.c:

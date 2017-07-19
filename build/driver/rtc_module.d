@@ -23,9 +23,10 @@ rtc_module.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/sens_reg.h \
@@ -74,7 +75,9 @@ rtc_module.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/rtc_cntl.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h:
 
@@ -122,11 +125,13 @@ rtc_module.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
 
@@ -225,3 +230,8 @@ rtc_module.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/rtc_cntl.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
+/home/penguin/Programio/esp-idf/components/driver/./rtc_module.c:

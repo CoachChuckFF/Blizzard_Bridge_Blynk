@@ -102,3 +102,4 @@ library/pk.o: \
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/ecp.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/ecdsa.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/pk.c:

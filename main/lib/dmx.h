@@ -59,16 +59,19 @@ extern "C" {
 #define ENABLE 1
 #define DISABLE 0
 
-//Modes
+#define HIGH 1
+#define LOW 0
+
+//MEDIUMS
 #define ETHERNET_MODE 0
 #define WIFI_MODE 1
-#define DMX_MODE 2
-#define WDMX 3
+#define NETWORKLESS_MODE 2
 
-//Sub Modes
+//MODES
+#define DMX_MODE 2
+#define WDMX_MODE 3
 #define ARTNET_MODE 0
 #define SACN_MODE 1
-#define BLYNK_MODE 2
 
 //Max and Mins
 #define DMX_MAX_SLOTS 513 // 512 + start byte
@@ -80,8 +83,8 @@ extern "C" {
 
 //flags
 extern uint8_t device_name_changed;
-extern uint8_t com_made_changed;
-extern uint8_t com_sub_mode_changed;
+extern uint8_t input_mode_changed;
+extern uint8_t output_mode_changed;
 extern uint8_t own_ip_changed;
 extern uint8_t own_address_changed;
 extern uint8_t own_universe_changed;
@@ -102,13 +105,17 @@ char* getPASS(void);
 
 void setPASS(char *pass, uint8_t length); //has to be null terminated
 
-uint8_t getComMode(void);
+uint8_t getMedium(void);
 
-void setComMode(uint8_t com_mode);
+void setMedium(uint8_t medium);
 
-uint8_t getSubComMode(void);
+uint8_t getInputMode(void);
 
-void setSubComMode(uint8_t com_sub_mode);
+void setInputMode(uint8_t input_mode);
+
+uint8_t getOutputMode(void);
+
+void setOutputMode(uint8_t output_mode);
 
 uint8_t* getOwnIPAddress();
 

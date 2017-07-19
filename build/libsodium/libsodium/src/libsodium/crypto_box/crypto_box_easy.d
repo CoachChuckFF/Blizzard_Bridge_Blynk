@@ -84,3 +84,4 @@ libsodium/src/libsodium/crypto_box/crypto_box_easy.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_box/crypto_box_easy.c:

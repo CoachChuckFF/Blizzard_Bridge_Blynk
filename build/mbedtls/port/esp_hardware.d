@@ -72,3 +72,4 @@ port/esp_hardware.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/port/esp_hardware.c:

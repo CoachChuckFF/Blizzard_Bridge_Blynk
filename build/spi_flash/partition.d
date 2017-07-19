@@ -16,6 +16,8 @@ partition.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
@@ -29,7 +31,6 @@ partition.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
@@ -73,6 +74,10 @@ partition.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
@@ -99,8 +104,6 @@ partition.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
@@ -120,3 +123,4 @@ partition.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
+/home/penguin/Programio/esp-idf/components/spi_flash/./partition.c:

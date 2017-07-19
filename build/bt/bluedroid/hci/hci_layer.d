@@ -23,12 +23,13 @@ bluedroid/hci/hci_layer.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
- /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
@@ -140,17 +141,19 @@ bluedroid/hci/hci_layer.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
-/home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h:
 
@@ -279,3 +282,4 @@ bluedroid/hci/hci_layer.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/hci/hci_layer.c:

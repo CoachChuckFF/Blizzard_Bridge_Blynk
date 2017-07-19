@@ -23,6 +23,11 @@ hwcrypto/aes.o: \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
@@ -74,6 +79,16 @@ hwcrypto/aes.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
@@ -81,3 +96,4 @@ hwcrypto/aes.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+/home/penguin/Programio/esp-idf/components/esp32/hwcrypto/aes.c:

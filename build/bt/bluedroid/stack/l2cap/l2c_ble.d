@@ -31,14 +31,15 @@ bluedroid/stack/l2cap/l2c_ble.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/l2cdefs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/l2cap/include/l2c_int.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -170,6 +171,14 @@ bluedroid/stack/l2cap/l2c_ble.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/l2cdefs.h:
@@ -179,12 +188,6 @@ bluedroid/stack/l2cap/l2c_ble.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
 
@@ -321,3 +324,4 @@ bluedroid/stack/l2cap/l2c_ble.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/hci/include/hci_packet_parser.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btcore/include/version.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_ble.c:

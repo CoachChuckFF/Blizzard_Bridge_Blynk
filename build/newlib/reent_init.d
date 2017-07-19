@@ -48,3 +48,4 @@ reent_init.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
+/home/penguin/Programio/esp-idf/components/newlib/./reent_init.c:

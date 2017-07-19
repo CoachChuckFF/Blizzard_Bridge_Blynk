@@ -29,6 +29,10 @@ bluedroid/external/sbc/decoder/srce/oi_codec_version.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/include/oi_stddefs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/include/oi_cpu_dep.h \
@@ -96,6 +100,14 @@ bluedroid/external/sbc/decoder/srce/oi_codec_version.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/include/oi_stddefs.h:
@@ -111,3 +123,4 @@ bluedroid/external/sbc/decoder/srce/oi_codec_version.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/include/oi_stddefs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/include/oi_status.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/srce/oi_codec_version.c:

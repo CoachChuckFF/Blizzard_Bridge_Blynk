@@ -51,3 +51,4 @@ xtensa_intr_asm.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h:
+/home/penguin/Programio/esp-idf/components/freertos/./xtensa_intr_asm.S:

@@ -35,6 +35,7 @@ apps/ping/ping.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
@@ -168,6 +169,8 @@ apps/ping/ping.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -291,3 +294,4 @@ apps/ping/ping.o: \
 /home/penguin/Programio/esp-idf/components/lwip/apps/ping/esp_ping.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
+/home/penguin/Programio/esp-idf/components/lwip/apps/ping/ping.c:

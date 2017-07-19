@@ -34,7 +34,9 @@ extern "C" {
 #include "esp_log.h"
 
 static esp_err_t blizzard_wifi_event_handler(void *ctx, system_event_t *event);
-void initialise_blizzard_wifi(void);
+void initialise_blizzard_wifi(char * ssid, char * pass);
+void deinitalise_blizzard_wifi(void);
+uint8_t* get_wifi_ip(void);
 
 #ifdef __cplusplus
 }

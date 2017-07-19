@@ -34,6 +34,7 @@ bluedroid/stack/sdp/sdp_discovery.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki_common.h \
@@ -153,6 +154,8 @@ bluedroid/stack/sdp/sdp_discovery.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki.h:
@@ -252,3 +255,4 @@ bluedroid/stack/sdp/sdp_discovery.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/smp_api.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/sdp/sdp_discovery.c:

@@ -41,6 +41,8 @@ nghttp2/lib/nghttp2_session.o: \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h \
  /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_net.h \
@@ -131,6 +133,10 @@ nghttp2/lib/nghttp2_session.o: \
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h:
@@ -144,3 +150,4 @@ nghttp2/lib/nghttp2_session.o: \
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_http.h:
 
 /home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.h:
+/home/penguin/Programio/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c:

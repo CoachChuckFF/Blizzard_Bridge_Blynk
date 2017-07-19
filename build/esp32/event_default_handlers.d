@@ -25,11 +25,12 @@ event_default_handlers.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -143,6 +144,10 @@ event_default_handlers.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
@@ -150,8 +155,6 @@ event_default_handlers.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -276,3 +279,4 @@ event_default_handlers.o: \
 /home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
+/home/penguin/Programio/esp-idf/components/esp32/./event_default_handlers.c:

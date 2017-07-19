@@ -39,6 +39,8 @@ libraries/WiFi/src/WiFiMulti.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
@@ -58,7 +60,6 @@ libraries/WiFi/src/WiFiMulti.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_default_fcntl.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/debug.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/arch.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
@@ -237,6 +238,10 @@ libraries/WiFi/src/WiFiMulti.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h:
@@ -274,8 +279,6 @@ libraries/WiFi/src/WiFiMulti.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/debug.h:
 
@@ -474,3 +477,4 @@ libraries/WiFi/src/WiFiMulti.o: \
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/cbuf.h:
 
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiMulti.cpp:

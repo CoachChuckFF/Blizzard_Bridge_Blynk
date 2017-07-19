@@ -24,6 +24,7 @@ wear_levelling.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
@@ -88,6 +89,8 @@ wear_levelling.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
@@ -117,3 +120,4 @@ wear_levelling.o: \
 /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/SPI_Flash.h:
 
 /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/Partition.h:
+/home/penguin/Programio/esp-idf/components/wear_levelling/./wear_levelling.cpp:

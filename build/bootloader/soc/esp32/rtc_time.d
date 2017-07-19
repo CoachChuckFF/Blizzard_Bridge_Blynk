@@ -21,3 +21,4 @@ esp32/rtc_time.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
+/home/penguin/Programio/esp-idf/components/soc/esp32/rtc_time.c:

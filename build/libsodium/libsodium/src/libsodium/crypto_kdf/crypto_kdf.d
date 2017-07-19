@@ -54,3 +54,4 @@ libsodium/src/libsodium/crypto_kdf/crypto_kdf.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/lock.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_kdf/crypto_kdf.c:

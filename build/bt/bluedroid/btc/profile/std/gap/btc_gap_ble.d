@@ -32,6 +32,7 @@ bluedroid/btc/profile/std/gap/btc_gap_ble.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -169,6 +170,8 @@ bluedroid/btc/profile/std/gap/btc_gap_ble.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -315,3 +318,4 @@ bluedroid/btc/profile/std/gap/btc_gap_ble.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gattc_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gatt_defs.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/profile/std/gap/btc_gap_ble.c:

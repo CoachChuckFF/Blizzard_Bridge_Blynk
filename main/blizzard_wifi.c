@@ -1,7 +1,8 @@
 #include "lib/blizzard_wifi.h"
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-#define EXAMPLE_WIFI_SSID "blizznet"
-#define EXAMPLE_WIFI_PASS "destroyer"
 
 /* FreeRTOS event group to signal when we are connected & ready to make a request */
 static const char *TAG = "WIFI";
@@ -31,21 +32,28 @@ static esp_err_t blizzard_wifi_event_handler(void *ctx, system_event_t *event)
     return ESP_OK;
 }
 
-void initialise_blizzard_wifi()
+void initialise_blizzard_wifi(char* ssid, char* pass)
 {
+    wifi_config_t wifi_config; /*= {
+      .sta = {
+        .ssid = "blizznet",
+        .password = "destroyer"
+      },
+    };*/
+    uint8_t i = 0;
     tcpip_adapter_init();
     wifi_event_group = xEventGroupCreate();
     ESP_ERROR_CHECK( esp_event_loop_init(blizzard_wifi_event_handler, NULL) );
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK( esp_wifi_init(&cfg) );
     ESP_ERROR_CHECK( esp_wifi_set_storage(WIFI_STORAGE_RAM) );
-    wifi_config_t wifi_config = {
-        .sta = {
-            .ssid = EXAMPLE_WIFI_SSID,
-            .password = EXAMPLE_WIFI_PASS,
-        },
-    };
+    memset(&wifi_config, 0, sizeof(wifi_config));
+
+    strcpy( (char *) wifi_config.sta.ssid, ssid );
+    strcpy( (char *) wifi_config.sta.password, pass );
+
     ESP_LOGI(TAG, "Setting WiFi configuration SSID %s...", wifi_config.sta.ssid);
+    ESP_LOGI(TAG, "Setting WiFi configuration PASS %s...", wifi_config.sta.password);
     ESP_ERROR_CHECK( esp_wifi_set_mode(WIFI_MODE_STA) );
     ESP_ERROR_CHECK( esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config) );
     ESP_ERROR_CHECK( esp_wifi_start() );
@@ -53,45 +61,24 @@ void initialise_blizzard_wifi()
                         false, true, portMAX_DELAY);
     ESP_LOGI(TAG, "Connected to AP");
 }
-/*
-static void test()
+
+void deinitalise_blizzard_wifi()
 {
-  uint16_t i = 0;
-  uint8_t j = 3;
-  uint8_t k = 140;
-  uint8_t l = 210;
-  uint8_t direction = RECEIVE;
-  //xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
-                      //false, true, portMAX_DELAY);
-  ESP_LOGI(TAG, "Connected to AP");
-  setName((char*)"magic box", 9);
-  setOwnUniverse(1);
-  startDMXArtnet(direction);
-  while(1)
-  {
-    switch(direction)
-    {
-      case SEND:
-        for(i = 1; i < DMX_MAX_SLOTS; i++)
-          setDMXData(i, i * j);
-        j++;
-        sendDMXDataArtnet(1);
-        vTaskDelay(1000 / portTICK_RATE_MS);
-      break;
-      case RECEIVE:
-        printf("\n------------ START -------------\n");
+  esp_wifi_disconnect();
+  esp_wifi_stop();
+}
 
-        for(i = 0; i < 513; i++)
-        {
-          if(!(i%32))
-            printf("\n");
-          if(getDMXData(i))
-            printf(" %d-%d ", i, getDMXData(i));
-        }
-        printf("\n------------ END -------------\n");
-        vTaskDelay(5000 / portTICK_RATE_MS);
-      break;
-    }
-
+uint8_t* get_wifi_ip()
+{
+  tcpip_adapter_ip_info_t ip;
+  memset(&ip, 0, sizeof(tcpip_adapter_ip_info_t));
+  if (tcpip_adapter_get_ip_info(ESP_IF_WIFI_STA, &ip) == 0) {
+      ESP_LOGI(TAG, "~~~~~~~~~~~");
+      ESP_LOGI(TAG, "WIFIIP:"IPSTR, IP2STR(&ip.ip));
+      ESP_LOGI(TAG, "WIFIPMASK:"IPSTR, IP2STR(&ip.netmask));
+      ESP_LOGI(TAG, "WIFIPGW:"IPSTR, IP2STR(&ip.gw));
+      ESP_LOGI(TAG, "~~~~~~~~~~~");
   }
-}*/
+
+  return (uint8_t *) ip4addr_ntoa(&ip.ip);
+}

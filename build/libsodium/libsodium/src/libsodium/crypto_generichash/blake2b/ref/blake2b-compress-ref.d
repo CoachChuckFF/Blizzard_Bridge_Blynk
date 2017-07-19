@@ -75,3 +75,4 @@ libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-ref.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-ref.c:

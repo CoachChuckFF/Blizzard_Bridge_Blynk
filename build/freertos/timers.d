@@ -33,6 +33,7 @@ timers.o: /home/penguin/Programio/esp-idf/components/freertos/./timers.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -121,6 +122,8 @@ timers.o: /home/penguin/Programio/esp-idf/components/freertos/./timers.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -158,3 +161,4 @@ timers.o: /home/penguin/Programio/esp-idf/components/freertos/./timers.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h:
+/home/penguin/Programio/esp-idf/components/freertos/./timers.c:

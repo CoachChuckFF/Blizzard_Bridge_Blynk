@@ -72,3 +72,4 @@ libsodium/src/libsodium/crypto_shorthash/siphash24/ref/shorthash_siphashx24_ref.
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/ref/shorthash_siphash_ref.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/ref/shorthash_siphashx24_ref.c:

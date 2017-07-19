@@ -44,6 +44,7 @@ cores/esp32/esp32-hal-timer.o: \
  /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-bt.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
@@ -182,6 +183,8 @@ cores/esp32/esp32-hal-timer.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h:
@@ -279,3 +282,4 @@ cores/esp32/esp32-hal-timer.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/esp32-hal-timer.c:

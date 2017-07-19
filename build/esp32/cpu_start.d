@@ -23,6 +23,11 @@ cpu_start.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -54,7 +59,6 @@ cpu_start.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -64,9 +68,6 @@ cpu_start.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/system.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -110,7 +111,8 @@ cpu_start.o: \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_heap_alloc_caps.h \
+ /home/penguin/Programio/esp-idf/components/heap/include/esp_heap_caps.h \
+ /home/penguin/Programio/esp-idf/components/heap/include/multi_heap.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/touch_pad.h \
@@ -128,7 +130,7 @@ cpu_start.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h \
  /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h \
  /home/penguin/Programio/esp-idf/components/newlib/platform_include/esp_newlib.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/esp_brownout.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_brownout.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_int_wdt.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_task_wdt.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_phy_init.h \
@@ -187,6 +189,16 @@ cpu_start.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -250,8 +262,6 @@ cpu_start.o: \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h:
@@ -269,12 +279,6 @@ cpu_start.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -362,7 +366,9 @@ cpu_start.o: \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_heap_alloc_caps.h:
+/home/penguin/Programio/esp-idf/components/heap/include/esp_heap_caps.h:
+
+/home/penguin/Programio/esp-idf/components/heap/include/multi_heap.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h:
 
@@ -398,7 +404,7 @@ cpu_start.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/platform_include/esp_newlib.h:
 
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/esp_brownout.h:
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_brownout.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_int_wdt.h:
 
@@ -423,3 +429,4 @@ cpu_start.o: \
 /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/eri.h:
 
 /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/xtensa-debug-module.h:
+/home/penguin/Programio/esp-idf/components/esp32/./cpu_start.c:

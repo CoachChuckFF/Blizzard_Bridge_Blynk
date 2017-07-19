@@ -43,6 +43,7 @@ syscalls.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -54,7 +55,9 @@ syscalls.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
+ /home/penguin/Programio/esp-idf/components/heap/include/esp_heap_caps.h \
+ /home/penguin/Programio/esp-idf/components/heap/include/multi_heap.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -142,6 +145,8 @@ syscalls.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
@@ -165,3 +170,8 @@ syscalls.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
+
+/home/penguin/Programio/esp-idf/components/heap/include/esp_heap_caps.h:
+
+/home/penguin/Programio/esp-idf/components/heap/include/multi_heap.h:
+/home/penguin/Programio/esp-idf/components/newlib/./syscalls.c:

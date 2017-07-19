@@ -41,7 +41,8 @@ extern "C" {
 #include "driver/uart.h"
 #include "driver/gpio.h"
 
-#define DIRECTION_PIN 23
+//find a diffrent pin
+#define DIRECTION_PIN 13
 
 #define DMX_UART UART_NUM_2
 #define DMX_TX_PIN 12
@@ -72,6 +73,7 @@ void uart_dmx_init(int baudrate);
 
 /* DMX Handler (User) Functions */
 void startDMXUart(uint8_t dir);
+void changeDirectionDMXUart(uint8_t dir);
 void stopDMXUart( void );
 
 /* Interrupt (Internal) handlers */

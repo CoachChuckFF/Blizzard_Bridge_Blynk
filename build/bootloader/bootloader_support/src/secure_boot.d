@@ -75,3 +75,4 @@ src/secure_boot.o: \
 /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
 
 /home/penguin/Programio/esp-idf/components/bootloader_support/include/esp_efuse.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/secure_boot.c:

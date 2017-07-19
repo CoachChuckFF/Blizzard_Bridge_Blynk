@@ -39,3 +39,4 @@ library/entropy_poll.o: \
 /home/penguin/Programio/esp-idf/components/mbedtls/port/include/sha512_alt.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/entropy_poll.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/entropy_poll.c:

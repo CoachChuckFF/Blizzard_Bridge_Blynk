@@ -96,3 +96,4 @@ library/ecdsa.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/hmac_drbg.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/ecdsa.c:

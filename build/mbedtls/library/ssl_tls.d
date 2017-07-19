@@ -174,3 +174,4 @@ library/ssl_tls.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/oid.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/ssl_tls.c:

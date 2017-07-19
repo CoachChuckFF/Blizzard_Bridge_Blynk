@@ -43,6 +43,7 @@ libraries/WiFi/src/WiFiServer.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
@@ -226,6 +227,8 @@ libraries/WiFi/src/WiFiServer.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -420,3 +423,4 @@ libraries/WiFi/src/WiFiServer.o: \
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/inet.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiServer.cpp:

@@ -81,3 +81,4 @@ libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-avx2.o: 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/sse2_64_32.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/common.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-compress-avx2.c:

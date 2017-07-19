@@ -81,3 +81,4 @@ libsodium/src/libsodium/crypto_secretbox/xsalsa20poly1305/secretbox_xsalsa20poly
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_stream_xsalsa20.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_secretbox/xsalsa20poly1305/secretbox_xsalsa20poly1305.c:

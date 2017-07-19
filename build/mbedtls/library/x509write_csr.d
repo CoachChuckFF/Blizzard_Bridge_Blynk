@@ -123,3 +123,4 @@ library/x509write_csr.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/pem.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/x509write_csr.c:

@@ -57,3 +57,4 @@ bluedroid/osi/hash_functions.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/hash_functions.c:

@@ -16,13 +16,14 @@ cxx_guards.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -84,6 +85,10 @@ cxx_guards.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h:
@@ -95,8 +100,6 @@ cxx_guards.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -153,3 +156,4 @@ cxx_guards.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
+/home/penguin/Programio/esp-idf/components/cxx/./cxx_guards.cpp:

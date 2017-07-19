@@ -69,3 +69,4 @@ libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_core/hchacha20/core_hchacha20.c:

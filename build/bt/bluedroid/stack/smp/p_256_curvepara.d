@@ -60,3 +60,4 @@ bluedroid/stack/smp/p_256_curvepara.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/smp/p_256_curvepara.c:

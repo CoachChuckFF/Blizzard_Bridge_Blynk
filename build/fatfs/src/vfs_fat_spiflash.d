@@ -25,6 +25,7 @@ src/vfs_fat_spiflash.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
@@ -136,6 +137,8 @@ src/vfs_fat_spiflash.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
@@ -258,3 +261,4 @@ src/vfs_fat_spiflash.o: \
 /home/penguin/Programio/esp-idf/components/sdmmc/include/sdmmc_cmd.h:
 
 /home/penguin/Programio/esp-idf/components/fatfs/src/diskio_spiflash.h:
+/home/penguin/Programio/esp-idf/components/fatfs/src/vfs_fat_spiflash.c:

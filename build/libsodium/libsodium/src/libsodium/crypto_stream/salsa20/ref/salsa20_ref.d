@@ -30,3 +30,4 @@ libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/../stream_salsa20.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/salsa20/ref/salsa20_ref.c:

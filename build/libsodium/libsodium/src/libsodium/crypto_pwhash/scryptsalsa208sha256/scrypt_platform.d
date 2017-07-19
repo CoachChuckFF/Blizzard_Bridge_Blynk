@@ -72,3 +72,4 @@ libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/scrypt_platform.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/runtime.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_pwhash/scryptsalsa208sha256/scrypt_platform.c:

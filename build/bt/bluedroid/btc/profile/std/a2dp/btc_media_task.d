@@ -29,6 +29,10 @@ bluedroid/btc/profile/std/a2dp/btc_media_task.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
@@ -39,9 +43,6 @@ bluedroid/btc/profile/std/a2dp/btc_media_task.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki_int.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -187,6 +188,14 @@ bluedroid/btc/profile/std/a2dp/btc_media_task.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h:
@@ -206,12 +215,6 @@ bluedroid/btc/profile/std/a2dp/btc_media_task.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/gki/include/gki_int.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
 
@@ -384,3 +387,4 @@ bluedroid/btc/profile/std/a2dp/btc_media_task.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/include/oi_status.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/external/sbc/decoder/include/oi_status.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/profile/std/a2dp/btc_media_task.c:

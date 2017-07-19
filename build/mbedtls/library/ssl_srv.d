@@ -174,3 +174,4 @@ library/ssl_srv.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/ecp.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/ssl_srv.c:

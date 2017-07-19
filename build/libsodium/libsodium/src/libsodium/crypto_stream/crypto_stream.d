@@ -54,3 +54,4 @@ libsodium/src/libsodium/crypto_stream/crypto_stream.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/lock.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_stream/crypto_stream.c:

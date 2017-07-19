@@ -29,6 +29,10 @@ bluedroid/btc/core/btc_profile_queue.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
@@ -36,9 +40,6 @@ bluedroid/btc/core/btc_profile_queue.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -140,6 +141,14 @@ bluedroid/btc/core/btc_profile_queue.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
@@ -153,12 +162,6 @@ bluedroid/btc/core/btc_profile_queue.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_trace.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h:
 
@@ -243,3 +246,4 @@ bluedroid/btc/core/btc_profile_queue.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/allocator.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/list.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/core/btc_profile_queue.c:

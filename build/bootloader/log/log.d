@@ -20,3 +20,4 @@ log.o: /home/penguin/Programio/esp-idf/components/log/./log.c \
 /home/penguin/Programio/blizzard-esp/build/bootloader/../include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
+/home/penguin/Programio/esp-idf/components/log/./log.c:

@@ -61,6 +61,7 @@ port/net.o: /home/penguin/Programio/esp-idf/components/mbedtls/port/net.c \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/cc.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -229,6 +230,8 @@ port/net.o: /home/penguin/Programio/esp-idf/components/mbedtls/port/net.c \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
@@ -314,3 +317,4 @@ port/net.o: /home/penguin/Programio/esp-idf/components/mbedtls/port/net.c \
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/posix/netdb.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/port/net.c:

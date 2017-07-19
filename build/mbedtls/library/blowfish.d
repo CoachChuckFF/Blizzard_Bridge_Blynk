@@ -66,3 +66,4 @@ library/blowfish.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/blowfish.c:

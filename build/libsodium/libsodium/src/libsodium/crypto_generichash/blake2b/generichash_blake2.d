@@ -69,3 +69,4 @@ libsodium/src/libsodium/crypto_generichash/blake2b/generichash_blake2.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/generichash_blake2.c:

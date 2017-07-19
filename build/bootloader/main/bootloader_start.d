@@ -1,5 +1,5 @@
 bootloader_start.o: \
- /home/penguin/Programio/esp-idf/components/bootloader/src/main/./bootloader_start.c \
+ /home/penguin/Programio/esp-idf/components/bootloader/subproject/main/./bootloader_start.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
  /home/penguin/Programio/blizzard-esp/build/bootloader/../include/sdkconfig.h \
@@ -41,8 +41,8 @@ bootloader_start.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_flash_data_types.h \
  /home/penguin/Programio/esp-idf/components/bootloader_support/include_priv/bootloader_flash.h \
  /home/penguin/Programio/esp-idf/components/bootloader_support/include_priv/bootloader_random.h \
- /home/penguin/Programio/esp-idf/components/bootloader/src/main/./bootloader_config.h \
- /home/penguin/Programio/esp-idf/components/bootloader/src/main/./flash_qio_mode.h
+ /home/penguin/Programio/esp-idf/components/bootloader/subproject/main/./bootloader_config.h \
+ /home/penguin/Programio/esp-idf/components/bootloader/subproject/main/./flash_qio_mode.h
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
 
@@ -126,6 +126,7 @@ bootloader_start.o: \
 
 /home/penguin/Programio/esp-idf/components/bootloader_support/include_priv/bootloader_random.h:
 
-/home/penguin/Programio/esp-idf/components/bootloader/src/main/./bootloader_config.h:
+/home/penguin/Programio/esp-idf/components/bootloader/subproject/main/./bootloader_config.h:
 
-/home/penguin/Programio/esp-idf/components/bootloader/src/main/./flash_qio_mode.h:
+/home/penguin/Programio/esp-idf/components/bootloader/subproject/main/./flash_qio_mode.h:
+/home/penguin/Programio/esp-idf/components/bootloader/subproject/main/./bootloader_start.c:

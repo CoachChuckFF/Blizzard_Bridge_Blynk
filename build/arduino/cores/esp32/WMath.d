@@ -24,6 +24,8 @@ cores/esp32/WMath.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
@@ -101,6 +103,10 @@ cores/esp32/WMath.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h:
@@ -156,3 +162,4 @@ cores/esp32/WMath.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtensa-versions.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/WMath.cpp:

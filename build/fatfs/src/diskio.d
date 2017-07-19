@@ -28,6 +28,11 @@ src/diskio.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_host.h \
@@ -45,7 +50,6 @@ src/diskio.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
  /home/penguin/Programio/esp-idf/components/fatfs/src/ffconf.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -58,9 +62,6 @@ src/diskio.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
@@ -134,6 +135,16 @@ src/diskio.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h:
@@ -168,8 +179,6 @@ src/diskio.o: \
 
 /home/penguin/Programio/esp-idf/components/fatfs/src/ffconf.h:
 
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
-
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
@@ -193,12 +202,6 @@ src/diskio.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -231,3 +234,4 @@ src/diskio.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
 
 /home/penguin/Programio/esp-idf/components/fatfs/src/ff.h:
+/home/penguin/Programio/esp-idf/components/fatfs/src/diskio.c:

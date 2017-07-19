@@ -37,11 +37,12 @@ syscall_table.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/reent.h \
  /home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h \
  /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h \
- /home/penguin/Programio/esp-idf/components/newlib/platform_include/esp_newlib.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/esp_newlib.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -117,6 +118,10 @@ syscall_table.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h:
@@ -124,5 +129,4 @@ syscall_table.o: \
 /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/platform_include/esp_newlib.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+/home/penguin/Programio/esp-idf/components/newlib/./syscall_table.c:

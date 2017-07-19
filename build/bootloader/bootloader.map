@@ -35,7 +35,7 @@ Discarded input sections
  .text.print_flash_info
                 0x0000000000000000        0xd /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .xt.lit        0x0000000000000000       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .xt.prop       0x0000000000000000      0x4bc /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xt.prop       0x0000000000000000      0x4d4 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  COMMON         0x0000000000000000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .literal.bootloader_flash_write
                 0x0000000000000000       0x34 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
@@ -267,83 +267,83 @@ END GROUP
  *(.jcr)
                 0x000000003fff0010                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x000000003fff0010      0xd50
+.dram0.rodata   0x000000003fff0010      0xdac
                 0x000000003fff0010                _rodata_start = ABSOLUTE (.)
  *(.rodata)
  .rodata        0x000000003fff0010       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  *(.rodata.*)
  .rodata.str1.1
-                0x000000003fff002c      0x4ad /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000003fff002c      0x508 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .rodata.CSWTCH$44
-                0x000000003fff04d9        0x5 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000003fff0534        0x5 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .rodata.str1.1
-                0x000000003fff04de      0x27d /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x000000003fff075b        0x1 
+                0x000000003fff0539      0x27d /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x000000003fff07b6        0x2 
  .rodata.CSWTCH$17
-                0x000000003fff075c        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000003fff07b8        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .rodata.str1.1
-                0x000000003fff0768       0xf6 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x000000003fff07c4       0xf6 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .rodata.str1.1
-                0x000000003fff085e      0x233 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000003fff08ba      0x233 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .rodata.str1.1
-                0x000000003fff0a91        0x9 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x000000003fff0aed        0x9 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .rodata.str1.1
-                0x000000003fff0a9a      0x1ea /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0af6      0x1ea /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.rtc_clk_init
-                0x000000003fff0c84       0x64 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0ce0       0x64 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$46
-                0x000000003fff0ce8       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0d44       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$45
-                0x000000003fff0cf9       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0d55       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$44
-                0x000000003fff0d0a       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0d66       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$43
-                0x000000003fff0d1b       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0d77       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$42
-                0x000000003fff0d2c       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0d88       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$41
-                0x000000003fff0d3d       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0d99       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$36
-                0x000000003fff0d4e       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0daa       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.irom1.text)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003fff0d5f                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003fff0dbb                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x000000003fff0d60                . = ((. + 0x3) & 0xfffffffffffffffc)
- *fill*         0x000000003fff0d5f        0x1 
-                0x000000003fff0d60                __init_array_start = ABSOLUTE (.)
+                0x000000003fff0dbc                . = ((. + 0x3) & 0xfffffffffffffffc)
+ *fill*         0x000000003fff0dbb        0x1 
+                0x000000003fff0dbc                __init_array_start = ABSOLUTE (.)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x000000003fff0d60                __init_array_end = ABSOLUTE (.)
+                0x000000003fff0dbc                __init_array_end = ABSOLUTE (.)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x000000003fff0d60                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003fff0dbc                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003fff0d60                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003fff0dbc                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003fff0d60                _rodata_end = ABSOLUTE (.)
-                0x000000003fff0d60                _lit4_start = ABSOLUTE (.)
+                0x000000003fff0dbc                _rodata_end = ABSOLUTE (.)
+                0x000000003fff0dbc                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003fff0d60                _lit4_end = ABSOLUTE (.)
-                0x000000003fff0d60                . = ALIGN (0x4)
-                0x000000003fff0d60                _heap_start = ABSOLUTE (.)
+                0x000000003fff0dbc                _lit4_end = ABSOLUTE (.)
+                0x000000003fff0dbc                . = ALIGN (0x4)
+                0x000000003fff0dbc                _heap_start = ABSOLUTE (.)
 
 .iram_pool_1.text
-                0x0000000040078000     0x2509
+                0x0000000040078000     0x2531
                 0x0000000040078000                _stext = .
                 0x0000000040078000                _text_start = ABSOLUTE (.)
  *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -356,315 +356,315 @@ END GROUP
                 0x0000000040078064       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_main
-                0x0000000040078074       0xd8 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0x1e4 (size before relaxing)
+                0x0000000040078074       0xe0 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0x1f0 (size before relaxing)
  .literal.bootloader_mmap
-                0x000000004007814c       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078154       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x50 (size before relaxing)
  .literal.bootloader_munmap
-                0x0000000040078168        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078170        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_flash_read
-                0x0000000040078170       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078178       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x60 (size before relaxing)
  .literal.esp_partition_table_basic_verify
-                0x0000000040078184       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x000000004007818c       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                          0x30 (size before relaxing)
  .literal.esp_image_load_header
-                0x0000000040078198       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400781a0       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x34 (size before relaxing)
  .literal.esp_image_load_segment_header
-                0x00000000400781ac        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400781b4        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x2c (size before relaxing)
  .literal.esp_image_basic_verify
-                0x00000000400781b8       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400781c0       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x5c (size before relaxing)
  .literal.bootloader_random_enable
-                0x00000000400781c8       0x70 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000400781d0       0x70 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x78 (size before relaxing)
  .literal.bootloader_random_disable
-                0x0000000040078238       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078240       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x4c (size before relaxing)
  .literal.esp_log_early_timestamp
-                0x0000000040078254        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
+                0x000000004007825c        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
  .literal.esp_rom_spiflash_read_status
-                0x000000004007825c       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078264       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_wait_idle
-                0x000000004007826c        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078274        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_enable_write$constprop$6
-                0x0000000040078274        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007827c        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_program_page_internal$constprop$4
-                0x000000004007827c        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078284        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_read_statushigh
-                0x0000000040078288        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078290        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_write_status
-                0x0000000040078288        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078290        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_unlock
-                0x0000000040078288        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078290        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_erase_sector
-                0x0000000040078290       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078298       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x34 (size before relaxing)
  .literal.esp_rom_spiflash_write
-                0x00000000400782a4        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400782ac        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x24 (size before relaxing)
  .literal.esp_rom_spiflash_read
-                0x00000000400782a4       0x34 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400782ac       0x34 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x70 (size before relaxing)
  .literal.rtc_clk_32k_enable_internal$constprop$2
-                0x00000000400782d8       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400782e0       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
  .literal.rtc_clk_32k_enable
-                0x00000000400782e8        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400782f0        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_8m_enable
-                0x00000000400782ec       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400782f4       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_slow_freq_set
-                0x00000000400782fc        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078304        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_slow_freq_get
-                0x00000000400782fc        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078304        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_fast_freq_set
-                0x00000000400782fc        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078304        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_fast_freq_get
-                0x00000000400782fc        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078304        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_bbpll_set
-                0x00000000400782fc       0x28 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078304       0x28 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x5c (size before relaxing)
  .literal.rtc_clk_xtal_freq_get
-                0x0000000040078324        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007832c        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
  .literal.rtc_clk_xtal_freq_update
-                0x0000000040078330        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078338        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_apb_freq_update
-                0x0000000040078330        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078338        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_set
-                0x0000000040078334       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007833c       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x64 (size before relaxing)
  .literal.rtc_clk_apb_freq_get
-                0x0000000040078364        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007836c        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_init
-                0x0000000040078364       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007836c       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x90 (size before relaxing)
  .literal.rtc_clk_cal_internal
-                0x0000000040078394       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007839c       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x38 (size before relaxing)
  .literal.rtc_clk_cal_ratio
-                0x00000000400783b4        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000400783bc        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
                                           0x8 (size before relaxing)
  .text.wdt_reset_info_dump
-                0x00000000400783b4       0xe2 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x00000000400783bc       0xe2 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0xe6 (size before relaxing)
- *fill*         0x0000000040078496        0x2 
+ *fill*         0x000000004007849e        0x2 
  .text.ota_select_valid
-                0x0000000040078498       0x22 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- *fill*         0x00000000400784ba        0x2 
+                0x00000000400784a0       0x22 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ *fill*         0x00000000400784c2        0x2 
  .text.load_partition_table
-                0x00000000400784bc       0xd2 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x00000000400784c4       0xd2 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0xda (size before relaxing)
-                0x00000000400784bc                load_partition_table
- *fill*         0x000000004007858e        0x2 
+                0x00000000400784c4                load_partition_table
+ *fill*         0x0000000040078596        0x2 
  .text.bootloader_main
-                0x0000000040078590      0x614 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0x680 (size before relaxing)
-                0x0000000040078590                bootloader_main
+                0x0000000040078598      0x634 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0x69c (size before relaxing)
+                0x0000000040078598                bootloader_main
  .text.bootloader_mmap
-                0x0000000040078ba4       0xac /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078bcc       0xac /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xb0 (size before relaxing)
-                0x0000000040078ba4                bootloader_mmap
+                0x0000000040078bcc                bootloader_mmap
  .text.bootloader_munmap
-                0x0000000040078c50       0x32 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078c50                bootloader_munmap
- *fill*         0x0000000040078c82        0x2 
+                0x0000000040078c78       0x32 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078c78                bootloader_munmap
+ *fill*         0x0000000040078caa        0x2 
  .text.bootloader_flash_read
-                0x0000000040078c84      0x116 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078cac      0x116 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                         0x11a (size before relaxing)
-                0x0000000040078c84                bootloader_flash_read
- *fill*         0x0000000040078d9a        0x2 
+                0x0000000040078cac                bootloader_flash_read
+ *fill*         0x0000000040078dc2        0x2 
  .text.esp_partition_table_basic_verify
-                0x0000000040078d9c       0xaa /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                0x0000000040078d9c                esp_partition_table_basic_verify
- *fill*         0x0000000040078e46        0x2 
+                0x0000000040078dc4       0xaa /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000040078dc4                esp_partition_table_basic_verify
+ *fill*         0x0000000040078e6e        0x2 
  .text.esp_image_load_header
-                0x0000000040078e48       0x97 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078e70       0x97 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0xa3 (size before relaxing)
-                0x0000000040078e48                esp_image_load_header
- *fill*         0x0000000040078edf        0x1 
+                0x0000000040078e70                esp_image_load_header
+ *fill*         0x0000000040078f07        0x1 
  .text.esp_image_load_segment_header
-                0x0000000040078ee0       0xb2 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                0x0000000040078ee0                esp_image_load_segment_header
- *fill*         0x0000000040078f92        0x2 
+                0x0000000040078f08       0xb2 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078f08                esp_image_load_segment_header
+ *fill*         0x0000000040078fba        0x2 
  .text.esp_image_basic_verify
-                0x0000000040078f94      0x17c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078fbc      0x17c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x18c (size before relaxing)
-                0x0000000040078f94                esp_image_basic_verify
+                0x0000000040078fbc                esp_image_basic_verify
  .text.bootloader_random_enable
-                0x0000000040079110      0x1d5 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x0000000040079110                bootloader_random_enable
- *fill*         0x00000000400792e5        0x3 
+                0x0000000040079138      0x1d5 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079138                bootloader_random_enable
+ *fill*         0x000000004007930d        0x3 
  .text.bootloader_random_disable
-                0x00000000400792e8      0x11c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x00000000400792e8                bootloader_random_disable
+                0x0000000040079310      0x11c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079310                bootloader_random_disable
  .text.esp_log_early_timestamp
-                0x0000000040079404       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
-                0x0000000040079404                esp_log_timestamp
-                0x0000000040079404                esp_log_early_timestamp
+                0x000000004007942c       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
+                0x000000004007942c                esp_log_timestamp
+                0x000000004007942c                esp_log_early_timestamp
  .text.esp_rom_spiflash_read_status
-                0x0000000040079418       0x5b /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x0000000040079418                esp_rom_spiflash_read_status
- *fill*         0x0000000040079473        0x1 
+                0x0000000040079440       0x5b /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079440                esp_rom_spiflash_read_status
+ *fill*         0x000000004007949b        0x1 
  .text.esp_rom_spiflash_wait_idle
-                0x0000000040079474       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x0000000040079474                esp_rom_spiflash_wait_idle
+                0x000000004007949c       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007949c                esp_rom_spiflash_wait_idle
  .text.esp_rom_spiflash_enable_write$constprop$6
-                0x00000000400794a4       0x3d /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400794cc       0x3d /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x41 (size before relaxing)
- *fill*         0x00000000400794e1        0x3 
+ *fill*         0x0000000040079509        0x3 
  .text.esp_rom_spiflash_program_page_internal$constprop$4
-                0x00000000400794e4       0xce /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- *fill*         0x00000000400795b2        0x2 
+                0x000000004007950c       0xce /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ *fill*         0x00000000400795da        0x2 
  .text.esp_rom_spiflash_read_statushigh
-                0x00000000400795b4       0x21 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x00000000400795b4                esp_rom_spiflash_read_statushigh
- *fill*         0x00000000400795d5        0x3 
+                0x00000000400795dc       0x21 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400795dc                esp_rom_spiflash_read_statushigh
+ *fill*         0x00000000400795fd        0x3 
  .text.esp_rom_spiflash_write_status
-                0x00000000400795d8       0x2f /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079600       0x2f /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x33 (size before relaxing)
-                0x00000000400795d8                esp_rom_spiflash_write_status
- *fill*         0x0000000040079607        0x1 
+                0x0000000040079600                esp_rom_spiflash_write_status
+ *fill*         0x000000004007962f        0x1 
  .text.esp_rom_spiflash_unlock
-                0x0000000040079608       0x66 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079630       0x66 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x72 (size before relaxing)
-                0x0000000040079608                esp_rom_spiflash_unlock
- *fill*         0x000000004007966e        0x2 
+                0x0000000040079630                esp_rom_spiflash_unlock
+ *fill*         0x0000000040079696        0x2 
  .text.esp_rom_spiflash_erase_sector
-                0x0000000040079670       0x89 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079698       0x89 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x8d (size before relaxing)
-                0x0000000040079670                esp_rom_spiflash_erase_sector
- *fill*         0x00000000400796f9        0x3 
+                0x0000000040079698                esp_rom_spiflash_erase_sector
+ *fill*         0x0000000040079721        0x3 
  .text.esp_rom_spiflash_write
-                0x00000000400796fc       0x9e /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079724       0x9e /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0xa2 (size before relaxing)
-                0x00000000400796fc                esp_rom_spiflash_write
- *fill*         0x000000004007979a        0x2 
+                0x0000000040079724                esp_rom_spiflash_write
+ *fill*         0x00000000400797c2        0x2 
  .text.esp_rom_spiflash_read
-                0x000000004007979c      0x2e5 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400797c4      0x2e5 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                         0x2e9 (size before relaxing)
-                0x000000004007979c                esp_rom_spiflash_read
- *fill*         0x0000000040079a81        0x3 
+                0x00000000400797c4                esp_rom_spiflash_read
+ *fill*         0x0000000040079aa9        0x3 
  .text.rtc_clk_32k_enable_internal$constprop$2
-                0x0000000040079a84       0x6f /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x0000000040079af3        0x1 
+                0x0000000040079aac       0x6f /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x0000000040079b1b        0x1 
  .text.rtc_clk_32k_enable
-                0x0000000040079af4       0x29 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079af4                rtc_clk_32k_enable
- *fill*         0x0000000040079b1d        0x3 
+                0x0000000040079b1c       0x29 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079b1c                rtc_clk_32k_enable
+ *fill*         0x0000000040079b45        0x3 
  .text.rtc_clk_8m_enable
-                0x0000000040079b20       0x7e /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079b20                rtc_clk_8m_enable
- *fill*         0x0000000040079b9e        0x2 
+                0x0000000040079b48       0x7e /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079b48                rtc_clk_8m_enable
+ *fill*         0x0000000040079bc6        0x2 
  .text.rtc_clk_slow_freq_set
-                0x0000000040079ba0       0x27 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079ba0                rtc_clk_slow_freq_set
- *fill*         0x0000000040079bc7        0x1 
+                0x0000000040079bc8       0x27 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079bc8                rtc_clk_slow_freq_set
+ *fill*         0x0000000040079bef        0x1 
  .text.rtc_clk_slow_freq_get
-                0x0000000040079bc8       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079bc8                rtc_clk_slow_freq_get
+                0x0000000040079bf0       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079bf0                rtc_clk_slow_freq_get
  .text.rtc_clk_fast_freq_set
-                0x0000000040079bd8       0x2a /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079bd8                rtc_clk_fast_freq_set
- *fill*         0x0000000040079c02        0x2 
+                0x0000000040079c00       0x2a /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079c00                rtc_clk_fast_freq_set
+ *fill*         0x0000000040079c2a        0x2 
  .text.rtc_clk_fast_freq_get
-                0x0000000040079c04       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079c04                rtc_clk_fast_freq_get
+                0x0000000040079c2c       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079c2c                rtc_clk_fast_freq_get
  .text.rtc_clk_bbpll_set
-                0x0000000040079c14      0x143 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079c14                rtc_clk_bbpll_set
- *fill*         0x0000000040079d57        0x1 
+                0x0000000040079c3c      0x143 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079c3c                rtc_clk_bbpll_set
+ *fill*         0x0000000040079d7f        0x1 
  .text.rtc_clk_xtal_freq_get
-                0x0000000040079d58       0x36 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079d58                rtc_get_xtal
-                0x0000000040079d58                rtc_clk_xtal_freq_get
- *fill*         0x0000000040079d8e        0x2 
+                0x0000000040079d80       0x36 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079d80                rtc_get_xtal
+                0x0000000040079d80                rtc_clk_xtal_freq_get
+ *fill*         0x0000000040079db6        0x2 
  .text.rtc_clk_xtal_freq_update
-                0x0000000040079d90       0x16 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079d90                rtc_clk_xtal_freq_update
- *fill*         0x0000000040079da6        0x2 
+                0x0000000040079db8       0x16 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079db8                rtc_clk_xtal_freq_update
+ *fill*         0x0000000040079dce        0x2 
  .text.rtc_clk_apb_freq_update
-                0x0000000040079da8       0x19 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079da8                rtc_clk_apb_freq_update
- *fill*         0x0000000040079dc1        0x3 
+                0x0000000040079dd0       0x19 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079dd0                rtc_clk_apb_freq_update
+ *fill*         0x0000000040079de9        0x3 
  .text.rtc_clk_cpu_freq_set
-                0x0000000040079dc4      0x1ae /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079dec      0x1ae /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x1b6 (size before relaxing)
-                0x0000000040079dc4                rtc_clk_cpu_freq_set
- *fill*         0x0000000040079f72        0x2 
+                0x0000000040079dec                rtc_clk_cpu_freq_set
+ *fill*         0x0000000040079f9a        0x2 
  .text.rtc_clk_apb_freq_get
-                0x0000000040079f74       0x13 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079f74                rtc_clk_apb_freq_get
- *fill*         0x0000000040079f87        0x1 
+                0x0000000040079f9c       0x13 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079f9c                rtc_clk_apb_freq_get
+ *fill*         0x0000000040079faf        0x1 
  .text.rtc_clk_init
-                0x0000000040079f88      0x1a9 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079fb0      0x1a9 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x1c5 (size before relaxing)
-                0x0000000040079f88                rtc_clk_init
- *fill*         0x000000004007a131        0x3 
+                0x0000000040079fb0                rtc_clk_init
+ *fill*         0x000000004007a159        0x3 
  .text.rtc_clk_cal_internal
-                0x000000004007a134      0x132 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- *fill*         0x000000004007a266        0x2 
+                0x000000004007a15c      0x132 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ *fill*         0x000000004007a28e        0x2 
  .text.rtc_clk_cal_ratio
-                0x000000004007a268       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000004007a290       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x24 (size before relaxing)
-                0x000000004007a268                rtc_clk_cal_ratio
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- *fill*         0x000000004007a288        0x0 
- .text          0x000000004007a288      0x281 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
-                0x000000004007a288                __udivdi3
+                0x000000004007a290                rtc_clk_cal_ratio
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ *fill*         0x000000004007a2b0        0x0 
+ .text          0x000000004007a2b0      0x281 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+                0x000000004007a2b0                __udivdi3
  *(.irom0.text)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x000000004007a509                _text_end = ABSOLUTE (.)
-                0x000000004007a509                _etext = .
+                0x000000004007a531                _text_end = ABSOLUTE (.)
+                0x000000004007a531                _etext = .
                 [!provide]                        PROVIDE (abort, 0x4000bba4)
                 [!provide]                        PROVIDE (abs, 0x40056340)
                 [!provide]                        PROVIDE (__absvdi2, 0x4006387c)
@@ -2488,17 +2488,17 @@ OUTPUT(/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader.elf elf3
  .debug_frame   0x0000000000000608       0xa0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_frame   0x00000000000006a8       0x28 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_info     0x0000000000000000     0x625c
- .debug_info    0x0000000000000000     0x21bc /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_info    0x00000000000021bc      0xb0e /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x0000000000002cca      0x383 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_info    0x000000000000304d      0x799 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_info    0x00000000000037e6      0x268 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_info    0x0000000000003a4e      0x2df /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
- .debug_info    0x0000000000003d2d      0xbbe /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_info    0x00000000000048eb     0x105c /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x0000000000005947      0x34d /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_info    0x0000000000005c94      0x5c8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_info     0x0000000000000000     0x6249
+ .debug_info    0x0000000000000000     0x21a9 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_info    0x00000000000021a9      0xb0e /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x0000000000002cb7      0x383 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_info    0x000000000000303a      0x799 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x00000000000037d3      0x268 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_info    0x0000000000003a3b      0x2df /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
+ .debug_info    0x0000000000003d1a      0xbbe /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_info    0x00000000000048d8     0x105c /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_info    0x0000000000005934      0x34d /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x0000000000005c81      0x5c8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_abbrev   0x0000000000000000     0x15a0
  .debug_abbrev  0x0000000000000000      0x460 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
@@ -2512,17 +2512,17 @@ OUTPUT(/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader.elf elf3
  .debug_abbrev  0x00000000000012ee      0x153 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_abbrev  0x0000000000001441      0x15f /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_loc      0x0000000000000000     0x3198
- .debug_loc     0x0000000000000000      0xb69 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_loc     0x0000000000000b69      0x4d4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x000000000000103d      0x11c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_loc     0x0000000000001159      0x39c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x00000000000014f5       0x91 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_loc     0x0000000000001586      0x152 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
- .debug_loc     0x00000000000016d8      0x785 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_loc     0x0000000000001e5d      0x6ed /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_loc     0x000000000000254a      0x266 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_loc     0x00000000000027b0      0x9e8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_loc      0x0000000000000000     0x3152
+ .debug_loc     0x0000000000000000      0xb23 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_loc     0x0000000000000b23      0x4d4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x0000000000000ff7      0x11c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x0000000000001113      0x39c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x00000000000014af       0x91 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_loc     0x0000000000001540      0x152 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
+ .debug_loc     0x0000000000001692      0x785 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_loc     0x0000000000001e17      0x6ed /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x0000000000002504      0x266 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x000000000000276a      0x9e8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_aranges  0x0000000000000000      0x300
  .debug_aranges
@@ -2546,50 +2546,50 @@ OUTPUT(/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader.elf elf3
  .debug_aranges
                 0x00000000000002e0       0x20 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_ranges   0x0000000000000000      0x6c0
- .debug_ranges  0x0000000000000000      0x1d8 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_ranges  0x00000000000001d8       0x68 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_ranges  0x0000000000000240       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_ranges  0x0000000000000270       0x80 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_ranges  0x00000000000002f0       0x80 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_ranges  0x0000000000000370       0x50 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
- .debug_ranges  0x00000000000003c0       0xd8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_ranges  0x0000000000000498      0x190 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_ranges  0x0000000000000628       0x38 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_ranges  0x0000000000000660       0x60 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_ranges   0x0000000000000000      0x6e8
+ .debug_ranges  0x0000000000000000      0x200 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_ranges  0x0000000000000200       0x68 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_ranges  0x0000000000000268       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_ranges  0x0000000000000298       0x80 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_ranges  0x0000000000000318       0x80 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_ranges  0x0000000000000398       0x50 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
+ .debug_ranges  0x00000000000003e8       0xd8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_ranges  0x00000000000004c0      0x190 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_ranges  0x0000000000000650       0x38 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_ranges  0x0000000000000688       0x60 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_line     0x0000000000000000     0x3794
- .debug_line    0x0000000000000000      0xae1 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_line    0x0000000000000ae1      0x4e3 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x0000000000000fc4      0x2e2 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x00000000000012a6      0x585 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x000000000000182b      0x410 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x0000000000001c3b      0x2b2 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
- .debug_line    0x0000000000001eed      0xa38 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x0000000000002925      0x963 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x0000000000003288      0x37d /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_line    0x0000000000003605      0x18f /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_line     0x0000000000000000     0x37f5
+ .debug_line    0x0000000000000000      0xb42 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_line    0x0000000000000b42      0x4e3 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x0000000000001025      0x2e2 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x0000000000001307      0x585 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x000000000000188c      0x410 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x0000000000001c9c      0x2b2 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
+ .debug_line    0x0000000000001f4e      0xa38 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x0000000000002986      0x963 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x00000000000032e9      0x37d /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x0000000000003666      0x18f /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_str      0x0000000000000000     0x1f59
- .debug_str     0x0000000000000000      0xe96 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0xf66 (size before relaxing)
- .debug_str     0x0000000000000e96      0x1ed /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+.debug_str      0x0000000000000000     0x1f60
+ .debug_str     0x0000000000000000      0xe9d /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0xf6d (size before relaxing)
+ .debug_str     0x0000000000000e9d      0x1ed /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                         0x5a6 (size before relaxing)
- .debug_str     0x0000000000001083       0x6f /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_str     0x000000000000108a       0x6f /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x3a7 (size before relaxing)
- .debug_str     0x00000000000010f2      0x138 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_str     0x00000000000010f9      0x138 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x5b2 (size before relaxing)
- .debug_str     0x000000000000122a       0x8e /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_str     0x0000000000001231       0x8e /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                         0x249 (size before relaxing)
- .debug_str     0x00000000000012b8       0xf0 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
+ .debug_str     0x00000000000012bf       0xf0 /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a(log.o)
                                         0x29f (size before relaxing)
- .debug_str     0x00000000000013a8      0x4b3 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_str     0x00000000000013af      0x4b3 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                         0x76b (size before relaxing)
- .debug_str     0x000000000000185b      0x427 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_str     0x0000000000001862      0x427 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x7e6 (size before relaxing)
- .debug_str     0x0000000000001c82      0x12f /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_str     0x0000000000001c89      0x12f /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
                                         0x36a (size before relaxing)
- .debug_str     0x0000000000001db1      0x1a8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_str     0x0000000000001db8      0x1a8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
                                         0x25a (size before relaxing)
 
 .comment        0x0000000000000000       0x3a

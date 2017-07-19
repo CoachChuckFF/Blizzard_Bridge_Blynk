@@ -66,3 +66,4 @@ cores/esp32/stdlib_noniso.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/math.h:
 
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/stdlib_noniso.h:
+/home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/stdlib_noniso.c:

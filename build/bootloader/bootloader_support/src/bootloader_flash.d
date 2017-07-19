@@ -57,3 +57,4 @@ src/bootloader_flash.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/cache.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+/home/penguin/Programio/esp-idf/components/bootloader_support/src/bootloader_flash.c:

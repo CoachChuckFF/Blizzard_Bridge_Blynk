@@ -46,6 +46,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <stdio.h>
 #include <inttypes.h>
 #include "esp_log.h"
+#include "lib/blizzard_nvs.h"
 #include "lib/dmx.h"
 
 static const char *TAG = "DMX";
@@ -57,21 +58,22 @@ static volatile uint8_t DMX[DMX_MAX_SLOTS];
 static char DEVICE_NAME[NAME_MAX_LENGTH];
 static char SSID[SSID_MAX_LENGTH];
 static char PASS[PASS_MAX_LENGTH];
-static uint8_t COM_MODE; //ethernet, wifi, dmx
-static uint8_t COM_SUB_MODE; //Arthnet, sACN, Blynk
+static uint8_t INPUT_MODE; //ethernet, wifi, dmx
+static uint8_t OUTPUT_MODE; //Arthnet, sACN, Blynk
+static uint8_t MEDIUM;
 static uint8_t OWN_IP_ADDRESS[4];
 static uint16_t OWN_ADDRESS;
 static uint16_t OWN_UNIVERSE;
 static uint16_t SLOTS;
 
 //flags
-uint8_t device_name_changed;
-uint8_t com_made_changed;
-uint8_t com_sub_mode_changed;
-uint8_t own_ip_changed;
-uint8_t own_address_changed;
-uint8_t own_universe_changed;
-uint8_t slots_changed;
+uint8_t device_name_changed = 0;
+uint8_t input_mode_changed = 0;
+uint8_t output_mode_changed = 0;
+uint8_t own_ip_changed = 0;
+uint8_t own_address_changed = 0;
+uint8_t own_universe_changed = 0;
+uint8_t slots_changed = 0;
 
 char* getName()
 {
@@ -91,6 +93,7 @@ void setName(char *name, uint8_t length)
   for(i = 0; i < length; i++)
     DEVICE_NAME[i] = name[i];
   DEVICE_NAME[i] = '\0'; //null termination
+  update_str_nvs_val(NVS_DEVICE_NAME_KEY, (char *) DEVICE_NAME);
 }
 
 char* getSSID(void)
@@ -115,6 +118,7 @@ void setSSID(char *ssid, uint8_t length)
   for(i = 0; i < length; i++)
     SSID[i] = ssid[i];
   SSID[i] = '\0'; //null termination
+  update_str_nvs_val(NVS_SSID_KEY, (char *) SSID);
 }
 
 char* getPASS(void)
@@ -139,26 +143,41 @@ void setPASS(char *pass, uint8_t length)
   for(i = 0; i < length; i++)
     PASS[i] = pass[i];
   PASS[i] = '\0'; //null termination
+  update_str_nvs_val(NVS_PASS_KEY, (char *) PASS);
 }
 
-uint8_t getComMode(void)
+uint8_t getMedium(void)
 {
-  return COM_MODE;
+  return MEDIUM;
 }
 
-void setComMode(uint8_t com_mode)
+void setMedium(uint8_t medium)
 {
-  COM_MODE = com_mode;
+  MEDIUM = medium;
 }
 
-uint8_t getSubComMode(void)
+uint8_t getInputMode(void)
 {
-  return COM_SUB_MODE;
+  return INPUT_MODE;
 }
 
-void setSubComMode(uint8_t com_sub_mode)
+void setInputMode(uint8_t input_mode)
 {
-  COM_SUB_MODE = com_sub_mode;
+  INPUT_MODE = input_mode;
+  input_mode_changed = 1;
+  update_u8_nvs_val(NVS_INPUT_MODE_KEY, INPUT_MODE);
+}
+
+uint8_t getOutputMode(void)
+{
+  return OUTPUT_MODE;
+}
+
+void setOutputMode(uint8_t output_mode)
+{
+  OUTPUT_MODE = output_mode;
+  output_mode_changed = 1;
+  update_u8_nvs_val(NVS_OUTPUT_MODE_KEY, OUTPUT_MODE);
 }
 
 uint8_t* getOwnIPAddress()

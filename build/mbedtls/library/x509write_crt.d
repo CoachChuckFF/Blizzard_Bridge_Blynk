@@ -123,3 +123,4 @@ library/x509write_crt.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/pem.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/x509write_crt.c:

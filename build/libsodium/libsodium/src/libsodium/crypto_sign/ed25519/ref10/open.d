@@ -87,3 +87,4 @@ libsodium/src/libsodium/crypto_sign/ed25519/ref10/open.o: \
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h:
 
 /home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h:
+/home/penguin/Programio/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_sign/ed25519/ref10/open.c:

@@ -26,12 +26,13 @@ bluedroid/api/esp_bt_device.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/device/include/controller.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_target.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/bt_types.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/gki_target.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/dyn_mem.h \
@@ -145,6 +146,10 @@ bluedroid/api/esp_bt_device.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
@@ -154,8 +159,6 @@ bluedroid/api/esp_bt_device.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/device/include/controller.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_target.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/bt_types.h:
 
@@ -276,3 +279,4 @@ bluedroid/api/esp_bt_device.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_task.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/api/esp_bt_device.c:

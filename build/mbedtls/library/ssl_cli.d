@@ -171,3 +171,4 @@ library/ssl_cli.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
+/home/penguin/Programio/esp-idf/components/mbedtls/library/ssl_cli.c:

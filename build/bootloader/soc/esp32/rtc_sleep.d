@@ -45,3 +45,4 @@ esp32/rtc_sleep.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/fe_reg.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
+/home/penguin/Programio/esp-idf/components/soc/esp32/rtc_sleep.c:

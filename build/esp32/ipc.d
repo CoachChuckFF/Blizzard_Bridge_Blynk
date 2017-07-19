@@ -17,6 +17,8 @@ ipc.o: /home/penguin/Programio/esp-idf/components/esp32/./ipc.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
@@ -29,7 +31,6 @@ ipc.o: /home/penguin/Programio/esp-idf/components/esp32/./ipc.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -96,6 +97,10 @@ ipc.o: /home/penguin/Programio/esp-idf/components/esp32/./ipc.c \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
@@ -119,8 +124,6 @@ ipc.o: /home/penguin/Programio/esp-idf/components/esp32/./ipc.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -179,3 +182,4 @@ ipc.o: /home/penguin/Programio/esp-idf/components/esp32/./ipc.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+/home/penguin/Programio/esp-idf/components/esp32/./ipc.c:

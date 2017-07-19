@@ -22,8 +22,13 @@ sdmmc_cmd.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_heap_alloc_caps.h \
+ /home/penguin/Programio/esp-idf/components/heap/include/esp_heap_caps.h \
+ /home/penguin/Programio/esp-idf/components/heap/include/multi_heap.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -36,9 +41,6 @@ sdmmc_cmd.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
@@ -106,9 +108,19 @@ sdmmc_cmd.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_heap_alloc_caps.h:
+/home/penguin/Programio/esp-idf/components/heap/include/esp_heap_caps.h:
+
+/home/penguin/Programio/esp-idf/components/heap/include/multi_heap.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -133,12 +145,6 @@ sdmmc_cmd.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
 
@@ -183,3 +189,4 @@ sdmmc_cmd.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/sdmmc/include/sdmmc_cmd.h:
+/home/penguin/Programio/esp-idf/components/sdmmc/./sdmmc_cmd.c:

@@ -60,3 +60,4 @@ portasm.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_timer.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_rtos.h:
+/home/penguin/Programio/esp-idf/components/freertos/./portasm.S:

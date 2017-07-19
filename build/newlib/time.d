@@ -30,6 +30,8 @@ time.o: /home/penguin/Programio/esp-idf/components/newlib/./time.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
@@ -44,7 +46,6 @@ time.o: /home/penguin/Programio/esp-idf/components/newlib/./time.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -133,6 +134,10 @@ time.o: /home/penguin/Programio/esp-idf/components/newlib/./time.c \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
@@ -160,8 +165,6 @@ time.o: /home/penguin/Programio/esp-idf/components/newlib/./time.c \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -212,3 +215,4 @@ time.o: /home/penguin/Programio/esp-idf/components/newlib/./time.c \
 /home/penguin/Programio/esp-idf/components/newlib/include/limits.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
+/home/penguin/Programio/esp-idf/components/newlib/./time.c:

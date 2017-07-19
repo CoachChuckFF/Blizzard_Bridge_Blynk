@@ -31,6 +31,10 @@ bluedroid/stack/smp/p_256_multprecision.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/smp/include/p_256_ecc_pp.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/smp/include/p_256_multprecision.h
@@ -97,8 +101,17 @@ bluedroid/stack/smp/p_256_multprecision.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/alloca.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/smp/include/p_256_ecc_pp.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/smp/include/p_256_multprecision.h:
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/smp/p_256_multprecision.c:

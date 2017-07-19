@@ -27,3 +27,4 @@ src/nvs_types.o: \
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/compressed_enum_table.hpp:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/crc.h:
+/home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_types.cpp:

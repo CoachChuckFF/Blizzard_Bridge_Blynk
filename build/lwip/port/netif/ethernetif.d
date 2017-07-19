@@ -35,6 +35,7 @@ port/netif/ethernetif.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
@@ -170,6 +171,8 @@ port/netif/ethernetif.o: \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h:
+
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -297,3 +300,4 @@ port/netif/ethernetif.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h:
+/home/penguin/Programio/esp-idf/components/lwip/port/netif/ethernetif.c:
