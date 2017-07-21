@@ -323,3 +323,18 @@ void copyFromDMX(uint8_t *buf, uint16_t start_index, uint16_t length)
       break;
     buf[j] = DMX[i];
 }
+
+void printDMX()
+{
+  uint16_t i;
+  printf("------------------------------------------\n");
+  for(i = 0; i < DMX_MAX_SLOTS; i++)
+  {
+    if(getDMXData(i))
+      printf(" %d: %d ", i, getDMXData(i));
+    if(!(i % 32))
+      printf("\n");
+
+  }
+  printf("------------------------------------------\n");
+}

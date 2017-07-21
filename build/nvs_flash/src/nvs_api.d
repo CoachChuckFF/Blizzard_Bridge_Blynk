@@ -22,6 +22,7 @@ src/nvs_api.o: \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_pagemanager.hpp \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_storage.hpp \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_platform.hpp \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
@@ -98,6 +99,8 @@ src/nvs_api.o: \
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_storage.hpp:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/src/nvs_platform.hpp:
 

@@ -113,6 +113,7 @@ blizzard_wifi.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/inet.h \
@@ -359,6 +360,8 @@ blizzard_wifi.o: \
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h:
 

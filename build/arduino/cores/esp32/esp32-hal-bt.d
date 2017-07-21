@@ -88,6 +88,7 @@ cores/esp32/esp32-hal-bt.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/penguin/Programio/esp-idf/components/bt/include/bt.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_main.h
 
@@ -266,6 +267,8 @@ cores/esp32/esp32-hal-bt.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/include/bt.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
 

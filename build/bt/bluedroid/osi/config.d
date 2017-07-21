@@ -56,6 +56,7 @@ bluedroid/osi/config.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/ctype.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
@@ -178,6 +179,8 @@ bluedroid/osi/config.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 

@@ -35,6 +35,7 @@ libraries/SimpleBLE/src/SimpleBLE.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
  /home/penguin/Programio/esp-idf/components/bt/include/bt.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Arduino.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/inttypes.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
@@ -119,7 +120,6 @@ libraries/SimpleBLE/src/SimpleBLE.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/thread.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gap_ble_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gatts_api.h \
@@ -196,6 +196,8 @@ libraries/SimpleBLE/src/SimpleBLE.o: \
 /home/penguin/Programio/esp-idf/components/bt/include/bt.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h:
 
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Arduino.h:
 
@@ -364,8 +366,6 @@ libraries/SimpleBLE/src/SimpleBLE.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/thread.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
-
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_task.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gap_ble_api.h:
 

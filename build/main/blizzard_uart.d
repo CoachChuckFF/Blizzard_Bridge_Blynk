@@ -113,6 +113,7 @@ blizzard_uart.o: \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_uart.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
@@ -348,6 +349,8 @@ blizzard_uart.o: \
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 

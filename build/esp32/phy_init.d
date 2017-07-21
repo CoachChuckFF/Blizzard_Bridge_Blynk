@@ -66,6 +66,7 @@ phy_init.o: /home/penguin/Programio/esp-idf/components/esp32/./phy_init.c \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/esp32/./phy.h \
  /home/penguin/Programio/esp-idf/components/esp32/./phy_init_data.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_coexist.h
@@ -203,6 +204,8 @@ phy_init.o: /home/penguin/Programio/esp-idf/components/esp32/./phy_init.c \
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/./phy.h:
 

@@ -92,6 +92,7 @@ cores/esp32/esp32-hal-misc.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
@@ -278,6 +279,8 @@ cores/esp32/esp32-hal-misc.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 

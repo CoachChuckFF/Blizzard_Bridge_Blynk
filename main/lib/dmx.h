@@ -147,6 +147,8 @@ void copyToDMX(uint8_t *buf, uint16_t start_index, uint16_t length);
 
 void copyFromDMX(uint8_t *buf, uint16_t start_index, uint16_t length);
 
+void printDMX(void);
+
 #ifdef __cplusplus
 }
 #endif

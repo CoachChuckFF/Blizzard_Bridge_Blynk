@@ -193,6 +193,7 @@ blizzard_blynk.o: \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wdmx.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
@@ -589,6 +590,8 @@ blizzard_blynk.o: \
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 

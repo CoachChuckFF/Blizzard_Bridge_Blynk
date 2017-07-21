@@ -121,6 +121,7 @@ cpu_start.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_ipc.h \
@@ -385,6 +386,8 @@ cpu_start.o: \
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 

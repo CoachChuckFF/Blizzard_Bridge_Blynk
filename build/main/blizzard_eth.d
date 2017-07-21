@@ -113,6 +113,7 @@ blizzard_eth.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/inttypes.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h \
@@ -366,6 +367,8 @@ blizzard_eth.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h:
 

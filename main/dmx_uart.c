@@ -19,21 +19,9 @@
 #include "esp_log.h"
 #include "lib/dmx.h"
 #include "lib/dmx_uart.h"
+#include "soc/uart_struct.h"
 
 static const char *TAG = "DMX UART";
-
-ESP32DMX DMX;
-
-volatile uint8_t tx_done;
-uint8_t MAB_RUNNING = 0;
-
-#define UART_ENTER_CRITICAL(mux)    portENTER_CRITICAL(mux)
-#define UART_EXIT_CRITICAL(mux)     portEXIT_CRITICAL(mux)
-#define UART_ENTER_CRITICAL_ISR(mux)    portENTER_CRITICAL_ISR(mux)
-#define UART_EXIT_CRITICAL_ISR(mux)     portEXIT_CRITICAL_ISR(mux)
-
-static DRAM_ATTR uart_dev_t* const UART[UART_NUM_MAX] = {&UART0, &UART1, &UART2};
-static portMUX_TYPE uart_spinlock[UART_NUM_MAX] = {portMUX_INITIALIZER_UNLOCKED, portMUX_INITIALIZER_UNLOCKED, portMUX_INITIALIZER_UNLOCKED};
 
 /*------------------------------------------------- starDMX -----
  |  Function startDMX
@@ -57,21 +45,7 @@ static portMUX_TYPE uart_spinlock[UART_NUM_MAX] = {portMUX_INITIALIZER_UNLOCKED,
  *-------------------------------------------------------------------*/
 void startDMXUart (uint8_t dir)
 {
-	static int count = 0;
 		gpio_config_t io_conf;
-
-		if(DMX._enabled == ENABLE)
-			stopDMXUart();
-
-		ESP_LOGI(TAG, "start DMXUART %d", count++)
-
-		DMX._enabled = ENABLE;
-		DMX._dmx_state = DMX_STATE_START;
-		DMX._slots = getSlots();
-		DMX._idle_count = 0;
-		DMX._current_slot = 0;
-		DMX._direction = dir;
-		DMX._dmx_data = getDMXBuffer();
 
 		//GPIO setup
     //This sets the direction for the MAX 485 chip
@@ -87,73 +61,10 @@ void startDMXUart (uint8_t dir)
     gpio_config(&io_conf);
 		gpio_set_level(DIRECTION_PIN, dir);
 
-		ESP_LOGI(TAG, "setup uart dir:%d", DMX._direction);
-		uart_dmx_init(DMX_DATA_BAUD);
+		uart_dmx_init(DMX_DATA_BAUD, dir);
 
 }
 
-void changeDirectionDMXUart(uint8_t dir)
-{
-	DMX._enabled = DISABLE;
-	if(DMX._direction == SEND && dir == RECEIVE)
-	{
-			while(MAB_RUNNING){vTaskDelay(10);}
-			uart_isr_register(DMX_UART, (void *) receiveInterruptHandlerDMX, NULL, ESP_INTR_FLAG_LOWMED, NULL);
-			UART_ENTER_CRITICAL(&uart_spinlock[DMX_UART]);
-			//set interrupts
-			UART[DMX_UART]->int_ena.rxfifo_full = 1;
-			UART[DMX_UART]->int_ena.brk_det = 1;
-			UART[DMX_UART]->conf1.rxfifo_full_thrhd = 1;
-			UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
-			DMX._enabled = ENABLE;
-			DMX._direction = dir;
-	}
-	else if(DMX._direction == RECEIVE && dir == SEND)
-	{
-		uart_isr_free(DMX_UART);
-		UART_ENTER_CRITICAL(&uart_spinlock[DMX_UART]);
-		//set interrupts
-		UART[DMX_UART]->int_ena.rxfifo_full = 0;
-		UART[DMX_UART]->int_ena.brk_det = 0;
-		UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
-		DMX._enabled = ENABLE;
-		DMX._direction = dir;
-
-		xTaskCreate(&handleMAB, "MAB", 1024 * 2, NULL, 15, NULL);
-	}
-
-	gpio_set_level(DIRECTION_PIN, dir);
-}
-
-/*------------------------------------------------- stopDMX -----
- |  Function stopDMX
- |
- |  Purpose:  To stop DMX functionality and free up DMX_UART
- |
- |  Parameters: N/A
- |
- |  Returns:  N/A
- *-------------------------------------------------------------------*/
-void stopDMXUart()
-{
-	ESP_LOGI(TAG, "stop uart dmx");
-	DMX._enabled = DISABLE;
-	//while transmit is happening
-	while(MAB_RUNNING){vTaskDelay(10);}
-	ESP_LOGI(TAG, "mab done");
-	uart_disable_intr_mask(DMX_UART, UART_INTR_MASK); //disable all inturrupts
-	if(DMX._direction == RECEIVE)
-	{
-				uart_isr_free(DMX_UART);
-	}
-
-	uart_flush(DMX_UART);
-	uart_driver_delete(DMX_UART);
-
-	memset(&DMX, 0, sizeof(DMX));
-
-	return;
-}
 
 /*------------------------------------------------- uart_dmx_init -----
  |  Function uart_dmx_init
@@ -170,7 +81,7 @@ void stopDMXUart()
  |
  |  Returns:  N/A
  *-------------------------------------------------------------------*/
-void uart_dmx_init(int baudrate)
+void uart_dmx_init(int baudrate, uint8_t dir)
 {
 	uart_config_t uart_config = {
 	.baud_rate = DMX_DATA_BAUD,
@@ -181,271 +92,61 @@ void uart_dmx_init(int baudrate)
 	.rx_flow_ctrl_thresh = 122
 };
 
-ESP_LOGI(TAG, "UART config");
-
-uart_param_config(DMX_UART, &uart_config);
-
-uart_set_pin(DMX_UART, DMX_TX_PIN, DMX_RX_PIN,
-	UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
-
-uart_driver_install(DMX_UART, 1024 * 2, 0, 0, NULL, 0);
-uart_flush(DMX_UART);
-/*
-uart_config_t uart_config = {
- .baud_rate = baudrate,
- .data_bits = UART_DATA_8_BITS,
- .parity = UART_PARITY_DISABLE,
- .stop_bits = UART_STOP_BITS_2,
- .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
- .rx_flow_ctrl_thresh = 1,
-};
-
-//Set UART parameters
 uart_param_config(DMX_UART, &uart_config);
 
 uart_set_pin(DMX_UART, DMX_TX_PIN, DMX_RX_PIN,
 	UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
 
 
-*/
-if(DMX._direction == SEND)
-	xTaskCreate(&handleMAB, "MAB", 1024 * 2, NULL, 15, NULL);
+
+uart_driver_install(DMX_UART, DMX_MAX_SLOTS * 2, 0, 0, NULL, ESP_INTR_FLAG_LOWMED);
+
+changeDirectionDMXUart(dir);
+
+}
+
+void changeDirectionDMXUart(uint8_t dir)
+{
+
+	gpio_set_level(DIRECTION_PIN, dir);
+
+	if(dir == SEND)
+	{
+		 uart_enable_tx_intr(DMX_UART, 1, 1); //threshold = 1 enable = 1;
+		 //xTaskCreate(&DMXTx, "DMX UART TX", 1024 * 2, NULL, 15, NULL);
+	}
+	else
+	{
+		uart_set_baudrate(DMX_UART, DMX_DATA_BAUD);
+		uart_set_stop_bits(DMX_UART, UART_STOP_BITS_2);
+		uart_disable_tx_intr(DMX_UART);
+	}
+
+if(dir == SEND)
+{
+	ESP_LOGI(TAG, "SEND");
+}
 else
 {
-	uart_isr_register(DMX_UART, (void *) receiveInterruptHandlerDMX, NULL, ESP_INTR_FLAG_LOWMED, NULL);
-	UART_ENTER_CRITICAL(&uart_spinlock[DMX_UART]);
-	//set interrupts
-	UART[DMX_UART]->int_ena.rxfifo_full = 1;
-	UART[DMX_UART]->int_ena.brk_det = 1;
-	UART[DMX_UART]->conf1.rxfifo_full_thrhd = 1;
-	UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
+	ESP_LOGI(TAG, "RECEIVE");
 }
 
-
-
-/*
-if(DMX._direction == SEND)
-{
-	//enable tx fifo full interrupt
-	uart_isr_register(DMX_UART, (void *) txEmptyInterruptHandlerDMX, NULL, ESP_INTR_FLAG_LOWMED, NULL);
-	UART_ENTER_CRITICAL(&uart_spinlock[DMX_UART]);
-	UART[DMX_UART]->int_ena.txfifo_empty = 1;
-	UART[DMX_UART]->int_ena.tx_done = 1;
-	UART[DMX_UART]->conf1.txfifo_empty_thrhd = 1;
-	UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
-
 }
-else //RECEIVE
-{
 
-}*/
-
-}
-/*---------------------------------------- handleMAB -----
- |  Function handleMAB
+/*------------------------------------------------- stopDMX -----
+ |  Function stopDMX
  |
- |  Purpose:  This is a seperate thread that deals with the
- |	DMX Tx state machine, it works as txEmptyInterruptHandlerDMX
- |	describes
- |
+ |  Purpose:  To stop DMX functionality and free up DMX_UART
  |
  |  Parameters: N/A
  |
  |  Returns:  N/A
  *-------------------------------------------------------------------*/
-static void handleMAB()
+void stopDMXUart()
 {
-	uint32_t i, state = DMX_STATE_START;
-	ESP_LOGI(TAG, "LOOP");
-	MAB_RUNNING = 1;
-	while(DMX._enabled)
-	{
-		switch( state )
-		{
-			case DMX_STATE_START:
-				uart_set_baudrate(DMX_UART, DMX_DATA_BAUD);
-				uart_set_stop_bits(DMX_UART, UART_STOP_BITS_2);
-				state = DMX_STATE_DATA;
-			break;
-			case DMX_STATE_DATA:
-				uart_write_bytes(DMX_UART, (const char *) DMX._dmx_data, DMX_MAX_SLOTS);
-				state = DMX_STATE_BREAK;
-			break;
-			case DMX_STATE_BREAK:
-				uart_wait_tx_done(DMX_UART, 10);
-				//vTaskDelay(3);
-				uart_set_baudrate(DMX_UART, DMX_BREAK_BAUD);
-				uart_set_stop_bits(DMX_UART, UART_STOP_BITS_1);
-				uart_write_bytes(DMX_UART, "\0", 1);
-				state = DMX_STATE_MAB;
-			break;
-			case DMX_STATE_MAB:
-				uart_wait_tx_done(DMX_UART, 10);
-				//vTaskDelay(2);
-				state = DMX_STATE_START;
-			break;
-		}
-	}
-	uart_wait_tx_done(DMX_UART, 100);
-	MAB_RUNNING = 0;
-	vTaskDelete(NULL);
-	/*
-	while(DMX._enabled)
-	{
-		switch(DMX._dmx_state)
-		{
-			case DMX_STATE_START:
-				uart_set_baudrate(DMX_UART, DMX_DATA_BAUD);
-				uart_set_stop_bits(DMX_UART, UART_STOP_BITS_2);
-				UART[DMX_UART]->int_ena.txfifo_empty = 1;
-				DMX._current_slot = 0;
-				DMX._dmx_state = DMX_STATE_DATA;
-			break;
-			case DMX_STATE_DATA:
-				;;//handled in isr
-			break;
-			case DMX_STATE_BREAK:
-				UART[DMX_UART]->int_ena.tx_done = 1;
-				while(!tx_done){;;} //wait for last byte of data
+	ESP_LOGI(TAG, "stop uart dmx");
+	uart_disable_intr_mask(DMX_UART, UART_INTR_MASK); //disable all inturrupts
+	uart_driver_delete(DMX_UART);
 
-				uart_set_baudrate(DMX_UART, DMX_BREAK_BAUD);
-				uart_set_stop_bits(DMX_UART, UART_STOP_BITS_1);
-				DMXTx(0x00); //send break
-				DMX._dmx_state = DMX_STATE_MAB;
-			break;
-			case DMX_STATE_MAB:
-				while(!tx_done){;;} //wait for break byte
-
-				DMX._dmx_state = DMX_STATE_START;
-			break;
-		}
-	}*/
-}
-
-/*------------------------------------------------- DMXTx -----
- |  Function DMXTx
- |
- |  Purpose:  Safe thread sends a byte to fifo
- |
- |  Parameters: N/A
- |
- |  Returns:  N/A
- *-------------------------------------------------------------------*/
-static void DMXTx(uint8_t value)
-{
-	WRITE_PERI_REG(UART_FIFO_AHB_REG(DMX_UART), value);
-	if(DMX._dmx_state != DMX_STATE_DATA || DMX._current_slot == DMX._slots + 1)
-	{
-		UART_ENTER_CRITICAL(&uart_spinlock[DMX_UART]);
-		UART[DMX_UART]->int_ena.tx_done = 1;
-		tx_done = 0;
-		UART_EXIT_CRITICAL(&uart_spinlock[DMX_UART]);
-	}
-
-}
-/*---------------------------------------- txEmptyInterruptHandlerDMX -----
- |  Function txEmptyInterruptHandlerDMX
- |
- |  Purpose:  The is where the DMX magic happens, it places
- |	one byte of DMX._dmx_data data directly into the UART fifo to be
- |	transmitted. Then once the fifo is empty, it does it again.
- |	It also tracks the states, so when its time to send a break
- |	it drops the baud to DMX_BREAK_BAUD and sends a 0 (looks like
- |	a break) then it spin waits of the MAB (unused UART is pulled high)
- |	Then it will send a start code.
- |
- |
- |  Parameters: N/A
- |
- |  Returns:  N/A
- *-------------------------------------------------------------------*/
-static void txEmptyInterruptHandlerDMX(void)
-{
-	uint8_t done = UART[DMX_UART]->int_st.tx_done;
-
-	UART[DMX_UART]->int_clr.txfifo_empty = 1;
-	UART[DMX_UART]->int_clr.tx_done = 1;
-
-	UART[DMX_UART]->int_ena.val = 0;
-
-	UART_ENTER_CRITICAL_ISR(&uart_spinlock[DMX_UART]);
-
-	if( done )
-	{
-		tx_done = 1;
-		goto EXIT_ISR;
-	}
-
-	if(DMX._dmx_state == DMX_STATE_DATA)
-	{
-			WRITE_PERI_REG(UART_FIFO_AHB_REG(DMX_UART),(0xFF & DMX._dmx_data[DMX._current_slot++]));
-
-			if(DMX._current_slot > DMX._slots)
-			{
-				DMX._dmx_state = DMX_STATE_BREAK;
-				tx_done = 0;
-				//UART[DMX_UART]->int_ena.tx_done = 1;
-			}
-			else
-				UART[DMX_UART]->int_ena.txfifo_empty = 1;
-	}
-
-EXIT_ISR:
-
-	UART_EXIT_CRITICAL_ISR(&uart_spinlock[DMX_UART]);
-}
-
-/*---------------------------------------- receiveInterruptHandlerDMX -----
- |  Function receiveInterruptHandlerDMX
- |
- |  Purpose: Receives DMX data and puts it into DMX._dmx_data
- |	Pretty simple: If break detected, the next byte should be a
- |	start byte. It'll collect data until the next break.
- |
- |	Needs to be a spinlock so the RTOS does not interrupt it
- |
- |  Parameters: N/A
- |
- |  Returns:  N/A
- *-------------------------------------------------------------------*/
-static void receiveInterruptHandlerDMX() {
-	uint8_t incoming_byte;
-
-	UART_ENTER_CRITICAL_ISR(&uart_spinlock[DMX_UART]);
-
-	if ( UART[DMX_UART]->int_st.brk_det ) {				//break detected
-		DMX._dmx_state = DMX_STATE_BREAK;
-		DMX._current_slot = 0;
-		UART[DMX_UART]->int_clr.brk_det = 1;
-		goto EXIT_ISR;
-	}
-	incoming_byte = UART[DMX_UART]->fifo.rw_byte;
-	switch ( DMX._dmx_state ) {
-
-	case DMX_STATE_DATA:
-
-		DMX._dmx_data[DMX._current_slot++] = incoming_byte;
-		if ( DMX._current_slot > DMX_MAX_SLOTS ) {
-			DMX._dmx_state = DMX_STATE_IDLE;			// go to idle, wait for next break
-		}
-
-		break;
-
-		case DMX_STATE_BREAK:
-			if ( incoming_byte == 0 ) {						//start code == zero (DMX)
-				DMX._dmx_state = DMX_STATE_DATA;
-				DMX._current_slot = 0;
-			} else {
-				DMX._dmx_state = DMX_STATE_IDLE;
-			}
-			break;
-
-	}
-
-	UART[DMX_UART]->int_clr.rxfifo_full = 1;
-
-EXIT_ISR:
-
-	UART_EXIT_CRITICAL_ISR(&uart_spinlock[DMX_UART]);
-
+	return;
 }

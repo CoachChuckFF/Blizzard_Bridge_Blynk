@@ -56,7 +56,7 @@ extern "C" {
 #define DMX_STATE_MAB 3
 #define DMX_STATE_IDLE 4
 
-/* ESP32 DMX struct*/
+/* ESP32 DMX struct not in use*/
 typedef struct ESP32DMX {
   uint8_t  _dmx_state;
   uint16_t  _idle_count;
@@ -68,19 +68,12 @@ typedef struct ESP32DMX {
 } ESP32DMX;
 
 /* UART Handler (Internal) Functions */
-//void uart_enable_interrupt(void);
-void uart_dmx_init(int baudrate);
+void uart_dmx_init(int baudrate, uint8_t dir);
 
 /* DMX Handler (User) Functions */
 void startDMXUart(uint8_t dir);
 void changeDirectionDMXUart(uint8_t dir);
 void stopDMXUart( void );
-
-/* Interrupt (Internal) handlers */
-static void txEmptyInterruptHandlerDMX(void);
-static void receiveInterruptHandlerDMX(void);
-static void handleMAB(void);
-static void DMXTx(uint8_t value);
 
 extern ESP32DMX DMX;
 

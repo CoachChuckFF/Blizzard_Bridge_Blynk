@@ -47,8 +47,6 @@
 
 static const char *TAG = "MAIN";
 
-ESP32DMX DMX;
-
 extern uint8_t device_name_changed;
 extern uint8_t input_mode_changed;
 extern uint8_t output_mode_changed;
@@ -62,7 +60,7 @@ void app_main()
 {
   uint8_t* data;
   esp_err_t ret_val;
-  uint8_t i;
+  uint8_t i = 0;
   size_t length;
 
   //initallize
@@ -98,11 +96,13 @@ void app_main()
   //vTaskDelay(5000);
 
   //startDMXArtnet(SEND);
-  xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 3, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
+  xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 6, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
   //vTaskStartScheduler();
 
-  //clearDMX();
+  clearDMX();
+  //startDMXUart(RECEIVE);
   startDMXUart(SEND);
+  //startDMXUart((getInputMode() == DMX_MODE) ? RECEIVE : SEND);
   startWDMX();
   //setOwnUniverse(1);
 
@@ -125,6 +125,7 @@ void app_main()
       {
         case DMX_MODE:
           changeDirectionDMXUart(RECEIVE);
+          //stopDMXTx();
         break;
         case WDMX_MODE:
           //TODO be able to toggle wdmx
@@ -146,6 +147,7 @@ void app_main()
       {
         case DMX_MODE:
           changeDirectionDMXUart(SEND);
+          //stopDMXRx();
         break;
         case WDMX_MODE:
           //TODO be able to toggle wdmx
@@ -168,6 +170,8 @@ void app_main()
     //delay for context switch
     //ESP_LOGI(TAG, "COLOR %d", get_wdmx_color());
     //ESP_LOGI(TAG, "DMX0 %d", getDMXData(0));
+    printDMX();
+    ESP_LOGI(TAG, "TICK: %d", i++);
     vTaskDelay(1000);
   }
 
