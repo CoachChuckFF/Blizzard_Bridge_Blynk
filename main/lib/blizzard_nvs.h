@@ -16,6 +16,7 @@ extern "C" {
 #include "nvs_flash.h"
 #include "nvs.h"
 #include "dmx.h"
+#include "rdm.h"
 
 //NVS Stuff
 #define NVS_NAMESPACE "Blizzard"
@@ -28,6 +29,7 @@ extern "C" {
 #define NVS_OWN_ADDRESS_KEY "OWN_ADDRESS"
 #define NVS_OWN_UNIVERSE_KEY "OWN_UNIVERSE"
 #define NVS_SLOTS_KEY "SLOTS"
+#define NVS_OWN_UUID_KEY "RDM_UUID"
 
 #define NVS_DEVICE_NAME_INDEX 0
 #define NVS_SSID_INDEX 1
@@ -38,6 +40,7 @@ extern "C" {
 #define NVS_OWN_ADDRESS_INDEX 6
 #define NVS_OWN_UNIVERSE_INDEX 7
 #define NVS_SLOTS_INDEX 8
+#define NVS_OWN_UUID_INDEX 9
 extern nvs_handle config_nvs_handle;
 
 //Default Values
@@ -50,7 +53,6 @@ extern nvs_handle config_nvs_handle;
 #define DEFAULT_OWN_ADDRESS 0
 #define DEFAULT_OWN_UNIVERSE 0
 #define DEFAULT_SLOTS DMX_MAX_SLOTS
-
 
 void init_blizzard_nvs(void); //you must call this before other nvs
 void init_nvs_key_pair_default(uint8_t index);

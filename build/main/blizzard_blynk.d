@@ -195,6 +195,7 @@ blizzard_blynk.o: \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/rdm.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wdmx.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
@@ -596,6 +597,8 @@ blizzard_blynk.o: \
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/rdm.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wdmx.h:
 

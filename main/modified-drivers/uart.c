@@ -20,6 +20,8 @@
 #include "esp_err.h"
 #include "malloc.h"
 #include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/event_groups.h"
 #include "freertos/semphr.h"
 #include "freertos/xtensa_api.h"
 #include "freertos/task.h"
@@ -30,6 +32,7 @@
 #include "driver/gpio.h"
 #include "../../../blizzard-esp/main/lib/dmx.h"
 #include "../../../blizzard-esp/main/lib/dmx_uart.h"
+#include "../../../blizzard-esp/main/lib/blizzard_rdm.h"
 
 static const char* UART_TAG = "uart";
 #define UART_CHECK(a, str, ret_val) \
@@ -99,9 +102,9 @@ uint8_t _dmx_state = DMX_STATE_IDLE;
 uint8_t _incoming_byte = 0;
 uint16_t _current_slot = 0;
 uint8_t _start_byte = 0;
-uint8_t _tx_done_flag = 0;
 uint8_t _tx_running = 0;
-uint32_t _delay = 0;
+xEventGroupHandle_t* _rdm_group;
+BaseType_t _rdm_woken = pdFALSE;
 uint8_t* _dmx_data;
 
 esp_err_t uart_set_word_length(uart_port_t uart_num, uart_word_length_t data_bit)
@@ -684,6 +687,19 @@ static void uart_rx_intr_handler_default(void *param)
 
           if(uart_num == DMX_UART && !_tx_running) //modified isr
           {
+            if(_dmx_state == DMX_STATE_RDM)
+            {
+              _rdm_woken = pdFALSE;
+              _dmx_state = DMX_STATE_BREAK;
+              _current_slot = 0;
+              if(xEventGroupSetBitsFromISR( *_rdm_group,
+                                            RDM_BITS,
+                                            _rdm_woken))
+              {
+                portYIELD_FROM_ISR(/* *getXRDMTaskWoken() */);
+              }
+
+            }
             _dmx_state = DMX_STATE_BREAK;
             _current_slot = 0;
           }
@@ -703,13 +719,30 @@ static void uart_rx_intr_handler_default(void *param)
 
                 case DMX_STATE_DATA:
 
+                  //start bit check
+                  if(_current_slot == 0)
+                  {
+                    //if rdm avaiable?
+                    if( _incoming_byte == 0xCC) //check rdm byte
+                    {
+                      ((uint8_t *)getRxRDMPacket())[_current_slot++] = _incoming_byte;
+                      _dmx_state = DMX_STATE_RDM;
+                      break;
+                    }
+                    else if( _incoming_byte != 0 ) { //check start byte
+                      _dmx_state = DMX_STATE_IDLE;
+                      break;
+                    }
+                  }
+
                   _dmx_data[_current_slot] = _incoming_byte;
-                  if ( ++_current_slot >= DMX_MAX_SLOTS ) {
+
+                  if ( ++_current_slot >= DMX_MAX_SLOTS) {
                     _dmx_state = DMX_STATE_IDLE;            // go to idle, wait for next break
                   }
                 break;
 
-                case DMX_STATE_BREAK:
+                case DMX_STATE_BREAK: //should be a zero - not start bit
                   if( _incoming_byte == 0 ) {
                       _dmx_state = DMX_STATE_DATA;
                       _current_slot = 0;
@@ -719,6 +752,15 @@ static void uart_rx_intr_handler_default(void *param)
                   }
                 break;
 
+                case DMX_STATE_RDM:
+                  //read in rdm message
+                  ((uint8_t *)getRxRDMPacket())[_current_slot] = _incoming_byte;
+
+                  if ( ++_current_slot >= DMX_MAX_SLOTS) {
+                    _dmx_state = DMX_STATE_IDLE;            // go to idle, wait for next break
+                  }
+
+                break;
                 case DMX_STATE_IDLE:
                   ;;//spin
                 break;
@@ -1154,6 +1196,8 @@ esp_err_t uart_driver_install(uart_port_t uart_num, int rx_buffer_size, int tx_b
     if(uart_num == DMX_UART)
     {
       _dmx_data = getDMXBuffer();
+      _rdm_group = getXRDMGroup();
+      _rdm_woken = pdFALSE;
 
       uart_intr.intr_enable_mask = UART_RXFIFO_FULL_INT_ENA_M
                                 | UART_TX_DONE_INT_ENA_M

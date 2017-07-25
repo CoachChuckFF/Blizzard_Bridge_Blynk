@@ -58,6 +58,7 @@ static volatile uint8_t DMX[DMX_MAX_SLOTS];
 static char DEVICE_NAME[NAME_MAX_LENGTH];
 static char SSID[SSID_MAX_LENGTH];
 static char PASS[PASS_MAX_LENGTH];
+static uint8_t OWN_UUID[6];
 static uint8_t INPUT_MODE; //ethernet, wifi, dmx
 static uint8_t OUTPUT_MODE; //Arthnet, sACN, Blynk
 static uint8_t MEDIUM;
@@ -94,6 +95,21 @@ void setName(char *name, uint8_t length)
     DEVICE_NAME[i] = name[i];
   DEVICE_NAME[i] = '\0'; //null termination
   update_str_nvs_val(NVS_DEVICE_NAME_KEY, (char *) DEVICE_NAME);
+}
+
+void setOwnUUID(uint8_t * uuid)
+{
+  uint8_t i;
+
+  for(i = 0; i < 6; i++)
+    OWN_UUID[i] = uuid[i];
+
+  //add in update_blob_nvs_val
+}
+
+uint8_t * getOwnUUID(void)
+{
+  return OWN_UUID;
 }
 
 char* getSSID(void)
@@ -327,7 +343,7 @@ void copyFromDMX(uint8_t *buf, uint16_t start_index, uint16_t length)
 void printDMX()
 {
   uint16_t i;
-  printf("------------------------------------------\n");
+  printf("-----------------DMX DATA---------------------\n");
   for(i = 0; i < DMX_MAX_SLOTS; i++)
   {
     if(getDMXData(i))
@@ -336,5 +352,5 @@ void printDMX()
       printf("\n");
 
   }
-  printf("------------------------------------------\n");
+  printf("----------------DMX DATA-----------------\n");
 }

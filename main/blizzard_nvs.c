@@ -1,4 +1,5 @@
 #include "lib/blizzard_nvs.h"
+#include "lib/blizzard_rdm.h"
 
 static const char *TAG = "BLIZZARD NVS";
 
@@ -71,13 +72,19 @@ void init_nvs_key_pair_default(uint8_t index)
       if(ret_val != ESP_OK)
         ESP_LOGI(TAG, "ERROR NVS SET DEFAULT SLOTS %d", ret_val);
     break;
+    case NVS_OWN_UUID_INDEX:
+      buf8[5] = 0x11; buf8[4] = 0x12; buf8[3] = 0x13; buf8[2] = 0x14; buf8[1] = 0x15; buf8[0] = 0x16;
+      ret_val = nvs_set_blob(config_nvs_handle, NVS_OWN_UUID_KEY, buf8, sizeof(uint8_t) * 6);
+      if(ret_val != ESP_OK)
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT SLOTS %d", ret_val);
+    break;
 
   }
   ret_val = nvs_commit(config_nvs_handle);
   if(ret_val != ESP_OK){
     ESP_LOGI(TAG, "NVS COMMIT FAIL - init default %d", ret_val);
   }else
-    ESP_LOGI(TAG, "COMMITED");
+    ESP_LOGI(TAG, "DEFAULT %d COMMITED", index);
 }
 
 void populate_all_dmx_nvs_values()
@@ -192,6 +199,18 @@ SET_SLOTS:
     if(buf16 == DMX_MAX_SLOTS){buf16--;}
       setSlots(buf16);
   }
+
+SET_OWN_UUID:
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, NULL, &length);
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, buf8, &length);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET OWN UUID %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_OWN_UUID_INDEX);
+    goto SET_OWN_UUID;
+  }else
+    setOwnUUID(buf8);
 
 }
 
@@ -328,6 +347,14 @@ void print_nvs_values(uint8_t index)
         ESP_LOGI(TAG, "ERROR NVS GET SLOTS %d", ret_val);
       }else
         ESP_LOGI(TAG, "SLOTS: %d", buf16);
+    break;
+    case NVS_OWN_UUID_INDEX:
+      ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, NULL, &length);
+      ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, buf8, &length);
+      if(ret_val != ESP_OK){
+        ESP_LOGI(TAG, "ERROR NVS GET UUID %d", ret_val);
+      }else
+        ESP_LOGI(TAG, "UUID: %d.%d.%d.%d.%d.%d", buf8[5], buf8[4], buf8[3], buf8[2], buf8[1], buf8[0]);
     break;
   }
 }

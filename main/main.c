@@ -43,6 +43,7 @@
 #include "lib/blizzard_wifi.h"
 #include "lib/blizzard_eth.h"
 #include "lib/blizzard_wdmx.h"
+#include "lib/blizzard_rdm.h"
 //#include "Arduino.h"
 
 static const char *TAG = "MAIN";
@@ -63,6 +64,7 @@ void app_main()
   uint8_t i = 0;
   size_t length;
 
+
   //initallize
 
   init_blizzard_nvs();
@@ -71,15 +73,20 @@ void app_main()
 
   //start with trying to connect to wifi
   //try to connect with nvs values
-/*
-  for(i = 0; i < 9; i++)
-    print_nvs_values(i);*/
 
+  for(i = 0; i < 9; i++)
+    print_nvs_values(i);
+
+/*
+  memset(uuid, 0x69, 6);
+  update_blob_nvs_val(NVS_OWN_UUID_KEY, uuid, 6);
+  update_str_nvs_val(NVS_SSID_KEY, "blizznet");
+  update_str_nvs_val(NVS_PASS_KEY, "destroyer");*/
 
   initialise_blizzard_wifi(getSSID(), getPASS());
   setOwnIPAddress(get_wifi_ip());
   print_nvs_values(NVS_OWN_IP_ADDRESS_INDEX); //does not work yet
-  initialise_blizzard_ethernet();
+  //initialise_blizzard_ethernet();
   /*for(i = 0; i < 9; i++)
     print_nvs_values(i);*/
 
@@ -100,10 +107,12 @@ void app_main()
   //vTaskStartScheduler();
 
   clearDMX();
-  //startDMXUart(RECEIVE);
-  startDMXUart(SEND);
+  startRDM(); //should be called before start DMXUART
+  startDMXUart(RECEIVE);
+  //startDMXUart(SEND);
   //startDMXUart((getInputMode() == DMX_MODE) ? RECEIVE : SEND);
   startWDMX();
+
   //setOwnUniverse(1);
 
 
@@ -170,7 +179,7 @@ void app_main()
     //delay for context switch
     //ESP_LOGI(TAG, "COLOR %d", get_wdmx_color());
     //ESP_LOGI(TAG, "DMX0 %d", getDMXData(0));
-    printDMX();
+    //printDMX();
     ESP_LOGI(TAG, "TICK: %d", i++);
     vTaskDelay(1000);
   }

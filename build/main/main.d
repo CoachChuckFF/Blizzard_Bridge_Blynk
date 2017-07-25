@@ -147,6 +147,7 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_blynk.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/rdm.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_uart.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h \
@@ -154,7 +155,8 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx_artnet.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx_sACN.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_eth.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wdmx.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wdmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_rdm.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -452,6 +454,8 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
 
+/home/penguin/Programio/blizzard-esp/main/./lib/rdm.h:
+
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_uart.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h:
@@ -467,4 +471,6 @@ main.o: /home/penguin/Programio/blizzard-esp/main/./main.c \
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_eth.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wdmx.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_rdm.h:
 /home/penguin/Programio/blizzard-esp/main/./main.c:

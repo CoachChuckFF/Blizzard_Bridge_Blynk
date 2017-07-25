@@ -62,11 +62,14 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -123,7 +126,9 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
- /home/penguin/Programio/esp-idf/components/driver/./../../../blizzard-esp/main/lib/dmx_uart.h
+ /home/penguin/Programio/esp-idf/components/driver/./../../../blizzard-esp/main/lib/dmx_uart.h \
+ /home/penguin/Programio/esp-idf/components/driver/./../../../blizzard-esp/main/lib/blizzard_rdm.h \
+ /home/penguin/Programio/esp-idf/components/driver/./../../../blizzard-esp/main/lib/rdm.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -251,15 +256,21 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
 
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/limits.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
 
@@ -374,4 +385,8 @@ uart.o: /home/penguin/Programio/esp-idf/components/driver/./uart.c \
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/driver/./../../../blizzard-esp/main/lib/dmx_uart.h:
+
+/home/penguin/Programio/esp-idf/components/driver/./../../../blizzard-esp/main/lib/blizzard_rdm.h:
+
+/home/penguin/Programio/esp-idf/components/driver/./../../../blizzard-esp/main/lib/rdm.h:
 /home/penguin/Programio/esp-idf/components/driver/./uart.c:

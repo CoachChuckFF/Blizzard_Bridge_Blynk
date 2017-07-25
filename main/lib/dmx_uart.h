@@ -55,6 +55,7 @@ extern "C" {
 #define DMX_STATE_BREAK 2
 #define DMX_STATE_MAB 3
 #define DMX_STATE_IDLE 4
+#define DMX_STATE_RDM 5
 
 /* ESP32 DMX struct not in use*/
 typedef struct ESP32DMX {

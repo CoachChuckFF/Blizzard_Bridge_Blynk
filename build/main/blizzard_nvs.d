@@ -114,7 +114,12 @@ blizzard_nvs.o: \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/rdm.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_rdm.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h
 
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h:
 
@@ -345,4 +350,14 @@ blizzard_nvs.o: \
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/rdm.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_rdm.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
 /home/penguin/Programio/blizzard-esp/main/./blizzard_nvs.c:

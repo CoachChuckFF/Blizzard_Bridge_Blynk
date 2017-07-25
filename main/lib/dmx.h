@@ -97,6 +97,10 @@ char* getName(void);
 
 void setName(char *name, uint8_t length);
 
+uint8_t* getOwnUUID(void);
+
+void setOwnUUID(uint8_t* uuid);
+
 char* getSSID(void);
 
 void setSSID(char *ssid, uint8_t length); //has to be null terminated

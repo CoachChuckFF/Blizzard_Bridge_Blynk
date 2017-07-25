@@ -114,6 +114,7 @@ dmx.o: /home/penguin/Programio/blizzard-esp/main/./dmx.c \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/rdm.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -345,6 +346,8 @@ dmx.o: /home/penguin/Programio/blizzard-esp/main/./dmx.c \
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/rdm.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
 /home/penguin/Programio/blizzard-esp/main/./dmx.c:
