@@ -45,8 +45,8 @@ extern "C" {
 #define DIRECTION_PIN 13
 
 #define DMX_UART UART_NUM_2
-#define DMX_TX_PIN 12
-#define DMX_RX_PIN 14
+#define DMX_TX_PIN 12 //12
+#define DMX_RX_PIN 14 //14
 #define DMX_DATA_BAUD		250000
 #define DMX_BREAK_BAUD 	 88000
 

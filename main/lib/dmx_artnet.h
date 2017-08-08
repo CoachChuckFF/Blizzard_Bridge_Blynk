@@ -68,6 +68,8 @@ extern "C" {
 
 #define MAX_ARTNET_BUFFER 530
 
+#define ARTNET_DMX_SEND_DELAY 1000
+
 typedef struct ArtnetPacket {
   uint8_t _id[8];
   uint16_t _opcode;
@@ -81,8 +83,46 @@ typedef struct ArtnetPacket {
   uint8_t *_dmx_data; // no start bit
 }__attribute__((packed)) ArtnetPacket;
 
+typedef struct ArtnetPollReplyPacket {
+  uint8_t _id[8];
+  uint16_t _opcode;
+  uint8_t _own_ip[4];
+  uint16_t _port; //always 0x1936
+  uint8_t _version_info_hi; //high byte of firmware version
+  uint8_t _version_info_lo; //low byte of firmware version
+  uint8_t _net_switch;
+  uint8_t _sub_switch;
+  uint8_t _oem_hi;
+  uint8_t _oem_lo;
+  uint8_t _ubea_version; //set to 0
+  uint8_t _status_1;
+  uint8_t _esta_man_lo;
+  uint8_t _esta_man_hi;
+  uint8_t _short_name[18];
+  uint8_t _long_name[64];
+  uint8_t _node_report[64];
+  uint8_t _num_ports_hi;
+  uint8_t _num_ports_lo;
+  uint8_t _port_types[4];
+  uint8_t _good_input[4];
+  uint8_t _good_output[4];
+  uint8_t _sw_in[4];
+  uint8_t _sw_out[4];
+  uint8_t _sw_video;
+  uint8_t _sw_macro;
+  uint8_t _sw_remote;
+  uint8_t _spare[3]; //spare bytes set to 0
+  uint8_t _style;
+  uint8_t _mac[6]; //set high bytes to 0 if no info
+  uint8_t _bind_ip[4];
+  uint8_t _bind_index;
+  uint8_t _status_2;
+  uint8_t _filler[26]; //zero for now
+}__attribute__((packed)) ArtnetPollReplyPacket;
+
 typedef struct ArtnetNode {
   ArtnetPacket *_packet;
+  ArtnetPollReplyPacket *_poll_reply_packet;
   struct udp_pcb *_udp;
   ip_addr_t *_own_ip;
   ip_addr_t *_dest_ip;
@@ -95,9 +135,10 @@ typedef struct ArtnetNode {
 /*External*/
 void startDMXArtnet(uint8_t direction);
 void stopDMXArtnet(void);
+void changeDirectionArtnet(uint8_t direction);
 void sendDMXDataArtnet(uint16_t universe);
 /*Internal*/
-void createPacketArtnet(void);
+void sendArtnetLoop(void);
 void sendPollReplyArtnet(struct pbuf *p, const ip_addr_t *addr);
 void sendPollArtnet(void); // run periodically in own thread
 void parsePollReplyArtnet(struct pbuf *p);
@@ -108,8 +149,8 @@ void recieveDMXArtnet(void *arg,
                   const ip_addr_t *addr,
                   u16_t port);
 void udp_artnet_init(void);
-
-
+void createPacketArtnet(void);
+void createPacketArtnetPollReply(void);
 
 
 extern ArtnetNode ARTNET;

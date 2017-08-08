@@ -8,6 +8,7 @@ static const char *TAG = "RDM";
 static rdm_dev dev;
 uint8_t* own_uuid;
 uint8_t HANDLER_RUNNING;
+static EventGroupHandle_t test;
 
 void rdmHandler(void)
 {
@@ -29,7 +30,7 @@ void rdmHandler(void)
   while(1)
   {
     dev.xRDMBits = xEventGroupWaitBits(dev.xRDMGroup, RDM_BITS,
-                        true, false, portMAX_DELAY);
+                        pdTRUE, pdFALSE, portMAX_DELAY);
 
     if(dev.xRDMBits & RDM_BITS)
     {
@@ -52,6 +53,7 @@ void rdmHandler(void)
     {
       //timout
     }
+
   }
 
   vTaskDelete(NULL);
@@ -153,7 +155,9 @@ void startRDM(void)
 
   memset(&dev, 0, sizeof(rdm_dev));
 
-  dev.xRDMGroup = xEventGroupCreate();
+  test = xEventGroupCreate();
+
+  dev.xRDMGroup = test;
 
   if(dev.xRDMGroup == NULL)
   {
@@ -169,7 +173,7 @@ void startRDM(void)
 
   set_rdm_unique_packet();
 
-  xTaskCreatePinnedToCore(&rdmHandler, "RDM HANDLER", 2048, NULL, tskIDLE_PRIORITY, &dev.xRDMHandle, 0);
+  xTaskCreatePinnedToCore(&rdmHandler, "RDM HANDLER", 2048, NULL, tskIDLE_PRIORITY + 15, &dev.xRDMHandle, 0);
 }
 
 
@@ -216,7 +220,7 @@ EventGroupHandle_t* getXRDMGroup(void)
     return NULL;
   }
 
-  return &dev.xRDMGroup;
+  return &test;//&dev.xRDMGroup;
 }
 
 BaseType_t* getXRDMTaskWoken(void)
@@ -292,6 +296,7 @@ void printRDMPacket(uint8_t dir)
       printf("\n");
 
   }
+  printf("\n");
   printf("----------------RDM DATA-----------------\n");
 
 }

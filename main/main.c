@@ -61,6 +61,7 @@ void app_main()
 {
   uint8_t* data;
   esp_err_t ret_val;
+  uint32_t temp_ip;
   uint8_t i = 0;
   size_t length;
 
@@ -84,7 +85,8 @@ void app_main()
   update_str_nvs_val(NVS_PASS_KEY, "destroyer");*/
 
   initialise_blizzard_wifi(getSSID(), getPASS());
-  setOwnIPAddress(get_wifi_ip());
+  temp_ip = get_wifi_ip();
+  setOwnIPAddress((uint8_t *) &temp_ip);
   print_nvs_values(NVS_OWN_IP_ADDRESS_INDEX); //does not work yet
   //initialise_blizzard_ethernet();
   /*for(i = 0; i < 9; i++)
@@ -107,11 +109,12 @@ void app_main()
   //vTaskStartScheduler();
 
   clearDMX();
-  startRDM(); //should be called before start DMXUART
+  //startRDM(); //should be called before start DMXUART
   startDMXUart(RECEIVE);
   //startDMXUart(SEND);
   //startDMXUart((getInputMode() == DMX_MODE) ? RECEIVE : SEND);
   startWDMX();
+  startDMXArtnet(RECEIVE);
 
   //setOwnUniverse(1);
 
@@ -140,7 +143,7 @@ void app_main()
           //TODO be able to toggle wdmx
         break;
         case ARTNET_MODE:
-          //startDMXArtnet(RECEIVE);
+          changeDirectionArtnet(RECEIVE);
         break;
         case SACN_MODE:
           //startDMXsACN();//TODO add in recive mode
@@ -163,7 +166,7 @@ void app_main()
         break;
         case ARTNET_MODE:
 
-          //startDMXArtnet(SEND);
+          changeDirectionArtnet(SEND);
         break;
         case SACN_MODE:
           //startDMXsACN();//TODO add in recive mode
@@ -180,8 +183,10 @@ void app_main()
     //ESP_LOGI(TAG, "COLOR %d", get_wdmx_color());
     //ESP_LOGI(TAG, "DMX0 %d", getDMXData(0));
     //printDMX();
+    //getXRDMGroup();
     ESP_LOGI(TAG, "TICK: %d", i++);
     vTaskDelay(1000);
+    //xEventGroupSetBits(*getXRDMGroup(), RDM_BITS);
   }
 
 }

@@ -103,7 +103,7 @@ uint8_t _incoming_byte = 0;
 uint16_t _current_slot = 0;
 uint8_t _start_byte = 0;
 uint8_t _tx_running = 0;
-xEventGroupHandle_t* _rdm_group;
+EventGroupHandle_t* _rdm_group;
 BaseType_t _rdm_woken = pdFALSE;
 uint8_t* _dmx_data;
 
@@ -687,19 +687,20 @@ static void uart_rx_intr_handler_default(void *param)
 
           if(uart_num == DMX_UART && !_tx_running) //modified isr
           {
+            /*
             if(_dmx_state == DMX_STATE_RDM)
             {
               _rdm_woken = pdFALSE;
               _dmx_state = DMX_STATE_BREAK;
               _current_slot = 0;
-              if(xEventGroupSetBitsFromISR( *_rdm_group,
+              if(xEventGroupSetBitsFromISR( *getXRDMGroup(),
                                             RDM_BITS,
                                             _rdm_woken))
               {
-                portYIELD_FROM_ISR(/* *getXRDMTaskWoken() */);
+                portYIELD_FROM_ISR();
               }
 
-            }
+            }*/
             _dmx_state = DMX_STATE_BREAK;
             _current_slot = 0;
           }
@@ -723,13 +724,14 @@ static void uart_rx_intr_handler_default(void *param)
                   if(_current_slot == 0)
                   {
                     //if rdm avaiable?
+                    /*
                     if( _incoming_byte == 0xCC) //check rdm byte
                     {
                       ((uint8_t *)getRxRDMPacket())[_current_slot++] = _incoming_byte;
                       _dmx_state = DMX_STATE_RDM;
                       break;
-                    }
-                    else if( _incoming_byte != 0 ) { //check start byte
+                    }*/
+                    /*else */if( _incoming_byte != 0 ) { //check start byte
                       _dmx_state = DMX_STATE_IDLE;
                       break;
                     }

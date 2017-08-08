@@ -68,8 +68,9 @@ void deinitalise_blizzard_wifi()
   esp_wifi_stop();
 }
 
-uint8_t* get_wifi_ip()
+uint32_t get_wifi_ip()
 {
+  uint32_t temp = 0;
   tcpip_adapter_ip_info_t ip;
   memset(&ip, 0, sizeof(tcpip_adapter_ip_info_t));
   if (tcpip_adapter_get_ip_info(ESP_IF_WIFI_STA, &ip) == 0) {
@@ -80,5 +81,11 @@ uint8_t* get_wifi_ip()
       ESP_LOGI(TAG, "~~~~~~~~~~~");
   }
 
-  return (uint8_t *) ip4addr_ntoa(&ip.ip);
+  //flip ip
+  temp |= (ip.ip.addr >> 24) & 0x000000FF;
+  temp |= (ip.ip.addr >> 8) & 0x0000FF00;
+  temp |= (ip.ip.addr << 8) & 0x00FF0000;
+  temp |= (ip.ip.addr << 24) & 0xFF000000;
+
+  return temp;
 }

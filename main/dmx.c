@@ -203,15 +203,18 @@ uint8_t* getOwnIPAddress()
 
 void setOwnIPAddress(uint8_t* address)
 {
+
   if(address == NULL)
   {
     ESP_LOGI(TAG, "NULL IP Address");
     return;
   }
-  OWN_IP_ADDRESS[0] = address[0];
-  OWN_IP_ADDRESS[1] = address[1];
-  OWN_IP_ADDRESS[2] = address[2];
-  OWN_IP_ADDRESS[3] = address[3];
+  OWN_IP_ADDRESS[3] = address[0];
+  OWN_IP_ADDRESS[2] = address[1];
+  OWN_IP_ADDRESS[1] = address[2];
+  OWN_IP_ADDRESS[0] = address[3];
+
+  update_blob_nvs_val(NVS_OWN_IP_ADDRESS_KEY, address, sizeof(uint8_t) * 4);
 
   own_ip_changed = 1;
 }
