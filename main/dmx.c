@@ -63,9 +63,13 @@ static uint8_t INPUT_MODE; //ethernet, wifi, dmx
 static uint8_t OUTPUT_MODE; //Arthnet, sACN, Blynk
 static uint8_t MEDIUM;
 static uint8_t OWN_IP_ADDRESS[4];
+static uint8_t OWN_NETMASK[4];
 static uint16_t OWN_ADDRESS;
 static uint16_t OWN_UNIVERSE;
 static uint16_t SLOTS;
+static uint16_t OWN_ID;
+static uint8_t DHCP_ENABLE;
+static uint8_t NEED_WIFI_MANAGER;
 
 //flags
 uint8_t device_name_changed = 0;
@@ -209,14 +213,27 @@ void setOwnIPAddress(uint8_t* address)
     ESP_LOGI(TAG, "NULL IP Address");
     return;
   }
-  OWN_IP_ADDRESS[3] = address[0];
-  OWN_IP_ADDRESS[2] = address[1];
-  OWN_IP_ADDRESS[1] = address[2];
-  OWN_IP_ADDRESS[0] = address[3];
+  OWN_IP_ADDRESS[3] = address[3];
+  OWN_IP_ADDRESS[2] = address[2];
+  OWN_IP_ADDRESS[1] = address[1];
+  OWN_IP_ADDRESS[0] = address[0];
 
   update_blob_nvs_val(NVS_OWN_IP_ADDRESS_KEY, address, sizeof(uint8_t) * 4);
 
   own_ip_changed = 1;
+}
+
+uint8_t* getOwnNetmask()
+{
+  return OWN_NETMASK;
+}
+
+void setOwnNetmask(uint8_t* netmask)
+{
+  OWN_NETMASK[3] = netmask[0];
+  OWN_NETMASK[2] = netmask[1];
+  OWN_NETMASK[1] = netmask[2];
+  OWN_NETMASK[0] = netmask[3];
 }
 
 uint16_t getOwnAddress(void)
@@ -258,6 +275,38 @@ void setSlots(uint16_t count)
   }
 
   SLOTS = count;
+}
+
+uint16_t getOwnID(void)
+{
+  return OWN_ID;
+}
+
+void setOwnID(uint16_t id)
+{
+  OWN_ID = id;
+}
+
+uint8_t getDHCPEnable(void)
+{
+  return DHCP_ENABLE;
+}
+
+void setDHCPEnable(uint8_t enable)
+{
+  DHCP_ENABLE = enable;
+  update_u8_nvs_val(NVS_DHCP_ENABLE_KEY, DHCP_ENABLE);
+}
+
+uint8_t getNeedWifiManager(void)
+{
+  return NEED_WIFI_MANAGER;
+}
+
+void setNeedWifiManager(uint8_t need)
+{
+  NEED_WIFI_MANAGER = need;
+  update_u8_nvs_val(NVS_NEED_WIFI_MANAGER_KEY, NEED_WIFI_MANAGER);
 }
 
 uint8_t getDMXData(uint16_t slot)

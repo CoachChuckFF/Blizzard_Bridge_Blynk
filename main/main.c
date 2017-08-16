@@ -44,7 +44,8 @@
 #include "lib/blizzard_eth.h"
 #include "lib/blizzard_wdmx.h"
 #include "lib/blizzard_rdm.h"
-//#include "Arduino.h"
+#include "lib/blizzard_wifi_manager.h"
+#include "Arduino.h"
 
 static const char *TAG = "MAIN";
 
@@ -67,66 +68,50 @@ void app_main()
 
 
   //initallize
-
   init_blizzard_nvs();
 
   populate_all_dmx_nvs_values();
 
-  //start with trying to connect to wifi
-  //try to connect with nvs values
-
   for(i = 0; i < 9; i++)
     print_nvs_values(i);
 
-/*
-  memset(uuid, 0x69, 6);
-  update_blob_nvs_val(NVS_OWN_UUID_KEY, uuid, 6);
-  update_str_nvs_val(NVS_SSID_KEY, "blizznet");
-  update_str_nvs_val(NVS_PASS_KEY, "destroyer");*/
+  //setSSID("blizznet", 8);
+  //setPASS("destroyer", 9);
 
-  initialise_blizzard_wifi(getSSID(), getPASS());
-  temp_ip = get_wifi_ip();
-  setOwnIPAddress((uint8_t *) &temp_ip);
-  print_nvs_values(NVS_OWN_IP_ADDRESS_INDEX); //does not work yet
+  //TODO Make Ethernet workflow
   //initialise_blizzard_ethernet();
-  /*for(i = 0; i < 9; i++)
-    print_nvs_values(i);*/
 
+  if(getNeedWifiManager() == ENABLE)
+  {
+    start_wifi_manager();
+  }
+  else
+  {
+    initialise_blizzard_wifi(getSSID(), getPASS());
+  }
 
-  //nvs_flash_init();
-  //initialise_blizzard_wifi();
-  //xTaskCreate(&ArduinoLoop, "Arduino Core", 2048, NULL, 10, NULL);
-  //vTaskDelay(10000 / portTICK_RATE_MS);
-
-  //startBlizzardUart();
-  //startDMXUart(SEND);
-
-  //initialise_blizzard_ethernet();
-  //vTaskDelay(5000);
-
-  //startDMXArtnet(SEND);
   xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 6, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
-  //vTaskStartScheduler();
+
+  vTaskDelay(10000);
+
+  if(getDHCPEnable() == DISABLE)
+  {
+    changeIP(getOwnIPAddress()); //set to last static ip address
+  }
+  else
+  {
+    temp_ip = get_wifi_ip();
+    setOwnIPAddress((uint8_t *) &temp_ip); //set DHCP address
+  }
+
+
 
   clearDMX();
-  //startRDM(); //should be called before start DMXUART
   startDMXUart(RECEIVE);
-  //startDMXUart(SEND);
-  //startDMXUart((getInputMode() == DMX_MODE) ? RECEIVE : SEND);
+
   startWDMX();
   startDMXArtnet(RECEIVE);
 
-  //setOwnUniverse(1);
-
-
-  //xTaskCreate(&test, "test", 2048, NULL, 5, NULL);
-
-  //main loop - listens to flag changes and responds to flag changes
-  /*startWDMX();
-  switch_wdmx_button_on();*/
-
-  //easy_wdmx_connect();
-  //startDMXArtnet(RECEIVE);
   /* Listen for Config Changes */
   while(1)
   {
@@ -175,18 +160,9 @@ void app_main()
       output_mode_changed = 0;
     }
 
-
-
-    //ESP_LOGI(TAG, "MAIN LOOP");
-    //sendDMXDataArtnet(0);
-    //delay for context switch
-    //ESP_LOGI(TAG, "COLOR %d", get_wdmx_color());
-    //ESP_LOGI(TAG, "DMX0 %d", getDMXData(0));
-    //printDMX();
-    //getXRDMGroup();
     ESP_LOGI(TAG, "TICK: %d", i++);
+    //get_wifi_ip();
     vTaskDelay(1000);
-    //xEventGroupSetBits(*getXRDMGroup(), RDM_BITS);
   }
 
 }

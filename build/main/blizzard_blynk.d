@@ -157,6 +157,12 @@ blizzard_blynk.o: \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiUdp.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Udp.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/cbuf.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/DNSServer_tng/src/DNSServer.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiUdp.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WebServer_tng/src/WebServer.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WebServer_tng/src/detail/RequestHandler.h \
+ /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WiFiManager/WiFiManager.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiClient.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/Blynk/src/BlynkSimpleEsp32.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/Blynk/src/BlynkApiArduino.h \
@@ -188,7 +194,6 @@ blizzard_blynk.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_blynk.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
@@ -205,8 +210,8 @@ blizzard_blynk.o: \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
 
@@ -522,6 +527,18 @@ blizzard_blynk.o: \
 
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/cbuf.h:
 
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/DNSServer_tng/src/DNSServer.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiUdp.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WebServer_tng/src/WebServer.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WebServer_tng/src/detail/RequestHandler.h:
+
+/home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WiFiManager/WiFiManager.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
+
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiClient.h:
 
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/Blynk/src/BlynkSimpleEsp32.h:
@@ -584,8 +601,6 @@ blizzard_blynk.o: \
 
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h:
 
-/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
-
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
@@ -618,7 +633,7 @@ blizzard_blynk.o: \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
 
-/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h:
-
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi.h:
 /home/penguin/Programio/blizzard-esp/main/./blizzard_blynk.cpp:

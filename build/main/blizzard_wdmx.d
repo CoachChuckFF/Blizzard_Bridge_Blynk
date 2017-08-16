@@ -125,8 +125,7 @@ blizzard_wdmx.o: \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
- /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h
 
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wdmx.h:
 
@@ -379,6 +378,4 @@ blizzard_wdmx.o: \
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
-
-/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_structs.h:
 /home/penguin/Programio/blizzard-esp/main/./blizzard_wdmx.c:

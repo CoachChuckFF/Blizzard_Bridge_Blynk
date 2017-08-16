@@ -13,8 +13,6 @@ extern "C" {
 #include "driver/uart.h"
 #include "driver/gpio.h"
 #include "dmx.h"
-#include "blizzard_structs.h"
-#include "blizzard_structs.h"
 
 #define WDMX_RED_PIN 35
 #define WDMX_GREEN_PIN 32

@@ -29,9 +29,6 @@ ArtnetPollReplyPacket POLLREPLYPACKET;
 uint8_t status_1, status_2;
 uint8_t send_active;
 
-ip_addr_t ip;
-
-
 const uint8_t ARTNET_ID[8] = {'A','r','t','-','N','e','t',0};
 
 //direction so you can ignore incoming DMX data packets
@@ -74,9 +71,10 @@ void changeDirectionArtnet(uint8_t direction)
 
 void udp_artnet_init()
 {
+  ip_addr_t ip;
   ARTNET._udp = udp_new();
   ARTNET._own_ip = IP_ADDR_ANY;
-  IP_ADDR4(&ip, 255,255,255,255); //broadcast
+  IP_ADDR4(&ip, 255,255,255,255); //broadcast ip
   ARTNET._dest_ip = &ip;
   ARTNET._port = ART_NET_PORT;
   ESP_LOGI(TAG, "Bind %d",udp_bind(ARTNET._udp, ARTNET._own_ip, ARTNET._port));
@@ -96,6 +94,8 @@ void sendArtnetLoop(void)
   {
     sendDMXDataArtnet(getOwnUniverse());
     vTaskDelay(ARTNET_DMX_SEND_DELAY);
+
+    //TODO send ArtPoll
   }
   send_active = 0;
   vTaskDelete(NULL);
@@ -110,7 +110,7 @@ void recieveDMXArtnet(void *arg,
   uint32_t i;
   uint16_t opcode;
 
-  ESP_LOGI(TAG, "PACKET REC");
+  //ESP_LOGI(TAG, "PACKET REC");
 
   for(i = 0; i < 8; i++)
   {
@@ -126,12 +126,11 @@ void recieveDMXArtnet(void *arg,
   switch(opcode)
   {
     case ART_OP_DMX:
-      /*
       if(ARTNET._direction != RECEIVE)
       {
         ESP_LOGI(TAG, "Not in Receive Mode %d", ARTNET._direction);
         goto FREE_P;
-      }*/
+      }
       parseDMXDataPacketArtnet(p);
       //ESP_LOGI(TAG, "Artnet DMX Data");
     break;
@@ -153,7 +152,8 @@ FREE_P:
 }
 // add in varible slots
 
-
+//send in broadcast
+//TODO send to diffrent universes
 void sendDMXDataArtnet(uint16_t universe){
   int i, j, ret_val;
   struct pbuf *p;
@@ -207,6 +207,9 @@ void sendPollReplyArtnet(struct pbuf *p, const ip_addr_t *addr)
     ESP_LOGI(TAG, "You silly, call startDMXArtnet(SEND/RECEIVE) first!")
     return;
   }
+
+  //take out for performance
+  createPacketArtnetPollReply();
 
   p_send = pbuf_alloc(PBUF_TRANSPORT, sizeof(ArtnetPollReplyPacket) ,PBUF_RAM);
 
@@ -312,7 +315,7 @@ void createPacketArtnetPollReply()
   POLLREPLYPACKET._opcode = ART_OP_POLL_REPLY;
 
   for(i = 0; i < 4; i++)
-    POLLREPLYPACKET._own_ip[i] = getOwnIPAddress()[i];
+    POLLREPLYPACKET._own_ip[3 - i] = getOwnIPAddress()[i];
 
   POLLREPLYPACKET._port = ART_NET_PORT;
 

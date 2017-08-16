@@ -10,6 +10,20 @@
 #include <string.h>
 #include <stdlib.h>
 #include "Arduino.h"
+#if defined(ESP8266)
+#include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
+#else
+#include <WiFi.h>          //https://github.com/esp8266/Arduino
+#endif
+
+//needed for library
+#include <DNSServer.h>
+#if defined(ESP8266)
+#include <ESP8266WebServer.h>
+#else
+#include <WebServer.h>
+#endif
+#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <BlynkSimpleEsp32.h>
@@ -22,6 +36,7 @@
 #include "lib/blizzard_nvs.h"
 #include "lib/blizzard_wdmx.h"
 #include "lib/dmx.h"
+#include "lib/blizzard_wifi.h"
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
 
@@ -41,6 +56,7 @@ BlynkTimer timer;
 uint8_t row_index;
 
 uint8_t octet = 0;
+uint8_t ip[4];
 
 
 void blizzard_timer_event()
@@ -84,6 +100,11 @@ void start_blynk()
 {
   uint32_t tick_count = 0;
   initArduino();
+
+  memset(ip, 0, 4);
+
+  delay(3000);
+
   //Blynk.begin(auth, ssid, pass);
   Blynk.config(auth);
   Blynk.connect();
@@ -120,9 +141,24 @@ void start_blynk()
 
 BLYNK_CONNECTED()
 {
+  //Blynk.syncAll();
   //Blynk.syncVirtual(V9, V10, V0, V1, V2, V3, V4, V5, V6, V7, V8);
   //Blynk.virtualWrite(V16, 0); //turn off LED
 }
+
+BLYNK_WRITE(V17)
+{
+  int val = param.asInt();
+
+  switch (val)
+  {
+    case HIGH:
+      setNeedWifiManager(ENABLE);
+    break;
+  }
+
+}
+
 
 //Input
 BLYNK_WRITE(V9)
@@ -246,7 +282,7 @@ BLYNK_WRITE(V15)
 
 BLYNK_WRITE(V12)
 {
-  uint8_t i, delim_count = 0, delim_indexes[3];
+  uint8_t i = 0,j = 0, delim_count = 0, delim_indexes[3], ip_index[3];
   String val = param.asStr();
 
   for(i = 0; i < val.length(); i++)
@@ -269,7 +305,11 @@ BLYNK_WRITE(V12)
 
   if(String("help") == val)
   {
-    terminal.println("There is no help");
+    //terminal.println("There is no help");
+    terminal.println("setname <name>");
+    terminal.println("setip <ip>");
+    terminal.println("setdhcp <en/dis>");
+    terminal.println("clear");
   }
   else if(String("setname") == String((char*)(gen_buf)))
   {
@@ -282,6 +322,78 @@ BLYNK_WRITE(V12)
       terminal.print("name changed to ");
       terminal.println(String((char*)(&gen_buf[delim_indexes[0]])));
       update_str_nvs_val(NVS_DEVICE_NAME_KEY,((char*)(&gen_buf[delim_indexes[0]])));
+    }
+  }
+  else if(String("setip") == String((char*)(gen_buf)))
+  {
+    if(delim_count == 0)
+    {
+      terminal.println("usage: setip <255.255.255.255>");
+    }
+    else
+    {
+
+      for(i = 0; i < 15; i++)
+      {
+        if(gen_buf[delim_indexes[0] + i] == '.')
+        {
+          gen_buf[delim_indexes[0] + i] = '\0'; //null terminate
+          ip_index[j++] = i + 1;
+        }
+        else if(gen_buf[delim_indexes[0] + i] == '\0')
+        {
+          break;
+        }
+      }
+
+      if(j != 3){
+        terminal.println("incorrect ip");
+        terminal.println("usage: setip <255.255.255.255>");
+        return;
+      }
+
+      ip[3] = (uint8_t) String((char*)(&gen_buf[delim_indexes[0]])).toInt();
+      ip[2] = (uint8_t) String((char*)(&gen_buf[delim_indexes[0] + ip_index[0]])).toInt();
+      ip[1] = (uint8_t) String((char*)(&gen_buf[delim_indexes[0] + ip_index[1]])).toInt();
+      ip[0] = (uint8_t) String((char*)(&gen_buf[delim_indexes[0] + ip_index[2]])).toInt();
+      //terminal.println(String(ip[3] + "." ip[2] + "." + ip[1] + "." ip[0]));
+
+
+      terminal.print("ip set to ");
+      terminal.print(ip[3], DEC);
+      terminal.print(".");
+      terminal.print(ip[2], DEC);
+      terminal.print(".");
+      terminal.print(ip[1], DEC);
+      terminal.print(".");
+      terminal.println(ip[0], DEC);
+
+      changeIP(ip);
+      setDHCPEnable(DISABLE);
+    }
+  }
+  else if(String("setdhcp") == String((char*)(gen_buf)))
+  {
+    if(delim_count == 0)
+    {
+      terminal.println("usage:setdhcp <en/dis>");
+    }
+    else
+    {
+      if(String("en") == String((char*)(&gen_buf[delim_indexes[0]])))
+      {
+        setDHCPEnable(ENABLE);
+        terminal.println("dhcp enabled");
+      }
+      else if(String("dis") == String((char*)(&gen_buf[delim_indexes[0]])))
+      {
+        setDHCPEnable(DISABLE);
+        terminal.println("dhcp disabled");
+      }
+      else
+      {
+        terminal.println("usage:setdhcp <en/dis>");
+      }
     }
   }
   else if(String("clear") == String((char*)(gen_buf)))

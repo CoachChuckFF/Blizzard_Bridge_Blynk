@@ -26,10 +26,14 @@ extern "C" {
 #define NVS_INPUT_MODE_KEY "INPUT_MODE"
 #define NVS_OUTPUT_MODE_KEY "OUTPUT_MODE"
 #define NVS_OWN_IP_ADDRESS_KEY "OWN_IP_ADDRESS"
+#define NVS_OWN_NETMASK_KEY "OWN_NETMASK"
 #define NVS_OWN_ADDRESS_KEY "OWN_ADDRESS"
 #define NVS_OWN_UNIVERSE_KEY "OWN_UNIVERSE"
 #define NVS_SLOTS_KEY "SLOTS"
 #define NVS_OWN_UUID_KEY "RDM_UUID"
+#define NVS_OWN_ID_KEY "OWN_ID"
+#define NVS_DHCP_ENABLE_KEY "DHCP_ENABLE"
+#define NVS_NEED_WIFI_MANAGER_KEY "NEED_WIFI"
 
 #define NVS_DEVICE_NAME_INDEX 0
 #define NVS_SSID_INDEX 1
@@ -37,10 +41,15 @@ extern "C" {
 #define NVS_INPUT_MODE_INDEX 3
 #define NVS_OUTPUT_MODE_INDEX 4
 #define NVS_OWN_IP_ADDRESS_INDEX 5
+#define NVS_OWN_NETMASK_INDEX 11
 #define NVS_OWN_ADDRESS_INDEX 6
 #define NVS_OWN_UNIVERSE_INDEX 7
 #define NVS_SLOTS_INDEX 8
 #define NVS_OWN_UUID_INDEX 9
+#define NVS_OWN_ID_INDEX 10
+#define NVS_DHCP_ENABLE_INDEX 12
+#define NVS_NEED_WIFI_MANAGER_INDEX 13
+
 extern nvs_handle config_nvs_handle;
 
 //Default Values
@@ -50,9 +59,13 @@ extern nvs_handle config_nvs_handle;
 #define DEFAULT_OUTPUT_MODE DMX_MODE
 #define DEFAULT_INPUT_MODE ARTNET_MODE
 #define DEFAULT_OWN_IP "192.168.1.1" //not used anywhere - for reference only
+#define DEFAULT_OWN_NETMASK "255.255.255.0" //not used anywhere - for refrence only
 #define DEFAULT_OWN_ADDRESS 0
 #define DEFAULT_OWN_UNIVERSE 0
 #define DEFAULT_SLOTS DMX_MAX_SLOTS
+#define DEFAULT_OWN_ID 1
+#define DEFAULT_DHCP_ENABLE_KEY ENABLE
+#define DEFAULT_NEED_WIFI_MANAGER ENABLE
 
 void init_blizzard_nvs(void); //you must call this before other nvs
 void init_nvs_key_pair_default(uint8_t index);

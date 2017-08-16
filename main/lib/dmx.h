@@ -125,6 +125,10 @@ uint8_t* getOwnIPAddress();
 
 void setOwnIPAddress(uint8_t* address);
 
+uint8_t* getOwnNetmask();
+
+void setOwnNetmask(uint8_t* netmask);
+
 uint16_t getOwnAddress(void);
 
 void setOwnAddress(uint16_t address);
@@ -136,6 +140,18 @@ void setOwnUniverse(uint16_t universe);
 uint16_t getSlots(void);
 
 void setSlots(uint16_t count);
+
+uint16_t getOwnID(void);
+
+void setOwnID(uint16_t id);
+
+uint8_t getDHCPEnable(void);
+
+void setDHCPEnable(uint8_t enable);
+
+uint8_t getNeedWifiManager(void);
+
+void setNeedWifiManager(uint8_t need);
 
 uint8_t getDMXData(uint16_t slot);
 

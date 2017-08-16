@@ -57,6 +57,12 @@ void init_nvs_key_pair_default(uint8_t index)
       if(ret_val != ESP_OK)
         ESP_LOGI(TAG, "ERROR NVS SET DEFAULT IP %d", ret_val);
     break;
+    case NVS_OWN_NETMASK_INDEX:
+      buf8[3] = 255; buf8[2] = 255; buf8[1] = 255; buf8[0] = 0;
+      ret_val = nvs_set_blob(config_nvs_handle, NVS_OWN_NETMASK_KEY, buf8, sizeof(uint8_t) * 4);
+      if(ret_val != ESP_OK)
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT NETMASK %d", ret_val);
+    break;
     case NVS_OWN_ADDRESS_INDEX:
       ret_val = nvs_set_u16(config_nvs_handle, NVS_OWN_ADDRESS_KEY, (uint16_t) DEFAULT_OWN_ADDRESS);
       if(ret_val != ESP_OK)
@@ -77,6 +83,21 @@ void init_nvs_key_pair_default(uint8_t index)
       ret_val = nvs_set_blob(config_nvs_handle, NVS_OWN_UUID_KEY, buf8, sizeof(uint8_t) * 6);
       if(ret_val != ESP_OK)
         ESP_LOGI(TAG, "ERROR NVS SET DEFAULT SLOTS %d", ret_val);
+    break;
+    case NVS_OWN_ID_INDEX:
+      ret_val = nvs_set_u16(config_nvs_handle, NVS_OWN_ID_KEY, (uint16_t) DEFAULT_OWN_ID);
+      if(ret_val != ESP_OK)
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT OWN ID %d", ret_val);
+    break;
+    case NVS_DHCP_ENABLE_INDEX:
+      ret_val = nvs_set_u8(config_nvs_handle, NVS_DHCP_ENABLE_KEY, DEFAULT_DHCP_ENABLE_KEY);
+      if(ret_val != ESP_OK)
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT DHCP ENABLE %d", ret_val);
+    break;
+    case NVS_NEED_WIFI_MANAGER_INDEX:
+      ret_val = nvs_set_u8(config_nvs_handle, NVS_NEED_WIFI_MANAGER_KEY, DEFAULT_NEED_WIFI_MANAGER);
+      if(ret_val != ESP_OK)
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT NEED WIFI MANAGER %d", ret_val);
     break;
 
   }
@@ -164,6 +185,18 @@ SET_OWN_IP:
   }else
     setOwnIPAddress(buf8);
 
+SET_OWN_NETMASK:
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_NETMASK_KEY, NULL, &length);
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_NETMASK_KEY, buf8, &length);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET NETMASK %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_OWN_NETMASK_INDEX);
+    goto SET_OWN_NETMASK;
+  }else
+    setOwnNetmask(buf8);
+
 SET_OWN_ADDRESS:
   ret_val = nvs_get_u16(config_nvs_handle, NVS_OWN_ADDRESS_KEY, &buf16);
   if(ret_val != ESP_OK){
@@ -211,6 +244,43 @@ SET_OWN_UUID:
     goto SET_OWN_UUID;
   }else
     setOwnUUID(buf8);
+
+/*---------------------AutoBaun Specific-------------------------*/
+
+SET_OWN_ID:
+  ret_val = nvs_get_u16(config_nvs_handle, NVS_OWN_ID_KEY, &buf16);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET OWN ID %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_OWN_ID_INDEX);
+    goto SET_OWN_ID;
+  }else
+  {
+    setOwnID(buf16);
+  }
+
+SET_DHCP_ENABLE:
+  ret_val = nvs_get_u8(config_nvs_handle, NVS_DHCP_ENABLE_KEY, buf8);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET DHCP ENABLE %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_DHCP_ENABLE_INDEX);
+    goto SET_DHCP_ENABLE;
+  }else
+    setDHCPEnable(buf8[0]);
+
+SET_NEED_WIFI_MANAGER:
+  ret_val = nvs_get_u8(config_nvs_handle, NVS_NEED_WIFI_MANAGER_KEY, buf8);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET NEED WIFI MANAGER %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_NEED_WIFI_MANAGER_INDEX);
+    goto SET_NEED_WIFI_MANAGER;
+  }else
+    setNeedWifiManager(buf8[0]);
 
 }
 
