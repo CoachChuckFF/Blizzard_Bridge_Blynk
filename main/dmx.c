@@ -89,14 +89,25 @@ char* getName()
 void setName(char *name, uint8_t length)
 {
   uint8_t i;
-  if(length - 1 > NAME_MAX_LENGTH)
+  if(name[0] == '/0')
+  {
+    ESP_LOGI(TAG, "Null string")
+    return;
+  }
+  if(length >= NAME_MAX_LENGTH)
   {
     ESP_LOGI(TAG, "Name too long %d", length);
     return;
   }
 
+  memset(DEVICE_NAME, 0, NAME_MAX_LENGTH);
+
   for(i = 0; i < length; i++)
+  {
+    if(name[i] == '\0')
+      break;
     DEVICE_NAME[i] = name[i];
+  }
   DEVICE_NAME[i] = '\0'; //null termination
   update_str_nvs_val(NVS_DEVICE_NAME_KEY, (char *) DEVICE_NAME);
 }

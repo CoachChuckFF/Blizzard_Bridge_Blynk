@@ -52,10 +52,14 @@ extern "C" {
 #include "lwip/ip6_addr.h"
 
 #define ART_NET_PORT 0x1936 // or 6454
+#define ART_NET_PORT_REV 0x3619
 
 #define ART_OP_DMX 0x5000
 #define ART_OP_POLL 0x2000
 #define ART_OP_POLL_REPLY 0x2100
+#define ART_OP_PROG 0xF800
+#define ART_OP_PROG_REPLY 0xF900
+#define ART_OP_ART_ADDRESS 0x6000
 
 #define ART_PROTO_VER 14
 
@@ -95,7 +99,17 @@ typedef struct ArtnetPollReplyPacket {
   uint8_t _oem_hi;
   uint8_t _oem_lo;
   uint8_t _ubea_version; //set to 0
-  uint8_t _status_1;
+  union {
+    struct {
+      uint8_t _ubea_present: 1;
+      uint8_t _rdm_status: 1;
+      uint8_t _boot_status: 1;
+      uint8_t _reserverd: 1;
+      uint8_t _port_prog_auth: 2;
+      uint8_t _indicator_state: 2;
+    };
+    uint8_t val;
+  } _status_1;
   uint8_t _esta_man_lo;
   uint8_t _esta_man_hi;
   uint8_t _short_name[18];
@@ -116,9 +130,79 @@ typedef struct ArtnetPollReplyPacket {
   uint8_t _mac[6]; //set high bytes to 0 if no info
   uint8_t _bind_ip[4];
   uint8_t _bind_index;
-  uint8_t _status_2;
+  union {
+    struct {
+      uint8_t _web_config_support: 1;
+      uint8_t _dhcp_capable: 1;
+      uint8_t _port_addressing: 1;
+      uint8_t _sacn_switchable: 1;
+      uint8_t _squawking: 1;
+      uint8_t _reserverd: 3;
+    };
+    uint8_t val;
+  } _status_2;
   uint8_t _filler[26]; //zero for now
 }__attribute__((packed)) ArtnetPollReplyPacket;
+
+typedef struct ArtnetProgPacket {
+  uint8_t _id[8];
+  uint16_t _opcode;
+  uint16_t _protocol_version; //14
+  uint16_t _filler_1; //0's
+  union {
+    struct {
+      uint8_t _prog_port: 1; //not used
+      uint8_t _prog_subnet_mask: 1;
+      uint8_t _prog_ip: 1;
+      uint8_t _set_default: 1;
+      uint8_t _filler: 2;
+      uint8_t _dhcp_en: 1;
+      uint8_t _prog_en: 1;
+    };
+    uint8_t val;
+  } _command;
+  uint8_t _filler_2;
+  uint8_t _prog_ip[4];
+  uint8_t _prog_subnet_mask[4];
+  uint16_t _prog_port; //not useed
+  uint8_t _spare[8]; //not used
+
+}__attribute__((packed)) ArtnetProgPacket;
+
+typedef struct ArtnetProgReplyPacket {
+  uint8_t _id[8];
+  uint16_t _opcode;
+  uint16_t _protocol_version; //14
+  uint8_t _filler[4];
+  uint8_t _prog_ip[4];
+  uint8_t _prog_subnet_mask[4];
+  uint16_t _prog_port; //not used
+  union {
+    struct {
+      uint8_t _reserved_1: 3;
+      uint8_t _dhcp_en: 1;
+      uint8_t _reserved_2: 4;
+    };
+    uint8_t val;
+  } _status;
+  uint8_t _spare[7];
+
+}__attribute__((packed)) ArtnetProgReplyPacket;
+
+typedef struct ArtnetArtAddressPacket {
+  uint8_t _id[8];
+  uint16_t _opcode;
+  uint16_t _protocol_version; //14
+  uint8_t _net_switch;
+  uint8_t _bind_index;
+  uint8_t _short_name[18];
+  uint8_t _long_name[64];
+  uint8_t _sw_in[4];
+  uint8_t _sw_out[4];
+  uint8_t _sub_switch;
+  uint8_t _sw_video;
+  uint8_t _command;
+}__attribute__((packed)) ArtnetArtAddressPacket;
 
 typedef struct ArtnetNode {
   ArtnetPacket *_packet;
@@ -139,7 +223,11 @@ void changeDirectionArtnet(uint8_t direction);
 void sendDMXDataArtnet(uint16_t universe);
 /*Internal*/
 void sendArtnetLoop(void);
+void parseArtAddressArtnet(struct pbuf *p, const ip_addr_t *addr);
 void sendPollReplyArtnet(struct pbuf *p, const ip_addr_t *addr);
+void parseProgArtnet(struct pbuf *p, const ip_addr_t *addr);
+void sendProgArtnet(void); //TODO
+void sendProgReplyArtnet(struct pbuf *p, const ip_addr_t *addr);
 void sendPollArtnet(void); // run periodically in own thread
 void parsePollReplyArtnet(struct pbuf *p);
 void parseDMXDataPacketArtnet(struct pbuf *p);
@@ -151,6 +239,7 @@ void recieveDMXArtnet(void *arg,
 void udp_artnet_init(void);
 void createPacketArtnet(void);
 void createPacketArtnetPollReply(void);
+
 
 
 extern ArtnetNode ARTNET;

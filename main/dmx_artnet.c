@@ -2,6 +2,7 @@
 #include <inttypes.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "freertos/semphr.h"
 #include "freertos/event_groups.h"
 #include "esp_system.h"
 #include "esp_wifi.h"
@@ -20,12 +21,14 @@
 
 #include "lib/dmx_artnet.h"
 #include "lib/dmx.h"
+#include "lib/blizzard_wifi.h"
 
 static const char *TAG = "ARTNET";
 
 ArtnetNode ARTNET;
 ArtnetPacket ARTNETPACKET;
 ArtnetPollReplyPacket POLLREPLYPACKET;
+SemaphoreHandle_t mutex;
 uint8_t status_1, status_2;
 uint8_t send_active;
 
@@ -42,6 +45,7 @@ void startDMXArtnet(uint8_t direction)
   ARTNET._enabled = ENABLE;
   createPacketArtnet();
   createPacketArtnetPollReply();
+  mutex = xSemaphoreCreateMutex();
   udp_artnet_init();
   ESP_LOGI(TAG, "Artnet Start");
 }
@@ -112,44 +116,194 @@ void recieveDMXArtnet(void *arg,
 
   //ESP_LOGI(TAG, "PACKET REC");
 
-  for(i = 0; i < 8; i++)
+  if( xSemaphoreTake( mutex, (TickType_t) 10 ) == pdTRUE )
   {
-    if(((uint8_t*)p->payload)[i] != ARTNET_ID[i])
+
+    for(i = 0; i < 8; i++)
     {
-      ESP_LOGI(TAG, "Invalid ArtnetPacket");
-      goto FREE_P;
-    }
-  }
-
-  opcode = ((uint16_t*)p->payload)[ART_OPCODE_U16_INDEX];
-
-  switch(opcode)
-  {
-    case ART_OP_DMX:
-      if(ARTNET._direction != RECEIVE)
+      if(((uint8_t*)p->payload)[i] != ARTNET_ID[i])
       {
-        ESP_LOGI(TAG, "Not in Receive Mode %d", ARTNET._direction);
+        ESP_LOGI(TAG, "Invalid ArtnetPacket");
         goto FREE_P;
       }
-      parseDMXDataPacketArtnet(p);
-      //ESP_LOGI(TAG, "Artnet DMX Data");
-    break;
-    case ART_OP_POLL:
-      sendPollReplyArtnet(p, addr);
-      //ESP_LOGI(TAG, "Artnet Poll");
-    break;
-    case ART_OP_POLL_REPLY:
-      parsePollReplyArtnet(p);
-      //ESP_LOGI(TAG, "Artnet Poll Reply");
-    break;
-  }
+    }
+
+    opcode = ((uint16_t*)p->payload)[ART_OPCODE_U16_INDEX];
+
+    switch(opcode)
+    {
+      case ART_OP_DMX:
+        if(ARTNET._direction != RECEIVE)
+        {
+          ESP_LOGI(TAG, "Not in Receive Mode %d", ARTNET._direction);
+          goto FREE_P;
+        }
+        parseDMXDataPacketArtnet(p);
+        //ESP_LOGI(TAG, "Artnet DMX Data");
+      break;
+      case ART_OP_POLL:
+        sendPollReplyArtnet(p, addr);
+        //ESP_LOGI(TAG, "Artnet Poll");
+      break;
+      case ART_OP_POLL_REPLY:
+        parsePollReplyArtnet(p);
+        //ESP_LOGI(TAG, "Artnet Poll Reply");
+      break;
+      case ART_OP_PROG:
+        parseProgArtnet(p, addr);
+      break;
+      case ART_OP_ART_ADDRESS:
+        parseArtAddressArtnet(p, addr);
+      break;
+      default:
+        ESP_LOGI(TAG, "Artnet packet: %d", opcode);
+    }
+
 
   //ESP_LOGI(TAG, ":)");
 
 FREE_P:
 
-  pbuf_free(p);
+    pbuf_free(p);
+    xSemaphoreGive( mutex );
+  }
 }
+
+void parseArtAddressArtnet(struct pbuf *p, const ip_addr_t *addr)
+{
+  ArtnetArtAddressPacket *packet = p->payload;
+
+  setName((char *) packet->_long_name, 63);
+
+  if(packet->_command == 0x90)
+    clearDMX();
+
+  sendPollReplyArtnet(p, addr);
+
+}
+
+void parseProgArtnet(struct pbuf *p, const ip_addr_t *addr)
+{
+  uint8_t temp[4];
+  ArtnetProgPacket *packet = (ArtnetProgPacket *) p->payload;
+
+  ESP_LOGI(TAG, "command = %02X", packet->_command.val);
+  ESP_LOGI(TAG, "%d.%d.%d.%d", packet->_prog_ip[3],
+                              packet->_prog_ip[2],
+                              packet->_prog_ip[1],
+                              packet->_prog_ip[0]);
+  ESP_LOGI(TAG, "%d.%d.%d.%d", packet->_prog_subnet_mask[3],
+                              packet->_prog_subnet_mask[2],
+                              packet->_prog_subnet_mask[1],
+                              packet->_prog_subnet_mask[0]);
+
+  if(!packet->_command._prog_en)
+    goto SEND_PROG_REPLY;
+
+  if(packet->_command._dhcp_en)
+  {
+    setDHCPEnable(ENABLE);
+    goto SEND_PROG_REPLY;
+  }
+
+  if(packet->_command._prog_ip)
+  {
+    temp[0] = packet->_prog_ip[3];
+    temp[1] = packet->_prog_ip[2];
+    temp[2] = packet->_prog_ip[1];
+    temp[3] = packet->_prog_ip[0];
+
+    changeIP(temp);
+    setDHCPEnable(DISABLE);
+  }
+
+SEND_PROG_REPLY:
+  //return;
+
+  sendProgReplyArtnet(p, addr); //TODO fix
+}
+
+void sendProgArtnet(void) //TODO
+{
+  struct pbuf *p_send;
+  int i;
+
+  p_send = pbuf_alloc(PBUF_TRANSPORT, 32, PBUF_RAM);
+
+  for(i = 0; i < 32; i++)
+    ((uint8_t*)(p_send->payload))[i] = i;
+
+  ESP_LOGI(TAG, "TEST")
+  pbuf_free(p_send);
+}
+
+void sendProgReplyArtnet(struct pbuf *p, const ip_addr_t *addr)
+{
+  int ret_val, i, hold;
+  struct pbuf *p_send;
+  ArtnetProgReplyPacket *packet;
+
+  if(ARTNET._enabled != ENABLE)
+  {
+    ESP_LOGI(TAG, "You silly, call startDMXArtnet(SEND/RECEIVE) first!")
+    return;
+  }
+
+  packet = (ArtnetProgReplyPacket *) malloc(sizeof(ArtnetArtAddressPacket));
+  if(packet == NULL)
+  {
+    ESP_LOGI(TAG, "Prog Reply Malloc Failed");
+    return;
+  }
+
+  for(i = 0; i < 8; i++)
+    packet->_id[i] = ARTNET_ID[i];
+
+  packet->_opcode = ART_OP_PROG_REPLY;
+
+  packet->_protocol_version = ART_PROTO_VER;
+
+  for(i = 0; i < 4; i++)
+    packet->_prog_ip[3 - i] = getOwnIPAddress()[i];
+
+  //TODO add in netmask
+  /*for(i = 0; i < 4; i++)
+    POLLREPLYPACKET._prog_ip[3 - i] = getOwnIPAddress()[i];
+    */
+  packet->_prog_subnet_mask[3] = 0;
+  packet->_prog_subnet_mask[2] = 255;
+  packet->_prog_subnet_mask[1] = 255;
+  packet->_prog_subnet_mask[0] = 255;
+
+  packet->_prog_port = ART_NET_PORT_REV;
+
+  packet->_status._dhcp_en = getDHCPEnable();
+
+  //This is a little hacky - can't seem to align small amounts of data
+  p_send = pbuf_alloc(PBUF_TRANSPORT, 256, PBUF_RAM);
+
+  hold = p_send->len = p_send->tot_len;
+
+  p_send->len = p_send->tot_len = sizeof(ArtnetProgReplyPacket);
+
+  for(i = 0; i < sizeof(ArtnetPollReplyPacket); i++)
+    ((uint8_t*)(p_send->payload))[i] = ((uint8_t*)(packet))[i];
+
+  udp_connect(ARTNET._udp, addr, ARTNET._port);
+
+  ret_val = udp_send(ARTNET._udp, p_send);
+
+  udp_disconnect(ARTNET._udp);
+
+  if(ret_val)
+    ESP_LOGI(TAG, "Send Poll Reply Error %d", ret_val);
+
+  p_send->len = p_send->tot_len = hold;
+  pbuf_free(p_send);
+  free(packet);
+
+}
+
 // add in varible slots
 
 //send in broadcast
@@ -171,7 +325,7 @@ void sendDMXDataArtnet(uint16_t universe){
   //set end IP
   udp_connect(ARTNET._udp, ARTNET._dest_ip, ARTNET._port);
   //establish pbuf
-  p = pbuf_alloc(PBUF_TRANSPORT, MAX_ARTNET_BUFFER ,PBUF_RAM);
+  p = pbuf_alloc(PBUF_TRANSPORT, MAX_ARTNET_BUFFER, PBUF_RAM);
 
   ARTNETPACKET._universe = (uint8_t)(universe >> 8);
   ARTNETPACKET._universe_subnet = (uint8_t)(universe & 0xFF);
@@ -224,6 +378,8 @@ void sendPollReplyArtnet(struct pbuf *p, const ip_addr_t *addr)
 
   if(ret_val)
     ESP_LOGI(TAG, "Send Poll Reply Error %d", ret_val);
+
+  pbuf_free(p_send);
 }
 
 void sendPollArtnet()
@@ -306,9 +462,6 @@ void createPacketArtnetPollReply()
 
   ARTNET._poll_reply_packet = &POLLREPLYPACKET;
 
-  status_1 = 0; //TODO getStatus1
-  status_2 = 0; //TODO getStatus2
-
   for(i = 0; i < 8; i++)
     POLLREPLYPACKET._id[i] = ARTNET_ID[i];
 
@@ -325,23 +478,32 @@ void createPacketArtnetPollReply()
   POLLREPLYPACKET._net_switch = (uint8_t)(getOwnUniverse() >> 8);
   POLLREPLYPACKET._sub_switch = (uint8_t)((getOwnUniverse() & 0xFF) >> 4);
 
-  POLLREPLYPACKET._oem_hi = 0x12; //just cause
+  POLLREPLYPACKET._oem_hi = 0x12; //blizzard oem
   POLLREPLYPACKET._oem_lo = 0x51;
 
   POLLREPLYPACKET._ubea_version = 0;
 
-  POLLREPLYPACKET._status_1 = status_1;
+  POLLREPLYPACKET._status_1._indicator_state = 2;
+  POLLREPLYPACKET._status_1._port_prog_auth = 2;
+  POLLREPLYPACKET._status_1._boot_status = 0;
+  POLLREPLYPACKET._status_1._rdm_status = 0;
+  POLLREPLYPACKET._status_1._ubea_present = 0;
 
   POLLREPLYPACKET._esta_man_lo = 0x04; //blizzard esta id
   POLLREPLYPACKET._esta_man_hi = 0x01;
 
-  for(i = 0; i < 26; i++)
+  memset(POLLREPLYPACKET._short_name, 0, 18);
+
+  for(i = 0; i < 18; i++)
   {
     temp = getName()[i];
     if(temp == '\0')
       break; //end of the name
     POLLREPLYPACKET._short_name[i] = temp;
   }
+  POLLREPLYPACKET._short_name[18-1] = '/0'; //double check its null terminated
+
+  memset(POLLREPLYPACKET._long_name, 0, 64);
 
   for(i = 0; i < 64; i++)
   {
@@ -350,6 +512,7 @@ void createPacketArtnetPollReply()
       break; //end of the name
     POLLREPLYPACKET._long_name[i] = temp;
   }
+  POLLREPLYPACKET._long_name[64-1] = '\0'; //double check its null terminated
 
   POLLREPLYPACKET._node_report[0] = 0x69; //TODO Embed Diognostics here
 
@@ -403,7 +566,11 @@ void createPacketArtnetPollReply()
 
   POLLREPLYPACKET._bind_index = 0; //not used
 
-  POLLREPLYPACKET._status_2 = status_2;
+  POLLREPLYPACKET._status_2._web_config_support = 1;
+  POLLREPLYPACKET._status_2._dhcp_capable = getDHCPEnable(); //TODO check
+  POLLREPLYPACKET._status_2._port_addressing = 1;
+  POLLREPLYPACKET._status_2._sacn_switchable = 1;
+  POLLREPLYPACKET._status_2._squawking = 0;
 
   for(i = 0; i < 26; i++)
     POLLREPLYPACKET._filler[i] = 0; //not used

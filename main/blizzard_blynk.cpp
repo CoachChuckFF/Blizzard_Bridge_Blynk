@@ -103,8 +103,6 @@ void start_blynk()
 
   memset(ip, 0, 4);
 
-  delay(3000);
-
   //Blynk.begin(auth, ssid, pass);
   Blynk.config(auth);
   Blynk.connect();
@@ -158,7 +156,18 @@ BLYNK_WRITE(V17)
   }
 
 }
+BLYNK_WRITE(V24)
+{
+  int val = param.asInt();
 
+  switch (val)
+  {
+    case HIGH:
+      setDHCPEnable(ENABLE);
+    break;
+  }
+
+}
 
 //Input
 BLYNK_WRITE(V9)

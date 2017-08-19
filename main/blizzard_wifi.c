@@ -75,6 +75,7 @@ static esp_err_t blizzard_wifi_event_handler(void *ctx, system_event_t *event)
         }
         break;
     default:
+        ESP_LOGI(TAG, "WIFI EVENT %d", event->event_id);
         break;
     }
     return ESP_OK;
@@ -159,4 +160,5 @@ void changeIP(uint8_t* ip)
   IP4_ADDR(&ipInfo.netmask, getOwnNetmask()[0],getOwnNetmask()[1],getOwnNetmask()[2],getOwnNetmask()[3]);
   tcpip_adapter_set_ip_info(TCPIP_ADAPTER_IF_STA, &ipInfo);
   setOwnIPAddress(ip);
+  get_wifi_ip();
 }

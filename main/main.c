@@ -81,6 +81,8 @@ void app_main()
   //TODO Make Ethernet workflow
   //initialise_blizzard_ethernet();
 
+  //setNeedWifiManager(ENABLE);
+
   if(getNeedWifiManager() == ENABLE)
   {
     start_wifi_manager();
@@ -92,7 +94,14 @@ void app_main()
 
   xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 6, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
 
-  vTaskDelay(10000);
+  //vTaskDelay(15000);
+
+/*
+  temp_ip = get_wifi_ip();
+  setOwnIPAddress((uint8_t *) &temp_ip); //set DHCP address
+*/
+
+  setDHCPEnable(ENABLE);
 
   if(getDHCPEnable() == DISABLE)
   {
@@ -104,7 +113,7 @@ void app_main()
     setOwnIPAddress((uint8_t *) &temp_ip); //set DHCP address
   }
 
-
+  get_wifi_ip();
 
   clearDMX();
   startDMXUart(RECEIVE);
@@ -160,7 +169,7 @@ void app_main()
       output_mode_changed = 0;
     }
 
-    ESP_LOGI(TAG, "TICK: %d", i++);
+    //ESP_LOGI(TAG, "TICK: %d", i++);
     //get_wifi_ip();
     vTaskDelay(1000);
   }

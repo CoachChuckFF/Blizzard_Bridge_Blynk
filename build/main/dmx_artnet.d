@@ -52,6 +52,8 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
@@ -102,8 +104,6 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/errno.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/def.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6_addr.h \
@@ -133,7 +133,8 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -241,6 +242,10 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
 
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h:
@@ -341,10 +346,6 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/port/arch/sys_arch.h:
 
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/def.h:
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4_addr.h:
@@ -404,4 +405,6 @@ dmx_artnet.o: /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c \
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi.h:
 /home/penguin/Programio/blizzard-esp/main/./dmx_artnet.c:
