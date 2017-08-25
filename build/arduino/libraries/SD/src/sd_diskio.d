@@ -133,6 +133,12 @@ libraries/SD/src/sd_diskio.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h \
  /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h \
  /home/penguin/Programio/esp-idf/components/fatfs/src/esp_vfs_fat.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/sdspi_host.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/spi_master.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/lldesc.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
  /home/penguin/Programio/esp-idf/components/fatfs/src/ff.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/include/wear_levelling.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h \
@@ -404,6 +410,18 @@ libraries/SD/src/sd_diskio.o: \
 /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h:
 
 /home/penguin/Programio/esp-idf/components/fatfs/src/esp_vfs_fat.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/sdspi_host.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/spi_master.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/spi_common.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/lldesc.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
 
 /home/penguin/Programio/esp-idf/components/fatfs/src/ff.h:
 

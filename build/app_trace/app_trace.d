@@ -39,6 +39,8 @@ app_trace.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/eri.h \
  /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/xtensa-debug-module.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -63,14 +65,6 @@ app_trace.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h \
  /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h \
  /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h
 
@@ -152,6 +146,10 @@ app_trace.o: \
 
 /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/xtensa-debug-module.h:
 
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
+
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
@@ -199,22 +197,6 @@ app_trace.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/limits.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h:
-
-/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h:
 
 /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h:
 

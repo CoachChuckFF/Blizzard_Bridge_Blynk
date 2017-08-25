@@ -84,7 +84,6 @@ bluedroid/main/bte_main.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/alarm.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
- /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/fixed_queue.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_map.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_functions.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_map.h \
@@ -92,6 +91,7 @@ bluedroid/main/bte_main.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/btcore/include/bdaddr.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/btcore/include/device_features.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/hci/include/hci_layer.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/fixed_queue.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/future.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/osi_arch.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/hci/include/hci_packet_factory.h \
@@ -276,8 +276,6 @@ bluedroid/main/bte_main.o: \
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
 
-/home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/fixed_queue.h:
-
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_map.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_functions.h:
@@ -291,6 +289,8 @@ bluedroid/main/bte_main.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btcore/include/device_features.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/hci/include/hci_layer.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/fixed_queue.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/future.h:
 

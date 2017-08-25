@@ -101,14 +101,6 @@ uint8_t* getOwnUUID(void);
 
 void setOwnUUID(uint8_t* uuid);
 
-char* getSSID(void);
-
-void setSSID(char *ssid, uint8_t length); //has to be null terminated
-
-char* getPASS(void);
-
-void setPASS(char *pass, uint8_t length); //has to be null terminated
-
 uint8_t getMedium(void);
 
 void setMedium(uint8_t medium);
@@ -120,14 +112,6 @@ void setInputMode(uint8_t input_mode);
 uint8_t getOutputMode(void);
 
 void setOutputMode(uint8_t output_mode);
-
-uint8_t* getOwnIPAddress();
-
-void setOwnIPAddress(uint8_t* address);
-
-uint8_t* getOwnNetmask();
-
-void setOwnNetmask(uint8_t* netmask);
 
 uint16_t getOwnAddress(void);
 
@@ -144,14 +128,6 @@ void setSlots(uint16_t count);
 uint16_t getOwnID(void);
 
 void setOwnID(uint16_t id);
-
-uint8_t getDHCPEnable(void);
-
-void setDHCPEnable(uint8_t enable);
-
-uint8_t getNeedWifiManager(void);
-
-void setNeedWifiManager(uint8_t need);
 
 uint8_t getDMXData(uint16_t slot);
 

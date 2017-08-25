@@ -59,6 +59,7 @@ event_loop.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
  /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
@@ -209,6 +210,8 @@ event_loop.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 

@@ -143,6 +143,7 @@ libraries/ESPmDNS/src/ESPmDNS.o: \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/apps/dhcpserver.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h
 
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/ESPmDNS/src/ESPmDNS.h:
@@ -430,6 +431,8 @@ libraries/ESPmDNS/src/ESPmDNS.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/ESPmDNS/src/ESPmDNS.cpp:

@@ -58,18 +58,13 @@ static volatile uint8_t DMX[DMX_MAX_SLOTS];
 static char DEVICE_NAME[NAME_MAX_LENGTH];
 static char SSID[SSID_MAX_LENGTH];
 static char PASS[PASS_MAX_LENGTH];
-static uint8_t OWN_UUID[6];
 static uint8_t INPUT_MODE; //ethernet, wifi, dmx
 static uint8_t OUTPUT_MODE; //Arthnet, sACN, Blynk
 static uint8_t MEDIUM;
-static uint8_t OWN_IP_ADDRESS[4];
-static uint8_t OWN_NETMASK[4];
 static uint16_t OWN_ADDRESS;
 static uint16_t OWN_UNIVERSE;
 static uint16_t SLOTS;
 static uint16_t OWN_ID;
-static uint8_t DHCP_ENABLE;
-static uint8_t NEED_WIFI_MANAGER;
 
 //flags
 uint8_t device_name_changed = 0;
@@ -112,71 +107,6 @@ void setName(char *name, uint8_t length)
   update_str_nvs_val(NVS_DEVICE_NAME_KEY, (char *) DEVICE_NAME);
 }
 
-void setOwnUUID(uint8_t * uuid)
-{
-  uint8_t i;
-
-  for(i = 0; i < 6; i++)
-    OWN_UUID[i] = uuid[i];
-
-  //add in update_blob_nvs_val
-}
-
-uint8_t * getOwnUUID(void)
-{
-  return OWN_UUID;
-}
-
-char* getSSID(void)
-{
-  return SSID;
-}
-
-void setSSID(char *ssid, uint8_t length)
-{
-  uint8_t i;
-  if(ssid == NULL)
-  {
-    ESP_LOGI(TAG, "NULL SSID");
-    return;
-  }
-  if(length - 1 > SSID_MAX_LENGTH)
-  {
-    ESP_LOGI(TAG, "SSID length too long");
-    return;
-  }
-
-  for(i = 0; i < length; i++)
-    SSID[i] = ssid[i];
-  SSID[i] = '\0'; //null termination
-  update_str_nvs_val(NVS_SSID_KEY, (char *) SSID);
-}
-
-char* getPASS(void)
-{
-  return PASS;
-}
-
-void setPASS(char *pass, uint8_t length)
-{
-  uint8_t i;
-  if(pass == NULL)
-  {
-    ESP_LOGI(TAG, "NULL PASS");
-    return;
-  }
-  if(length - 1 > PASS_MAX_LENGTH)
-  {
-    ESP_LOGI(TAG, "PASS length too long");
-    return;
-  }
-
-  for(i = 0; i < length; i++)
-    PASS[i] = pass[i];
-  PASS[i] = '\0'; //null termination
-  update_str_nvs_val(NVS_PASS_KEY, (char *) PASS);
-}
-
 uint8_t getMedium(void)
 {
   return MEDIUM;
@@ -209,42 +139,6 @@ void setOutputMode(uint8_t output_mode)
   OUTPUT_MODE = output_mode;
   output_mode_changed = 1;
   update_u8_nvs_val(NVS_OUTPUT_MODE_KEY, OUTPUT_MODE);
-}
-
-uint8_t* getOwnIPAddress()
-{
-  return OWN_IP_ADDRESS;
-}
-
-void setOwnIPAddress(uint8_t* address)
-{
-
-  if(address == NULL)
-  {
-    ESP_LOGI(TAG, "NULL IP Address");
-    return;
-  }
-  OWN_IP_ADDRESS[3] = address[3];
-  OWN_IP_ADDRESS[2] = address[2];
-  OWN_IP_ADDRESS[1] = address[1];
-  OWN_IP_ADDRESS[0] = address[0];
-
-  update_blob_nvs_val(NVS_OWN_IP_ADDRESS_KEY, address, sizeof(uint8_t) * 4);
-
-  own_ip_changed = 1;
-}
-
-uint8_t* getOwnNetmask()
-{
-  return OWN_NETMASK;
-}
-
-void setOwnNetmask(uint8_t* netmask)
-{
-  OWN_NETMASK[3] = netmask[0];
-  OWN_NETMASK[2] = netmask[1];
-  OWN_NETMASK[1] = netmask[2];
-  OWN_NETMASK[0] = netmask[3];
 }
 
 uint16_t getOwnAddress(void)
@@ -296,28 +190,6 @@ uint16_t getOwnID(void)
 void setOwnID(uint16_t id)
 {
   OWN_ID = id;
-}
-
-uint8_t getDHCPEnable(void)
-{
-  return DHCP_ENABLE;
-}
-
-void setDHCPEnable(uint8_t enable)
-{
-  DHCP_ENABLE = enable;
-  update_u8_nvs_val(NVS_DHCP_ENABLE_KEY, DHCP_ENABLE);
-}
-
-uint8_t getNeedWifiManager(void)
-{
-  return NEED_WIFI_MANAGER;
-}
-
-void setNeedWifiManager(uint8_t need)
-{
-  NEED_WIFI_MANAGER = need;
-  update_u8_nvs_val(NVS_NEED_WIFI_MANAGER_KEY, NEED_WIFI_MANAGER);
 }
 
 uint8_t getDMXData(uint16_t slot)

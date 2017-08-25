@@ -12,6 +12,8 @@ deps_config := \
 	/home/penguin/Programio/esp-idf/components/mbedtls/Kconfig \
 	/home/penguin/Programio/esp-idf/components/openssl/Kconfig \
 	/home/penguin/Programio/esp-idf/components/spi_flash/Kconfig \
+	/home/penguin/Programio/esp-idf/components/tcpip_adapter/Kconfig \
+	/home/penguin/Programio/esp-idf/components/wear_levelling/Kconfig \
 	/home/penguin/Programio/esp-idf/components/bootloader/Kconfig.projbuild \
 	/home/penguin/Programio/esp-idf/components/esptool_py/Kconfig.projbuild \
 	/home/penguin/Programio/esp-idf/components/partition_table/Kconfig.projbuild \

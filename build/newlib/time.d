@@ -22,6 +22,8 @@ time.o: /home/penguin/Programio/esp-idf/components/newlib/./time.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/reent.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/unistd.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/unistd.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/time.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/times.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/rtc.h \
@@ -117,6 +119,10 @@ time.o: /home/penguin/Programio/esp-idf/components/newlib/./time.c \
 /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/reent.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/unistd.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/unistd.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/time.h:
 

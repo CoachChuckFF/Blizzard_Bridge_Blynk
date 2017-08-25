@@ -140,6 +140,7 @@ cpu_start.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_panic.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_core_dump.h \
  /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h \
+ /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_clk.h \
  /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/trax.h \
  /home/penguin/Programio/esp-idf/components/xtensa-debug-module/include/eri.h \
@@ -424,6 +425,8 @@ cpu_start.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_core_dump.h:
 
 /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h:
+
+/home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_clk.h:
 

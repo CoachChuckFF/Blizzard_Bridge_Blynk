@@ -61,6 +61,7 @@ sdmmc_transaction.o: \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/sdmmc_reg.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
  /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/sdmmc_struct.h \
+ /home/penguin/Programio/esp-idf/components/soc/include/soc/soc_memory_layout.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_defs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
@@ -199,6 +200,8 @@ sdmmc_transaction.o: \
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
 
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/sdmmc_struct.h:
+
+/home/penguin/Programio/esp-idf/components/soc/include/soc/soc_memory_layout.h:
 
 /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h:
 

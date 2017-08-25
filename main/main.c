@@ -36,16 +36,22 @@
 #include "esp_system.h"
 #include "nvs_flash.h"
 #include "esp_log.h"
+#include "driver/spi_master.h"
 #include "lib/blizzard_blynk.h"
 #include "lib/blizzard_nvs.h"
 #include "lib/blizzard_uart.h"
 #include "lib/blizzard_structs.h"
-#include "lib/blizzard_wifi.h"
-#include "lib/blizzard_eth.h"
 #include "lib/blizzard_wdmx.h"
 #include "lib/blizzard_rdm.h"
-#include "lib/blizzard_wifi_manager.h"
+#include "lib/blizzard_connection_manager.h"
 #include "Arduino.h"
+
+#define MISO 32;
+#define MOSI 16;
+#define SCLK 4;
+#define CS1 5;
+#define CS2 2;
+#define MASTER_SWITCH 39;
 
 static const char *TAG = "MAIN";
 
@@ -66,14 +72,43 @@ void app_main()
   uint8_t i = 0;
   size_t length;
 
+  /* spi interface
+  int ret;
+  gpio_config_t io_conf;
+  spi_device_handle_t spi;
+  spi_bus_config_t buscfg = {
+    .miso_io_num = 32,
+    .mosi_io_num = 16,
+    .sclk_io_num = 4,
+    .quadwp_io_num = -1,
+    .quadhd_io_num = -1
+  };
+  spi_device_interface_config_t devcfg = {
+    .clock_speed_hz = 10000000,
+    .mode = 0,
+    .spics_io_num = 5,
+    .queue_size = 3
+  };
+  spi_device_interface_config_t devcfg1 = {
+    .clock_speed_hz = 10000000,
+    .mode = 0,
+    .spics_io_num = 2,
+    .queue_size = 3
+  };
+  */
+
+
 
   //initallize
   init_blizzard_nvs();
 
+  init_nvs_key_pair_default(NVS_MAC_INDEX);
+
   populate_all_dmx_nvs_values();
 
+/*
   for(i = 0; i < 9; i++)
-    print_nvs_values(i);
+    print_nvs_values(i);*/
 
   //setSSID("blizznet", 8);
   //setPASS("destroyer", 9);
@@ -81,16 +116,7 @@ void app_main()
   //TODO Make Ethernet workflow
   //initialise_blizzard_ethernet();
 
-  //setNeedWifiManager(ENABLE);
-
-  if(getNeedWifiManager() == ENABLE)
-  {
-    start_wifi_manager();
-  }
-  else
-  {
-    initialise_blizzard_wifi(getSSID(), getPASS());
-  }
+  start_connection_manager();
 
   xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 6, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
 
@@ -101,25 +127,33 @@ void app_main()
   setOwnIPAddress((uint8_t *) &temp_ip); //set DHCP address
 */
 
-  setDHCPEnable(ENABLE);
-
-  if(getDHCPEnable() == DISABLE)
-  {
-    changeIP(getOwnIPAddress()); //set to last static ip address
-  }
-  else
-  {
-    temp_ip = get_wifi_ip();
-    setOwnIPAddress((uint8_t *) &temp_ip); //set DHCP address
-  }
-
-  get_wifi_ip();
-
   clearDMX();
   startDMXUart(RECEIVE);
 
   startWDMX();
   startDMXArtnet(RECEIVE);
+
+  /* // SPI interface
+  ret = spi_bus_initialize(HSPI_HOST, &buscfg, 1);
+  assert(ret == ESP_OK);
+
+  ret = spi_bus_add_device(HSPI_HOST, &devcfg, &spi);
+  assert(ret == ESP_OK);
+
+  ret = spi_bus_add_device(HSPI_HOST, &devcfg1, &spi);
+  assert(ret == ESP_OK);
+
+  //LED gpio setup
+  if(!GPIO_IS_VALID_GPIO(39))
+      ESP_LOGI(TAG, "Invalid GPIO");
+
+  io_conf.intr_type = GPIO_PIN_INTR_DISABLE;
+  io_conf.mode = GPIO_MODE_INPUT;
+  io_conf.pin_bit_mask = GPIO_SEL_39;
+  io_conf.pull_down_en = 0;
+  io_conf.pull_up_en = 0;
+  gpio_config(&io_conf);
+  */
 
   /* Listen for Config Changes */
   while(1)
@@ -170,7 +204,7 @@ void app_main()
     }
 
     //ESP_LOGI(TAG, "TICK: %d", i++);
-    //get_wifi_ip();
+    //printDMX();
     vTaskDelay(1000);
   }
 

@@ -133,14 +133,27 @@ blizzard_eth.o: \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip4.h \
  /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_connection_manager.h \
+ /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h \
+ /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
- /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_eth.h \
- /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h \
- /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/rdm.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi_manager.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_eth.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
 
@@ -408,9 +421,21 @@ blizzard_eth.o: \
 
 /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/ip6.h:
 
-/home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_connection_manager.h:
+
+/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h:
+
+/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/event_groups.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h:
 
 /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h:
 
@@ -418,9 +443,23 @@ blizzard_eth.o: \
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/rdm.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi_manager.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
 /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_eth.h:
-
-/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h:
-
-/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h:
 /home/penguin/Programio/blizzard-esp/main/./blizzard_eth.c:

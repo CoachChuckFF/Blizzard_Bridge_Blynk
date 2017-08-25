@@ -110,6 +110,12 @@ libraries/SD_MMC/src/SD_MMC.o: \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_host.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/sdspi_host.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/spi_master.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/lldesc.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
  /home/penguin/Programio/esp-idf/components/fatfs/src/ff.h \
  /home/penguin/Programio/esp-idf/components/fatfs/src/integer.h \
  /home/penguin/Programio/esp-idf/components/fatfs/src/ffconf.h \
@@ -342,6 +348,18 @@ libraries/SD_MMC/src/SD_MMC.o: \
 /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_host.h:
 
 /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/sdspi_host.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/spi_master.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/spi_common.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/lldesc.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
 
 /home/penguin/Programio/esp-idf/components/fatfs/src/ff.h:
 

@@ -105,7 +105,8 @@ bluedroid/btc/profile/std/gap/btc_gap_ble.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gatt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gattc_api.h \
- /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gatt_defs.h
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gatt_defs.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_ble_storage.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -318,4 +319,6 @@ bluedroid/btc/profile/std/gap/btc_gap_ble.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gattc_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gatt_defs.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_ble_storage.h:
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/profile/std/gap/btc_gap_ble.c:

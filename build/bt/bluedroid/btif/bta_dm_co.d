@@ -91,6 +91,9 @@ bluedroid/btif/bta_dm_co.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_dm_ci.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_ble_storage.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gap_ble_api.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bte_appl.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -274,6 +277,12 @@ bluedroid/btif/bta_dm_co.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_ble_storage.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gap_ble_api.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bte_appl.h:
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btif/bta_dm_co.c:

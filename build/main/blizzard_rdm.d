@@ -86,6 +86,7 @@ blizzard_rdm.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
  /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
@@ -118,8 +119,30 @@ blizzard_rdm.o: \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs_flash.h \
  /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
- /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_connection_manager.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h \
+ /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h \
+ /home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h \
+ /home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sockets.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/inet.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sys.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h \
+ /home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h \
+ /home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi_manager.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h \
+ /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h \
  /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
@@ -294,6 +317,8 @@ blizzard_rdm.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h:
 
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
+
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 
 /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
@@ -358,9 +383,53 @@ blizzard_rdm.o: \
 
 /home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
-/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_connection_manager.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h:
+
+/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy_lan8720.h:
+
+/home/penguin/Programio/esp-idf/components/ethernet/include/eth_phy/phy.h:
+
+/home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/err.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sockets.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/inet.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/sys.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/netdb.h:
+
+/home/penguin/Programio/esp-idf/components/lwip/include/lwip/lwip/dns.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_nvs.h:
+
+/home/penguin/Programio/blizzard-esp/main/./lib/blizzard_wifi_manager.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
+
+/home/penguin/Programio/esp-idf/components/nvs_flash/include/nvs.h:
 
 /home/penguin/Programio/blizzard-esp/main/./lib/dmx.h:
 /home/penguin/Programio/blizzard-esp/main/./blizzard_rdm.c:

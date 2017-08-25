@@ -17,7 +17,6 @@ library/cipher_wrap.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/aes.h \
- /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/arc4.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/camellia.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/des.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/blowfish.h \
@@ -76,8 +75,6 @@ library/cipher_wrap.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/rom/aes.h:
-
-/home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/arc4.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/camellia.h:
 

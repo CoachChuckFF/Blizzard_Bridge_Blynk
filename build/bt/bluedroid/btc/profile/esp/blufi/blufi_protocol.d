@@ -111,6 +111,7 @@ bluedroid/btc/profile/esp/blufi/blufi_protocol.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/profile/esp/blufi/include/blufi_int.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
  /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
@@ -355,6 +356,8 @@ bluedroid/btc/profile/esp/blufi/blufi_protocol.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 

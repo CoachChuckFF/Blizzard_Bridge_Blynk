@@ -162,7 +162,8 @@ libraries/3rdParty/WiFiManager/WiFiManager.o: \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WebServer_tng/src/detail/RequestHandler.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/DNSServer_tng/src/DNSServer.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiUdp.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h
 
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WiFiManager/WiFiManager.h:
 
@@ -489,4 +490,6 @@ libraries/3rdParty/WiFiManager/WiFiManager.o: \
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiUdp.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/3rdParty/WiFiManager/WiFiManager.cpp:

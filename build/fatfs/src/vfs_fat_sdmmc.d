@@ -53,9 +53,8 @@ src/vfs_fat_sdmmc.o: \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_host.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h \
- /home/penguin/Programio/esp-idf/components/fatfs/src/ff.h \
- /home/penguin/Programio/esp-idf/components/fatfs/src/integer.h \
- /home/penguin/Programio/esp-idf/components/fatfs/src/ffconf.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/sdspi_host.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/spi_master.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -81,6 +80,13 @@ src/vfs_fat_sdmmc.o: \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/spi_common.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/lldesc.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
+ /home/penguin/Programio/esp-idf/components/fatfs/src/ff.h \
+ /home/penguin/Programio/esp-idf/components/fatfs/src/integer.h \
+ /home/penguin/Programio/esp-idf/components/fatfs/src/ffconf.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/include/wear_levelling.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_partition.h \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
@@ -193,11 +199,9 @@ src/vfs_fat_sdmmc.o: \
 
 /home/penguin/Programio/esp-idf/components/driver/include/driver/sdmmc_types.h:
 
-/home/penguin/Programio/esp-idf/components/fatfs/src/ff.h:
+/home/penguin/Programio/esp-idf/components/driver/include/driver/sdspi_host.h:
 
-/home/penguin/Programio/esp-idf/components/fatfs/src/integer.h:
-
-/home/penguin/Programio/esp-idf/components/fatfs/src/ffconf.h:
+/home/penguin/Programio/esp-idf/components/driver/include/driver/spi_master.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -248,6 +252,20 @@ src/vfs_fat_sdmmc.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/spi_common.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/spi_struct.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/lldesc.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/penguin/Programio/esp-idf/components/fatfs/src/ff.h:
+
+/home/penguin/Programio/esp-idf/components/fatfs/src/integer.h:
+
+/home/penguin/Programio/esp-idf/components/fatfs/src/ffconf.h:
 
 /home/penguin/Programio/esp-idf/components/wear_levelling/include/wear_levelling.h:
 

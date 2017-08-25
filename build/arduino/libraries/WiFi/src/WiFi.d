@@ -157,7 +157,8 @@ libraries/WiFi/src/WiFi.o: \
  /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFiUdp.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/Udp.h \
  /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/cbuf.h \
- /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h
 
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFi.h:
 
@@ -474,4 +475,6 @@ libraries/WiFi/src/WiFi.o: \
 /home/penguin/Programio/blizzard-esp/components/arduino/cores/esp32/cbuf.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
 /home/penguin/Programio/blizzard-esp/components/arduino/libraries/WiFi/src/WiFi.cpp:

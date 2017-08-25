@@ -35,9 +35,15 @@ wear_levelling.o: \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Config.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/Flash_Access.h \
- /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Flash.h \
+ /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Cfg.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Config.h \
+ /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Flash.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_State.h \
+ /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Perf.h \
+ /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Flash.h \
+ /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Cfg.h \
+ /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Safe.h \
+ /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Perf.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/SPI_Flash.h \
  /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/Partition.h
 
@@ -111,11 +117,23 @@ wear_levelling.o: \
 
 /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/Flash_Access.h:
 
-/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Flash.h:
+/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Cfg.h:
 
 /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Config.h:
 
+/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Flash.h:
+
 /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_State.h:
+
+/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Perf.h:
+
+/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Flash.h:
+
+/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Cfg.h:
+
+/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Safe.h:
+
+/home/penguin/Programio/esp-idf/components/wear_levelling/private_include/WL_Ext_Perf.h:
 
 /home/penguin/Programio/esp-idf/components/wear_levelling/private_include/SPI_Flash.h:
 

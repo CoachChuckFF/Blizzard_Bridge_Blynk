@@ -1,27 +1,6 @@
-#include <string.h>
-#include <inttypes.h>
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "freertos/semphr.h"
-#include "freertos/event_groups.h"
-#include "esp_system.h"
-#include "esp_wifi.h"
-#include "esp_event_loop.h"
-#include "esp_log.h"
-#include "nvs_flash.h"
-
-#include "lwip/err.h"
-#include "lwip/sockets.h"
-#include "lwip/sys.h"
-#include "lwip/netdb.h"
-#include "lwip/dns.h"
-#include "lwip/udp.h"
-#include "lwip/ip4_addr.h"
-#include "lwip/ip6_addr.h"
 
 #include "lib/dmx_artnet.h"
 #include "lib/dmx.h"
-#include "lib/blizzard_wifi.h"
 
 static const char *TAG = "ARTNET";
 
@@ -213,7 +192,7 @@ void parseProgArtnet(struct pbuf *p, const ip_addr_t *addr)
     temp[2] = packet->_prog_ip[1];
     temp[3] = packet->_prog_ip[0];
 
-    changeIP(temp);
+    setIP(temp);
     setDHCPEnable(DISABLE);
   }
 
@@ -264,7 +243,7 @@ void sendProgReplyArtnet(struct pbuf *p, const ip_addr_t *addr)
   packet->_protocol_version = ART_PROTO_VER;
 
   for(i = 0; i < 4; i++)
-    packet->_prog_ip[3 - i] = getOwnIPAddress()[i];
+    packet->_prog_ip[3 - i] = getIP()[i];
 
   //TODO add in netmask
   /*for(i = 0; i < 4; i++)
@@ -468,7 +447,7 @@ void createPacketArtnetPollReply()
   POLLREPLYPACKET._opcode = ART_OP_POLL_REPLY;
 
   for(i = 0; i < 4; i++)
-    POLLREPLYPACKET._own_ip[3 - i] = getOwnIPAddress()[i];
+    POLLREPLYPACKET._own_ip[i] = getIP()[i];
 
   POLLREPLYPACKET._port = ART_NET_PORT;
 
@@ -557,7 +536,12 @@ void createPacketArtnetPollReply()
 
   POLLREPLYPACKET._style = 0x00; //DMX to/from Artnet - Node
 
-  POLLREPLYPACKET._mac[0] = 0x00; //TODO getOwnMac()
+  POLLREPLYPACKET._mac[5] = getMac()[0];
+  POLLREPLYPACKET._mac[4] = getMac()[1];
+  POLLREPLYPACKET._mac[3] = getMac()[2];
+  POLLREPLYPACKET._mac[2] = getMac()[3];
+  POLLREPLYPACKET._mac[1] = getMac()[4];
+  POLLREPLYPACKET._mac[0] = getMac()[5];
 
   POLLREPLYPACKET._bind_ip[0] = 0; //not used
   POLLREPLYPACKET._bind_ip[1] = 0;

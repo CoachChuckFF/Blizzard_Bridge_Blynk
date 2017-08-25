@@ -77,7 +77,7 @@ panic.o: /home/penguin/Programio/esp-idf/components/esp32/./panic.c \
  /home/penguin/Programio/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_cache_err_int.h \
  /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
  /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
@@ -247,7 +247,7 @@ panic.o: /home/penguin/Programio/esp-idf/components/esp32/./panic.c \
 
 /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace.h:
 
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h:
+/home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h:
 

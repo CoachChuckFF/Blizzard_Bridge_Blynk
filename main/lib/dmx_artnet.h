@@ -51,6 +51,8 @@ extern "C" {
 #include "lwip/ip4_addr.h"
 #include "lwip/ip6_addr.h"
 
+#include "blizzard_connection_manager.h"
+
 #define ART_NET_PORT 0x1936 // or 6454
 #define ART_NET_PORT_REV 0x3619
 

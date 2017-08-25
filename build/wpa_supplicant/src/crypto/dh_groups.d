@@ -84,7 +84,8 @@ src/crypto/dh_groups.o: \
  /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/crypto/random.h \
  /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/crypto/dh_groups.h \
  /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h \
- /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h
+ /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h
 
 /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/crypto/includes.h:
 
@@ -255,4 +256,6 @@ src/crypto/dh_groups.o: \
 /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h:
 
 /home/penguin/Programio/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
 /home/penguin/Programio/esp-idf/components/wpa_supplicant/src/crypto/dh_groups.c:

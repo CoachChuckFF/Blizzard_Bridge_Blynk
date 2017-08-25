@@ -102,11 +102,15 @@ bluedroid/btc/core/btc_dm.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gap_ble_api.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/rfcdefs.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_int.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_gatt_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_api.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gatt_api.h \
- /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h \
- /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_target.h:
 
@@ -312,6 +316,16 @@ bluedroid/btc/core/btc_dm.o: \
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
 
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/rfcdefs.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_int.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h:
+
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_gatt_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/bta/include/bta_api.h:
@@ -319,6 +333,4 @@ bluedroid/btc/core/btc_dm.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gatt_api.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/gattdefs.h:
-
-/home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_ble_api.h:
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/core/btc_dm.c:

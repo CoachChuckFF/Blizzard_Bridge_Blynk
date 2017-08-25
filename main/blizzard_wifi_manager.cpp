@@ -49,9 +49,9 @@ setSSID(temp, (uint8_t) wifiManager.getSSID().length()+1);
 memset(&temp, 0, 64);
 
 wifiManager.getPassword().toCharArray(temp, wifiManager.getPassword().length()+1);
-setPASS(temp, (uint8_t) wifiManager.getPassword().length()+1);
+setPass(temp, (uint8_t) wifiManager.getPassword().length()+1);
 
-setNeedWifiManager(DISABLE);
+setWifiManagerEnable(DISABLE);
 
 ESP.restart();
 

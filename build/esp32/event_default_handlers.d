@@ -59,6 +59,7 @@ event_default_handlers.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
  /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/rom/queue.h \
@@ -92,6 +93,23 @@ event_default_handlers.o: \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h \
  /home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_struct.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/touch_pad.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/penguin/Programio/esp-idf/components/log/include/esp_log.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdlib.h:
@@ -212,6 +230,8 @@ event_default_handlers.o: \
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_interface.h:
 
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
+
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event.h:
 
 /home/penguin/Programio/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
@@ -277,6 +297,40 @@ event_default_handlers.o: \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_event_loop.h:
 
 /home/penguin/Programio/esp-idf/components/ethernet/include/esp_eth.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_system.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_deep_sleep.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/gpio.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_struct.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/gpio.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/touch_pad.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_intr.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h:
 
 /home/penguin/Programio/esp-idf/components/log/include/esp_log.h:
 /home/penguin/Programio/esp-idf/components/esp32/./event_default_handlers.c:

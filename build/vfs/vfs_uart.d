@@ -14,13 +14,19 @@ vfs_uart.o: /home/penguin/Programio/esp-idf/components/vfs/./vfs_uart.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/lock.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/cdefs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/fcntl.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/_default_fcntl.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/time.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h \
  /home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/_intsup.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/platform_include/assert.h \
  /home/penguin/Programio/blizzard-esp/build/include/sdkconfig.h \
@@ -28,14 +34,55 @@ vfs_uart.o: /home/penguin/Programio/esp-idf/components/vfs/./vfs_uart.c \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/stdlib.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/alloca.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/assert.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/time.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h \
  /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h \
+ /home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs_dev.h \
+ /home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h \
- /home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h \
- /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h \
+ /home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/tie.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/system.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/tie/xt_core.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/specreg.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_crosscore_int.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h \
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -67,6 +114,22 @@ vfs_uart.o: /home/penguin/Programio/esp-idf/components/vfs/./vfs_uart.c \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
 
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/fcntl.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/_default_fcntl.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/time.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h:
+
 /home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdint.h:
@@ -76,10 +139,6 @@ vfs_uart.o: /home/penguin/Programio/esp-idf/components/vfs/./vfs_uart.c \
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
@@ -95,19 +154,101 @@ vfs_uart.o: /home/penguin/Programio/esp-idf/components/vfs/./vfs_uart.c \
 
 /home/penguin/Programio/esp-idf/components/newlib/include/assert.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/stat.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/time.h:
-
-/home/penguin/Programio/esp-idf/components/newlib/include/machine/time.h:
-
 /home/penguin/Programio/esp-idf/components/newlib/include/dirent.h:
 
 /home/penguin/Programio/esp-idf/components/vfs/include/sys/dirent.h:
 
+/home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs_dev.h:
+
+/home/penguin/Programio/esp-idf/components/vfs/include/esp_vfs.h:
+
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_attr.h:
 
-/home/penguin/Programio/esp-idf/components/newlib/include/sys/errno.h:
-
 /home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/uart.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_assert.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_intr_alloc.h:
+
+/home/penguin/Programio/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/soc.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
+
+/home/penguin/Programio/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_dport_access.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_config.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/hal.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtensa-versions.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/tie.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/system.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_context.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/corebits.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/rom/ets_sys.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/projdefs.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/portable.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/deprecated_definitions.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/tie/xt_core.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/config/specreg.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_crosscore_int.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/portbenchmark.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/mpu_wrappers.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/xtensa_api.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/limits.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/queue.h:
+
+/home/penguin/Programio/esp-idf/components/freertos/include/freertos/ringbuf.h:
+
+/home/penguin/Programio/esp-idf/components/esp32/include/esp_types.h:
 /home/penguin/Programio/esp-idf/components/vfs/./vfs_uart.c:

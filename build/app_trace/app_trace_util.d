@@ -51,7 +51,6 @@ app_trace_util.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/limits.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h \
  /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h \
  /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/stdio.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
@@ -159,8 +158,6 @@ app_trace_util.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/list.h:
 
 /home/penguin/Programio/esp-idf/components/app_trace/include/esp_app_trace_util.h:
-
-/home/penguin/Programio/esp-idf/components/freertos/include/freertos/portmacro.h:
 
 /home/penguin/Programio/esp-idf/components/esp32/include/esp_err.h:
 

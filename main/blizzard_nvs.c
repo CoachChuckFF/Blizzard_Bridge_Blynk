@@ -94,10 +94,22 @@ void init_nvs_key_pair_default(uint8_t index)
       if(ret_val != ESP_OK)
         ESP_LOGI(TAG, "ERROR NVS SET DEFAULT DHCP ENABLE %d", ret_val);
     break;
-    case NVS_NEED_WIFI_MANAGER_INDEX:
-      ret_val = nvs_set_u8(config_nvs_handle, NVS_NEED_WIFI_MANAGER_KEY, DEFAULT_NEED_WIFI_MANAGER);
+    case NVS_WIFI_MANAGER_ENABLE_INDEX:
+      ret_val = nvs_set_u8(config_nvs_handle, NVS_WIFI_MANAGER_ENABLE_KEY, DEFAULT_WIFI_MANAGER_ENABLE);
       if(ret_val != ESP_OK)
         ESP_LOGI(TAG, "ERROR NVS SET DEFAULT NEED WIFI MANAGER %d", ret_val);
+    break;
+    case NVS_MAC_INDEX:
+      buf8[5] = 0x43; buf8[4] = 0x68; buf8[3] = 0x75; buf8[2] = 0x63; buf8[1] = 0x68; buf8[0] = 0x21;
+      ret_val = nvs_set_blob(config_nvs_handle, NVS_MAC_KEY, buf8, sizeof(uint8_t) * 6);
+      if(ret_val != ESP_OK)
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT MAC %d", ret_val);
+    break;
+    case NVS_GATEWAY_INDEX:
+      buf8[3] = 192; buf8[2] = 168; buf8[1] = 1; buf8[0] = 1;
+      ret_val = nvs_set_blob(config_nvs_handle, NVS_GATEWAY_KEY, buf8, sizeof(uint8_t) * 4);
+      if(ret_val != ESP_OK)
+        ESP_LOGI(TAG, "ERROR NVS SET DEFAULT GATEWAY %d", ret_val);
     break;
 
   }
@@ -113,6 +125,18 @@ void populate_all_dmx_nvs_values()
   esp_err_t ret_val;
   size_t length;
   uint8_t buf_ip[4];
+
+
+SET_DHCP_ENABLE:
+  ret_val = nvs_get_u8(config_nvs_handle, NVS_DHCP_ENABLE_KEY, buf8);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET DHCP ENABLE %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_DHCP_ENABLE_INDEX);
+    goto SET_DHCP_ENABLE;
+  }else
+    setDHCPEnable(buf8[0]);
 
   //set dev name
 SET_DEV_NAME:
@@ -149,7 +173,7 @@ SET_PASS:
     init_nvs_key_pair_default(NVS_PASS_INDEX);
     goto SET_PASS;
   }else
-    setPASS((char *) buf8, length);
+    setPass((char *) buf8, length);
 
 SET_INPUT_MODE:
   ret_val = nvs_get_u8(config_nvs_handle, NVS_INPUT_MODE_KEY, buf8);
@@ -183,7 +207,7 @@ SET_OWN_IP:
     init_nvs_key_pair_default(NVS_OWN_IP_ADDRESS_INDEX);
     goto SET_OWN_IP;
   }else
-    setOwnIPAddress(buf8);
+    setIP(buf8);
 
 SET_OWN_NETMASK:
   ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_NETMASK_KEY, NULL, &length);
@@ -195,7 +219,7 @@ SET_OWN_NETMASK:
     init_nvs_key_pair_default(NVS_OWN_NETMASK_INDEX);
     goto SET_OWN_NETMASK;
   }else
-    setOwnNetmask(buf8);
+    setNetmask(buf8);
 
 SET_OWN_ADDRESS:
   ret_val = nvs_get_u16(config_nvs_handle, NVS_OWN_ADDRESS_KEY, &buf16);
@@ -232,7 +256,7 @@ SET_SLOTS:
     if(buf16 == DMX_MAX_SLOTS){buf16--;}
       setSlots(buf16);
   }
-
+/*
 SET_OWN_UUID:
   ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, NULL, &length);
   ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, buf8, &length);
@@ -243,7 +267,7 @@ SET_OWN_UUID:
     init_nvs_key_pair_default(NVS_OWN_UUID_INDEX);
     goto SET_OWN_UUID;
   }else
-    setOwnUUID(buf8);
+    setOwnUUID(buf8);*/
 
 /*---------------------AutoBaun Specific-------------------------*/
 
@@ -260,27 +284,40 @@ SET_OWN_ID:
     setOwnID(buf16);
   }
 
-SET_DHCP_ENABLE:
-  ret_val = nvs_get_u8(config_nvs_handle, NVS_DHCP_ENABLE_KEY, buf8);
-  if(ret_val != ESP_OK){
-    ESP_LOGI(TAG, "ERROR NVS GET DHCP ENABLE %d", ret_val);
-  }
-  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
-    init_nvs_key_pair_default(NVS_DHCP_ENABLE_INDEX);
-    goto SET_DHCP_ENABLE;
-  }else
-    setDHCPEnable(buf8[0]);
-
-SET_NEED_WIFI_MANAGER:
-  ret_val = nvs_get_u8(config_nvs_handle, NVS_NEED_WIFI_MANAGER_KEY, buf8);
+SET_WIFI_MANAGER_ENABLE:
+  ret_val = nvs_get_u8(config_nvs_handle, NVS_WIFI_MANAGER_ENABLE_KEY, buf8);
   if(ret_val != ESP_OK){
     ESP_LOGI(TAG, "ERROR NVS GET NEED WIFI MANAGER %d", ret_val);
   }
   if(ret_val == ESP_ERR_NVS_NOT_FOUND){
-    init_nvs_key_pair_default(NVS_NEED_WIFI_MANAGER_INDEX);
-    goto SET_NEED_WIFI_MANAGER;
+    init_nvs_key_pair_default(NVS_WIFI_MANAGER_ENABLE_INDEX);
+    goto SET_WIFI_MANAGER_ENABLE;
   }else
-    setNeedWifiManager(buf8[0]);
+    setWifiManagerEnable(buf8[0]);
+
+SET_MAC:
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_MAC_KEY, NULL, &length);
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_MAC_KEY, buf8, &length);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET MAC %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_MAC_INDEX);
+    goto SET_MAC;
+  }else
+    setMac(buf8);
+
+SET_GATEWAY:
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_GATEWAY_KEY, NULL, &length);
+  ret_val = nvs_get_blob(config_nvs_handle, NVS_GATEWAY_KEY, buf8, &length);
+  if(ret_val != ESP_OK){
+    ESP_LOGI(TAG, "ERROR NVS GET GATEWAY %d", ret_val);
+  }
+  if(ret_val == ESP_ERR_NVS_NOT_FOUND){
+    init_nvs_key_pair_default(NVS_GATEWAY_INDEX);
+    goto SET_GATEWAY;
+  }else
+    setMac(buf8);
 
 }
 
@@ -317,10 +354,14 @@ void update_u16_nvs_val(const char* key, uint8_t value)
 void update_blob_nvs_val(const char* key, uint8_t* value, uint8_t length)
 {
   esp_err_t ret_val;
+  uint8_t i;
 
   ret_val = nvs_set_blob(config_nvs_handle, key, value, sizeof(uint8_t) * length);
   if(ret_val != ESP_OK)
     ESP_LOGI(TAG, "ERROR NVS SET BLOB %d", ret_val);
+    ESP_LOGI(TAG, "%s", key);
+  for(i = 0; i < length; i++)
+    ESP_LOGI(TAG, "0x%02X", value[i]);
 
   ret_val = nvs_commit(config_nvs_handle);
   if(ret_val != ESP_OK){
@@ -418,13 +459,13 @@ void print_nvs_values(uint8_t index)
       }else
         ESP_LOGI(TAG, "SLOTS: %d", buf16);
     break;
-    case NVS_OWN_UUID_INDEX:
+    /*case NVS_OWN_UUID_INDEX:
       ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, NULL, &length);
       ret_val = nvs_get_blob(config_nvs_handle, NVS_OWN_UUID_KEY, buf8, &length);
       if(ret_val != ESP_OK){
         ESP_LOGI(TAG, "ERROR NVS GET UUID %d", ret_val);
       }else
         ESP_LOGI(TAG, "UUID: %d.%d.%d.%d.%d.%d", buf8[5], buf8[4], buf8[3], buf8[2], buf8[1], buf8[0]);
-    break;
+    break;*/
   }
 }

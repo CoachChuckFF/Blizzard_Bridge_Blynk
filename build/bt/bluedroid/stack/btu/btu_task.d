@@ -93,7 +93,6 @@ bluedroid/stack/btu/btu_task.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/include/bt_defs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btu.h \
- /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/fixed_queue.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_map.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/hcimsgs.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/l2cap/include/l2c_int.h \
@@ -301,8 +300,6 @@ bluedroid/stack/btu/btu_task.o: \
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btm_int.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/stack/include/btu.h:
-
-/home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/fixed_queue.h:
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/hash_map.h:
 

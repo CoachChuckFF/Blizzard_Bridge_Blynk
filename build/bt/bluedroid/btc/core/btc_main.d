@@ -97,7 +97,10 @@ bluedroid/btc/core/btc_main.o: \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_config.h \
  /home/penguin/Programio/esp-idf/components/bt/bluedroid/osi/include/alarm.h \
  /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h \
- /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h
+ /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_ble_storage.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gap_ble_api.h \
+ /home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h
 
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_task.h:
 
@@ -294,4 +297,10 @@ bluedroid/btc/core/btc_main.o: \
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/timers.h:
 
 /home/penguin/Programio/esp-idf/components/freertos/include/freertos/task.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/include/btc_ble_storage.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_gap_ble_api.h:
+
+/home/penguin/Programio/esp-idf/components/bt/bluedroid/api/include/esp_bt_defs.h:
 /home/penguin/Programio/esp-idf/components/bt/bluedroid/btc/core/btc_main.c:

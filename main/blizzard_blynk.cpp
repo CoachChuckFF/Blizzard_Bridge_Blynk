@@ -36,7 +36,7 @@
 #include "lib/blizzard_nvs.h"
 #include "lib/blizzard_wdmx.h"
 #include "lib/dmx.h"
-#include "lib/blizzard_wifi.h"
+#include "lib/blizzard_connection_manager.h"
 // You should get Auth Token in the Blynk App.
 // Go to the Project Settings (nut icon).
 
@@ -58,6 +58,46 @@ uint8_t row_index;
 uint8_t octet = 0;
 uint8_t ip[4];
 
+void start_blynk()
+{
+  uint32_t tick_count = 0;
+  initArduino();
+
+  memset(ip, 0, 4);
+
+  //Blynk.begin(auth, ssid, pass);
+  Blynk.config(auth);
+  //Blynk.connect();
+
+  /* Talk to Terminal */
+  terminal.print(String(getName()));
+  terminal.println(" has connected!");
+  terminal.flush();
+
+  /* Init Table */
+  Blynk.virtualWrite(V11, "clr");
+  Blynk.virtualWrite(V11, "add", 0, "Device Name", String(getName()));
+
+  /* Init Timer */
+  timer.setInterval(BLYNK_TIMER_INTERVAL, blizzard_timer_event);
+
+  while(1)
+  {
+    Blynk.run();
+    //timer.run();
+
+    //update led if wdmx is on
+    /*if(tick_count++ > 5)
+    {
+      tick_count = 0;
+      update_blynk_wdmx_led();
+    }*/
+
+
+    delay(50); //freertos context switch
+
+  }
+}
 
 void blizzard_timer_event()
 {
@@ -96,47 +136,6 @@ void update_blynk_wdmx_led()
   }
 }
 
-void start_blynk()
-{
-  uint32_t tick_count = 0;
-  initArduino();
-
-  memset(ip, 0, 4);
-
-  //Blynk.begin(auth, ssid, pass);
-  Blynk.config(auth);
-  Blynk.connect();
-
-  /* Talk to Terminal */
-  terminal.print(String(getName()));
-  terminal.println(" has connected!");
-  terminal.flush();
-
-  /* Init Table */
-  Blynk.virtualWrite(V11, "clr");
-  Blynk.virtualWrite(V11, "add", 0, "Device Name", String(getName()));
-
-  /* Init Timer */
-  timer.setInterval(BLYNK_TIMER_INTERVAL, blizzard_timer_event);
-
-  while(1)
-  {
-    Blynk.run();
-    //timer.run();
-
-    //update led if wdmx is on
-    /*if(tick_count++ > 5)
-    {
-      tick_count = 0;
-      update_blynk_wdmx_led();
-    }*/
-
-
-    delay(50); //freertos context switch
-
-  }
-}
-
 BLYNK_CONNECTED()
 {
   //Blynk.syncAll();
@@ -151,7 +150,7 @@ BLYNK_WRITE(V17)
   switch (val)
   {
     case HIGH:
-      setNeedWifiManager(ENABLE);
+      setWifiManagerEnable(ENABLE);
     break;
   }
 
@@ -377,7 +376,7 @@ BLYNK_WRITE(V12)
       terminal.print(".");
       terminal.println(ip[0], DEC);
 
-      changeIP(ip);
+      setIP(ip);
       setDHCPEnable(DISABLE);
     }
   }

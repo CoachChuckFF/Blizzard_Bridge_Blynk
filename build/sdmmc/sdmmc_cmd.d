@@ -62,7 +62,12 @@ sdmmc_cmd.o: \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/machine/types.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h \
- /home/penguin/Programio/esp-idf/components/sdmmc/include/sdmmc_cmd.h
+ /home/penguin/Programio/esp-idf/components/sdmmc/include/sdmmc_cmd.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/param.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/sys/syslimits.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/endian.h \
+ /home/penguin/Programio/esp-idf/components/newlib/include/machine/param.h \
+ /home/penguin/Programio/esp-idf/components/soc/include/soc/soc_memory_layout.h
 
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
@@ -189,4 +194,14 @@ sdmmc_cmd.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/stdio.h:
 
 /home/penguin/Programio/esp-idf/components/sdmmc/include/sdmmc_cmd.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/param.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/sys/syslimits.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/endian.h:
+
+/home/penguin/Programio/esp-idf/components/newlib/include/machine/param.h:
+
+/home/penguin/Programio/esp-idf/components/soc/include/soc/soc_memory_layout.h:
 /home/penguin/Programio/esp-idf/components/sdmmc/./sdmmc_cmd.c:

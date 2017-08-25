@@ -32,7 +32,6 @@ library/pkcs12.o: \
  /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/cipher.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/string.h \
  /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h \
- /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/arc4.h \
  /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/des.h
 
 /home/penguin/Programio/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
@@ -98,8 +97,6 @@ library/pkcs12.o: \
 /home/penguin/Programio/esp-idf/components/newlib/include/string.h:
 
 /home/penguin/Programio/esp-idf/components/newlib/include/sys/string.h:
-
-/home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/arc4.h:
 
 /home/penguin/Programio/esp-idf/components/mbedtls/include/mbedtls/des.h:
 /home/penguin/Programio/esp-idf/components/mbedtls/library/pkcs12.c:
