@@ -98,7 +98,6 @@ void app_main()
   */
 
 
-
   //initallize
   init_blizzard_nvs();
 
@@ -118,7 +117,7 @@ void app_main()
 
   start_connection_manager();
 
-  xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 6, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
+  //xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 6, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
 
   //vTaskDelay(15000);
 
@@ -128,11 +127,11 @@ void app_main()
 */
 
   clearDMX();
-  startDMXUart(RECEIVE);
+  startDMXUart(SEND);
 
   startWDMX();
   startDMXArtnet(RECEIVE);
-
+  turn_on_wdmx();
   /* // SPI interface
   ret = spi_bus_initialize(HSPI_HOST, &buscfg, 1);
   assert(ret == ESP_OK);
@@ -158,7 +157,7 @@ void app_main()
   /* Listen for Config Changes */
   while(1)
   {
-    if(input_mode_changed)
+  /*  if(input_mode_changed)
     {
       ESP_LOGI(TAG, "input mode changed to: %d", getInputMode());
       switch(getInputMode())
@@ -201,7 +200,7 @@ void app_main()
         break;
       }
       output_mode_changed = 0;
-    }
+    }*/
 
     //ESP_LOGI(TAG, "TICK: %d", i++);
     //printDMX();
