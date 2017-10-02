@@ -113,9 +113,9 @@ void app_main()
   //setPASS("destroyer", 9);
 
   //TODO Make Ethernet workflow
-  //initialise_blizzard_ethernet();
+  start_blizzard_ethernet();
 
-  start_connection_manager();
+  //start_connection_manager();
 
   //xTaskCreatePinnedToCore(&start_blynk, "BLYNK", 2048 * 6, NULL, tskIDLE_PRIORITY + 6, NULL, 0); //pinned to core 0
 
@@ -129,8 +129,12 @@ void app_main()
   clearDMX();
   startDMXUart(SEND);
 
+  printConnectionInfo();
+
   startWDMX();
+  ESP_LOGI(TAG, "3");
   startDMXArtnet(RECEIVE);
+  ESP_LOGI(TAG, "2");
   turn_on_wdmx();
   /* // SPI interface
   ret = spi_bus_initialize(HSPI_HOST, &buscfg, 1);
@@ -155,6 +159,7 @@ void app_main()
   */
 
   /* Listen for Config Changes */
+  ESP_LOGI(TAG, "1");
   while(1)
   {
   /*  if(input_mode_changed)
@@ -204,7 +209,8 @@ void app_main()
 
     //ESP_LOGI(TAG, "TICK: %d", i++);
     //printDMX();
-    vTaskDelay(1000);
+
+    vTaskDelay(100);
   }
 
 }

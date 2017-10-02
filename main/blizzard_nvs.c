@@ -14,7 +14,11 @@ void init_blizzard_nvs()
 
   ret_val = nvs_flash_init();
   if(ret_val != ESP_OK)
+  {
     ESP_LOGI(TAG, "NVS INIT FAILED %d", ret_val);
+    ESP_LOGI(TAG, "%d", ESP_ERR_NVS_NO_FREE_PAGES);
+  }
+
 
   ret_val = nvs_open(NVS_NAMESPACE, NVS_READWRITE, &config_nvs_handle);
   if(ret_val != ESP_OK)

@@ -1,204 +1,200 @@
 Archive member included to satisfy reference by file (symbol)
 
-/home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
                               (call_start_cpu0)
-/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_mmap)
-/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_partition_table_basic_verify)
-/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_image_load)
-/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (bootloader_sha256_start)
-/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (bootloader_fill_random)
-/home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_rom_spiflash_unlock)
-/home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (rtc_clk_slow_freq_get)
-/home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o) (rtc_clk_cal_ratio)
-/home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
-/home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
-                              /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o) (__udivdi3)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_mmap)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_partition_table_basic_verify)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_image_load)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (bootloader_sha256_start)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (bootloader_fill_random)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (esp_rom_spiflash_unlock)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o) (rtc_clk_slow_freq_get)
+/home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o) (rtc_clk_cal_ratio)
+/home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
+/home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+                              /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o) (__udivdi3)
 
 Allocating common symbols
 Common symbol       size              file
 
 esp_image_spi_freq_t
-                    0x4               /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                    0x4               /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
 
 Discarded input sections
 
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .xt.lit        0x0000000000000000       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .xt.prop       0x0000000000000000      0x3f0 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- COMMON         0x0000000000000000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .text.__assert_func
+                0x0000000000000000        0x6 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xt.lit        0x0000000000000000       0x20 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xt.prop       0x0000000000000000      0x3d8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ COMMON         0x0000000000000000        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .literal.bootloader_flash_write
-                0x0000000000000000       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_flash_erase_sector
-                0x0000000000000000        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .text.bootloader_flash_write
-                0x0000000000000000       0x5a /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000000       0x5a /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .text.bootloader_flash_erase_sector
-                0x0000000000000000       0x1b /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xt.lit        0x0000000000000000       0x28 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xt.prop       0x0000000000000000      0x204 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xt.lit        0x0000000000000000        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xt.prop       0x0000000000000000       0x60 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000000000000       0x1b /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xt.lit        0x0000000000000000       0x28 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xt.prop       0x0000000000000000      0x204 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xt.lit        0x0000000000000000        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xt.prop       0x0000000000000000       0x60 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .literal.esp_image_verify_bootloader
-                0x0000000000000000        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .rodata        0x0000000000000000        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000000000000        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .rodata        0x0000000000000000        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .text.esp_image_verify_bootloader
-                0x0000000000000000       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xt.lit        0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xt.prop       0x0000000000000000      0x33c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xt.lit        0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xt.prop       0x0000000000000000      0x180 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000000000000       0x30 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xt.lit        0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xt.prop       0x0000000000000000      0x354 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xt.lit        0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xt.prop       0x0000000000000000      0x12c /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .rodata.str1.1
-                0x0000000000000000        0x9 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .data.TAG      0x0000000000000000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xt.lit        0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xt.prop       0x0000000000000000       0xd8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000000000000        0x9 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .data.TAG      0x0000000000000000        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xt.lit        0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xt.prop       0x0000000000000000       0xd8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .literal.esp_rom_spiflash_enable_write$constprop$6
-                0x0000000000000000       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x14 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_program_page_internal$constprop$4
-                0x0000000000000000       0x28 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x28 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_lock
-                0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_config_readmode
-                0x0000000000000000       0x50 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x50 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_chip
-                0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_block
-                0x0000000000000000       0x34 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x34 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_sector
-                0x0000000000000000       0x34 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x34 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_write
-                0x0000000000000000       0x24 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x24 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_write_encrypted
-                0x0000000000000000       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.esp_rom_spiflash_erase_area
-                0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_enable_write$constprop$6
-                0x0000000000000000       0x41 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x41 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_program_page_internal$constprop$4
-                0x0000000000000000       0xce /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0xce /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_lock
-                0x0000000000000000       0x4c /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x4c /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_config_readmode
-                0x0000000000000000      0x287 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000      0x287 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_chip
-                0x0000000000000000       0x3a /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x3a /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_block
-                0x0000000000000000       0x88 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x88 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_sector
-                0x0000000000000000       0x8d /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x8d /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_write
-                0x0000000000000000       0xa2 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0xa2 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_write_encrypted
-                0x0000000000000000       0x51 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x51 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_erase_area
-                0x0000000000000000       0x96 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x96 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .rodata.CSWTCH$38
-                0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xt.lit        0x0000000000000000       0x80 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xt.prop       0x0000000000000000      0x78c /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xt.lit        0x0000000000000000       0x80 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xt.prop       0x0000000000000000      0x78c /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .literal.rtc_clk_32k_bootstrap
-                0x0000000000000000       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x14 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_32k_enabled
-                0x0000000000000000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_8m_enabled
-                0x0000000000000000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_8md256_enabled
-                0x0000000000000000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_apll_enable
-                0x0000000000000000       0x50 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x50 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_slow_freq_get_hz
-                0x0000000000000000        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_get
-                0x0000000000000000       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_value
-                0x0000000000000000       0x2c /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x1c /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_32k_bootstrap
-                0x0000000000000000       0x38 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x38 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_32k_enabled
-                0x0000000000000000       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_8m_enabled
-                0x0000000000000000       0x15 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x15 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_8md256_enabled
-                0x0000000000000000       0x15 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x15 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_apll_enable
-                0x0000000000000000      0x15a /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000      0x15a /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_slow_freq_get_hz
-                0x0000000000000000       0x1e /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.str1.1
-                0x0000000000000000       0x88 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x1e /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_get
-                0x0000000000000000       0x7c /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x54 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_value
-                0x0000000000000000       0x45 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x3c /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.rtc_clk_cpu_freq_value
-                0x0000000000000000       0x14 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.CSWTCH$31
-                0x0000000000000000        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.__func__$2152
-                0x0000000000000000       0x17 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.__func__$2137
-                0x0000000000000000       0x15 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .xt.lit        0x0000000000000000       0xb0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .xt.prop       0x0000000000000000      0x6c0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000000       0x14 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$33
+                0x0000000000000000        0xc /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.lit        0x0000000000000000       0xb0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xt.prop       0x0000000000000000      0x6c0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cal
-                0x0000000000000000        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000        0xc /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .literal.rtc_time_us_to_slowclk
-                0x0000000000000000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .literal.rtc_time_get
-                0x0000000000000000       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_clk_cal
-                0x0000000000000000       0x54 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x54 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_time_us_to_slowclk
-                0x0000000000000000       0x1f /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x1f /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_time_slowclk_to_us
-                0x0000000000000000       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000000       0x1c /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .text.rtc_time_get
-                0x0000000000000000       0x50 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.lit        0x0000000000000000       0x28 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.prop       0x0000000000000000      0x1e0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .xt.lit        0x0000000000000000        0x8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .xt.prop       0x0000000000000000       0x30 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .data          0x0000000000000000        0x0 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .bss           0x0000000000000000        0x0 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .eh_frame      0x0000000000000000       0x28 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
- .xt.prop       0x0000000000000000      0x264 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+                0x0000000000000000       0x50 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.lit        0x0000000000000000       0x28 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.prop       0x0000000000000000      0x1e0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .xt.lit        0x0000000000000000        0x8 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .xt.prop       0x0000000000000000       0x30 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .data          0x0000000000000000        0x0 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .eh_frame      0x0000000000000000       0x28 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .xt.prop       0x0000000000000000      0x264 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 Memory Configuration
 
@@ -211,14 +207,15 @@ dram_seg         0x000000003fff0000 0x0000000000010000 rw
 Linker script and memory map
 
 START GROUP
-LOAD /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a
-LOAD /home/penguin/Programio/blizzard-esp/build/bootloader/log/liblog.a
-LOAD /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a
-LOAD /home/penguin/Programio/blizzard-esp/build/bootloader/micro-ecc/libmicro-ecc.a
-LOAD /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a
-LOAD /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a
-LOAD /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a
-LOAD /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/libstdc++.a
+LOAD /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a
+LOAD /home/ece453/Documents/work/blizzard-esp/build/bootloader/log/liblog.a
+LOAD /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a
+LOAD /home/ece453/Documents/work/blizzard-esp/build/bootloader/micro-ecc/libmicro-ecc.a
+LOAD /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a
+LOAD /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a
+LOAD /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a
+LOAD /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/../../../../xtensa-esp32-elf/lib/libstdc++.a
+LOAD /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcov.a
 END GROUP
 
 .iram1.text     0x0000000040078000        0x0
@@ -241,12 +238,12 @@ END GROUP
  *(.dynbss)
  *(.bss)
  *(.bss.*)
- .bss.mapped    0x000000003fff0000        0x1 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .bss.mapped    0x000000003fff0000        0x1 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *fill*         0x000000003fff0001        0x3 
  .bss.ram_obfs_value
-                0x000000003fff0004        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000003fff0004        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .bss.words_hashed
-                0x000000003fff000c        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff000c        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  *(.gnu.linkonce.b.*)
  *(COMMON)
                 0x000000003fff0010                . = ALIGN (0x8)
@@ -257,7 +254,7 @@ END GROUP
  *(.data)
  *(.data.*)
  .data.current_read_mapping
-                0x000000003fff0010        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000003fff0010        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *(.gnu.linkonce.d.*)
  *(.data1)
  *(.sdata)
@@ -269,387 +266,377 @@ END GROUP
  *(.jcr)
                 0x000000003fff0014                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x000000003fff0014      0x1d0
+.dram0.rodata   0x000000003fff0014       0xe8
                 0x000000003fff0014                _rodata_start = ABSOLUTE (.)
  *(.rodata)
- .rodata        0x000000003fff0014       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .rodata        0x000000003fff0014       0x1c /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  *(.rodata.*)
  .rodata.CSWTCH$52
-                0x000000003fff0030        0x5 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000003fff0030        0x5 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  *fill*         0x000000003fff0035        0x3 
  .rodata.CSWTCH$17
-                0x000000003fff0038        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .rodata.str1.1
-                0x000000003fff0044       0xb7 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .rodata.padding$2489
-                0x000000003fff00fb       0x40 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .rodata.__func__$2485
-                0x000000003fff013b       0x19 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .rodata.__func__$2465
-                0x000000003fff0154       0x17 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff0038        0xc /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .rodata.padding$2491
+                0x000000003fff0044       0x40 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .rodata.CSWTCH$48
+                0x000000003fff0084       0x11 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$47
+                0x000000003fff0095       0x11 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$46
-                0x000000003fff016b       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff00a6       0x11 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$45
-                0x000000003fff017c       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff00b7       0x11 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$44
-                0x000000003fff018d       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff00c8       0x11 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.CSWTCH$43
-                0x000000003fff019e       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.CSWTCH$42
-                0x000000003fff01af       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.CSWTCH$41
-                0x000000003fff01c0       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.CSWTCH$36
-                0x000000003fff01d1       0x11 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff00d9       0x11 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.CSWTCH$38
+                0x000000003fff00ea       0x11 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003fff01e2                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003fff00fb                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x000000003fff01e4                . = ((. + 0x3) & 0xfffffffffffffffc)
- *fill*         0x000000003fff01e2        0x2 
-                0x000000003fff01e4                __init_array_start = ABSOLUTE (.)
+                0x000000003fff00fc                . = ((. + 0x3) & 0xfffffffffffffffc)
+ *fill*         0x000000003fff00fb        0x1 
+                0x000000003fff00fc                __init_array_start = ABSOLUTE (.)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x000000003fff01e4                __init_array_end = ABSOLUTE (.)
+                0x000000003fff00fc                __init_array_end = ABSOLUTE (.)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x000000003fff01e4                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003fff00fc                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003fff01e4                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003fff00fc                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003fff01e4                _rodata_end = ABSOLUTE (.)
-                0x000000003fff01e4                _lit4_start = ABSOLUTE (.)
+                0x000000003fff00fc                _rodata_end = ABSOLUTE (.)
+                0x000000003fff00fc                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003fff01e4                _lit4_end = ABSOLUTE (.)
-                0x000000003fff01e4                . = ALIGN (0x4)
-                0x000000003fff01e4                _heap_start = ABSOLUTE (.)
+                0x000000003fff00fc                _lit4_end = ABSOLUTE (.)
+                0x000000003fff00fc                . = ALIGN (0x4)
+                0x000000003fff00fc                _heap_start = ABSOLUTE (.)
 
-.iram.text      0x0000000040078000     0x2281
+.iram.text      0x0000000040078000     0x222d
                 0x0000000040078000                _stext = .
                 0x0000000040078000                _text_start = ABSOLUTE (.)
  *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
  .literal.ota_select_valid
-                0x0000000040078000        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078000        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .literal.load_partition_table
-                0x0000000040078004        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078004        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_main
-                0x000000004007800c       0xdc /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000004007800c       0xdc /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                         0x154 (size before relaxing)
  .literal.call_start_cpu0
-                0x00000000400780e8       0x24 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                         0x4c (size before relaxing)
+                0x00000000400780e8       0x1c /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                         0x44 (size before relaxing)
  .literal.bootloader_mmap
-                0x000000004007810c        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078104        0xc /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x28 (size before relaxing)
  .literal.bootloader_munmap
-                0x0000000040078118        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078110        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_flash_read
-                0x000000004007811c        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078114        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x34 (size before relaxing)
  .literal.esp_partition_table_basic_verify
-                0x0000000040078124        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x000000004007811c        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                           0x8 (size before relaxing)
  .literal.should_load
-                0x0000000040078128        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078120        0xc /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x24 (size before relaxing)
  .literal.esp_image_load
-                0x0000000040078134       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                         0x7c (size before relaxing)
+                0x000000004007812c       0x18 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                         0x84 (size before relaxing)
  .literal.bootloader_sha256_start
-                0x000000004007814c        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040078144        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .literal.bootloader_sha256_data
-                0x0000000040078154       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                                         0x2c (size before relaxing)
+                0x000000004007814c       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                                         0x18 (size before relaxing)
  .literal.bootloader_sha256_finish
-                0x0000000040078174       0x18 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                                         0x40 (size before relaxing)
+                0x000000004007815c        0xc /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                                         0x28 (size before relaxing)
  .literal.bootloader_fill_random
-                0x000000004007818c        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078168        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .literal.bootloader_random_enable
-                0x0000000040078194       0x6c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078170       0x6c /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x78 (size before relaxing)
  .literal.bootloader_random_disable
-                0x0000000040078200       0x1c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x00000000400781dc       0x1c /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x4c (size before relaxing)
  .literal.esp_rom_spiflash_read_status
-                0x000000004007821c       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400781f8       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_wait_idle
-                0x000000004007822c        0x8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078208        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_read_statushigh
-                0x0000000040078234        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078210        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_write_status
-                0x0000000040078238        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078214        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_unlock
-                0x0000000040078238        0xc /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078214        0xc /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_read
-                0x0000000040078244       0x4c /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078220       0x4c /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x70 (size before relaxing)
  .literal.rtc_clk_32k_enable_internal$constprop$2
-                0x0000000040078290       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007826c       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
  .literal.rtc_clk_32k_enable
-                0x00000000400782a0        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004007827c        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_8m_enable
-                0x00000000400782a4       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078280       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_slow_freq_set
-                0x00000000400782b4        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078290        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_slow_freq_get
-                0x00000000400782b4        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078290        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_fast_freq_set
-                0x00000000400782b4        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078290        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_fast_freq_get
-                0x00000000400782b4        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078290        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_bbpll_set
-                0x00000000400782b4       0x28 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040078290       0x28 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x5c (size before relaxing)
  .literal.rtc_clk_xtal_freq_get
-                0x00000000400782dc        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400782b8        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_xtal_freq_update
-                0x00000000400782e0        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400782bc        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_apb_freq_update
-                0x00000000400782e0        0x4 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400782bc        0x4 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_set
-                0x00000000400782e4       0x2c /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400782c0       0x2c /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x64 (size before relaxing)
  .literal.rtc_clk_apb_freq_get
-                0x0000000040078310        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
+                0x00000000400782ec        0x8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
  .literal.rtc_clk_init
-                0x0000000040078310       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x5c (size before relaxing)
+                0x00000000400782f4       0x20 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x60 (size before relaxing)
  .literal.rtc_clk_cal_internal
-                0x0000000040078330       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040078314       0x20 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x38 (size before relaxing)
  .literal.rtc_clk_cal_ratio
-                0x0000000040078350        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040078334        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
                                           0x8 (size before relaxing)
- .literal       0x0000000040078350        0x8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .literal       0x0000000040078334        0x8 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .text.ota_select_valid
-                0x0000000040078358       0x22 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- *fill*         0x000000004007837a        0x2 
+                0x000000004007833c       0x22 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ *fill*         0x000000004007835e        0x2 
  .text.load_partition_table
-                0x000000004007837c       0xa6 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                0x000000004007837c                load_partition_table
- *fill*         0x0000000040078422        0x2 
+                0x0000000040078360       0xa6 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040078360                load_partition_table
+ *fill*         0x0000000040078406        0x2 
  .text.bootloader_main
-                0x0000000040078424      0x4be /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0x4f6 (size before relaxing)
-                0x0000000040078424                bootloader_main
- *fill*         0x00000000400788e2        0x2 
+                0x0000000040078408      0x4c3 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0x4f3 (size before relaxing)
+                0x0000000040078408                bootloader_main
+ *fill*         0x00000000400788cb        0x1 
  .text.call_start_cpu0
-                0x00000000400788e4       0xeb /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                0x00000000400788e4                call_start_cpu0
- *fill*         0x00000000400789cf        0x1 
+                0x00000000400788cc       0xc7 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                         0xcb (size before relaxing)
+                0x00000000400788cc                call_start_cpu0
+ *fill*         0x0000000040078993        0x1 
  .text.bootloader_mmap
-                0x00000000400789d0       0x6c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x00000000400789d0                bootloader_mmap
+                0x0000000040078994       0x6c /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078994                bootloader_mmap
  .text.bootloader_munmap
-                0x0000000040078a3c       0x32 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078a3c                bootloader_munmap
- *fill*         0x0000000040078a6e        0x2 
+                0x0000000040078a00       0x32 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078a00                bootloader_munmap
+ *fill*         0x0000000040078a32        0x2 
  .text.bootloader_flash_read
-                0x0000000040078a70       0xc1 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078a70                bootloader_flash_read
- *fill*         0x0000000040078b31        0x3 
+                0x0000000040078a34       0xc1 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078a34                bootloader_flash_read
+ *fill*         0x0000000040078af5        0x3 
  .text.esp_partition_table_basic_verify
-                0x0000000040078b34       0x46 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                0x0000000040078b34                esp_partition_table_basic_verify
- *fill*         0x0000000040078b7a        0x2 
+                0x0000000040078af8       0x46 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000040078af8                esp_partition_table_basic_verify
+ *fill*         0x0000000040078b3e        0x2 
  .text.should_load
-                0x0000000040078b7c       0x6e /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- *fill*         0x0000000040078bea        0x2 
+                0x0000000040078b40       0x6e /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ *fill*         0x0000000040078bae        0x2 
  .text.esp_image_load
-                0x0000000040078bec      0x328 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                        0x34c (size before relaxing)
-                0x0000000040078bec                esp_image_load
+                0x0000000040078bb0      0x344 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                        0x370 (size before relaxing)
+                0x0000000040078bb0                esp_image_load
  .text.bootloader_sha256_start
-                0x0000000040078f14       0x12 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                0x0000000040078f14                bootloader_sha256_start
- *fill*         0x0000000040078f26        0x2 
+                0x0000000040078ef4       0x12 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040078ef4                bootloader_sha256_start
+ *fill*         0x0000000040078f06        0x2 
  .text.bootloader_sha256_data
-                0x0000000040078f28       0xa5 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                0x0000000040078f28                bootloader_sha256_data
- *fill*         0x0000000040078fcd        0x3 
+                0x0000000040078f08       0x81 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040078f08                bootloader_sha256_data
+ *fill*         0x0000000040078f89        0x3 
  .text.bootloader_sha256_finish
-                0x0000000040078fd0       0xb4 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                                         0xc0 (size before relaxing)
-                0x0000000040078fd0                bootloader_sha256_finish
+                0x0000000040078f8c       0x78 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                                         0x80 (size before relaxing)
+                0x0000000040078f8c                bootloader_sha256_finish
  .text.bootloader_fill_random
-                0x0000000040079084       0x49 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x0000000040079084                bootloader_fill_random
- *fill*         0x00000000400790cd        0x3 
+                0x0000000040079004       0x49 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079004                bootloader_fill_random
+ *fill*         0x000000004007904d        0x3 
  .text.bootloader_random_enable
-                0x00000000400790d0      0x1d5 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x00000000400790d0                bootloader_random_enable
- *fill*         0x00000000400792a5        0x3 
+                0x0000000040079050      0x1d5 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079050                bootloader_random_enable
+ *fill*         0x0000000040079225        0x3 
  .text.bootloader_random_disable
-                0x00000000400792a8      0x11c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x00000000400792a8                bootloader_random_disable
+                0x0000000040079228      0x11c /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079228                bootloader_random_disable
  .text.esp_rom_spiflash_read_status
-                0x00000000400793c4       0x5b /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x00000000400793c4                esp_rom_spiflash_read_status
- *fill*         0x000000004007941f        0x1 
+                0x0000000040079344       0x5b /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079344                esp_rom_spiflash_read_status
+ *fill*         0x000000004007939f        0x1 
  .text.esp_rom_spiflash_wait_idle
-                0x0000000040079420       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x0000000040079420                esp_rom_spiflash_wait_idle
+                0x00000000400793a0       0x30 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400793a0                esp_rom_spiflash_wait_idle
  .text.esp_rom_spiflash_read_statushigh
-                0x0000000040079450       0x21 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x0000000040079450                esp_rom_spiflash_read_statushigh
- *fill*         0x0000000040079471        0x3 
+                0x00000000400793d0       0x21 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400793d0                esp_rom_spiflash_read_statushigh
+ *fill*         0x00000000400793f1        0x3 
  .text.esp_rom_spiflash_write_status
-                0x0000000040079474       0x2f /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400793f4       0x2f /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x33 (size before relaxing)
-                0x0000000040079474                esp_rom_spiflash_write_status
- *fill*         0x00000000400794a3        0x1 
+                0x00000000400793f4                esp_rom_spiflash_write_status
+ *fill*         0x0000000040079423        0x1 
  .text.esp_rom_spiflash_unlock
-                0x00000000400794a4       0x66 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040079424       0x66 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x72 (size before relaxing)
-                0x00000000400794a4                esp_rom_spiflash_unlock
- *fill*         0x000000004007950a        0x2 
+                0x0000000040079424                esp_rom_spiflash_unlock
+ *fill*         0x000000004007948a        0x2 
  .text.esp_rom_spiflash_read
-                0x000000004007950c      0x2e5 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007948c      0x2e5 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                         0x2e9 (size before relaxing)
-                0x000000004007950c                esp_rom_spiflash_read
- *fill*         0x00000000400797f1        0x3 
+                0x000000004007948c                esp_rom_spiflash_read
+ *fill*         0x0000000040079771        0x3 
  .text.rtc_clk_32k_enable_internal$constprop$2
-                0x00000000400797f4       0x6f /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x0000000040079863        0x1 
+                0x0000000040079774       0x6f /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x00000000400797e3        0x1 
  .text.rtc_clk_32k_enable
-                0x0000000040079864       0x29 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079864                rtc_clk_32k_enable
- *fill*         0x000000004007988d        0x3 
+                0x00000000400797e4       0x29 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400797e4                rtc_clk_32k_enable
+ *fill*         0x000000004007980d        0x3 
  .text.rtc_clk_8m_enable
-                0x0000000040079890       0x7e /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079890                rtc_clk_8m_enable
- *fill*         0x000000004007990e        0x2 
+                0x0000000040079810       0x7e /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079810                rtc_clk_8m_enable
+ *fill*         0x000000004007988e        0x2 
  .text.rtc_clk_slow_freq_set
-                0x0000000040079910       0x27 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079910                rtc_clk_slow_freq_set
- *fill*         0x0000000040079937        0x1 
+                0x0000000040079890       0x27 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079890                rtc_clk_slow_freq_set
+ *fill*         0x00000000400798b7        0x1 
  .text.rtc_clk_slow_freq_get
-                0x0000000040079938       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079938                rtc_clk_slow_freq_get
+                0x00000000400798b8       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400798b8                rtc_clk_slow_freq_get
  .text.rtc_clk_fast_freq_set
-                0x0000000040079948       0x2a /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079948                rtc_clk_fast_freq_set
- *fill*         0x0000000040079972        0x2 
+                0x00000000400798c8       0x2a /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400798c8                rtc_clk_fast_freq_set
+ *fill*         0x00000000400798f2        0x2 
  .text.rtc_clk_fast_freq_get
-                0x0000000040079974       0x10 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079974                rtc_clk_fast_freq_get
+                0x00000000400798f4       0x10 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400798f4                rtc_clk_fast_freq_get
  .text.rtc_clk_bbpll_set
-                0x0000000040079984      0x143 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079984                rtc_clk_bbpll_set
- *fill*         0x0000000040079ac7        0x1 
+                0x0000000040079904      0x143 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079904                rtc_clk_bbpll_set
+ *fill*         0x0000000040079a47        0x1 
  .text.rtc_clk_xtal_freq_get
-                0x0000000040079ac8       0x22 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079ac8                rtc_get_xtal
-                0x0000000040079ac8                rtc_clk_xtal_freq_get
- *fill*         0x0000000040079aea        0x2 
+                0x0000000040079a48       0x22 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079a48                rtc_get_xtal
+                0x0000000040079a48                rtc_clk_xtal_freq_get
+ *fill*         0x0000000040079a6a        0x2 
  .text.rtc_clk_xtal_freq_update
-                0x0000000040079aec       0x16 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079aec                rtc_clk_xtal_freq_update
- *fill*         0x0000000040079b02        0x2 
+                0x0000000040079a6c       0x16 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079a6c                rtc_clk_xtal_freq_update
+ *fill*         0x0000000040079a82        0x2 
  .text.rtc_clk_apb_freq_update
-                0x0000000040079b04       0x19 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079b04                rtc_clk_apb_freq_update
- *fill*         0x0000000040079b1d        0x3 
+                0x0000000040079a84       0x19 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079a84                rtc_clk_apb_freq_update
+ *fill*         0x0000000040079a9d        0x3 
  .text.rtc_clk_cpu_freq_set
-                0x0000000040079b20      0x1ae /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079aa0      0x1ae /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0x1b6 (size before relaxing)
-                0x0000000040079b20                rtc_clk_cpu_freq_set
- *fill*         0x0000000040079cce        0x2 
+                0x0000000040079aa0                rtc_clk_cpu_freq_set
+ *fill*         0x0000000040079c4e        0x2 
  .text.rtc_clk_apb_freq_get
-                0x0000000040079cd0       0x13 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040079cd0                rtc_clk_apb_freq_get
- *fill*         0x0000000040079ce3        0x1 
+                0x0000000040079c50       0x27 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040079c50                rtc_clk_apb_freq_get
+ *fill*         0x0000000040079c77        0x1 
  .text.rtc_clk_init
-                0x0000000040079ce4      0x156 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                        0x172 (size before relaxing)
-                0x0000000040079ce4                rtc_clk_init
- *fill*         0x0000000040079e3a        0x2 
+                0x0000000040079c78      0x16e /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x191 (size before relaxing)
+                0x0000000040079c78                rtc_clk_init
+ *fill*         0x0000000040079de6        0x2 
  .text.rtc_clk_cal_internal
-                0x0000000040079e3c      0x132 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- *fill*         0x0000000040079f6e        0x2 
+                0x0000000040079de8      0x132 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ *fill*         0x0000000040079f1a        0x2 
  .text.rtc_clk_cal_ratio
-                0x0000000040079f70       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040079f1c       0x20 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x24 (size before relaxing)
-                0x0000000040079f70                rtc_clk_cal_ratio
- .text          0x0000000040079f90       0x26 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
-                0x0000000040079f90                __bswapsi2
- *fill*         0x0000000040079fb6        0x2 
+                0x0000000040079f1c                rtc_clk_cal_ratio
+ .text          0x0000000040079f3c       0x26 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+                0x0000000040079f3c                __bswapsi2
+ *fill*         0x0000000040079f62        0x2 
  .text.index_to_partition
-                0x0000000040079fb8       0x3e /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- *fill*         0x0000000040079ff6        0x0 
- *fill*         0x0000000040079ff6        0x0 
- *fill*         0x0000000040079ff6        0x0 
- *fill*         0x0000000040079ff6        0x2 
- .text.__assert_func
-                0x0000000040079ff8        0x6 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                0x0000000040079ff8                __assert_func
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x0 
- *fill*         0x0000000040079ffe        0x2 
- .text          0x000000004007a000      0x281 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
-                0x000000004007a000                __udivdi3
+                0x0000000040079f64       0x45 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x0 
+ *fill*         0x0000000040079fa9        0x3 
+ .text          0x0000000040079fac      0x281 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+                0x0000000040079fac                __udivdi3
  *(.iram1 .iram1.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x000000004007a281                _text_end = ABSOLUTE (.)
-                0x000000004007a281                _etext = .
+                0x000000004007a22d                _text_end = ABSOLUTE (.)
+                0x000000004007a22d                _etext = .
                 [!provide]                        PROVIDE (abort, 0x4000bba4)
-                [!provide]                        PROVIDE (abs, 0x40056340)
                 [!provide]                        PROVIDE (__absvdi2, 0x4006387c)
                 [!provide]                        PROVIDE (__absvsi2, 0x40063868)
                 [!provide]                        PROVIDE (Add2SelfBigHex256, 0x40015b7c)
@@ -666,15 +653,8 @@ END GROUP
                 [!provide]                        PROVIDE (aes_unwrap, 0x4005ccf0)
                 [!provide]                        PROVIDE (app_gpio_arg, 0x3ffe003c)
                 [!provide]                        PROVIDE (app_gpio_handler, 0x3ffe0040)
-                [!provide]                        PROVIDE (__ascii_wctomb, 0x40058ef0)
-                [!provide]                        PROVIDE (asctime, 0x40059588)
-                [!provide]                        PROVIDE (asctime_r, 0x40000ec8)
                 [!provide]                        PROVIDE (__ashldi3, 0x4000c818)
                 [!provide]                        PROVIDE (__ashrdi3, 0x4000c830)
-                [!provide]                        PROVIDE (atoi, 0x400566c4)
-                [!provide]                        PROVIDE (_atoi_r, 0x400566d4)
-                [!provide]                        PROVIDE (atol, 0x400566ec)
-                [!provide]                        PROVIDE (_atol_r, 0x400566fc)
                 [!provide]                        PROVIDE (base64_decode, 0x4005ced8)
                 [!provide]                        PROVIDE (base64_encode, 0x4005cdbc)
                 [!provide]                        PROVIDE (BasePoint_x_256, 0x3ff97488)
@@ -694,7 +674,6 @@ END GROUP
                 [!provide]                        PROVIDE (btdm_r_modules_func_p_set, 0x40054270)
                 [!provide]                        PROVIDE (btdm_r_plf_func_p_set, 0x40054288)
                 [!provide]                        PROVIDE (bt_util_buf_env, 0x3ffb8bd4)
-                [!provide]                        PROVIDE (bzero, 0x4000c1f4)
                 0x00000000400095e0                PROVIDE (cache_flash_mmu_set_rom, 0x400095e0)
                 0x0000000040009a14                PROVIDE (Cache_Flush_rom, 0x40009a14)
                 0x0000000040009ab8                PROVIDE (Cache_Read_Disable_rom, 0x40009ab8)
@@ -704,10 +683,7 @@ END GROUP
                 [!provide]                        PROVIDE (calc_rtc_memory_crc, 0x40008170)
                 [!provide]                        PROVIDE (calloc, 0x4000bee4)
                 [!provide]                        PROVIDE (_calloc_r, 0x4000bbf8)
-                [!provide]                        PROVIDE (_cleanup, 0x40001df8)
-                [!provide]                        PROVIDE (_cleanup_r, 0x40001d48)
                 [!provide]                        PROVIDE (__clear_cache, 0x40063860)
-                [!provide]                        PROVIDE (close, 0x40001778)
                 [!provide]                        PROVIDE (_close_r, 0x4000bd3c)
                 [!provide]                        PROVIDE (__clrsbdi2, 0x40064a38)
                 [!provide]                        PROVIDE (__clrsbsi2, 0x40064a20)
@@ -723,9 +699,6 @@ END GROUP
                 0x000000004005cfec                PROVIDE (crc32_le, 0x4005cfec)
                 [!provide]                        PROVIDE (crc8_be, 0x4005d114)
                 [!provide]                        PROVIDE (crc8_le, 0x4005d0e0)
-                [!provide]                        PROVIDE (creat, 0x40000e8c)
-                [!provide]                        PROVIDE (ctime, 0x400595b0)
-                [!provide]                        PROVIDE (ctime_r, 0x400595c4)
                 [!provide]                        PROVIDE (_ctype_, 0x3ff96354)
                 [!provide]                        PROVIDE (__ctype_ptr__, 0x3ff96350)
                 [!provide]                        PROVIDE (__ctzdi2, 0x4000ca64)
@@ -762,7 +735,6 @@ END GROUP
                 [!provide]                        PROVIDE (dh_group2_prime, 0x3ff9ad22)
                 [!provide]                        PROVIDE (dh_group5_generator, 0x3ff9ad21)
                 [!provide]                        PROVIDE (dh_group5_prime, 0x3ff9ac61)
-                [!provide]                        PROVIDE (div, 0x40056348)
                 [!provide]                        PROVIDE (__divdc3, 0x40064460)
                 [!provide]                        PROVIDE (__divdf3, 0x40002954)
                 [!provide]                        PROVIDE (__divdi3, 0x4000ca84)
@@ -770,14 +742,10 @@ END GROUP
                 [!provide]                        PROVIDE (__divsf3, 0x4000234c)
                 [!provide]                        PROVIDE (__divsi3, 0x4000c7b8)
                 0x000000003ffae290                PROVIDE (g_rom_spiflash_dummy_len_plus, 0x3ffae290)
-                [!provide]                        PROVIDE (__dummy_lock, 0x4000c728)
-                [!provide]                        PROVIDE (__dummy_lock_try, 0x4000c730)
                 [!provide]                        PROVIDE (ecc_env, 0x3ffb8d60)
                 [!provide]                        PROVIDE (ecc_Jacobian_InfinityPoint256, 0x3ff972e8)
                 [!provide]                        PROVIDE (em_buf_env, 0x3ffb8d74)
                 [!provide]                        PROVIDE (environ, 0x3ffae0b4)
-                [!provide]                        PROVIDE (__env_lock, 0x40001fd4)
-                [!provide]                        PROVIDE (__env_unlock, 0x40001fe0)
                 [!provide]                        PROVIDE (__eqdf2, 0x400636a8)
                 [!provide]                        PROVIDE (__eqsf2, 0x40063374)
                 [!provide]                        PROVIDE (esp_crc8, 0x4005d144)
@@ -787,13 +755,8 @@ END GROUP
                 [!provide]                        PROVIDE (exc_cause_table, 0x3ff991d0)
                 [!provide]                        PROVIDE (_exit_r, 0x4000bd28)
                 [!provide]                        PROVIDE (__extendsfdf2, 0x40002c34)
-                [!provide]                        PROVIDE (fclose, 0x400020ac)
-                [!provide]                        PROVIDE (_fclose_r, 0x40001fec)
-                [!provide]                        PROVIDE (fflush, 0x40059394)
-                [!provide]                        PROVIDE (_fflush_r, 0x40059320)
                 [!provide]                        PROVIDE (__ffsdi2, 0x4000ca2c)
                 [!provide]                        PROVIDE (__ffssi2, 0x4000c804)
-                [!provide]                        PROVIDE (_findenv_r, 0x40001f44)
                 [!provide]                        PROVIDE (__fixdfdi, 0x40002ac4)
                 [!provide]                        PROVIDE (__fixdfsi, 0x40002a78)
                 [!provide]                        PROVIDE (__fixsfdi, 0x4000244c)
@@ -809,31 +772,19 @@ END GROUP
                 [!provide]                        PROVIDE (__floatundisf, 0x4000c8b0)
                 [!provide]                        PROVIDE (__floatunsidf, 0x4000c938)
                 [!provide]                        PROVIDE (__floatunsisf, 0x4000c864)
-                [!provide]                        PROVIDE (__fp_lock_all, 0x40001f1c)
-                [!provide]                        PROVIDE (__fp_unlock_all, 0x40001f30)
-                [!provide]                        PROVIDE (fputwc, 0x40058ea8)
-                [!provide]                        PROVIDE (__fputwc, 0x40058da0)
-                [!provide]                        PROVIDE (_fputwc_r, 0x40058e4c)
                 [!provide]                        PROVIDE (free, 0x4000beb8)
                 [!provide]                        PROVIDE (_free_r, 0x4000bbcc)
                 [!provide]                        PROVIDE (_fstat_r, 0x4000bccc)
-                [!provide]                        PROVIDE (_fwalk, 0x4000c738)
-                [!provide]                        PROVIDE (_fwalk_reent, 0x4000c770)
                 [!provide]                        PROVIDE (__gcc_bcmp, 0x40064a70)
                 [!provide]                        PROVIDE (__gedf2, 0x40063768)
                 [!provide]                        PROVIDE (__gesf2, 0x4006340c)
-                [!provide]                        PROVIDE (__get_current_time_locale, 0x40001834)
-                [!provide]                        PROVIDE (_getenv_r, 0x40001fbc)
                 [!provide]                        PROVIDE (_getpid_r, 0x4000bcfc)
                 [!provide]                        PROVIDE (__getreent, 0x4000be8c)
                 [!provide]                        PROVIDE (_gettimeofday_r, 0x4000bc58)
-                [!provide]                        PROVIDE (__gettzinfo, 0x40001fcc)
                 [!provide]                        PROVIDE (GF_Jacobian_Point_Addition256, 0x400163a4)
                 [!provide]                        PROVIDE (GF_Jacobian_Point_Double256, 0x40016260)
                 [!provide]                        PROVIDE (GF_Point_Jacobian_To_Affine256, 0x40016b0c)
                 [!provide]                        PROVIDE (_global_impure_ptr, 0x3ffae0b0)
-                [!provide]                        PROVIDE (gmtime, 0x40059848)
-                [!provide]                        PROVIDE (gmtime_r, 0x40059868)
                 [!provide]                        PROVIDE (g_phyFuns_instance, 0x3ffae0c4)
                 0x000000003ffae270                PROVIDE (g_rom_flashchip, 0x3ffae270)
                 [!provide]                        PROVIDE (__gtdf2, 0x400636dc)
@@ -860,26 +811,10 @@ END GROUP
                 [!provide]                        PROVIDE (hmac_sha1_vector, 0x400609e4)
                 [!provide]                        PROVIDE (hmac_sha256, 0x40060d58)
                 [!provide]                        PROVIDE (hmac_sha256_vector, 0x40060c84)
-                [!provide]                        PROVIDE (isalnum, 0x40000f04)
-                [!provide]                        PROVIDE (isalpha, 0x40000f18)
-                [!provide]                        PROVIDE (isascii, 0x4000c20c)
-                [!provide]                        PROVIDE (_isatty_r, 0x40000ea0)
-                [!provide]                        PROVIDE (isblank, 0x40000f2c)
-                [!provide]                        PROVIDE (iscntrl, 0x40000f50)
-                [!provide]                        PROVIDE (isdigit, 0x40000f64)
-                [!provide]                        PROVIDE (isgraph, 0x40000f94)
-                [!provide]                        PROVIDE (islower, 0x40000f78)
-                [!provide]                        PROVIDE (isprint, 0x40000fa8)
-                [!provide]                        PROVIDE (ispunct, 0x40000fc0)
-                [!provide]                        PROVIDE (isspace, 0x40000fd4)
-                [!provide]                        PROVIDE (isupper, 0x40000fe8)
-                [!provide]                        PROVIDE (itoa, 0x400566b4)
-                [!provide]                        PROVIDE (__itoa, 0x40056678)
                 [!provide]                        PROVIDE (jd_decomp, 0x400613e8)
                 [!provide]                        PROVIDE (jd_prepare, 0x40060fa8)
                 [!provide]                        PROVIDE (ke_env, 0x3ffb93cc)
                 [!provide]                        PROVIDE (_kill_r, 0x4000bd10)
-                [!provide]                        PROVIDE (labs, 0x40056370)
                 [!provide]                        PROVIDE (lb_default_handler, 0x3ff982b8)
                 [!provide]                        PROVIDE (lb_default_state_tab_p_get, 0x4001c198)
                 [!provide]                        PROVIDE (lb_env, 0x3ffb9424)
@@ -895,7 +830,6 @@ END GROUP
                 [!provide]                        PROVIDE (ld_acl_edr_sizes, 0x3ff98a14)
                 [!provide]                        PROVIDE (ld_acl_edr_types, 0x3ff98a22)
                 [!provide]                        PROVIDE (ld_env, 0x3ffb9510)
-                [!provide]                        PROVIDE (ldiv, 0x40056378)
                 [!provide]                        PROVIDE (ld_pcm_settings_dft, 0x3ff98a0c)
                 [!provide]                        PROVIDE (ld_sched_params, 0x3ffb96c0)
                 [!provide]                        PROVIDE (ld_sync_train_channels, 0x3ff98a3c)
@@ -913,9 +847,17 @@ END GROUP
                 [!provide]                        PROVIDE (lldesc_build_chain, 0x4000a850)
                 [!provide]                        PROVIDE (lldesc_num2link, 0x4000a948)
                 [!provide]                        PROVIDE (lldesc_set_owner, 0x4000a974)
+                [!provide]                        PROVIDE (lld_evt_deferred_elt_push, 0x400466b4)
+                [!provide]                        PROVIDE (lld_evt_deferred_elt_pop, 0x400466dc)
+                [!provide]                        PROVIDE (lld_evt_winsize_change, 0x40046730)
+                [!provide]                        PROVIDE (lld_evt_rxwin_compute, 0x400467c8)
+                [!provide]                        PROVIDE (lld_evt_slave_time_compute, 0x40046818)
                 [!provide]                        PROVIDE (lld_evt_env, 0x3ffb9704)
+                [!provide]                        PROVIDE (lld_evt_elt_wait_get, 0x400468e4)
+                [!provide]                        PROVIDE (lld_evt_get_next_free_slot, 0x4004692c)
                 [!provide]                        PROVIDE (lld_pdu_adv_pk_desc_tab, 0x3ff98c70)
                 [!provide]                        PROVIDE (lld_pdu_llcp_pk_desc_tab, 0x3ff98b68)
+                [!provide]                        PROVIDE (lld_pdu_pack, 0x4004ab14)
                 [!provide]                        PROVIDE (LLM_AA_CT1, 0x3ff98d8a)
                 [!provide]                        PROVIDE (LLM_AA_CT2, 0x3ff98d88)
                 [!provide]                        PROVIDE (llm_default_handler, 0x3ff98d80)
@@ -936,25 +878,14 @@ END GROUP
                 [!provide]                        PROVIDE (lmp_desc_tab, 0x3ff96e6c)
                 [!provide]                        PROVIDE (lmp_ext_desc_tab, 0x3ff96d9c)
                 [!provide]                        PROVIDE (lm_state, 0x3ffb9a1c)
-                [!provide]                        PROVIDE (__locale_charset, 0x40059540)
-                [!provide]                        PROVIDE (__locale_cjk_lang, 0x40059558)
-                [!provide]                        PROVIDE (localeconv, 0x4005957c)
-                [!provide]                        PROVIDE (_localeconv_r, 0x40059560)
-                [!provide]                        PROVIDE (__locale_mb_cur_max, 0x40059548)
-                [!provide]                        PROVIDE (__locale_msgcharset, 0x40059550)
-                [!provide]                        PROVIDE (localtime, 0x400595dc)
-                [!provide]                        PROVIDE (localtime_r, 0x400595fc)
-                [!provide]                        PROVIDE (_lock_acquire, 0x4000be14)
                 [!provide]                        PROVIDE (_lock_acquire_recursive, 0x4000be28)
                 [!provide]                        PROVIDE (_lock_close, 0x4000bdec)
                 [!provide]                        PROVIDE (_lock_close_recursive, 0x4000be00)
                 [!provide]                        PROVIDE (_lock_init, 0x4000bdc4)
                 [!provide]                        PROVIDE (_lock_init_recursive, 0x4000bdd8)
-                [!provide]                        PROVIDE (_lock_release, 0x4000be64)
                 [!provide]                        PROVIDE (_lock_release_recursive, 0x4000be78)
                 [!provide]                        PROVIDE (_lock_try_acquire, 0x4000be3c)
                 [!provide]                        PROVIDE (_lock_try_acquire_recursive, 0x4000be50)
-                [!provide]                        PROVIDE (longjmp, 0x400562cc)
                 [!provide]                        PROVIDE (_lseek_r, 0x4000bd8c)
                 [!provide]                        PROVIDE (__lshrdi3, 0x4000c84c)
                 [!provide]                        PROVIDE (__ltdf2, 0x40063790)
@@ -967,14 +898,6 @@ END GROUP
                 [!provide]                        PROVIDE (MD5Init, 0x4005da7c)
                 [!provide]                        PROVIDE (MD5Update, 0x4005da9c)
                 [!provide]                        PROVIDE (md5_vector, 0x4005db80)
-                [!provide]                        PROVIDE (memccpy, 0x4000c220)
-                [!provide]                        PROVIDE (memchr, 0x4000c244)
-                0x000000004000c260                PROVIDE (memcmp, 0x4000c260)
-                0x000000004000c2c8                PROVIDE (memcpy, 0x4000c2c8)
-                [!provide]                        PROVIDE (memmove, 0x4000c3c0)
-                [!provide]                        PROVIDE (memrchr, 0x4000c400)
-                0x000000004000c44c                PROVIDE (memset, 0x4000c44c)
-                [!provide]                        PROVIDE (mktime, 0x4005a5e8)
                 0x00000000400095a4                PROVIDE (mmu_init, 0x400095a4)
                 [!provide]                        PROVIDE (__moddi3, 0x4000cd4c)
                 [!provide]                        PROVIDE (__modsi3, 0x4000c7c0)
@@ -1004,7 +927,6 @@ END GROUP
                 [!provide]                        PROVIDE (notEqual256, 0x40015b04)
                 [!provide]                        PROVIDE (__nsau_data, 0x3ff96544)
                 [!provide]                        PROVIDE (one_bits, 0x3ff971f8)
-                [!provide]                        PROVIDE (open, 0x4000178c)
                 [!provide]                        PROVIDE (_open_r, 0x4000bd54)
                 [!provide]                        PROVIDE (__paritysi2, 0x40002f3c)
                 [!provide]                        PROVIDE (pbkdf2_sha1, 0x40060ba4)
@@ -1016,10 +938,6 @@ END GROUP
                 [!provide]                        PROVIDE (__powisf2, 0x4006389c)
                 [!provide]                        PROVIDE (_Pri_4_HandlerAddress, 0x3ffe0648)
                 [!provide]                        PROVIDE (_Pri_5_HandlerAddress, 0x3ffe064c)
-                [!provide]                        PROVIDE (qsort, 0x40056424)
-                [!provide]                        PROVIDE (_raise_r, 0x4000bc70)
-                [!provide]                        PROVIDE (rand, 0x40001058)
-                [!provide]                        PROVIDE (rand_r, 0x400010d4)
                 [!provide]                        PROVIDE (r_btdm_option_data, 0x3ffae6e0)
                 [!provide]                        PROVIDE (r_bt_util_buf_acl_rx_alloc, 0x40010218)
                 [!provide]                        PROVIDE (r_bt_util_buf_acl_rx_free, 0x40010234)
@@ -1063,7 +981,6 @@ END GROUP
                 [!provide]                        PROVIDE (r_E3, 0x40010a58)
                 [!provide]                        PROVIDE (r_ea_alarm_clear, 0x40015ab4)
                 [!provide]                        PROVIDE (r_ea_alarm_set, 0x40015a10)
-                [!provide]                        PROVIDE (read, 0x400017dc)
                 [!provide]                        PROVIDE (_read_r, 0x4000bda8)
                 [!provide]                        PROVIDE (r_ea_elt_cancel, 0x400150d0)
                 [!provide]                        PROVIDE (r_ea_elt_create, 0x40015264)
@@ -2084,24 +2001,10 @@ END GROUP
                 [!provide]                        PROVIDE (rwip_rf, 0x3ffbdb28)
                 [!provide]                        PROVIDE (rwip_rf_p_get, 0x400558f4)
                 [!provide]                        PROVIDE (r_XorKey, 0x400112c0)
-                [!provide]                        PROVIDE (sbrk, 0x400017f4)
                 [!provide]                        PROVIDE (_sbrk_r, 0x4000bce4)
-                [!provide]                        PROVIDE (__sccl, 0x4000c498)
-                [!provide]                        PROVIDE (__sclose, 0x400011b8)
-                [!provide]                        PROVIDE (__seofread, 0x40001148)
-                [!provide]                        PROVIDE (setjmp, 0x40056268)
-                [!provide]                        PROVIDE (setlocale, 0x40059568)
-                [!provide]                        PROVIDE (_setlocale_r, 0x4005950c)
                 [!provide]                        PROVIDE (__sf_fake_stderr, 0x3ff96458)
                 [!provide]                        PROVIDE (__sf_fake_stdin, 0x3ff96498)
                 [!provide]                        PROVIDE (__sf_fake_stdout, 0x3ff96478)
-                [!provide]                        PROVIDE (__sflush_r, 0x400591e0)
-                [!provide]                        PROVIDE (__sfmoreglue, 0x40001dc8)
-                [!provide]                        PROVIDE (__sfp, 0x40001e90)
-                [!provide]                        PROVIDE (__sfp_lock_acquire, 0x40001e08)
-                [!provide]                        PROVIDE (__sfp_lock_release, 0x40001e14)
-                [!provide]                        PROVIDE (__sfputs_r, 0x40057790)
-                [!provide]                        PROVIDE (__sfvwrite_r, 0x4005893c)
                 [!provide]                        PROVIDE (sha1_prf, 0x40060ae8)
                 [!provide]                        PROVIDE (sha1_vector, 0x40060b64)
                 [!provide]                        PROVIDE (sha256_prf, 0x40060d70)
@@ -2110,9 +2013,6 @@ END GROUP
                 [!provide]                        PROVIDE (sha_blk_bits_bytes, 0x3ff99288)
                 [!provide]                        PROVIDE (sha_blk_hash_bytes, 0x3ff9928c)
                 [!provide]                        PROVIDE (sig_matrix, 0x3ffae293)
-                [!provide]                        PROVIDE (__sinit, 0x40001e38)
-                [!provide]                        PROVIDE (__sinit_lock_acquire, 0x40001e20)
-                [!provide]                        PROVIDE (__sinit_lock_release, 0x40001e2c)
                 [!provide]                        PROVIDE (sip_after_tx_complete, 0x4000b358)
                 [!provide]                        PROVIDE (sip_alloc_to_host_evt, 0x4000ab9c)
                 [!provide]                        PROVIDE (sip_get_ptr, 0x4000b34c)
@@ -2138,15 +2038,7 @@ END GROUP
                 [!provide]                        PROVIDE (slc_send_to_host_chain, 0x4000b6a0)
                 [!provide]                        PROVIDE (slc_set_host_io_max_window, 0x4000b89c)
                 [!provide]                        PROVIDE (slc_to_host_chain_recycle, 0x4000b758)
-                [!provide]                        PROVIDE (__smakebuf_r, 0x40059108)
                 [!provide]                        PROVIDE (specialModP256, 0x4001600c)
-                [!provide]                        PROVIDE (srand, 0x40001004)
-                [!provide]                        PROVIDE (__sread, 0x40001118)
-                [!provide]                        PROVIDE (__srefill_r, 0x400593d4)
-                [!provide]                        PROVIDE (__sseek, 0x40001184)
-                [!provide]                        PROVIDE (__ssprint_r, 0x40056ff8)
-                [!provide]                        PROVIDE (__ssputs_r, 0x40056f2c)
-                [!provide]                        PROVIDE (__ssrefill_r, 0x40057fec)
                 [!provide]                        PROVIDE (__stack, 0x3ffe3f20)
                 [!provide]                        PROVIDE (__stack_app, 0x3ffe7e30)
                 [!provide]                        PROVIDE (_stack_sentry, 0x3ffe1320)
@@ -2155,41 +2047,7 @@ END GROUP
                 [!provide]                        PROVIDE (start_tb_console, 0x4005a980)
                 [!provide]                        PROVIDE (_stat_r, 0x4000bcb4)
                 [!provide]                        PROVIDE (_stext, 0x40000560)
-                [!provide]                        PROVIDE (strcasecmp, 0x400011cc)
-                [!provide]                        PROVIDE (strcasestr, 0x40001210)
-                [!provide]                        PROVIDE (strcat, 0x4000c518)
-                [!provide]                        PROVIDE (strchr, 0x4000c53c)
-                [!provide]                        PROVIDE (strcmp, 0x40001274)
-                [!provide]                        PROVIDE (strcoll, 0x40001398)
-                [!provide]                        PROVIDE (strcpy, 0x400013ac)
-                [!provide]                        PROVIDE (strcspn, 0x4000c558)
-                [!provide]                        PROVIDE (strdup, 0x4000143c)
-                [!provide]                        PROVIDE (_strdup_r, 0x40001450)
-                [!provide]                        PROVIDE (strftime, 0x40059ab4)
-                [!provide]                        PROVIDE (strlcat, 0x40001470)
-                [!provide]                        PROVIDE (strlcpy, 0x4000c584)
-                [!provide]                        PROVIDE (strlen, 0x400014c0)
-                [!provide]                        PROVIDE (strlwr, 0x40001524)
-                [!provide]                        PROVIDE (strncasecmp, 0x40001550)
-                [!provide]                        PROVIDE (strncat, 0x4000c5c4)
-                [!provide]                        PROVIDE (strncmp, 0x4000c5f4)
-                [!provide]                        PROVIDE (strncpy, 0x400015d4)
-                [!provide]                        PROVIDE (strndup, 0x400016b0)
-                [!provide]                        PROVIDE (_strndup_r, 0x400016c4)
-                [!provide]                        PROVIDE (strnlen, 0x4000c628)
-                [!provide]                        PROVIDE (strrchr, 0x40001708)
-                [!provide]                        PROVIDE (strsep, 0x40001734)
-                [!provide]                        PROVIDE (strspn, 0x4000c648)
-                [!provide]                        PROVIDE (strstr, 0x4000c674)
-                [!provide]                        PROVIDE (__strtok_r, 0x4000c6a8)
-                [!provide]                        PROVIDE (strtok_r, 0x4000c70c)
-                [!provide]                        PROVIDE (strtol, 0x4005681c)
-                [!provide]                        PROVIDE (_strtol_r, 0x40056714)
-                [!provide]                        PROVIDE (strtoul, 0x4005692c)
-                [!provide]                        PROVIDE (_strtoul_r, 0x40056834)
-                [!provide]                        PROVIDE (strupr, 0x4000174c)
                 [!provide]                        PROVIDE (__subdf3, 0x400026e4)
-                [!provide]                        PROVIDE (__submore, 0x40058f3c)
                 [!provide]                        PROVIDE (__subsf3, 0x400021d0)
                 [!provide]                        PROVIDE (SubtractBigHex256, 0x40015bcc)
                 [!provide]                        PROVIDE (SubtractBigHexMod256, 0x40015e8c)
@@ -2198,15 +2056,9 @@ END GROUP
                 [!provide]                        PROVIDE (SubtractFromSelfBigHexSign256, 0x40015dc8)
                 [!provide]                        PROVIDE (__subvdi3, 0x40002d20)
                 [!provide]                        PROVIDE (__subvsi3, 0x40002cf8)
-                [!provide]                        PROVIDE (_sungetc_r, 0x40057f6c)
-                [!provide]                        PROVIDE (__swbuf, 0x40058cb4)
-                [!provide]                        PROVIDE (__swbuf_r, 0x40058bec)
-                [!provide]                        PROVIDE (__swrite, 0x40001150)
-                [!provide]                        PROVIDE (__swsetup_r, 0x40058cc8)
                 [!provide]                        PROVIDE (sw_to_hw, 0x3ffb8d40)
                 [!provide]                        PROVIDE (syscall_table_ptr_app, 0x3ffae020)
                 [!provide]                        PROVIDE (syscall_table_ptr_pro, 0x3ffae024)
-                [!provide]                        PROVIDE (_system_r, 0x4000bc10)
                 [!provide]                        PROVIDE (tdefl_compress, 0x400600bc)
                 [!provide]                        PROVIDE (tdefl_compress_buffer, 0x400607f4)
                 [!provide]                        PROVIDE (tdefl_compress_mem_to_mem, 0x40060900)
@@ -2216,24 +2068,13 @@ END GROUP
                 [!provide]                        PROVIDE (tdefl_init, 0x40060810)
                 [!provide]                        PROVIDE (tdefl_write_image_to_png_file_in_memory, 0x4006091c)
                 [!provide]                        PROVIDE (tdefl_write_image_to_png_file_in_memory_ex, 0x40060910)
-                [!provide]                        PROVIDE (time, 0x40001844)
-                [!provide]                        PROVIDE (__time_load_locale, 0x4000183c)
-                [!provide]                        PROVIDE (times, 0x40001808)
                 [!provide]                        PROVIDE (_times_r, 0x4000bc40)
                 [!provide]                        PROVIDE (_timezone, 0x3ffae0a0)
                 [!provide]                        PROVIDE (tinfl_decompress, 0x4005ef30)
                 [!provide]                        PROVIDE (tinfl_decompress_mem_to_callback, 0x40060090)
                 [!provide]                        PROVIDE (tinfl_decompress_mem_to_mem, 0x40060050)
-                [!provide]                        PROVIDE (toascii, 0x4000c720)
-                [!provide]                        PROVIDE (tolower, 0x40001868)
-                [!provide]                        PROVIDE (toupper, 0x40001884)
                 [!provide]                        PROVIDE (__truncdfsf2, 0x40002b90)
-                [!provide]                        PROVIDE (__tzcalc_limits, 0x400018a0)
-                [!provide]                        PROVIDE (__tz_lock, 0x40001a04)
                 [!provide]                        PROVIDE (_tzname, 0x3ffae030)
-                [!provide]                        PROVIDE (tzset, 0x40001a1c)
-                [!provide]                        PROVIDE (_tzset_r, 0x40001a28)
-                [!provide]                        PROVIDE (__tz_unlock, 0x40001a10)
                 [!provide]                        PROVIDE (UartDev, 0x3ffe019c)
                 [!provide]                        PROVIDE (__ucmpdi2, 0x40063840)
                 [!provide]                        PROVIDE (__udivdi3, 0x4000cff8)
@@ -2243,20 +2084,12 @@ END GROUP
                 [!provide]                        PROVIDE (__umoddi3, 0x4000d280)
                 [!provide]                        PROVIDE (__umodsi3, 0x4000c7d0)
                 [!provide]                        PROVIDE (__umulsidi3, 0x4000c7d8)
-                [!provide]                        PROVIDE (ungetc, 0x400590f4)
-                [!provide]                        PROVIDE (_ungetc_r, 0x40058fa0)
                 [!provide]                        PROVIDE (_unlink_r, 0x4000bc84)
                 [!provide]                        PROVIDE (__unorddf2, 0x400637f4)
                 [!provide]                        PROVIDE (__unordsf2, 0x40063478)
                 [!provide]                        PROVIDE (user_code_start, 0x3ffe0400)
-                [!provide]                        PROVIDE (utoa, 0x40056258)
-                [!provide]                        PROVIDE (__utoa, 0x400561f0)
                 [!provide]                        PROVIDE (veryBigHexP256, 0x3ff9736c)
-                [!provide]                        PROVIDE (wcrtomb, 0x40058920)
-                [!provide]                        PROVIDE (_wcrtomb_r, 0x400588d8)
                 [!provide]                        PROVIDE (__wctomb, 0x3ff96540)
-                [!provide]                        PROVIDE (_wctomb_r, 0x40058f14)
-                [!provide]                        PROVIDE (write, 0x4000181c)
                 [!provide]                        PROVIDE (_write_r, 0x4000bd70)
                 [!provide]                        PROVIDE (xthal_bcopy, 0x4000c098)
                 [!provide]                        PROVIDE (xthal_copy123, 0x4000c124)
@@ -2432,11 +2265,178 @@ END GROUP
                 [!provide]                        PROVIDE (prbs_64bytes, 0x3ff98992)
                 [!provide]                        PROVIDE (nvds_env, 0x3ffb8364)
                 [!provide]                        PROVIDE (nvds_magic_number, 0x3ff9912a)
+                [!provide]                        PROVIDE (TASK_DESC_LLD, 0x3ff98b58)
+                [!provide]                        PROVIDE (abs, 0x40056340)
+                [!provide]                        PROVIDE (__ascii_wctomb, 0x40058ef0)
+                [!provide]                        PROVIDE (asctime, 0x40059588)
+                [!provide]                        PROVIDE (asctime_r, 0x40000ec8)
+                [!provide]                        PROVIDE (atoi, 0x400566c4)
+                [!provide]                        PROVIDE (_atoi_r, 0x400566d4)
+                [!provide]                        PROVIDE (atol, 0x400566ec)
+                [!provide]                        PROVIDE (_atol_r, 0x400566fc)
+                [!provide]                        PROVIDE (bzero, 0x4000c1f4)
+                [!provide]                        PROVIDE (_cleanup, 0x40001df8)
+                [!provide]                        PROVIDE (_cleanup_r, 0x40001d48)
+                [!provide]                        PROVIDE (close, 0x40001778)
+                [!provide]                        PROVIDE (creat, 0x40000e8c)
+                [!provide]                        PROVIDE (ctime, 0x400595b0)
+                [!provide]                        PROVIDE (ctime_r, 0x400595c4)
+                [!provide]                        PROVIDE (div, 0x40056348)
+                [!provide]                        PROVIDE (__dummy_lock, 0x4000c728)
+                [!provide]                        PROVIDE (__dummy_lock_try, 0x4000c730)
+                [!provide]                        PROVIDE (__env_lock, 0x40001fd4)
+                [!provide]                        PROVIDE (__env_unlock, 0x40001fe0)
+                [!provide]                        PROVIDE (fclose, 0x400020ac)
+                [!provide]                        PROVIDE (_fclose_r, 0x40001fec)
+                [!provide]                        PROVIDE (fflush, 0x40059394)
+                [!provide]                        PROVIDE (_fflush_r, 0x40059320)
+                [!provide]                        PROVIDE (_findenv_r, 0x40001f44)
+                [!provide]                        PROVIDE (__fp_lock_all, 0x40001f1c)
+                [!provide]                        PROVIDE (__fp_unlock_all, 0x40001f30)
+                [!provide]                        PROVIDE (fputwc, 0x40058ea8)
+                [!provide]                        PROVIDE (__fputwc, 0x40058da0)
+                [!provide]                        PROVIDE (_fputwc_r, 0x40058e4c)
+                [!provide]                        PROVIDE (_fwalk, 0x4000c738)
+                [!provide]                        PROVIDE (_fwalk_reent, 0x4000c770)
+                [!provide]                        PROVIDE (__get_current_time_locale, 0x40001834)
+                [!provide]                        PROVIDE (_getenv_r, 0x40001fbc)
+                [!provide]                        PROVIDE (__gettzinfo, 0x40001fcc)
+                [!provide]                        PROVIDE (gmtime, 0x40059848)
+                [!provide]                        PROVIDE (gmtime_r, 0x40059868)
+                [!provide]                        PROVIDE (isalnum, 0x40000f04)
+                [!provide]                        PROVIDE (isalpha, 0x40000f18)
+                [!provide]                        PROVIDE (isascii, 0x4000c20c)
+                [!provide]                        PROVIDE (_isatty_r, 0x40000ea0)
+                [!provide]                        PROVIDE (isblank, 0x40000f2c)
+                [!provide]                        PROVIDE (iscntrl, 0x40000f50)
+                [!provide]                        PROVIDE (isdigit, 0x40000f64)
+                [!provide]                        PROVIDE (isgraph, 0x40000f94)
+                [!provide]                        PROVIDE (islower, 0x40000f78)
+                [!provide]                        PROVIDE (isprint, 0x40000fa8)
+                [!provide]                        PROVIDE (ispunct, 0x40000fc0)
+                [!provide]                        PROVIDE (isspace, 0x40000fd4)
+                [!provide]                        PROVIDE (isupper, 0x40000fe8)
+                [!provide]                        PROVIDE (itoa, 0x400566b4)
+                [!provide]                        PROVIDE (__itoa, 0x40056678)
+                [!provide]                        PROVIDE (labs, 0x40056370)
+                [!provide]                        PROVIDE (ldiv, 0x40056378)
+                [!provide]                        PROVIDE (__locale_charset, 0x40059540)
+                [!provide]                        PROVIDE (__locale_cjk_lang, 0x40059558)
+                [!provide]                        PROVIDE (localeconv, 0x4005957c)
+                [!provide]                        PROVIDE (_localeconv_r, 0x40059560)
+                [!provide]                        PROVIDE (__locale_mb_cur_max, 0x40059548)
+                [!provide]                        PROVIDE (__locale_msgcharset, 0x40059550)
+                [!provide]                        PROVIDE (localtime, 0x400595dc)
+                [!provide]                        PROVIDE (localtime_r, 0x400595fc)
+                [!provide]                        PROVIDE (_lock_acquire, 0x4000be14)
+                [!provide]                        PROVIDE (_lock_release, 0x4000be64)
+                [!provide]                        PROVIDE (longjmp, 0x400562cc)
+                [!provide]                        PROVIDE (memccpy, 0x4000c220)
+                [!provide]                        PROVIDE (memchr, 0x4000c244)
+                0x000000004000c260                PROVIDE (memcmp, 0x4000c260)
+                0x000000004000c2c8                PROVIDE (memcpy, 0x4000c2c8)
+                [!provide]                        PROVIDE (memmove, 0x4000c3c0)
+                [!provide]                        PROVIDE (memrchr, 0x4000c400)
+                0x000000004000c44c                PROVIDE (memset, 0x4000c44c)
+                [!provide]                        PROVIDE (mktime, 0x4005a5e8)
+                [!provide]                        PROVIDE (open, 0x4000178c)
+                [!provide]                        PROVIDE (qsort, 0x40056424)
+                [!provide]                        PROVIDE (_raise_r, 0x4000bc70)
+                [!provide]                        PROVIDE (rand, 0x40001058)
+                [!provide]                        PROVIDE (rand_r, 0x400010d4)
+                [!provide]                        PROVIDE (read, 0x400017dc)
+                [!provide]                        PROVIDE (sbrk, 0x400017f4)
+                [!provide]                        PROVIDE (__sccl, 0x4000c498)
+                [!provide]                        PROVIDE (__sclose, 0x400011b8)
+                [!provide]                        PROVIDE (__seofread, 0x40001148)
+                [!provide]                        PROVIDE (setjmp, 0x40056268)
+                [!provide]                        PROVIDE (setlocale, 0x40059568)
+                [!provide]                        PROVIDE (_setlocale_r, 0x4005950c)
+                [!provide]                        PROVIDE (__sflush_r, 0x400591e0)
+                [!provide]                        PROVIDE (__sfmoreglue, 0x40001dc8)
+                [!provide]                        PROVIDE (__sfp, 0x40001e90)
+                [!provide]                        PROVIDE (__sfp_lock_acquire, 0x40001e08)
+                [!provide]                        PROVIDE (__sfp_lock_release, 0x40001e14)
+                [!provide]                        PROVIDE (__sfputs_r, 0x40057790)
+                [!provide]                        PROVIDE (__sfvwrite_r, 0x4005893c)
+                [!provide]                        PROVIDE (__sinit, 0x40001e38)
+                [!provide]                        PROVIDE (__sinit_lock_acquire, 0x40001e20)
+                [!provide]                        PROVIDE (__sinit_lock_release, 0x40001e2c)
+                [!provide]                        PROVIDE (__smakebuf_r, 0x40059108)
+                [!provide]                        PROVIDE (srand, 0x40001004)
+                [!provide]                        PROVIDE (__sread, 0x40001118)
+                [!provide]                        PROVIDE (__srefill_r, 0x400593d4)
+                [!provide]                        PROVIDE (__sseek, 0x40001184)
+                [!provide]                        PROVIDE (__ssprint_r, 0x40056ff8)
+                [!provide]                        PROVIDE (__ssputs_r, 0x40056f2c)
+                [!provide]                        PROVIDE (__ssrefill_r, 0x40057fec)
+                [!provide]                        PROVIDE (strcasecmp, 0x400011cc)
+                [!provide]                        PROVIDE (strcasestr, 0x40001210)
+                [!provide]                        PROVIDE (strcat, 0x4000c518)
+                [!provide]                        PROVIDE (strchr, 0x4000c53c)
+                [!provide]                        PROVIDE (strcmp, 0x40001274)
+                [!provide]                        PROVIDE (strcoll, 0x40001398)
+                [!provide]                        PROVIDE (strcpy, 0x400013ac)
+                [!provide]                        PROVIDE (strcspn, 0x4000c558)
+                [!provide]                        PROVIDE (strdup, 0x4000143c)
+                [!provide]                        PROVIDE (_strdup_r, 0x40001450)
+                [!provide]                        PROVIDE (strftime, 0x40059ab4)
+                [!provide]                        PROVIDE (strlcat, 0x40001470)
+                [!provide]                        PROVIDE (strlcpy, 0x4000c584)
+                [!provide]                        PROVIDE (strlen, 0x400014c0)
+                [!provide]                        PROVIDE (strlwr, 0x40001524)
+                [!provide]                        PROVIDE (strncasecmp, 0x40001550)
+                [!provide]                        PROVIDE (strncat, 0x4000c5c4)
+                [!provide]                        PROVIDE (strncmp, 0x4000c5f4)
+                [!provide]                        PROVIDE (strncpy, 0x400015d4)
+                [!provide]                        PROVIDE (strndup, 0x400016b0)
+                [!provide]                        PROVIDE (_strndup_r, 0x400016c4)
+                [!provide]                        PROVIDE (strnlen, 0x4000c628)
+                [!provide]                        PROVIDE (strrchr, 0x40001708)
+                [!provide]                        PROVIDE (strsep, 0x40001734)
+                [!provide]                        PROVIDE (strspn, 0x4000c648)
+                [!provide]                        PROVIDE (strstr, 0x4000c674)
+                [!provide]                        PROVIDE (__strtok_r, 0x4000c6a8)
+                [!provide]                        PROVIDE (strtok_r, 0x4000c70c)
+                [!provide]                        PROVIDE (strtol, 0x4005681c)
+                [!provide]                        PROVIDE (_strtol_r, 0x40056714)
+                [!provide]                        PROVIDE (strtoul, 0x4005692c)
+                [!provide]                        PROVIDE (_strtoul_r, 0x40056834)
+                [!provide]                        PROVIDE (strupr, 0x4000174c)
+                [!provide]                        PROVIDE (__submore, 0x40058f3c)
+                [!provide]                        PROVIDE (_sungetc_r, 0x40057f6c)
+                [!provide]                        PROVIDE (__swbuf, 0x40058cb4)
+                [!provide]                        PROVIDE (__swbuf_r, 0x40058bec)
+                [!provide]                        PROVIDE (__swrite, 0x40001150)
+                [!provide]                        PROVIDE (__swsetup_r, 0x40058cc8)
+                [!provide]                        PROVIDE (_system_r, 0x4000bc10)
+                [!provide]                        PROVIDE (time, 0x40001844)
+                [!provide]                        PROVIDE (__time_load_locale, 0x4000183c)
+                [!provide]                        PROVIDE (times, 0x40001808)
+                [!provide]                        PROVIDE (toascii, 0x4000c720)
+                [!provide]                        PROVIDE (tolower, 0x40001868)
+                [!provide]                        PROVIDE (toupper, 0x40001884)
+                [!provide]                        PROVIDE (__tzcalc_limits, 0x400018a0)
+                [!provide]                        PROVIDE (__tz_lock, 0x40001a04)
+                [!provide]                        PROVIDE (tzset, 0x40001a1c)
+                [!provide]                        PROVIDE (_tzset_r, 0x40001a28)
+                [!provide]                        PROVIDE (__tz_unlock, 0x40001a10)
+                [!provide]                        PROVIDE (ungetc, 0x400590f4)
+                [!provide]                        PROVIDE (_ungetc_r, 0x40058fa0)
+                [!provide]                        PROVIDE (utoa, 0x40056258)
+                [!provide]                        PROVIDE (__utoa, 0x400561f0)
+                [!provide]                        PROVIDE (wcrtomb, 0x40058920)
+                [!provide]                        PROVIDE (_wcrtomb_r, 0x400588d8)
+                [!provide]                        PROVIDE (_wctomb_r, 0x40058f14)
+                [!provide]                        PROVIDE (write, 0x4000181c)
                 [!provide]                        PROVIDE (UART0, 0x3ff40000)
                 [!provide]                        PROVIDE (SPI1, 0x3ff42000)
                 [!provide]                        PROVIDE (SPI0, 0x3ff43000)
                 [!provide]                        PROVIDE (GPIO, 0x3ff44000)
                 [!provide]                        PROVIDE (SIGMADELTA, 0x3ff44f00)
+                [!provide]                        PROVIDE (RTCCNTL, 0x3ff48000)
+                [!provide]                        PROVIDE (RTCIO, 0x3ff48400)
+                [!provide]                        PROVIDE (SENS, 0x3ff48800)
                 [!provide]                        PROVIDE (UHCI1, 0x3ff4c000)
                 [!provide]                        PROVIDE (I2S0, 0x3ff4f000)
                 [!provide]                        PROVIDE (UART1, 0x3ff50000)
@@ -2457,156 +2457,156 @@ END GROUP
                 [!provide]                        PROVIDE (UART2, 0x3ff6e000)
                 [!provide]                        PROVIDE (SDMMC, 0x3ff68000)
                 0x0000000040008550                PROVIDE (ets_update_cpu_frequency, 0x40008550)
-OUTPUT(/home/penguin/Programio/blizzard-esp/build/bootloader/bootloader.elf elf32-xtensa-le)
+OUTPUT(/home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader.elf elf32-xtensa-le)
 
 .debug_frame    0x0000000000000000      0x6f8
- .debug_frame   0x0000000000000000       0xa0 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_frame   0x00000000000000a0       0x88 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_frame   0x0000000000000128       0x28 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_frame   0x0000000000000150       0x58 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_frame   0x00000000000001a8       0x58 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_frame   0x0000000000000200       0x58 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_frame   0x0000000000000258      0x190 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_frame   0x00000000000003e8      0x220 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_frame   0x0000000000000608       0xa0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_frame   0x00000000000006a8       0x28 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .debug_frame   0x00000000000006d0       0x28 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000000000000000       0xa0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_frame   0x00000000000000a0       0x88 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_frame   0x0000000000000128       0x28 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_frame   0x0000000000000150       0x58 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_frame   0x00000000000001a8       0x58 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_frame   0x0000000000000200       0x58 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_frame   0x0000000000000258      0x190 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_frame   0x00000000000003e8      0x220 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_frame   0x0000000000000608       0xa0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_frame   0x00000000000006a8       0x28 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_frame   0x00000000000006d0       0x28 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_info     0x0000000000000000     0x6947
- .debug_info    0x0000000000000000     0x2283 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_info    0x0000000000002283      0x9fc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x0000000000002c7f      0x2ec /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_info    0x0000000000002f6b      0xf03 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_info    0x0000000000003e6e      0x35b /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_info    0x00000000000041c9      0x268 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_info    0x0000000000004431      0xbbe /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_info    0x0000000000004fef      0xf76 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x0000000000005f65      0x34d /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_info    0x00000000000062b2       0xcd /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .debug_info    0x000000000000637f      0x5c8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_info     0x0000000000000000     0x6893
+ .debug_info    0x0000000000000000     0x225a /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_info    0x000000000000225a      0x9fc /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x0000000000002c56      0x2ec /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_info    0x0000000000002f42      0xf2d /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x0000000000003e6f      0x2da /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_info    0x0000000000004149      0x268 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_info    0x00000000000043b1      0xbbe /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_info    0x0000000000004f6f      0xf42 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_info    0x0000000000005eb1      0x34d /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x00000000000061fe       0xcd /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_info    0x00000000000062cb      0x5c8 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_abbrev   0x0000000000000000     0x17c7
- .debug_abbrev  0x0000000000000000      0x47d /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_abbrev  0x000000000000047d      0x256 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_abbrev  0x00000000000006d3      0x131 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_abbrev  0x0000000000000804      0x350 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_abbrev  0x0000000000000b54      0x15d /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_abbrev  0x0000000000000cb1      0x13c /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_abbrev  0x0000000000000ded      0x2e1 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_abbrev  0x00000000000010ce      0x3e7 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_abbrev  0x00000000000014b5      0x153 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_abbrev  0x0000000000001608       0x60 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .debug_abbrev  0x0000000000001668      0x15f /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_abbrev   0x0000000000000000     0x17a5
+ .debug_abbrev  0x0000000000000000      0x467 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_abbrev  0x0000000000000467      0x256 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_abbrev  0x00000000000006bd      0x131 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_abbrev  0x00000000000007ee      0x361 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_abbrev  0x0000000000000b4f      0x166 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_abbrev  0x0000000000000cb5      0x13c /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_abbrev  0x0000000000000df1      0x2e1 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_abbrev  0x00000000000010d2      0x3c1 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x0000000000001493      0x153 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_abbrev  0x00000000000015e6       0x60 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_abbrev  0x0000000000001646      0x15f /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_loc      0x0000000000000000     0x387f
- .debug_loc     0x0000000000000000      0xe37 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_loc     0x0000000000000e37      0x5aa /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x00000000000013e1       0x98 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_loc     0x0000000000001479      0x669 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x0000000000001ae2      0x20e /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_loc     0x0000000000001cf0       0x91 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_loc     0x0000000000001d81      0x785 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_loc     0x0000000000002506      0x70a /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_loc     0x0000000000002c10      0x266 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_loc     0x0000000000002e76       0x21 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .debug_loc     0x0000000000002e97      0x9e8 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_loc      0x0000000000000000     0x38af
+ .debug_loc     0x0000000000000000      0xdf0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_loc     0x0000000000000df0      0x5aa /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x000000000000139a       0x98 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x0000000000001432      0x73d /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x0000000000001b6f      0x1aa /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_loc     0x0000000000001d19       0x91 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_loc     0x0000000000001daa      0x785 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_loc     0x000000000000252f      0x711 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x0000000000002c40      0x266 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x0000000000002ea6       0x21 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_loc     0x0000000000002ec7      0x9e8 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_aranges  0x0000000000000000      0x320
  .debug_aranges
-                0x0000000000000000       0x48 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000000000000       0x48 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_aranges
-                0x0000000000000048       0x40 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000048       0x40 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .debug_aranges
-                0x0000000000000088       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000000000088       0x20 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .debug_aranges
-                0x00000000000000a8       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000000000a8       0x30 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .debug_aranges
-                0x00000000000000d8       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000000000d8       0x30 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .debug_aranges
-                0x0000000000000108       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000000000108       0x30 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .debug_aranges
-                0x0000000000000138       0x98 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000000000138       0x98 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_aranges
-                0x00000000000001d0       0xc8 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000000001d0       0xc8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_aranges
-                0x0000000000000298       0x48 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000298       0x48 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_aranges
-                0x00000000000002e0       0x20 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+                0x00000000000002e0       0x20 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_aranges
-                0x0000000000000300       0x20 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+                0x0000000000000300       0x20 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_ranges   0x0000000000000000      0x7c0
- .debug_ranges  0x0000000000000000      0x258 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_ranges  0x0000000000000258       0x68 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_ranges  0x00000000000002c0       0x30 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_ranges  0x00000000000002f0      0x148 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_ranges  0x0000000000000438       0x20 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_ranges  0x0000000000000458       0x80 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_ranges  0x00000000000004d8       0xd8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_ranges  0x00000000000005b0      0x178 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_ranges  0x0000000000000728       0x38 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_ranges  0x0000000000000760       0x60 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_ranges   0x0000000000000000      0x7d8
+ .debug_ranges  0x0000000000000000      0x258 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_ranges  0x0000000000000258       0x68 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_ranges  0x00000000000002c0       0x30 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_ranges  0x00000000000002f0      0x140 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_ranges  0x0000000000000430       0x38 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_ranges  0x0000000000000468       0x80 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_ranges  0x00000000000004e8       0xd8 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_ranges  0x00000000000005c0      0x180 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_ranges  0x0000000000000740       0x38 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_ranges  0x0000000000000778       0x60 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_line     0x0000000000000000     0x38ec
- .debug_line    0x0000000000000000      0x984 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .debug_line    0x0000000000000984      0x470 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x0000000000000df4      0x291 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x0000000000001085      0x77d /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x0000000000001802      0x3df /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .debug_line    0x0000000000001be1      0x410 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x0000000000001ff1      0xa38 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .debug_line    0x0000000000002a29      0x92d /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x0000000000003356      0x37d /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_line    0x00000000000036d3       0x8a /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .debug_line    0x000000000000375d      0x18f /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+.debug_line     0x0000000000000000     0x3a07
+ .debug_line    0x0000000000000000      0x990 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .debug_line    0x0000000000000990      0x49a /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x0000000000000e2a      0x2b5 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x00000000000010df      0x7b1 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000001890      0x399 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x0000000000001c29      0x42e /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x0000000000002057      0xa50 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .debug_line    0x0000000000002aa7      0x9ac /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x0000000000003453      0x39b /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x00000000000037ee       0x8a /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_line    0x0000000000003878      0x18f /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_str      0x0000000000000000     0x2216
- .debug_str     0x0000000000000000      0xea9 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
-                                        0xf78 (size before relaxing)
- .debug_str     0x0000000000000ea9      0x278 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                        0x589 (size before relaxing)
- .debug_str     0x0000000000001121       0x6a /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
-                                        0x38a (size before relaxing)
- .debug_str     0x000000000000118b      0x314 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
-                                        0x9fb (size before relaxing)
- .debug_str     0x000000000000149f       0xfc /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                                        0x2d4 (size before relaxing)
- .debug_str     0x000000000000159b       0x7e /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                                        0x249 (size before relaxing)
- .debug_str     0x0000000000001619      0x4a8 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                                        0x76b (size before relaxing)
- .debug_str     0x0000000000001ac1      0x410 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                        0x7c9 (size before relaxing)
- .debug_str     0x0000000000001ed1      0x12f /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
-                                        0x36a (size before relaxing)
- .debug_str     0x0000000000002000      0x13a /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+.debug_str      0x0000000000000000     0x2285
+ .debug_str     0x0000000000000000      0xeab /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+                                        0xf84 (size before relaxing)
+ .debug_str     0x0000000000000eab      0x282 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                        0x593 (size before relaxing)
+ .debug_str     0x000000000000112d       0x70 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                                        0x394 (size before relaxing)
+ .debug_str     0x000000000000119d      0x32f /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                                        0xa13 (size before relaxing)
+ .debug_str     0x00000000000014cc      0x102 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                                        0x2c3 (size before relaxing)
+ .debug_str     0x00000000000015ce       0x84 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                                        0x253 (size before relaxing)
+ .debug_str     0x0000000000001652      0x4ae /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                                        0x771 (size before relaxing)
+ .debug_str     0x0000000000001b00      0x43a /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x7ed (size before relaxing)
+ .debug_str     0x0000000000001f3a      0x135 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+                                        0x370 (size before relaxing)
+ .debug_str     0x000000000000206f      0x13a /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
                                         0x1e0 (size before relaxing)
- .debug_str     0x000000000000213a       0xdc /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_str     0x00000000000021a9       0xdc /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
                                         0x25a (size before relaxing)
 
 .comment        0x0000000000000000       0x3a
- .comment       0x0000000000000000       0x3a /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .comment       0x0000000000000000       0x3a /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x3b (size before relaxing)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .comment       0x000000000000003a       0x3b /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .comment       0x000000000000003a       0x3b /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .xtensa.info    0x0000000000000000       0x38
- .xtensa.info   0x0000000000000000       0x38 /home/penguin/Programio/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .xtensa.info   0x0000000000000038        0x0 /home/penguin/Programio/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .xtensa.info   0x0000000000000000       0x38 /home/ece453/Documents/work/blizzard-esp/build/bootloader/main/libmain.a(bootloader_start.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/work/blizzard-esp/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/ece453/Documents/ece453/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)

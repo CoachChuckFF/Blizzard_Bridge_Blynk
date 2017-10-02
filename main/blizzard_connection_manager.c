@@ -154,15 +154,19 @@ static esp_err_t blizzard_event_handler(void *ctx, system_event_t *event)
         break;
     case SYSTEM_EVENT_ETH_START:
         ESP_LOGI(TAG,"ETH START");
+        system_event_eth_start_handle_default(event);
         break;
     case SYSTEM_EVENT_ETH_STOP:
         ESP_LOGI(TAG,"ETH STOP");
+        system_event_eth_stop_handle_default(event);
         break;
     case SYSTEM_EVENT_ETH_CONNECTED:
         ESP_LOGI(TAG,"ETH CONNECTED");
+        system_event_eth_connected_handle_default(event);
         break;
     case SYSTEM_EVENT_ETH_DISCONNECTED:
         ESP_LOGI(TAG,"ETH DISCONNECTED");
+        system_event_eth_disconnected_handle_default(event);
         break;
     case SYSTEM_EVENT_ETH_GOT_IP:
         ESP_LOGI(TAG,"GOT IP");
@@ -217,7 +221,11 @@ void stop_blizzard_wifi()
 void start_blizzard_ethernet()
 {
     esp_err_t ret = ESP_OK;
-    esp_event_loop_init(NULL, NULL);
+
+    tcpip_adapter_init();
+
+    //esp_event_loop_init(NULL, NULL);
+    ESP_ERROR_CHECK( esp_event_loop_init(blizzard_event_handler, NULL) );
 
     eth_config_t config = DEFAULT_ETHERNET_PHY_CONFIG;
     //Set the PHY address in the example configuration
@@ -599,4 +607,61 @@ void printConnectionInfo(void)
       }
       ESP_LOGI(TAG, "~~~~~~~~~~~");
   }
+}
+
+/*------------------------- Default Handlers ---------------------------------*/
+esp_err_t system_event_eth_start_handle_default(system_event_t *event)
+{
+    tcpip_adapter_ip_info_t eth_ip;
+    uint8_t eth_mac[6];
+
+    esp_eth_get_mac(eth_mac);
+    tcpip_adapter_get_ip_info(TCPIP_ADAPTER_IF_ETH, &eth_ip);
+    tcpip_adapter_eth_start(eth_mac, &eth_ip);
+
+    return ESP_OK;
+}
+
+esp_err_t system_event_eth_stop_handle_default(system_event_t *event)
+{
+    tcpip_adapter_stop(TCPIP_ADAPTER_IF_ETH);
+
+    return ESP_OK;
+}
+
+esp_err_t system_event_eth_connected_handle_default(system_event_t *event)
+{
+    tcpip_adapter_dhcp_status_t status;
+
+    tcpip_adapter_up(TCPIP_ADAPTER_IF_ETH);
+
+    tcpip_adapter_dhcpc_get_status(TCPIP_ADAPTER_IF_ETH, &status);
+
+    if (status == TCPIP_ADAPTER_DHCP_INIT) {
+        tcpip_adapter_dhcpc_start(TCPIP_ADAPTER_IF_ETH);
+    } else if (status == TCPIP_ADAPTER_DHCP_STOPPED) {
+        tcpip_adapter_ip_info_t eth_ip;
+
+        tcpip_adapter_get_ip_info(TCPIP_ADAPTER_IF_ETH, &eth_ip);
+
+        if (!(ip4_addr_isany_val(eth_ip.ip) || ip4_addr_isany_val(eth_ip.netmask) || ip4_addr_isany_val(eth_ip.gw))) {
+            system_event_t evt;
+
+            //notify event
+            evt.event_id = SYSTEM_EVENT_ETH_GOT_IP;
+            memcpy(&evt.event_info.got_ip.ip_info, &eth_ip, sizeof(tcpip_adapter_ip_info_t));
+
+            esp_event_send(&evt);
+        } else {
+            ESP_LOGE(TAG, "invalid static ip");
+        }
+    }
+
+    return ESP_OK;
+}
+
+esp_err_t system_event_eth_disconnected_handle_default(system_event_t *event)
+{
+    tcpip_adapter_down(TCPIP_ADAPTER_IF_ETH);
+    return ESP_OK;
 }

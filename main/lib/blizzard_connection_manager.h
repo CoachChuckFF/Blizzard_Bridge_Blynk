@@ -97,8 +97,14 @@ void setDHCPEnable(uint8_t);
 uint8_t getWifiManagerEnable(void);
 void setWifiManagerEnable(uint8_t enable);
 
-
+//debug info
 void printConnectionInfo(void);
+
+//default Handlers
+static esp_err_t system_event_eth_start_handle_default(system_event_t *event);
+static esp_err_t system_event_eth_stop_handle_default(system_event_t *event);
+static esp_err_t system_event_eth_connected_handle_default(system_event_t *event);
+static esp_err_t system_event_eth_disconnected_handle_default(system_event_t *event);
 
 #ifdef __cplusplus
 }
